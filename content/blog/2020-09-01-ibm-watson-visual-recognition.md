@@ -6,7 +6,7 @@ description = "Learn how to use IBM Watson visual recognition to automatically a
 
 <div class="alert alert-info" role="alert">
     <h4 class="alert-heading">Want to try it yourself?</h4>
-    <p class="mb-0">You can download the Jupyter Notebook containing this Python analysis here: <a class="alert-link" href="https://github.com/christian-cleberg/data-science" rel="noreferrer,noopener">IBM Watson Visual Recognition.ipynb</a>.</p>
+    <p class="mb-0">You can download the Jupyter Notebook containing this Python analysis here: <a class="alert-link" href="https://git.sr.ht/~kaizoku/data-science" rel="noreferrer,noopener">IBM Watson Visual Recognition.ipynb</a>.</p>
 </div>
 
 ## What is IBM Watson?

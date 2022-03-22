@@ -8,7 +8,7 @@ title = "Projects"
 | ---------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------- |
 | [401k Projections](https://git.sr.ht/~kaizoku/401k/)                   | TBD                                            | A plotly graph to calculate future 401k value.      |
 | [Color Generator](https://git.sr.ht/~kaizoku/color-generator/)         | TBD                                            | A color palette generator.                          |
-| [Crypt](https://github.com/christian-cleberg/crypt/)                   | [Visit &rarr;](https://crates.io/crates/crypt) | A command-line password manager.                    |
+| [Crypt](https://git.sr.ht/~kaizoku/crypt/)                   | [Visit &rarr;](https://crates.io/crates/crypt) | A command-line password manager.                    |
 | [Lincoln Incidents](https://git.sr.ht/~kaizoku/lincoln-incidents/)     | TBD                                            | A set of plotly line charts of police data.         |
 | [Michelangelo](https://git.sr.ht/~kaizoku/michelangelo/)               | N/A                                            | A photo & video gallery using Tumblr's API.         |
 | [PHP Blog](https://git.sr.ht/~kaizoku/php-blog/)                       | N/A                                            | A database-free blogging platform.                  |

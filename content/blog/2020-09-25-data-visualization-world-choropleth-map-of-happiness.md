@@ -6,7 +6,7 @@ description = "Let's explore a data set together using Python and Jupyter Lab - 
 
 <div class="alert alert-info" role="alert">
     <h4 class="alert-heading">Want to try it yourself?</h4>
-    <p class="mb-0">You can download the Jupyter Notebook containing this Python analysis here: <a class="alert-link" href="https://github.com/christian-cleberg/data-science" rel="noreferrer,noopener">World Happiness Rankings.ipynb</a>.</p>
+    <p class="mb-0">You can download the Jupyter Notebook containing this Python analysis here: <a class="alert-link" href="https://git.sr.ht/~kaizoku/data-science" rel="noreferrer,noopener">World Happiness Rankings.ipynb</a>.</p>
 </div>
 
 ## Background Information

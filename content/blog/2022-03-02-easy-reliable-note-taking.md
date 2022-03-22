@@ -13,7 +13,7 @@ As I've written more and more over the years, I've found that my love of note-ta
 
 However, I had a historical struggle with migration of notes between different apps that require different formats and applied proprietary styling. This meant that I had to go through each note during migration and edit the file to look presentable again.
 
-For the last year or two, I have written everything exclusively in [Markdown](https://en.wikipedia.org/wiki/Markdown) format. Small notes, long-form writings, and even these blog posts ([see this blog post in Markdown format](https://github.com/christian-cleberg/cleberg.io/blob/main/content/blog/2022-03-02-easy-reliable-note-taking.md)) are all written in Markdown.
+For the last year or two, I have written everything exclusively in [Markdown](https://en.wikipedia.org/wiki/Markdown) format. Small notes, long-form writings, and even these blog posts ([see this blog post in Markdown format](https://git.sr.ht/~kaizoku/cleberg.io/blob/main/content/blog/2022-03-02-easy-reliable-note-taking.md)) are all written in Markdown.
 
 Why Markdown? While I do appreciate the simplicity of plain-text files without any formatting, I often need visual cues such as heading and code blocks to keep my thoughts straight. Markdown provides a minimal set of styling indicators for me to style my notes without adding any proprietary, embedded data into the files. If I want a top-level heading, I simply add a hash (`#`) before the line. An added bonus is that even if a system doesn't understand Markdown, it will render it as plain-text and I can read it just as easily.
 
