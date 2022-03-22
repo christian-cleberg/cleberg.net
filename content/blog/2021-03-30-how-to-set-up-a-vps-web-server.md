@@ -118,7 +118,7 @@ So let's set up a new user in our system. The `-m` option below tells the OS to 
 user.
 
 ```bash
-useradd -m USERNAME
+adduser -m USERNAME
 ```
 
 Now, create a password for that user.
