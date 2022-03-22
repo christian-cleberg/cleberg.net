@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title ~ " | " ~ config.title }}{% endblock %}
+{% block page_meta %}
+    <meta content="{{ page.description | safe | default(value='') }}" name="description"/>
+{% endblock page_meta %}
+
+{% block content %}
+<h1 class="title">
+    {{ page.title }}
+</h1>
+<p class="subtitle">{{ page.date }}</p>
+{{ page.content | safe }}
+{% endblock content %}

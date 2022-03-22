@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title ~ " | " ~ config.title }}{% endblock %}
+
+{% block content %}
+<h1 class="title">
+    {{ section.title }}
+</h1>
+<p>Subscribe: <a href="/atom.xml">Atom RSS Feed</a></p>
+<div class="posts">
+    {% set current_date = "2000-01-01" | date(format="%Y") %}
+    {% set date = "2000-01-01" | date(format="%Y") %}
+    {% for page in section.pages %}
+        {% set_global current_date = page.date | date(format="%Y") %}
+        {% if current_date != date %}
+            {%- set_global date = current_date -%}
+            <h2 class="post-year">{{- current_date -}}</h2>
+        {% endif %}
+        <div class="post">
+            <a class="post-link" href="{{ page.permalink | safe }}">
+                {{- page.title -}}
+            </a>
+            <span class="post-date">
+                {{- page.date | date(format="%m-%d-%Y") -}}
+            </span>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}
