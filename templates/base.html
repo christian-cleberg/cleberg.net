@@ -11,43 +11,48 @@
     <link rel="canonical" href="{{ config.base_url | safe }}">
     <link rel="icon" type="image/x-icon" href="/favicon.ico"">
     {% block page_meta %}
-    <meta name="description" content="{{ config.description | default(value='') | truncate(length=150) }}">
+    <meta name=" description" content="{{ config.description | default(value='') | truncate(length=150) }}">
     {% endblock page_meta %}
     {% if config.generate_feed %}
-        <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+    <link rel="alternate"
+        type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %}
+        title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif %}
     {% block css %}
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/styles.css">
-        <link rel="stylesheet" href="/syntax-theme-dark.css" media="(prefers-color-scheme: dark)">
-        <link rel="stylesheet" href="/syntax-theme-light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/syntax-theme-dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/syntax-theme-light.css" media="(prefers-color-scheme: light)">
     {% endblock css %}
     <script async defer src="https://nullitics.com/script.js"></script>
 </head>
 
 <body>
-<div class="container">
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <a href="/">cleberg.io</a>
-        </div>
-        <div class="navbar-links">
-            <p><a href="/">/home</a></p>
-            <p><a href="/blog/">/blog</a></p>
-            <p><a href="/projects/">/projects</a></p>
-        </div>
-    </nav>
-    <section class="section">
+    <div class="container">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-logo">
+                    <a href="/">cleberg.io</a>
+                </div>
+                <div class="navbar-links">
+                    <p><a href="/">/home</a></p>
+                    <p><a href="/blog/">/blog</a></p>
+                    <p><a href="/projects/">/projects</a></p>
+                </div>
+            </div>
+        </nav>
+        <section class="section">
             {% block content %} {% endblock %}
-    </section>
-    <footer>
-        <p><a href="/privacy/">Privacy Policy</a></p>
-        <p>Written Work: <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a></p>
-        <p>Source Code: <a href="https://git.sr.ht/~kaizoku/cleberg.io/blob/main/LICENSE" target="_blank" rel="noopener,noreferrer">GPLv3</a></p>
-        <br>
-        <p>&copy; 2016 - 2022</p>
-    </footer>
-</div>
+        </section>
+        <footer>
+            <p><a href="/privacy/">Privacy Policy</a></p>
+            <p>Written Work: <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a></p>
+            <p>Source Code: <a href="https://git.sr.ht/~kaizoku/cleberg.io/blob/main/LICENSE" target="_blank"
+                    rel="noopener,noreferrer">GPLv3</a></p>
+            <br>
+            <p>&copy; 2016 - 2022</p>
+        </footer>
+    </div>
 </body>
 
 </html>

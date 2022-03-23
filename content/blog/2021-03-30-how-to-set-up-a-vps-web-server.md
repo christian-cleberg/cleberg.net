@@ -320,6 +320,8 @@ Now, add the following rules to the firewall allow SSH, Apache, and HTTP(S) conn
 different ports for specifics applications, SFTP, etc.
 
 ```bash
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
 sudo ufw allow OpenSSH
 sudo ufw allow Apache
 sudo ufw allow proto tcp from any to any port 80,443

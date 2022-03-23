@@ -61,12 +61,20 @@ body {
 }
 
 .navbar {
-  position: relative;
+  background-color: var(--primary-bg-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar > .container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0;
   padding: 1rem;
 }
 
@@ -133,7 +141,7 @@ body {
 }
 
 .section {
-  margin: 3rem 0;
+  margin: 5rem 0 3rem 0;
 }
 
 a:hover {
