@@ -138,4 +138,4 @@ See the screenshots below for the dashboard and a settings page on my instance o
 
 ![Nextcloud Settings](https://img.cleberg.io/blog/20220323-installing-nextcloud-on-ubuntu/nextcloud_settings.png)
 
-*Figure 01: Nextcloud Security Settings*
+*Figure 02: Nextcloud Security Settings*
