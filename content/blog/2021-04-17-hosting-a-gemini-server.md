@@ -133,8 +133,8 @@ the [amfora](https://github.com/makeworld-the-better-one/amfora) browser.
 
 ![](https://img.cleberg.io/blog/032-hosting-a-gemini-server/lagrange.png)
 
-*Lagrange: geminimg.cleberg.io*
+*Lagrange: gemini.cleberg.io*
 
 ![](https://img.cleberg.io/blog/032-hosting-a-gemini-server/amfora.png)
 
-*Amfora: geminimg.cleberg.io*
+*Amfora: gemini.cleberg.io*
