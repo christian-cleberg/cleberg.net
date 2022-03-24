@@ -9,7 +9,7 @@ draft = false
 
 ### My Personal Data Flow
 
-```ascii
+```txt
                                                           ┌───────┐   ┌─────────────────┐
                                                        ┌──► VLAN1 ├───► Private Devices │
                                                        │  └───────┘   └─────────────────┘
