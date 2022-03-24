@@ -152,7 +152,7 @@ the `threshold` in the `visual_recognition.classify()` function.
 
 When your program runs, it should show the output below for each photo you provide.
 
-```text
+```txt
 ----------------------------------------------------------------
 Image Title:  Grizzly Bear
 Image URL: https://example.com/photos/20140717.jpg

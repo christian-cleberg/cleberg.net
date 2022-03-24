@@ -62,7 +62,7 @@ sudo nano /etc/apache2/sites-available/nextcloud.conf
 
 Once the editor is open, paste the following information in. Then, save and close the file.
 
-```apacheconfig
+```config
 <VirtualHost *:80>
     DocumentRoot /var/www/example.com
     ServerName  example.com

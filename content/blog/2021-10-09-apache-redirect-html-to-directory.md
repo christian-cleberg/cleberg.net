@@ -24,7 +24,7 @@ To solve this problem, I really needed to solve two pieces:
 
 After *a lot* of tweaking and testing, I believe I have finally found the solution. The solution is shown below.
 
-```apacheconfig
+```config
 RewriteEngine On
 RewriteCond %{REQUEST_URI} !\index.html$ [NC]
 RewriteRule ^(.*).html$ https://example.com/$1 [R=301,L]

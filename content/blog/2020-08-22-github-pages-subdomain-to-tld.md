@@ -23,7 +23,7 @@ E.g.: `example.com`
 
 Add these 5 entries to the very top of your DNS configuration:
 
-```text
+```txt
 @        A        185.199.108.153
 @        A        185.199.109.153
 @        A        185.199.110.153

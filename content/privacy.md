@@ -18,12 +18,12 @@ This website collects only the bare essential information to provide a secure an
 The web server software running this website, Nginx/1.18.0 (Debian), collects two logs of information automatically. See below for examples of information collected in each log:
 
 **Error Log**  
-```apacheconfig
+```config
 2022/02/23 05:53:57 [error] 35218#35218: *1090 directory index of "/var/www/img.cleberg.io/" is forbidden, client: XXX.XXX.XXX.XXX, server: img.cleberg.io, request: "GET / HTTP/1.1", host: "XXX.XXX.XXX.XXX"
 ```
 
 **Access Log**  
-```apacheconfig
+```config
 XXX.XXX.XXX.XXX - - [23/Feb/2022:15:05:15 +0000] "GET http://cleberg.io/phpmyadmin/scripts/setup.php HTTP/1.0" 404 153 "-" "-"
 ```
 
@@ -37,7 +37,7 @@ Beginning on 2022-02-02, this website utilizes [Nullitics](https://nullitics.com
 
 Here's an example of everything Nullitics provides for a user who visits this page - I can't see anything more than this:
 
-```text
+```txt
 Timeframe: 6:00 - 7:00 CT
 Path: /blog/i-passed-the-cisa/
 Referrer: duckduckgo.com

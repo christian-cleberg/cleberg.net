@@ -17,7 +17,7 @@ style 3 levels of headings, regular text, links (which will display on their own
 
 Here's a complete listing of valid Gemtext:
 
-```text
+```txt
 # Heading 1
 ## Heading 2
 ### Heading 3

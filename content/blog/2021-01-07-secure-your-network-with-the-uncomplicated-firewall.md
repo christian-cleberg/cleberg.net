@@ -89,7 +89,7 @@ Now that the firewall is enabled, let's check and see what the rules look like.
 sudo ufw status numbered
 ```
 
-```text
+```txt
 Status: active
 
      To                    Action      From
@@ -119,7 +119,7 @@ sudo ufw app list
 
 The results should look something like this:
 
-```text
+```txt
 Available applications:
     OpenSSH
     Samba
@@ -136,7 +136,7 @@ sudo ufw app info plexmediaserver-dlna
 
 You'll get a blurb of info back like this:
 
-```text
+```txt
 Profile: plexmediaserver-dlna
 Title: Plex Media Server (DLNA)
 Description: The Plex Media Server (additional DLNA capability only)
@@ -163,7 +163,7 @@ Within the file you create, you need to make sure the content is properly format
 
 For example, here are the contents my `plexmediaserver` file, which creates three distinct app rules for ufw:
 
-```text
+```config
 [plexmediaserver]
 title=Plex Media Server (Standard)
 description=The Plex Media Server
@@ -186,7 +186,7 @@ So, if I wanted to create a custom app rule called "mycustomrule", I'd create a 
 sudo nano /etc/ufw/applications.d/mycustomrule
 ```
 
-```text
+```config
 [mycustomrule]
 title=My Custom Rule
 description=This is a temporary ufw app rule.

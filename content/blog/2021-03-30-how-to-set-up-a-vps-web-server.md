@@ -76,7 +76,7 @@ that DNS over to your new VPS provider. For me, I route my DNS through [Gandi](h
 Once you know where your DNS settings are, go ahead and update the `A` records to match the public IP address of your
 VPS. For example:
 
-```text
+```txt
 A         example.com     xxx.xxx.xxx.xxx
 A         subdomain       xxx.xxx.xxx.xxx
 CNAME     www             example.com.
@@ -222,7 +222,7 @@ sudo nano example.com.conf
 This configuration file will have a few default lines, but you'll need to edit it to look similar to this (settings may
 change based on your personal needs):
 
-```text
+```config
 <VirtualHost *:80>
     ServerAdmin your-email@email-provider.com
     ServerName example.com

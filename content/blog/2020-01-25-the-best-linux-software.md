@@ -174,7 +174,7 @@ sudo nano /etc/pacman.conf
 
 Now, scroll down and uncomment the `multilib` section.
 
-```text
+```config
 # Before:
 #[multilib]
 #Include = /etc/pacman.d/mirrorlist

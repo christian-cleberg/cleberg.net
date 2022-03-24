@@ -44,7 +44,7 @@ sudo nano /etc/fstab
 
 Each drive you want to mount on boot should have its own line in the `/etc/fstab` file that looks similar to this:
 
-```text
+```config
 UUID=B64E53824E5339F7 /path/to/folder ntfs-3g uid=1000,gid=1000 0 0
 ```
 
