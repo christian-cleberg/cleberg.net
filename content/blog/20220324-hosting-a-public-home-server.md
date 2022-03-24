@@ -7,6 +7,22 @@ draft = false
 
 ## Planning Data Flows & Security
 
+### My Personal Data Flow
+
+```ascii
+                                                          ┌───────┐   ┌─────────────────┐
+                                                       ┌──► VLAN1 ├───► Private Devices │
+                                                       │  └───────┘   └─────────────────┘
+┌──────────┐   ┌────────┐   ┌──────────┐   ┌────────┐  │
+│ Internet ├───► Router ├───► Firewall ├───► Switch ├──┤
+└──────────┘   └────────┘   └──────────┘   └────────┘  │
+                                                       │  ┌───────┐   ┌───────────────┐
+                                                       └──► VLAN2 ├───► Public Server │
+                                                          └───────┘   └───────────────┘
+```
+
+### Thought Process
+
 To serve content from your home server, you have to think about the transport of data from `server` to `client`.
 
 Let's start with the actual server itself. Think about the following:
