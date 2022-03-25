@@ -54,7 +54,7 @@ geo_data = gpd.read_file('https://raw.githubusercontent.com/datasets/geo-countri
 geo_data.head()
 ```
 
-![GeoJSON Dataframe](https://img.cleberg.io/blog/019-world-choropleth-map/geojson_df.png)
+![GeoJSON Dataframe](https://img.cleberg.io/blog/20200925-world-choropleth-map/geojson_df.png)
 
 _Fig. 1 - GeoJSON Dataframe_
 
@@ -66,7 +66,7 @@ happy_data = pd.read_csv(r'~/Downloads/world_happiness_data_2019.csv')
 happy_data.head()
 ```
 
-![Happiness Dataframe](https://img.cleberg.io/blog/019-world-choropleth-map/happiness_df.png)
+![Happiness Dataframe](https://img.cleberg.io/blog/20200925-world-choropleth-map/happiness_df.png)
 
 _Fig. 2 - Happiness Dataframe_
 
@@ -109,7 +109,7 @@ merged_df = merged_df.rename(columns = {'ADMIN':'GeoJSON_Country'})
 merged_df = merged_df.rename(columns = {'Country or region':'Country'})
 ```
 
-[Merged Dataframe](https://img.cleberg.io/blog/019-world-choropleth-map/merged_df.png)
+[Merged Dataframe](https://img.cleberg.io/blog/20200925-world-choropleth-map/merged_df.png)
 
 _Fig. 3 - Merged Dataframe_
 
@@ -145,7 +145,7 @@ folium.Choropleth(
 
 Let's look at the resulting map.
 
-![Choropleth Map](https://img.cleberg.io/blog/019-world-choropleth-map/map.png)
+![Choropleth Map](https://img.cleberg.io/blog/20200925-world-choropleth-map/map.png)
 
 _Fig. 4 - Choropleth Map_
 
@@ -198,6 +198,6 @@ world_map
 
 The final image below will show you what the tooltip looks like whenever you hover on a country.
 
-![Choropleth Map Tooltip](https://img.cleberg.io/blog/019-world-choropleth-map/tooltip_map.png)
+![Choropleth Map Tooltip](https://img.cleberg.io/blog/20200925-world-choropleth-map/tooltip_map.png)
 
 _Fig. 5 - Choropleth Map Tooltip_

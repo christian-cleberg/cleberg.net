@@ -149,4 +149,4 @@ remote: https://builds.sr.ht/~kaizoku/job/689803 [.build.yml]
 Now that you've properly built your Sourcehut page, you can browse to your-username.srht.site in a Gemini browser and
 view the final results. Take a look at the image below for my Sourcehut Gemini capsule.
 
-![Gemini page on the amfora browser](https://img.cleberg.io/blog/029-launching-a-gemini-capsule/amfora.png)
+![Gemini page on the amfora browser](https://img.cleberg.io/blog/20210328-launching-a-gemini-capsule/amfora.png)

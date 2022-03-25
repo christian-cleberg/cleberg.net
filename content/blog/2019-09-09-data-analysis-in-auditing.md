@@ -12,7 +12,7 @@ A quick aside before I dive into this post: `data analytics` is a vague term tha
 
 One of the common mistakes that managers (and anyone new to the process) make is assuming that everything involved with this process is "data analytics". In fact, data analytics are only a small part of the process. See **Figure 1** for a more accurate representation of where data analysis sits within the full process. This means that data analytics do not include querying or extracting data, selecting samples, or performing audit tests. These steps can be necessary for an audit (and may even be performed by the same associates), but they are not data analytics.
 
-![The Intelligence Cycle](https://img.cleberg.io/blog/004-data-analysis-in-auditing/intelligence_cycle-min.png)
+![The Intelligence Cycle](https://img.cleberg.io/blog/20190909-data-analysis-in-auditing/intelligence_cycle-min.png)
 
 _Figure 1: The Intelligence Cycle_
 
@@ -40,7 +40,7 @@ The DELTA model sets a few guidelines for areas wanting to implement data analyt
 - **Targets**: Must be set for key areas and risks that the analytics can be compared against (KPIs).
 - **Analysts**: There must be auditors willing and able to perform data analytics or else the system cannot be sustained.
 
-![The DELTA Model](https://img.cleberg.io/blog/004-data-analysis-in-auditing/delta-min.png)
+![The DELTA Model](https://img.cleberg.io/blog/20190909-data-analysis-in-auditing/delta-min.png)
 
 _Figure 2: The DELTA Model_
 
@@ -96,11 +96,11 @@ Lastly, let's take a look at an example of data visualization. This example come
 
 This is the kind of result that easily describes the data for you. However, make sure to include an explanation of what the results mean. Don't let the reader assume what the data means, especially if it relates to a complex subject. _Tell a story_ about the data and why the results matter. For example, **Figure 4** shows a part of the explanation the author gives to illustrate his point.
 
-![Entry-Level Visualization](https://img.cleberg.io/blog/004-data-analysis-in-auditing/vis_example-min.png)
+![Entry-Level Visualization](https://img.cleberg.io/blog/20190909-data-analysis-in-auditing/vis_example-min.png)
 
 _Figure 3: Entry-Level Visualization_
 
-![Entry-Level Visualization](https://img.cleberg.io/blog/004-data-analysis-in-auditing/vis_example_explanation-min.png)
+![Entry-Level Visualization](https://img.cleberg.io/blog/20190909-data-analysis-in-auditing/vis_example_explanation-min.png)
 
 _Figure 4: Visualization Explanation_
 

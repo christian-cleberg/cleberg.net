@@ -14,7 +14,7 @@ One of the most significant strategic planning and management frameworks that co
 
 This framework uses a two-by-two figure to show the four strategic options for companies to use in this framework: market penetration, market development, product development, and diversification (see **Figure 1**). The x-axis of the matrix focuses on the firm's markets and also determines if the firm is looking to enter new markets or innovate in its current markets. The y-axis of the matrix focuses on the firm's products and determines if the firm wants to pursue strategies around their existing products or explore new products.
 
-![The Ansoff Matrix](https://img.cleberg.io/blog/005-the-ansoff-matrix/ansoff_matrix-min.png)
+![The Ansoff Matrix](https://img.cleberg.io/blog/20191203-the-ansoff-matrix/ansoff_matrix-min.png)
 
 _Figure 1: The Ansoff Matrix_ - [By JaisonAbeySabu - Own work, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=33604757)
 

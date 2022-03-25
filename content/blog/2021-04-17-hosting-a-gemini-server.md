@@ -130,10 +130,10 @@ You can put whatever you want in the "index.gmi" file, just make sure it's valid
 Here are some screenshots of the Gemini page I just created in the [Lagrange browser](https://gmi.skyjake.fi/lagrange/) and
 the [amfora](https://github.com/makeworld-the-better-one/amfora) browser.
 
-![](https://img.cleberg.io/blog/032-hosting-a-gemini-server/lagrange.png)
+![](https://img.cleberg.io/blog/20210417-hosting-a-gemini-server/lagrange.png)
 
 *Lagrange: gemini.cleberg.io*
 
-![](https://img.cleberg.io/blog/032-hosting-a-gemini-server/amfora.png)
+![](https://img.cleberg.io/blog/20210417-hosting-a-gemini-server/amfora.png)
 
 *Amfora: gemini.cleberg.io*

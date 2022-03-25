@@ -17,7 +17,7 @@ dev tools.
 Before I move on to the technical aspects of my set-up, I want to take some time and express my thoughts on the overall
 OS.
 
-![](https://img.cleberg.io/blog/027-macos-testing-out-a-new-os/macos-desktop.png)
+![](https://img.cleberg.io/blog/20210219-macos-testing-out-a-new-os/macos-desktop.png)
 
 As expected, the initial computer setup is breeze with Mac's guided GUI installer.
 
@@ -54,7 +54,7 @@ With only a few minutes of installing and tweaking a few packages, I was able to
 feel very comfortable using. See the image below for a preview of the iTerm2 app with a split view between my macOS
 desktop shell and an SSH session into my server.
 
-![](https://img.cleberg.io/blog/027-macos-testing-out-a-new-os/iterm2.png)
+![](https://img.cleberg.io/blog/20210219-macos-testing-out-a-new-os/iterm2.png)
 
 ## Xcode
 

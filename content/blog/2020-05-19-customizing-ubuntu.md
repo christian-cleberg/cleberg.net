@@ -16,7 +16,7 @@ In this post, I'm going to go through customization on Ubuntu 20.04 (GNOME) sinc
 
 ### Required Tools
 
-![GNOME Tweaks](https://img.cleberg.io/blog/012-customizing-ubuntu/gnome-tweaks-min.png)
+![GNOME Tweaks](https://img.cleberg.io/blog/20200519-customizing-ubuntu/gnome-tweaks-min.png)
 
 Ubuntu 20.04 ships with the default desktop environment [GNOME](https://www.gnome.org/), which includes the handy `gnome-tweaks` tool to quickly change designs. To install this, just open your terminal and enter the following command:
 
@@ -56,7 +56,7 @@ cinnamon  COPYING  gnome-shell  gtk-2.0  gtk-3.0  index.theme  metacity-1  plank
 
 To change the appearance of the title bar, default dock, app menu, and other parts of the GNOME shell, you'll need to install the [User Themes](https://extensions.gnome.org/extension/19/user-themes/) extension on [GNOME Extensions](https://extensions.gnome.org/). To be able to install extensions, you will first need to install the browser extension that the website instructs you to. See this screenshot for the blue box with a link to the extension.
 
-![GNOME Extensions](https://img.cleberg.io/blog/012-customizing-ubuntu/gnome-extensions-min.png)
+![GNOME Extensions](https://img.cleberg.io/blog/20200519-customizing-ubuntu/gnome-extensions-min.png)
 
 After the browser extension in installed, you will need to install the native host connector:
 

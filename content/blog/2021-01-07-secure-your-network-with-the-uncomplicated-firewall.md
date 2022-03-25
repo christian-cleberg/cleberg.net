@@ -18,7 +18,7 @@ front-end to iptables.
 [Gufw](https://gufw.org) is available as a graphical user interface (GUI) application for users who are uncomfortable
 setting up a firewall through a terminal.
 
-![](https://img.cleberg.io/blog/026-secure-your-network-with-the-uncomplicated-firewall/gufw.png)
+![](https://img.cleberg.io/blog/20210107-secure-your-network-with-the-uncomplicated-firewall/gufw.png)
 
 ## Getting Help
 

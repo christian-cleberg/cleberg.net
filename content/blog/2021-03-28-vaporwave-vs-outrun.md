@@ -13,11 +13,11 @@ all aesthetics in these two genres are usually attributed to Vaporwave. For exam
 results for Vaporwave - the results include **a lot** of Outrun-themed images. You'll find a similar trend almost
 everywhere.
 
-![](https://img.cleberg.io/blog/030-vaporwave-vs-outrun/vaporwave-search-results.png)
+![](https://img.cleberg.io/blog/20210328-vaporwave-vs-outrun/vaporwave-search-results.png)
 
 ## Vaporwave
 
-![](https://img.cleberg.io/blog/030-vaporwave-vs-outrun/macintosh-plus.png)
+![](https://img.cleberg.io/blog/20210328-vaporwave-vs-outrun/macintosh-plus.png)
 
 Okay, so what is Vaporwave? I'm going to just copy-and-paste some general info from the Wikipedia article
 on [Vaporwave](https://en.wikipedia.org/wiki/Vaporwave), so that I'm not repeating everything you can already search for
@@ -53,7 +53,7 @@ of Vaporwave.
 
 ## Outrun
 
-![](https://img.cleberg.io/blog/030-vaporwave-vs-outrun/outrun.png)
+![](https://img.cleberg.io/blog/20210328-vaporwave-vs-outrun/outrun.png)
 
 Now, let's get to Outrun. This one is a little trickier since the genre has largely been lumped under the Vaporwave
 title for so long. However, it stems from the [Synthwave](https://en.wikipedia.org/wiki/Synthwave) music genre and is
@@ -80,13 +80,13 @@ aesthetic.
 Outrun enthusiasts love what people in the 1980s thought the future would look like. Take a look at a common video game
 discussed in Outrun circles, Far Cry 3: Blood Dragon:
 
-![](https://img.cleberg.io/blog/030-vaporwave-vs-outrun/far-cry.png)
+![](https://img.cleberg.io/blog/20210328-vaporwave-vs-outrun/far-cry.png)
 
 Another example that doesn't force the color scheme as hard as some online art does is Kung Fury:
 
-![](https://img.cleberg.io/blog/030-vaporwave-vs-outrun/kung-fury.png)
+![](https://img.cleberg.io/blog/20210328-vaporwave-vs-outrun/kung-fury.png)
 
-![](https://img.cleberg.io/blog/030-vaporwave-vs-outrun/kung-fury-hacker.png)
+![](https://img.cleberg.io/blog/20210328-vaporwave-vs-outrun/kung-fury-hacker.png)
 
 ## Conclusion
 

@@ -48,7 +48,7 @@ map_LNK = folium.Map(location=[latitude, longitude], zoom_start=12)
 map_LNK
 ```
 
-![Blank map](https://img.cleberg.io/blog/014-ibm-data-science/01_blank_map-min.png "Blank map")
+![Blank map](https://img.cleberg.io/blog/20200726-ibm-data-science/01_blank_map-min.png "Blank map")
 
 Now that we have defined our city and created the map, we need to go get the business data. The Foursquare API will limit the results to 100 per API call, so we use our first API call below to determine the total results that Foursquare has found. Since the total results is 232, we perform the API fetching process three times (100 + 100 + 32 = 232).
 
@@ -181,7 +181,7 @@ nearby_venues = nearby_venues.reset_index(drop=True)
 nearby_venues
 ```
 
-![Clean data](https://img.cleberg.io/blog/014-ibm-data-science/02_clean_data-min.png "Clean data")
+![Clean data](https://img.cleberg.io/blog/20200726-ibm-data-science/02_clean_data-min.png "Clean data")
 
 ## Visualize the Data
 
@@ -205,7 +205,7 @@ for lat, lng, name, categories in zip(nearby_venues['lat'], nearby_venues['lng']
 map_LNK
 ```
 
-![Initial data map](https://img.cleberg.io/blog/014-ibm-data-science/03_data_map-min.png "Initial data map")
+![Initial data map](https://img.cleberg.io/blog/20200726-ibm-data-science/03_data_map-min.png "Initial data map")
 
 ## Clustering: _k-means_
 
@@ -286,7 +286,7 @@ for lat, lng, name, categories, cluster in zip(nearby_venues['lat'], nearby_venu
 map_clusters
 ```
 
-![clustered map](https://img.cleberg.io/blog/014-ibm-data-science/04_clusters-min.png "clustered map")
+![clustered map](https://img.cleberg.io/blog/20200726-ibm-data-science/04_clusters-min.png "clustered map")
 
 ## Investigate Clusters
 
@@ -301,7 +301,7 @@ for x in range(0,6):
     print("---")
 ```
 
-![venues per cluster](https://img.cleberg.io/blog/014-ibm-data-science/05_venues_per_cluster-min.png "venues per cluster")
+![venues per cluster](https://img.cleberg.io/blog/20200726-ibm-data-science/05_venues_per_cluster-min.png "venues per cluster")
 
 Our last piece of analysis is to summarize the categories of businesses within each cluster. With these results, we can
 clearly see that restaurants, coffee shops, and grocery stores are the most popular.
@@ -328,9 +328,9 @@ with pd.option_context('display.max_rows', None, 'display.max_columns', None):
     print("\n\n", "Cluster 5:", "\n", cluster5_grouped.loc[cluster5_grouped['Cluster Labels'] > 1])
 ```
 
-![venue categories per cluster pt. 1](https://img.cleberg.io/blog/014-ibm-data-science/06_categories_per_cluster_pt1-min.png "venue categories per cluster pt. 1")
+![venue categories per cluster pt. 1](https://img.cleberg.io/blog/20200726-ibm-data-science/06_categories_per_cluster_pt1-min.png "venue categories per cluster pt. 1")
 
-![venue categories per cluster pt. 2](https://img.cleberg.io/blog/014-ibm-data-science/07_categories_per_cluster_pt2-min.png "venue categories per cluster pt. 2")
+![venue categories per cluster pt. 2](https://img.cleberg.io/blog/20200726-ibm-data-science/07_categories_per_cluster_pt2-min.png "venue categories per cluster pt. 2")
 
 ## Discussion
 
