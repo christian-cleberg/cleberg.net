@@ -8,7 +8,7 @@ description = "Fix issues with NTFS-formatted hard drives with Linux and Steam."
 
 ![Steam example](https://img.cleberg.io/blog/007-the-best-linux-software/steam.png "Steam example")
 
-If you want to see how to install Steam on Linux, see my other post: [The Best Linux Software](the-best-linux-software/).
+If you want to see how to install Steam on Linux, see my other post: [The Best Linux Software](../the-best-linux-software/).
 
 Are you having trouble launching games, even though they've installed correctly? This may happen if you're storing your games on an NTFS-formatted drive. This shouldn't be an issue if you're storing your games on the same drive that Steam is on, but some gamers prefer to put Steam on their main drive and game files on another SSD or HDD.
 
