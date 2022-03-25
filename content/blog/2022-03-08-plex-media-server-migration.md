@@ -12,6 +12,7 @@ I recently decided to migrate my server from an old OptiPlex desktop machine to 
 The second part of this migration is that the new server uses an Nvidia GPU and does not have any integrated graphics, which requires extra work for installation - but provides much better hardware transcoding options for Plex.
 
 Therefore, I have broken this migration down into three phases:
+
 1. [Configure the New Server](#phase-1-configure-the-new-server)
 2. [Migrate Plex Data & Devices](#phase-2-migrate-plex-data-devices)
 3. [Configure GPU Transcoding](#phase-3-configure-gpu-transcoding)
@@ -70,7 +71,7 @@ This phase uses the great Plex article on migrations ([Move an Install to Anothe
 
 **Source:** The original server that is being replaced.  
 **Destination:** The new server.  
-**Client:** Any application that can be used to modify settings for both source/destination.  
+**Client:** Any application that can be used to modify settings for both source/destination.
 
 ### Step 01: [Client] Update Settings
 
@@ -93,7 +94,7 @@ sudo systemctl stop plexmediaserver.service
 First, stop the Plex service so that no data is created or modified during the migration.
 
 ```bash
-sudo systemctl stop plexmediaserver.service 
+sudo systemctl stop plexmediaserver.service
 ```
 
 Next, copy the data to the new server. To find where the Plex data directory is located, Plex has another excellent article available: [Where is the Plex Media Server data directory located?](https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/).
@@ -132,6 +133,7 @@ sudo systemctl status plexmediaserver.service
 The first step - now that the new server is up and running - is to sign out of the client and sign back in. Once this is done, update any library locations, if necessary. This was unnecessary in my case since I simply moved my storage drives from the source server to the destination server.
 
 Next, perform the following actions in the client:
+
 1. On the left sidebar, click `More` > Three-Dot Menu > `Scan Library Files`
 2. _Enable_ the `Account` > `Library` > `Empty trash automatically after every scan` preference for the source server.
 3. On the left sidebar, click `More` > Three-Dot Menu > `Manage Server` > `Empty Trash`

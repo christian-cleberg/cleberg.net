@@ -43,7 +43,7 @@ Once the data leaves the server, where does it go? In my case, it goes to a mana
 Now, the data has been processed through the switch. Where does it go next? In my case, it's pretty simple - it goes to the router/modem device:
 
 - Does my ISP block any ports that I need?
-	- This is an important one that a lot of people run into when self-hosting at home. Use an online port-checker tool for your IP or call your ISP if you think ports are blocked.
+  - This is an important one that a lot of people run into when self-hosting at home. Use an online port-checker tool for your IP or call your ISP if you think ports are blocked.
 - Is there a router firewall?
   - Yes, I checked that it's configured to allow the ports I need to run my services publicly.
 - Are there any other settings affecting inbound/outbound traffic?

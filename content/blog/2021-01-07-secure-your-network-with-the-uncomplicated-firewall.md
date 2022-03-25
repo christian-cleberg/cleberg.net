@@ -6,17 +6,11 @@ description = "Learn how to use the UFW, one of the simplest and most widely ava
 
 ## Uncomplicated Firewall
 
-Uncomplicated Firewall, also known as ufw, is a convenient and beginner-friendly way to enforce OS-level firewall rules.
-For those who are hosting servers or any device that is accessible to the world (i.e. by public IP or domain name), it's
-critical that a firewall is properly implemented and active.
+Uncomplicated Firewall, also known as ufw, is a convenient and beginner-friendly way to enforce OS-level firewall rules. For those who are hosting servers or any device that is accessible to the world (i.e. by public IP or domain name), it's critical that a firewall is properly implemented and active.
 
-Ufw is available by default in all Ubuntu installations after 8.04 LTS. For other distributions, you can look to install
-ufw or check if there are alternative firewalls installed already. There are usually alternatives available, such as
-Fedora's `firewall` and the package available on most distributions: `iptables`. ufw is considered a beginner-friendly
-front-end to iptables.
+Ufw is available by default in all Ubuntu installations after 8.04 LTS. For other distributions, you can look to install ufw or check if there are alternative firewalls installed already. There are usually alternatives available, such as Fedora's `firewall` and the package available on most distributions: `iptables`. ufw is considered a beginner-friendly front-end to iptables.
 
-[Gufw](https://gufw.org) is available as a graphical user interface (GUI) application for users who are uncomfortable
-setting up a firewall through a terminal.
+[Gufw](https://gufw.org) is available as a graphical user interface (GUI) application for users who are uncomfortable setting up a firewall through a terminal.
 
 ![](https://img.cleberg.io/blog/20210107-secure-your-network-with-the-uncomplicated-firewall/gufw.png)
 
@@ -30,16 +24,13 @@ sudo ufw --help
 
 ## Set Default State
 
-The proper way to run a firewall is to set a strict default state and slowly open up ports that you want to allow. This
-helps prevent anything malicious from slipping through the cracks. The following command prevents all incoming traffic (
-other than the rules we specify later), but you can also set this for outgoing connections, if necessary.
+The proper way to run a firewall is to set a strict default state and slowly open up ports that you want to allow. This helps prevent anything malicious from slipping through the cracks. The following command prevents all incoming traffic (other than the rules we specify later), but you can also set this for outgoing connections, if necessary.
 
 ```bash
 sudo ufw default deny incoming
 ```
 
-You should also allow outgoing traffic if you want to allow the device to communicate back to you or other parties. For
-example, media servers like Plex need to be able to send out data related to streaming the media.
+You should also allow outgoing traffic if you want to allow the device to communicate back to you or other parties. For example, media servers like Plex need to be able to send out data related to streaming the media.
 
 ```bash
 sudo ufw default allow outgoing
@@ -47,15 +38,13 @@ sudo ufw default allow outgoing
 
 ## Adding Port Rules
 
-Now that we've disabled all incoming traffic by default, we need to open up some ports (or else no traffic would be able
-to come in). If you need to be able to `ssh` into the machine, you'll need to open up port 22.
+Now that we've disabled all incoming traffic by default, we need to open up some ports (or else no traffic would be able to come in). If you need to be able to `ssh` into the machine, you'll need to open up port 22.
 
 ```bash
 sudo ufw allow 22
 ```
 
-You can also issue more restrictive rules. The following rule will allow `ssh` connections only from machines on the
-local subnet.
+You can also issue more restrictive rules. The following rule will allow `ssh` connections only from machines on the local subnet.
 
 ```bash
 sudo ufw allow proto tcp from 192.168.0.0/24 to any port 22
@@ -100,8 +89,7 @@ Status: active
 
 ## Deleting Rules
 
-If you need to delete a rule, you need to know the number associated with that rule. Let's delete the first rule in the
-table above - you'll be asked to confirm the deletion.
+If you need to delete a rule, you need to know the number associated with that rule. Let's delete the first rule in the table above - you'll be asked to confirm the deletion.
 
 ```bash
 sudo ufw delete 1
@@ -109,9 +97,7 @@ sudo ufw delete 1
 
 ## Managing App Rules
 
-Luckily, there's a convenient way for installed applications to create files that ufw can easily implement so that you
-don't have to search and find which ports your application requires. To see if your device has any applications with
-pre-installed ufw rules, execute the following command:
+Luckily, there's a convenient way for installed applications to create files that ufw can easily implement so that you don't have to search and find which ports your application requires. To see if your device has any applications with pre-installed ufw rules, execute the following command:
 
 ```bash
 sudo ufw app list
@@ -158,8 +144,7 @@ sudo ufw delete RULE|NUM
 
 ## Creating App Rules
 
-If you'd like to create you own app rule, you'll need to create a file in the `/etc/ufw/applications.d` directory.
-Within the file you create, you need to make sure the content is properly formatted.
+If you'd like to create you own app rule, you'll need to create a file in the `/etc/ufw/applications.d` directory. Within the file you create, you need to make sure the content is properly formatted.
 
 For example, here are the contents my `plexmediaserver` file, which creates three distinct app rules for ufw:
 

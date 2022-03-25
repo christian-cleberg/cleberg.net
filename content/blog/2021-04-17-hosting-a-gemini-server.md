@@ -10,13 +10,11 @@ To read more about Gemini and ways to test out this new protocol without your ow
 
 ## Preparation
 
-This guide assumes you have access to a server accessible to the world through a public IP address and that you own a
-domain name used for this Gemini capsule.
+This guide assumes you have access to a server accessible to the world through a public IP address and that you own a domain name used for this Gemini capsule.
 
 ## Getting Started with Agate
 
-We are going to use [Agate](https://github.com/mbrubeck/agate) for this tutorial. This is a very simple Gemini server
-written in Rust. It takes very little time and maintenance to get it running.
+We are going to use [Agate](https://github.com/mbrubeck/agate) for this tutorial. This is a very simple Gemini server written in Rust. It takes very little time and maintenance to get it running.
 
 ## Install Dependencies
 
@@ -84,8 +82,7 @@ WorkingDirectory=/var/gemini/
 ExecStart=agate --hostname gemini.example.com --lang en
 ```
 
-Since we've altered the systemd configuration files, we have to reload the daemon. Let's do that, restart our service,
-and check its status.
+Since we've altered the systemd configuration files, we have to reload the daemon. Let's do that, restart our service, and check its status.
 
 ```bash
 sudo systemctl daemon-reload
@@ -95,8 +92,7 @@ sudo systemctl status gemini.service
 
 ## Fixing Systemd Errors
 
-If you're still getting errors, the installation process may not have properly enabled the gemini service. Fix it with
-the following commands.
+If you're still getting errors, the installation process may not have properly enabled the gemini service. Fix it with the following commands.
 
 ```bash
 sudo systemctl enable gemini.service
@@ -106,8 +102,7 @@ sudo systemctl status gemini.service
 
 ## Firewall Rules
 
-Great! Our server is now functional and running. The first consideration now is that you need to be able to access port
-1965 on the server. If you have a firewall enabled, you'll need to open that port up.
+Great! Our server is now functional and running. The first consideration now is that you need to be able to access port 1965 on the server. If you have a firewall enabled, you'll need to open that port up.
 
 ```bash
 sudo ufw allow 1965
@@ -127,13 +122,12 @@ You can put whatever you want in the "index.gmi" file, just make sure it's valid
 
 ## The Results
 
-Here are some screenshots of the Gemini page I just created in the [Lagrange browser](https://gmi.skyjake.fi/lagrange/) and
-the [amfora](https://github.com/makeworld-the-better-one/amfora) browser.
+Here are some screenshots of the Gemini page I just created in the [Lagrange](https://gmi.skyjake.fi/lagrange/) browser and the [amfora](https://github.com/makeworld-the-better-one/amfora) browser.
 
-![](https://img.cleberg.io/blog/20210417-hosting-a-gemini-server/lagrange.png)
+![GUI Gemini browser](https://img.cleberg.io/blog/20210417-hosting-a-gemini-server/lagrange.png)
 
 *Lagrange: gemini.cleberg.io*
 
-![](https://img.cleberg.io/blog/20210417-hosting-a-gemini-server/amfora.png)
+![CLI Gemini browser](https://img.cleberg.io/blog/20210417-hosting-a-gemini-server/amfora.png)
 
 *Amfora: gemini.cleberg.io*

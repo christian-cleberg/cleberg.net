@@ -44,11 +44,13 @@ nano /var/www/your_domain/html/index.html
 The next part, creating the Nginx configuration files, is quite a bit different from Apache. First, you need to create the files in the `sites-available` folder and symlink it the `sites-enabled` folder.
 
 Creating the config file for your domain:
+
 ```bash
 sudo nano /etc/nginx/sites-available/your_domain
 ```
 
 Default content for an Nginx config file:
+
 ```bash
 server {
         listen 80;
@@ -66,6 +68,7 @@ server {
 ```
 
 Finally, symlink it together:
+
 ```bash
 sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
 ```
@@ -88,6 +91,7 @@ The configuration below shows a set-up where you only want your website to serve
 ```bash
 sudo nano /etc/nginx/sites-available/your_domain
 ```
+
 ```bash
 server {
     ...
@@ -100,6 +104,7 @@ server {
     ...
 }
 ```
+
 ```bash
 sudo systemctl restart nginx
 ```
@@ -107,6 +112,7 @@ sudo systemctl restart nginx
 ### Nginx vs. Apache
 
 As I stated at the beginning, my historical hesitation with trying Nginx was that the differences in configuration formats scared me away from leaving Apache. However, I actually prefer Nginx over Apache for a few reasons:
+
 1. Nginx uses only one config file (`your_domain`) vs. Apache's two-file approach for HTTP vs. HTTPS (`your_domain.conf` and `your_domain-le-ssl.conf`).
 2. Symlinking new configurations files and reloading Nginx is way easier than Apache's process of having to enable headers with `a2enmod mod_headers`, enable PHP with `a2enmod php` (plus any other mods you need), and then enabling sites with `a2ensite`, and THEN reloading Apache.
 3. The contents of the Nginx config files seem more organized and logical with the curly-bracket approach. This is a small one, but everything just felt cleaner while I was installing my sites and that had a big quality of life impact on the installation for me.

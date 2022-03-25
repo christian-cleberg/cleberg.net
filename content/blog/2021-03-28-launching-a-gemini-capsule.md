@@ -6,18 +6,13 @@ description = "Learn more about Gemini, an alternative internet protocol to the 
 
 ## What is Gemini?
 
-[Gemini](https://gemini.circumlunar.space/) is an internet protocol introduced in June 2019 as an alternative to HTTP(S)
-or Gopher. In layman's terms, it's an alternative way to browse sites (called capsules) that requires a special browser.
-Since Gemini is not standardized as an internet standard, normal web browsers won't be able to load a Gemini capsule -
-you'll need use [a Gemini-specific browser](https://gemini.circumlunar.space/clients.html).
+[Gemini](https://gemini.circumlunar.space/) is an internet protocol introduced in June 2019 as an alternative to HTTP(S) or Gopher. In layman's terms, it's an alternative way to browse sites (called capsules) that requires a special browser. Since Gemini is not standardized as an internet standard, normal web browsers won't be able to load a Gemini capsule - you'll need use [a Gemini-specific browser](https://gemini.circumlunar.space/clients.html).
 
-The content found within a Gemini page is called [Gemtext](https://gemini.circumlunar.space/docs/cheatsheet.gmi) and
-is *extremely* basic (on purpose). Gemini only processes text, no media content like images. However, you're able to
-style 3 levels of headings, regular text, links (which will display on their own line), quotes, and an unordered list.
+The content found within a Gemini page is called [Gemtext](https://gemini.circumlunar.space/docs/cheatsheet.gmi) and is _extremely_ basic (on purpose). Gemini only processes text, no media content like images. However, you're able to style 3 levels of headings, regular text, links (which will display on their own line), quotes, and an unordered list.
 
 Here's a complete listing of valid Gemtext:
 
-```txt
+````txt
 # Heading 1
 ## Heading 2
 ### Heading 3
@@ -34,58 +29,41 @@ My List:
 * Item
 
 ```Anything between three backticks will be rendered as code.```
-```
+````
 
 ## Free Option
 
-There are probably numerous websites that allow you to create your personal Gemini capsule, but I'm going to focus on
-the two sites that I have personally tested. The first option below, Midnight Pub, allows you to create/edit any Gemini
-files you want in your account. This is essentially a GUI option with a built-in text box for editing. The second option
-below, Sourcehut, allows you to use a Git repository and automatic build process to deploy your personal Gemini capsule
-every time you push a commit.
+There are probably numerous websites that allow you to create your personal Gemini capsule, but I'm going to focus on the two sites that I have personally tested. The first option below, Midnight Pub, allows you to create/edit any Gemini files you want in your account. This is essentially a GUI option with a built-in text box for editing. The second option below, Sourcehut, allows you to use a Git repository and automatic build process to deploy your personal Gemini capsule every time you push a commit.
 
 ### Midnight Pub - Beginner Friendly
 
-[Midnight Pub](https://midnight.pub/) is a small, virtual community meant to reflect the atmosphere of wandering into a
-small alley pub. The site is built in Gemtext and has a server-side process to convert Gemtext to HTML if someone loads
-the site in an HTTP(S) browser.
+[Midnight Pub](https://midnight.pub/) is a small, virtual community meant to reflect the atmosphere of wandering into a small alley pub. The site is built in Gemtext and has a server-side process to convert Gemtext to HTML if someone loads the site in an HTTP(S) browser.
 
-To create an account, you'll need to email the owner of the website to obtain a key - you can find their email on the
-Midnight Pub homepage. Once registered, head to [your account](https://midnight.pub/account) and
-select [manage site](https://midnight.pub/site). This is the screen where you can upload or create any files to be
-displayed on the internet.
+To create an account, you'll need to email the owner of the website to obtain a key - you can find their email on the Midnight Pub homepage. Once registered, head to [your account](https://midnight.pub/account) and select [manage site](https://midnight.pub/site). This is the screen where you can upload or create any files to be displayed on the internet.
 
-For example, I've created both an HTML file and a Gemini file. Remember that Gemini is automatically converted to HTML
-on the Pub, so you don't need an HTML version - I created an HTML version to add in some extra styling.
+For example, I've created both an HTML file and a Gemini file. Remember that Gemini is automatically converted to HTML on the Pub, so you don't need an HTML version - I created an HTML version to add in some extra styling.
 
-All you need to do is create a page like `index.gmi` and use your Gemini browser to head over to
-your-username.midnight.pub to see the result.
+All you need to do is create a page like `index.gmi` and use your Gemini browser to head over to your-username.midnight.pub to see the result.
 
 That's all there is to it! Easy enough, right? Let's check out a more advanced version in the next section.
 
 ## Paid Option
 
-As of 2021, Sourcehut has decided to require users to have a paid account in order to utilize their automated build
-system. For now, paid accounts can be as low as $2/month.
+As of 2021, Sourcehut has decided to require users to have a paid account in order to utilize their automated build system. For now, paid accounts can be as low as $2/month.
 
 ### Sourcehut
 
-[Sourcehut](https://sourcehut.org/) is a collection of software development tools, but mostly surrounds their hosted Git
-repository service. Simply put, it's a minimal and more private alternative to services like GitHub.
+[Sourcehut](https://sourcehut.org/) is a collection of software development tools, but mostly surrounds their hosted Git repository service. Simply put, it's a minimal and more private alternative to services like GitHub.
 
-This walkthrough is more advanced and involves things like Git, SSH, the command line. If you don't think you know
-enough to do this, check out my walkthrough on creating a Gemini capsule for the Midnight Pub instead.
+This walkthrough is more advanced and involves things like Git, SSH, the command line. If you don't think you know enough to do this, check out my walkthrough on creating a Gemini capsule for the Midnight Pub instead.
 
-The first thing you'll need to do is create an SSH key pair, if you don't already have one on your system. Once created,
-grab the contents of `id_rsa.pub` and add it to your Sourcehut account settings - this will allow you to push and pull
-code changes without using a username/password.
+The first thing you'll need to do is create an SSH key pair, if you don't already have one on your system. Once created, grab the contents of `id_rsa.pub` and add it to your Sourcehut account settings - this will allow you to push and pull code changes without using a username/password.
 
 ```bash
 ssh keygen
 ```
 
-Next up, let's create a repository with the proper name so that the Sourcehut build system will know we want them to
-host a website for us. Use the following format exactly:
+Next up, let's create a repository with the proper name so that the Sourcehut build system will know we want them to host a website for us. Use the following format exactly:
 
 ```bash
 mkdir your-username.srht.site && cd your-username.srht.site
@@ -121,15 +99,14 @@ tasks:
       acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz -Fprotocol=GEMINI
 ```
 
-For the `index.gmi` file, put whatever you want in there and save it. You could even just copy and paste the Gemtext
-cheatsheet.
+For the `index.gmi` file, put whatever you want in there and save it. You could even just copy and paste the Gemtext cheatsheet.
 
 If you want to serve both HTML and Gemini files from this repository, just add a second command to the `upload` section:
 
 ```yaml
-  - upload: |
-      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz -Fprotocol=GEMINI
-      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
+- upload: |
+    acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz -Fprotocol=GEMINI
+    acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
 ```
 
 Lastly, commit your changes and push them to the remote repo.
@@ -138,15 +115,13 @@ Lastly, commit your changes and push them to the remote repo.
 git add .; git commit -m "initial commit"; git push --set-upstream origin HEAD
 ```
 
-If you've successfully created the files with the proper format, you'll see the terminal print a message that lets you
-know where the automatic build is taking place. For example, here's what the terminal tells me:
+If you've successfully created the files with the proper format, you'll see the terminal print a message that lets you know where the automatic build is taking place. For example, here's what the terminal tells me:
 
 ```bash
 remote: Build started:
 remote: https://builds.sr.ht/~kaizoku/job/689803 [.build.yml]
 ```
 
-Now that you've properly built your Sourcehut page, you can browse to your-username.srht.site in a Gemini browser and
-view the final results. Take a look at the image below for my Sourcehut Gemini capsule.
+Now that you've properly built your Sourcehut page, you can browse to your-username.srht.site in a Gemini browser and view the final results. Take a look at the image below for my Sourcehut Gemini capsule.
 
 ![Gemini page on the amfora browser](https://img.cleberg.io/blog/20210328-launching-a-gemini-capsule/amfora.png)

@@ -6,61 +6,37 @@ description = "My personal experience with macOS, from the perspective of a Linu
 
 ## Diving into macOS
 
-After spending nearly 15 years working with Windows and focusing the last 8 years spending most of my time on Linux, I
-have experienced macOS for the first. By chance, my spouse happened to buy a new MacBook and gifted me her 2013 model.
-Of course, I still consider my Linux desktop to be my daily driver and keep Windows around for gaming needs, but over
-the past week I've found myself using the MacBook more and more for things that don't require gaming specs or advanced
-dev tools.
+After spending nearly 15 years working with Windows and focusing the last 8 years spending most of my time on Linux, I have experienced macOS for the first. By chance, my spouse happened to buy a new MacBook and gifted me her 2013 model. Of course, I still consider my Linux desktop to be my daily driver and keep Windows around for gaming needs, but over the past week I've found myself using the MacBook more and more for things that don't require gaming specs or advanced dev tools.
 
 ## Initial Thoughts
 
-Before I move on to the technical aspects of my set-up, I want to take some time and express my thoughts on the overall
-OS.
+Before I move on to the technical aspects of my set-up, I want to take some time and express my thoughts on the overall OS.
 
-![](https://img.cleberg.io/blog/20210219-macos-testing-out-a-new-os/macos-desktop.png)
+![macOS Desktop](https://img.cleberg.io/blog/20210219-macos-testing-out-a-new-os/macos-desktop.png)
 
 As expected, the initial computer setup is breeze with Mac's guided GUI installer.
 
-The desktop itself reminds me of GNOME more than anything else I've seen - even Pantheon
-from [ElementaryOS](https://elementary.io/), which people commonly refer to as the closest Linux distro to macOS. The
-desktop toolbar is great and far surpasses the utility of the GNOME toolbar due to the fact that the extensions and
-icons *actually work*. I launch macOS and immediately see my shortcuts for Tresorit, Bitwarden, and Mullvad pop up as
-the computer loads.
+The desktop itself reminds me of GNOME more than anything else I've seen - even Pantheon from [ElementaryOS](https://elementary.io/), which people commonly refer to as the closest Linux distro to macOS. The desktop toolbar is great and far surpasses the utility of the GNOME toolbar due to the fact that the extensions and icons *actually work*. I launch macOS and immediately see my shortcuts for Tresorit, Bitwarden, and Mullvad pop up as the computer loads.
 
-Even further, the app dock is very useful and will be yet another familiarity for GNOME users. I know many people like
-panels instead of docks, but I've always found docks to have a more pleasing UI. However, I had to disable the "Show
-recent applications in Dock" preference - I can't stand items taking up precious screen space if I'm not currently using
-them. On that same note, it's taking me some time to get use to the fact that I have to manually quit an app or else it
-will still stay open/active in the dock, even if I've closed out all windows for that app (e.g. Firefox).
+Even further, the app dock is very useful and will be yet another familiarity for GNOME users. I know many people like panels instead of docks, but I've always found docks to have a more pleasing UI. However, I had to disable the "Show recent applications in Dock" preference - I can't stand items taking up precious screen space if I'm not currently using them. On that same note, it's taking me some time to get use to the fact that I have to manually quit an app or else it will still stay open/active in the dock, even if I've closed out all windows for that app (e.g. Firefox).
 
-Overall, I'm having a lot of fun and for users who spend a large majority of their time performing basic tasks like web
-browsing, writing, watching media, etc., macOS is a fantastic option.
+Overall, I'm having a lot of fun and for users who spend a large majority of their time performing basic tasks like web browsing, writing, watching media, etc., macOS is a fantastic option.
 
-The rest of this post explains the technicalities of how I set up my CLI environment to make me feel more at-home,
-similar to the environments I set up on Fedora, Ubuntu, etc.
+The rest of this post explains the technicalities of how I set up my CLI environment to make me feel more at-home, similar to the environments I set up on Fedora, Ubuntu, etc.
 
 ## Making it Feel Like Home
 
-If you're someone who uses Linux primarily, no doubt your first thought when booting macOS will be the same as mine
-was: "Where is the terminal and how do I set up my favorite utilities?"
+If you're someone who uses Linux primarily, no doubt your first thought when booting macOS will be the same as mine was: "Where is the terminal and how do I set up my favorite utilities?"
 
-Luckily, macOS hasn't completely hidden away the development tools from the average user. You can easily find the
-Terminal app in the Launchpad area, but it's probably not what you're used to. I was surprised (and happy) to see that
-the default shell is `zsh`, the shell I use on all of my Linux distros. However, the commands are not the same - even
-the ones you may think are native to the shell. Commands like `dir` do not exist, so other native commands like `ls -la`
-or `pwd` are more useful here.
+Luckily, macOS hasn't completely hidden away the development tools from the average user. You can easily find the Terminal app in the Launchpad area, but it's probably not what you're used to. I was surprised (and happy) to see that the default shell is `zsh`, the shell I use on all of my Linux distros. However, the commands are not the same - even the ones you may think are native to the shell. Commands like `dir` do not exist, so other native commands like `ls -la` or `pwd` are more useful here.
 
-With only a few minutes of installing and tweaking a few packages, I was able to recreate a terminal environment that I
-feel very comfortable using. See the image below for a preview of the iTerm2 app with a split view between my macOS
-desktop shell and an SSH session into my server.
+With only a few minutes of installing and tweaking a few packages, I was able to recreate a terminal environment that I feel very comfortable using. See the image below for a preview of the iTerm2 app with a split view between my macOS desktop shell and an SSH session into my server.
 
-![](https://img.cleberg.io/blog/20210219-macos-testing-out-a-new-os/iterm2.png)
+![iTerm2](https://img.cleberg.io/blog/20210219-macos-testing-out-a-new-os/iterm2.png)
 
 ## Xcode
 
-My first step was to search the web for any hints on how to get `zsh` back up to the state I like, with extensions,
-themes, etc. My first step was to install the CLI tools for [Xcode](https://developer.apple.com/xcode/), Apple's suite
-of development tools.
+My first step was to search the web for any hints on how to get `zsh` back up to the state I like, with extensions, themes, etc. My first step was to install the CLI tools for [Xcode](https://developer.apple.com/xcode/), Apple's suite of development tools.
 
 ```bash
 sudo xcode-select -r
@@ -86,8 +62,7 @@ Error: Failed to link all completions, docs and manpages:
 Failed during: /usr/local/bin/brew update --force --quiet
 ```
 
-I found that the following permission modification worked like a charm. However, I noted that some users online
-discussed the fact that this solution may not work if your system has multiple users who each use Homebrew.
+I found that the following permission modification worked like a charm. However, I noted that some users online discussed the fact that this solution may not work if your system has multiple users who each use Homebrew.
 
 ```bash
 sudo chown -R $(whoami) $(brew --prefix)/*
@@ -105,15 +80,13 @@ brew cleanup
 
 ## iTerm2
 
-Now that I've installed the basic utilities for development, I moved onto installing iTerm2, a much better terminal than
-the default.
+Now that I've installed the basic utilities for development, I moved onto installing iTerm2, a much better terminal than the default.
 
 ```bash
 brew install --cask iterm2
 ```
 
-I also used the `Make iTerm2 Default Term` and `Install Shell Integration` options in the iTerm2 application menu to
-make sure I don't run into any issues later on with different terminals.
+I also used the `Make iTerm2 Default Term` and `Install Shell Integration` options in the iTerm2 application menu to make sure I don't run into any issues later on with different terminals.
 
 We will also install `zsh` so we can use it in iTerm2.
 
@@ -123,8 +96,7 @@ brew install zsh
 
 ## Oh-My-Zsh
 
-I've shown the great aspects of [Oh My Zsh](https://ohmyz.sh) in other blog posts, so I'll skip over that speech for
-now. Simply install it and run an update.
+I've shown the great aspects of [Oh My Zsh](https://ohmyz.sh) in other blog posts, so I'll skip over that speech for now. Simply install it and run an update.
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -144,22 +116,17 @@ Let's change the theme of the terminal to make it a little more friendly.
 open ~/.zshrc
 ```
 
-The third section of this file should contain a line like the code below. Change that theme
-to [any theme you want](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), save the file, and exit.
+The third section of this file should contain a line like the code below. Change that theme to [any theme you want](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes), save the file, and exit.
 
 ```bash
 ZSH_THEME="af-magic"
 ```
 
-After changing the `.zshrc` file, you'll need to close your terminal and re-open it to see the changes. Optionally, just
-open a new tab if you're using iTerm2 and you'll see the new shell config.
+After changing the `.zshrc` file, you'll need to close your terminal and re-open it to see the changes. Optionally, just open a new tab if you're using iTerm2 and you'll see the new shell config.
 
 ## Oh-My-Zsh Plugins
 
-Of course, my customization of `zsh` would not be complete
-without [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions). This will bring up commands you've run
-in the past as you type them. For example, if you've run `ssh user@192.168.1.99` before, the terminal will show this
-command as soon as you start typing it (e.g. `zsh u`), and you can hit the right arrow to autocomplete the command.
+Of course, my customization of `zsh` would not be complete without [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions). This will bring up commands you've run in the past as you type them. For example, if you've run `ssh user@192.168.1.99` before, the terminal will show this command as soon as you start typing it (e.g. `zsh u`), and you can hit the right arrow to autocomplete the command.
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -174,5 +141,4 @@ open ~/.zshrc
 plugins=(git zsh-autosuggestions)
 ```
 
-Remember: After changing the `.zshrc` file, you'll need to close your terminal and re-open it to see the changes.
-Optionally, just open a new tab if you're using iTerm2 and you'll see the new shell config.
+Remember: After changing the `.zshrc` file, you'll need to close your terminal and re-open it to see the changes. Optionally, just open a new tab if you're using iTerm2 and you'll see the new shell config.

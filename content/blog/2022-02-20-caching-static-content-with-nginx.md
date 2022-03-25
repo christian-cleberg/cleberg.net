@@ -31,11 +31,11 @@ So, I went ahead and set the expiration date at `30d`, which is short enough to 
 
 To test my changes to the Nginx configuration, I used the [HTTP Header Live](https://addons.mozilla.org/en-US/firefox/addon/http-header-live/) extension on my Gecko browser and used the sidebar to inspect the headers of a recent image from my blog.
 
-In the image below, you can see that the `Cache-Control` header is now present and set to 2592000, which is 30 days represented in seconds (30 days * 24 hours/day * 60 minutes/hour * 60 seconds/minute = 2,592,000 seconds). 
+In the image below, you can see that the `Cache-Control` header is now present and set to 2592000, which is 30 days represented in seconds (30 days _ 24 hours/day _ 60 minutes/hour \* 60 seconds/minute = 2,592,000 seconds).
 
 The `Expires` field is now showing 22 March 2022, which is 30 days from the day of this post, 20 February 2022.
 
-![](https://img.cleberg.io/blog/20220220-caching-static-content-with-nginx/image_headers.png)
+![Image Headers](https://img.cleberg.io/blog/20220220-caching-static-content-with-nginx/image_headers.png)
 
 ## Caveats
 

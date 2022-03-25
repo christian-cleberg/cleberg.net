@@ -10,6 +10,7 @@ draft = false
 Okay, so you want to strip metadata from your photos. Perhaps you take pictures of very rare birds and the location metadata is a gold mine for poachers - or perhaps you're just privacy-oriented like me and prefer to strip metadata from publicly-available images.
 
 There are various components of image metadata that you may want to delete before releasing a photo to the public. Here's an incomplete list of things I could easily see just by inspecting a photo on my laptop:
+
 - Location (Latitude & Longitude)
 - Dimensions
 - Device Make & Model

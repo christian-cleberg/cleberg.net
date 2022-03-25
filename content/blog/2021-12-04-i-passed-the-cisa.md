@@ -11,7 +11,7 @@ For those of you lucky enough not to be knee-deep in the world of IT/IS Auditing
 
 Now, the CISA certification itself is, in my opinion, the main certification for this career. While certifications such as the CPA or CISSP are beneficial, nothing matches the power of the CISA for an IS auditor when it comes to getting hired, getting a raise/bonus, or earning respect in the field.
 
-However, to be honest, I am a skeptic of most certifications. I understand the value they hold in terms of how much you need to commit to studying or learning on the job, as well as the market value for certifications such as the CISA. But, I also have known some very ~~incompetent~~ *less than stellar* auditors who have CPAs, CISAs, CIAs, etc.
+However, to be honest, I am a skeptic of most certifications. I understand the value they hold in terms of how much you need to commit to studying or learning on the job, as well as the market value for certifications such as the CISA. But, I also have known some very ~~incompetent~~ _less than stellar_ auditors who have CPAs, CISAs, CIAs, etc.
 
 The same goes for most industries - if a person is good at studying, they can earn the certification. However, that knowledge means nothing unless you're actually able to use it in real life and perform as expected of a certification holder. The challenge comes when people are hired or connected strictly because of their certifications or resume; you need to see a person work before you can assume them having a CISA means they're better than someone without the CISA.
 
@@ -25,14 +25,14 @@ The CISA is broken down into five sections, each weighted with a percentage of t
 
 Since the exam contains 150 questions, here's how those sections break down:
 
-| Exam Section | Percentage of Exam | Questions |
-|:------------:|:------------------:|:---------:|
-| 1            | 21%                | 32        |
-| 2            | 17%                | 26        |
-| 3            | 12%                | 18        |
-| 4            | 23%                | 34        |
-| 5            | 27%                | 40        |
-| **Grand Total** | **100%**    | **150**       |
+|  Exam Section   | Percentage of Exam | Questions |
+| :-------------: | :----------------: | :-------: |
+|        1        |        21%         |    32     |
+|        2        |        17%         |    26     |
+|        3        |        12%         |    18     |
+|        4        |        23%         |    34     |
+|        5        |        27%         |    40     |
+| **Grand Total** |      **100%**      |  **150**  |
 
 ## My Studying Habits
 
@@ -65,14 +65,14 @@ In September, I studied sections 3-5, took notes, and did a quick review of the 
 
 Here's a breakdown of my initial practice exam:
 
-| Exam Section | Incorrect | Correct | Grand Total | Percent |
-|:------------:|:---------:|:-------:|:-----------:|:-------:|
-| 1            | 8         | 25      | 33          | 76%     |
-| 2            | 5         | 20      | 25          | 80%     |
-| 3            | 6         | 12      | 18          | 67%     |
-| 4            | 10        | 23      | 33          | 70%     |
-| 5            | 16        | 25      | 41          | 61%     |
-| **Grand Total**  | **45** | **105** | **150** | **70%**    |
+|  Exam Section   | Incorrect | Correct | Grand Total | Percent |
+| :-------------: | :-------: | :-----: | :---------: | :-----: |
+|        1        |     8     |   25    |     33      |   76%   |
+|        2        |     5     |   20    |     25      |   80%   |
+|        3        |     6     |   12    |     18      |   67%   |
+|        4        |    10     |   23    |     33      |   70%   |
+|        5        |    16     |   25    |     41      |   61%   |
+| **Grand Total** |  **45**   | **105** |   **150**   | **70%** |
 
 As I expected, my toughest sections were to related to project management, development, implementation, and security.
 
@@ -80,14 +80,14 @@ This just leaves October and November. For these months, I tried to practice eve
 
 While some practice sessions were worse and some were better, the final results were similar to my practice exam results. As you can see below, my averages were slightly worse than my practice exam. However, I got in over 700 questions of practice and, most importantly, **I read through the explanations every time I answered incorrectly and learned from my mistakes**.
 
-| Exam Section | Incorrect | Correct | Grand Total | Percent |
-|:------------:|:---------:|:-------:|:-----------:|:-------:|
-| 1            | 33        | 108     | 141         | 77%     |
-| 2            | 33        | 109     | 142         | 77%     |
-| 3            | 55        | 89      | 144         | 62%     |
-| 4            | 52        | 88      | 140         | 63%     |
-| 5            | 55        | 85      | 140         | 61%     |
-| **Grand Total** | **228** | **479** | **707** | **68%**    |
+|  Exam Section   | Incorrect | Correct | Grand Total | Percent |
+| :-------------: | :-------: | :-----: | :---------: | :-----: |
+|        1        |    33     |   108   |     141     |   77%   |
+|        2        |    33     |   109   |     142     |   77%   |
+|        3        |    55     |   89    |     144     |   62%   |
+|        4        |    52     |   88    |     140     |   63%   |
+|        5        |    55     |   85    |     140     |   61%   |
+| **Grand Total** |  **228**  | **479** |   **707**   | **68%** |
 
 ![CISA practice question results](https://img.cleberg.io/blog/20211204-i-passed-the-cisa/cisa-practice-questions-results.png)
 
@@ -95,16 +95,16 @@ While some practice sessions were worse and some were better, the final results 
 
 Now, how do the practices scores reflect my actual results? After all, it's hard to tell how good a practice regimen is unless you see how it turns out.
 
-| Exam Section | Section Name                                                     | Score |
-|:------------:|------------------------------------------------------------------|:-----:|
-| 1            | Information Systems Auditing Process                             | 678   |
-| 2            | Governance and Management of IT                                  | 590   |
-| 3            | Information Systems Acquisition, Development, and Implementation | 721   |
-| 4            | Information Systems Operations and Business Resilience           | 643   |
-| 5            | Protection of Information Assets                                 | 511   |
-| **TOTAL**    |                                                                  | **616** |
+| Exam Section | Section Name                                                     |  Score  |
+| :----------: | ---------------------------------------------------------------- | :-----: |
+|      1       | Information Systems Auditing Process                             |   678   |
+|      2       | Governance and Management of IT                                  |   590   |
+|      3       | Information Systems Acquisition, Development, and Implementation |   721   |
+|      4       | Information Systems Operations and Business Resilience           |   643   |
+|      5       | Protection of Information Assets                                 |   511   |
+|  **TOTAL**   |                                                                  | **616** |
 
-Now, in order to pass the CISA, you need at least 450 on a sliding scale of 200-800. Personally, I really have no clue what an average CISA score is. After a *very* brief look online, I can see that the high end is usually in the low 700s. In addition, only about 50-60% of people pass the exam at all.
+Now, in order to pass the CISA, you need at least 450 on a sliding scale of 200-800. Personally, I really have no clue what an average CISA score is. After a _very_ brief look online, I can see that the high end is usually in the low 700s. In addition, only about 50-60% of people pass the exam at all.
 
 Given this information, I feel great about my scores. 616 may not be phenomenal (and I wish I had done better on sections 2 & 5), but overall, my practicing seems to have worked very well.
 
