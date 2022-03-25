@@ -4,10 +4,9 @@ title = "Hosting a Gemini Server"
 description = "Dive deeper into Gemini by hosting your own Gemini web server."
 +++
 
-<div class="alert alert-info" role="alert">
-    <h4 class="alert-heading">Similar Article Available</h4>
-    <p class="mb-0">To read more about Gemini and ways to test out this new protocol without your own server, see my previous post <a class="alert-link" href="/blog/launching-a-gemini-capsule/">Launching a Gemini Capsule</a>.</p>
-</div>
+## Similar Article Available
+
+To read more about Gemini and ways to test out this new protocol without your own server, see my previous post [Launching a Gemini Capsule](/blog/launching-a-gemini-capsule/).
 
 ## Preparation
 

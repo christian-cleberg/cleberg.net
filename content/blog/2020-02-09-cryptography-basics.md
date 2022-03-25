@@ -4,10 +4,9 @@ title = "Cryptography Basics"
 description = "Learn more about cryptography, a process that can change data from a readable format into an unreadable format."
 +++
 
-<div class="alert alert-info" role="alert">
-    <h4 class="alert-heading">Similar Article Available</h4>
-    <p class="mb-0">If you haven't already, read my previous article on <a class="alert-link" href="/blog/aes-encryption/">AES Encryption</a>.</p>
-</div>
+## Similar Article Available
+
+If you haven't already, feel free to read my post on [AES Encryption](/blog/aes-encryption/).
 
 ## What is Cryptography?
 
