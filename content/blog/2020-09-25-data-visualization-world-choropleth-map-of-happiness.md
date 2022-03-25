@@ -4,15 +4,13 @@ title = "Data Visualization: World Choropleth Map of Happiness"
 description = "Let's explore a data set together using Python and Jupyter Lab - happiness rankings around the world."
 +++
 
-<div class="alert alert-info" role="alert">
-    <h4 class="alert-heading">Want to try it yourself?</h4>
-    <p class="mb-0">You can download the Jupyter Notebook containing this Python analysis here: <a class="alert-link" href="https://git.sr.ht/~kaizoku/data-science" rel="noreferrer,noopener">World Happiness Rankings.ipynb</a>.</p>
-</div>
+## Want to try it yourself?
+
+You can download the Jupyter Notebook containing this Python analysis here: [World Happiness Rankings.ipynb](https://git.sr.ht/~kaizoku/data-science)
 
 ## Background Information
 
-The dataset (obtained from [Kaggle](https://www.kaggle.com/unsdsn/world-happiness)) used in this article contains a list
-of countries around the world, their happiness rankings and scores, as well as other national scoring measures.
+The dataset (obtained from [Kaggle](https://www.kaggle.com/unsdsn/world-happiness)) used in this article contains a list of countries around the world, their happiness rankings and scores, as well as other national scoring measures.
 
 Fields include:
 
@@ -25,8 +23,7 @@ Fields include:
 - Generosity
 - Perceptions of corruption
 
-There are 156 records. Since there are \~195 countries in the world, we can see that around 40 countries will be missing
-from this dataset.
+There are 156 records. Since there are ~195 countries in the world, we can see that around 40 countries will be missing from this dataset.
 
 ## Install Packages
 
@@ -38,9 +35,7 @@ As always, run the `install` command for all packages needed to perform analysis
 
 ## Import the Data
 
-We only need a couple packages to create a choropleth map. We will
-use [Folium](https://python-visualization.github.io/folium/), which provides map visualizations in Python. We will also
-use geopandas and pandas to wrangle our data before we put it on a map.
+We only need a couple packages to create a choropleth map. We will use [Folium](https://python-visualization.github.io/folium/), which provides map visualizations in Python. We will also use geopandas and pandas to wrangle our data before we put it on a map.
 
 ```python
 # Import the necessary Python packages
@@ -49,12 +44,9 @@ import geopandas as gpd
 import pandas as pd
 ```
 
-To get anything to show up on a map, we need a file that will specify the boundaries of each country. Luckily, these
-GeoJSON files exists for free on the internet. To get the boundaries of every country in the world, we will use the
-GeoJSON link shown below.
+To get anything to show up on a map, we need a file that will specify the boundaries of each country. Luckily, GeoJSON files exist (for free!) on the internet. To get the boundaries of every country in the world, we will use the GeoJSON link shown below.
 
-GeoPandas will take this data and load it into a dataframe so that we can easily match it to the data we're trying to
-analyze. Let's look at the GeoJSON dataframe:
+GeoPandas will take this data and load it into a dataframe so that we can easily match it to the data we're trying to analyze. Let's look at the GeoJSON dataframe:
 
 ```python
 # Load the GeoJSON data with geopandas
@@ -62,12 +54,11 @@ geo_data = gpd.read_file('https://raw.githubusercontent.com/datasets/geo-countri
 geo_data.head()
 ```
 
-![](https://img.cleberg.io/blog/019-world-choropleth-map/geojson_df.png)
+![GeoJSON Dataframe](https://img.cleberg.io/blog/019-world-choropleth-map/geojson_df.png)
 
-Fig. 1 - GeoJSON Dataframe
+_Fig. 1 - GeoJSON Dataframe_
 
-Next, let's load the data from the Kaggle dataset. I've downloaded this file, so update the file path if you have it
-somewhere else. After loading, let's take a look at this dataframe:
+Next, let's load the data from the Kaggle dataset. I've downloaded this file, so update the file path if you have it somewhere else. After loading, let's take a look at this dataframe:
 
 ```python
 # Load the world happiness data with pandas
@@ -75,16 +66,13 @@ happy_data = pd.read_csv(r'~/Downloads/world_happiness_data_2019.csv')
 happy_data.head()
 ```
 
-![](https://img.cleberg.io/blog/019-world-choropleth-map/happiness_df.png)
+![Happiness Dataframe](https://img.cleberg.io/blog/019-world-choropleth-map/happiness_df.png)
 
-Fig. 2 - Happiness Dataframe
+_Fig. 2 - Happiness Dataframe_
 
 ## Clean the Data
 
-Some countries need to be renamed, or they will be lost when you merge the happiness and GeoJSON dataframes. This is
-something I discovered when the map below showed empty countries. I searched both data frames for the missing countries
-to see the naming differences. Any countries that do not have records in the `happy_data` df will not show up on the
-map.
+Some countries need to be renamed, or they will be lost when you merge the happiness and GeoJSON dataframes. This is something I discovered when the map below showed empty countries. I searched both data frames for the missing countries to see the naming differences. Any countries that do not have records in the `happy_data` df will not show up on the map.
 
 ```python
 # Rename some countries to match our GeoJSON data
@@ -108,8 +96,7 @@ happy_data.at[democratic_congo_index, 'Country or region'] = 'Democratic Republi
 
 ## Merge the Data
 
-Now that we have clean data, we need to merge the GeoJSON data with the happiness data. Since we've stored them both in
-dataframes, we just need to call the `.merge()` function.
+Now that we have clean data, we need to merge the GeoJSON data with the happiness data. Since we've stored them both in dataframes, we just need to call the `.merge()` function.
 
 We will also rename a couple columns, just so that they're a little easier to use when we create the map.
 
@@ -122,15 +109,13 @@ merged_df = merged_df.rename(columns = {'ADMIN':'GeoJSON_Country'})
 merged_df = merged_df.rename(columns = {'Country or region':'Country'})
 ```
 
-[](https://img.cleberg.io/blog/019-world-choropleth-map/merged_df.png)
+[Merged Dataframe](https://img.cleberg.io/blog/019-world-choropleth-map/merged_df.png)
 
-Fig. 3 - Merged Dataframe
+_Fig. 3 - Merged Dataframe_
 
 ## Create the Map
 
-The data is finally ready to be added to a map. The code below shows the simplest way to find the center of the map and
-create a Folium map object. The important part is to remember to reference the merged dataframe for our GeoJSON data and
-value data. The columns specify which geo data and value data to use.
+The data is finally ready to be added to a map. The code below shows the simplest way to find the center of the map and create a Folium map object. The important part is to remember to reference the merged dataframe for our GeoJSON data and value data. The columns specify which geo data and value data to use.
 
 ```python
 # Assign centroids to map
@@ -145,7 +130,7 @@ folium.TileLayer('CartoDB positron',name='Dark Map',control=False).add_to(world_
 # Creating choropleth map
 folium.Choropleth(
     geo_data=merged_df,
-    name='Choropleth',         
+    name='Choropleth',
     data=merged_df,
     columns=['Country','Overall rank'],
     key_on='feature.properties.Country',
@@ -153,19 +138,20 @@ folium.Choropleth(
     fill_opacity=0.6,
     line_opacity=0.8,
     legend_name='Overall happiness rank',
-    smooth_factor=0,     
+    smooth_factor=0,
     highlight=True
 ).add_to(world_map)
 ```
 
 Let's look at the resulting map.
 
-![](https://img.cleberg.io/blog/019-world-choropleth-map/map.png) \<\>Fig. 4 - Choropleth Map
+![Choropleth Map](https://img.cleberg.io/blog/019-world-choropleth-map/map.png)
+
+_Fig. 4 - Choropleth Map_
 
 ## Create a Tooltip on Hover
 
-Now that we have a map set up, we could stop. However, I want to add a tooltip so that I can see more information about
-each country. The `tooltip_data` code below will show a popup on hover with all the data fields shown.
+Now that we have a map set up, we could stop. However, I want to add a tooltip so that I can see more information about each country. The `tooltip_data` code below will show a popup on hover with all the data fields shown.
 
 ```python
     # Adding labels to map
@@ -212,8 +198,6 @@ world_map
 
 The final image below will show you what the tooltip looks like whenever you hover on a country.
 
-![](https://img.cleberg.io/blog/019-world-choropleth-map/tooltip_map.png)
+![Choropleth Map Tooltip](https://img.cleberg.io/blog/019-world-choropleth-map/tooltip_map.png)
 
-Fig. 5 - Choropleth Map Tooltip
-
-
+_Fig. 5 - Choropleth Map Tooltip_
