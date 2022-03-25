@@ -4,10 +4,9 @@ title = "Data Exploration: Video Game Sales"
 description = "Let's explore a data set together using Python and Jupyter Lab - video game sales from around the world."
 +++
 
-<div class="alert alert-info" role="alert">
-    <h4 class="alert-heading">Want to try it yourself?</h4>
-    <p class="mb-0">You can download the Jupyter Notebook containing this Python analysis here: <a class="alert-link" href="https://git.sr.ht/~kaizoku/data-science" rel="noreferrer,noopener">video_game_sales.ipynb</a>.</p>
-</div>
+## Want to try it yourself?
+
+You can download the Jupyter Notebook containing this Python analysis here: [video_game_sales.ipynb](https://git.sr.ht/~kaizoku/data-science)
 
 ## Background Information
 
@@ -22,11 +21,11 @@ Fields include:
 - Year - Year of the game's release
 - Genre - Genre of the game
 - Publisher - Publisher of the game
-- NA\_Sales - Sales in North America (in millions)
-- EU\_Sales - Sales in Europe (in millions)
-- JP\_Sales - Sales in Japan (in millions)
-- Other\_Sales - Sales in the rest of the world (in millions)
-- Global\_Sales - Total worldwide sales.
+- NA_Sales - Sales in North America (in millions)
+- EU_Sales - Sales in Europe (in millions)
+- JP_Sales - Sales in Japan (in millions)
+- Other_Sales - Sales in the rest of the world (in millions)
+- Global_Sales - Total worldwide sales.
 
 There are 16,598 records. 2 records were dropped due to incomplete information.
 
