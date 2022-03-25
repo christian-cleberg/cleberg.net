@@ -111,7 +111,7 @@ sudo chown -R www-data:www-data /var/www/example.com/nextcloud/
 
 If you do not have a static IP address, you will need to update your DNS settings (at your DNS provider) whenever your dynamic IP address changes.
 
-For an example on how I do that with Cloudflare, see my other post: [Updating Dynamic DNS with Cloudflare API](../updating-dynamic-dns-with-cloudflare-api/)
+For an example on how I do that with Cloudflare, see my other post: [Updating Dynamic DNS with Cloudflare API](/blog/updating-dynamic-dns-with-cloudflare-api/)
 
 ## Certbot
 

@@ -64,7 +64,7 @@ For a little bit of security, I use `ufw` as my server firewall and `fail2ban` a
 
 ### `ufw`
 
-To see how to configure `ufw`, see my other post: [Secure Your Network with the Uncomplicated Firewall](../secure-your-network-with-the-uncomplicated-firewall/)
+To see how to configure `ufw`, see my other post: [Secure Your Network with the Uncomplicated Firewall](/blog/secure-your-network-with-the-uncomplicated-firewall/)
 
 ![ufw](https://img.cleberg.io/blog/20220324-hosting-a-public-home-server/ufw.png)
 
