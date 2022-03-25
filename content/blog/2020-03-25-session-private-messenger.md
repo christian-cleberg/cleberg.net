@@ -35,7 +35,7 @@ Since most people are looking for an alternative to a popular chat app, I am goi
 
 ## Downloads
 
-I have tested this app on Ubuntu 191.10, Android 10, macOS Monterey, and iOS 15. All apps have worked well without many issues.
+I have tested this app on Ubuntu 19.10, Android 10, macOS Monterey, and iOS 15. All apps have worked well without many issues.
 
 Below is a brief overview of the Session app on Linux. To get this app, you'll need to [go to the Downloads page](https://getsession.org/download/) and click to link to the operating system you're using.
 
