@@ -125,6 +125,4 @@ They're both great software packages, but Nginx just seems more organized and ea
 
 Finally, I set up the Agate software on this server again to host my Gemini server content - using Rust as I have before. You can read my other post for more information on installing Agate: [Hosting a Gemini Server](https://cleberg.io/blog/hosting-a-gemini-server/).
 
-If you want to view the Gemini page itself, use a Gemini browser like amfora or Lagrange and go to [gemini://geminimg.cleberg.io](gemini://geminimg.cleberg.io).
-
 All in all, Debian + Nginx is very slick and I prefer it over my old combination of Ubuntu + Apache (although it's really just Nginx > Apache for me, since Debian seems mostly the same as Ubuntu so far).
