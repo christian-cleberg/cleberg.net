@@ -129,10 +129,9 @@ To test that everything’s working so far, open ANOTHER terminal and try loggin
 
 This part is optional but I highly recommend it. So far, we've ensured that no one can log into our user on the server without using our secret key and we've ensured that no one can log in remotely as `root`. Next, you can enable MFA authentication for `ssh` connections.
 
-This process involves editing a couple files and installing an MFA package, so I will not include all the details in this post. To see how to configure MFA for`ssh`, see my other post: [Enabling MFA for SSH](/blog/enabling-mfa-for-ssh/).
+This process involves editing a couple files and installing an MFA package, so I will not include all the details in this post. To see how to configure MFA for `ssh`, see my other post: [Enabling MFA for SSH](/blog/enable-totp-mfa-for-ssh/).
 
 ![SSH MFA](https://img.cleberg.io/blog/20220324-hardening-a-public-facing-home-server/ssh_mfa.png)
-
 
 ### `fail2ban`
 
