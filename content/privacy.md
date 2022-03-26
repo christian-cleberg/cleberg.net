@@ -7,7 +7,7 @@ title = "Privacy Policy"
 Please see the [full Git history](https://git.sr.ht/~kaizoku/cleberg.io/log) for all source code changes to this privacy policy and website. Otherwise, see below for the creation and revision dates for this policy.
 
 Created: `2022-02-11 23:05:00 UTC`  
-Updated: `2022-03-21 13:30:00 UTC`
+Updated: `2022-03-26 23:00:00 UTC`
 
 ## Data Collection & Usage
 
@@ -31,15 +31,15 @@ This information collected by the server is not sent to any third parties and re
 - **Error Log**: To provide information that may help the developer fix any website errors or issues.
 - **Access Log**: To enable the local [Fail2Ban](https://www.fail2ban.org) software to block malicious attacks against the server.
 
-### Analytics
+### Analytics (Deprecated)
 
-Beginning on 2022-02-02, this website utilizes [Nullitics](https://nullitics.com) as a tool to learn what to improve on this website (or what people love already, so I could do more of that). This information is not personally identifiable - no user tracking, cookies, or user-agent strings.
+For the period of 2022-02-02 - 2022-03-26, this website utilized [Nullitics](https://nullitics.com) as a tool to learn what to improve on this website. As of 2022-03-26, this tracking script was removed from the site and is no longer in use.
 
-Here's an example of everything Nullitics provides for a user who visits this page - I can't see anything more than this:
+This information was not personally identifiable - no user tracking, cookies, or user-agent strings. Here's an example of everything Nullitics provided for a user who visited this website:
 
 ```txt
 Timeframe: 6:00 - 7:00 CT
-Path: /blog/i-passed-the-cisa/
+Path: /privacy/
 Referrer: duckduckgo.com
 Country: US
 Device: Mobile
