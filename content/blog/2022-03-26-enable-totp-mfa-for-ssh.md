@@ -32,7 +32,7 @@ sudo apt-get install libpam-google-authenticator
 
 ## Initialize the PAM Module
 
-## Interactive Method
+### Interactive Method
 
 Once the package is installed, initialize it and following the interactive prompts to generate your OTP or TOTP:
 
@@ -88,7 +88,7 @@ By default, this limits attackers to no more than 3 login attempts every 30s.
 Do you want to enable rate-limiting? (y/n) y
 ```
 
-## Non-Interactive Method
+### Non-Interactive Method
 
 If you need to do this quickly, know your responses to the prompts, or are setting this up for numerous users, the non-interactive method can be much faster:
 
