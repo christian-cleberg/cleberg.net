@@ -98,14 +98,29 @@ google-authenticator -t -d -f -r 3 -R 30 -w 3
 
 The options referenced above are as follows:
 
-- -t => Time based counter
-- -d => Disallow token reuse
-- -f => Force writing the settings to file without prompting the user
-- -r => How many attempts to enter the correct code
-- -R => How long in seconds a user can attempt to enter the correct code
-- -w => How many codes can are valid at a time (this references the 1:30 min - 4 min window of valid codes)
+```txt
+google-authenticator [<options>]
+ -h, --help                     Print this message
+ -c, --counter-based            Set up counter-based (HOTP) verification
+ -t, --time-based               Set up time-based (TOTP) verification
+ -d, --disallow-reuse           Disallow reuse of previously used TOTP tokens
+ -D, --allow-reuse              Allow reuse of previously used TOTP tokens
+ -f, --force                    Write file without first confirming with user
+ -l, --label=<label>            Override the default label in "otpauth://" URL
+ -i, --issuer=<issuer>          Override the default issuer in "otpauth://" URL
+ -q, --quiet                    Quiet mode
+ -Q, --qr-mode={NONE,ANSI,UTF8} QRCode output mode
+ -r, --rate-limit=N             Limit logins to N per every M seconds
+ -R, --rate-time=M              Limit logins to N per every M seconds
+ -u, --no-rate-limit            Disable rate-limiting
+ -s, --secret=<file>            Specify a non-standard file location
+ -S, --step-size=S              Set interval between token refreshes
+ -w, --window-size=W            Set window of concurrently valid codes
+ -W, --minimal-window           Disable window of concurrently valid codes
+ -e, --emergency-codes=N        Number of emergency codes to generate
+```
 
-This fully configures the authenticator, saves it to a file, and then outputs the secret key, QR code, and recovery codes. (If you add the flag -q, then there won’t be any output). If you use this command in an automated fashion, make sure your script captures the secret key and/or recovery codes and makes them available to the user.
+This fully configures the authenticator, saves it to a file, and then outputs the secret key, QR code, and recovery codes. (If you add the flag `-q`, then there won’t be any output). If you use this command in an automated fashion, make sure your script captures the secret key and/or recovery codes and makes them available to the user.
 
 ## PAM Configuration Settings
 
