@@ -63,7 +63,7 @@ While I was writing this, I realized I should specify that I don't use the same 
 
 Personally, I write very little on mobile - except when needing to take important notes on-the-go. Any long-form writing, journals, etc. are done at home, where I always have my laptop available.
 
-I wanted a simple and foolproof editor for iOS - preferably open-source. However, after testing 5-10 apps, I could not find an open-source iOS note-taking app that allowed me to use the local folder I wanted for my notes (Tresorit). So, I am using [Pretext](https://apps.apple.com/app/pretext/id1347707000) for now, which is not open-source.
+I wanted a simple and foolproof editor for iOS - preferably open-source. However, after testing 5-10 apps, I could not find an open-source iOS note-taking app that allowed me to use the local folder I wanted for my notes (Cryptomator). So, I am using [QuickText](https://apps.apple.com/us/app/quicktext-plain-text-editor/id1440478074) for now, which is not open-source.
 
 This app opens the iOS file manager and allows you to click any file you want, opens it up in an editor, and lets me save and close out of that note.
 
