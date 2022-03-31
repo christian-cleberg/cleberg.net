@@ -77,7 +77,7 @@ While being able to use `root` can be beneficial at times, you shouldn't use `ro
 So let's set up a new user in our system. The `-m` option below tells the OS to create a home directory for the new user.
 
 ```bash
-adduser -m USERNAME
+adduser USERNAME
 ```
 
 Now, create a password for that user.
