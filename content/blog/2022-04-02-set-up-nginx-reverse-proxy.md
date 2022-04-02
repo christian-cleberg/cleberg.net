@@ -1,7 +1,7 @@
 +++
 date = 2022-04-02
 title = "Set-Up a Reverse Proxy with Nginx"
-description = ""
+description = "Learn how to set-up a reverse proxy server with Nginx on Ubuntu."
 draft = false
 +++
 
