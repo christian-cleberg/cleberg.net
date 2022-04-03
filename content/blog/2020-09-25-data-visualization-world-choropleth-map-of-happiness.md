@@ -7,7 +7,7 @@ description = "Let's explore a data set together using Python and Jupyter Lab - 
 ## Want to try it yourself?
 
 You can download the Jupyter Notebook containing this Python analysis here:
-[World Happiness Rankings.ipynb](https://git.sr.ht/~kaizoku/data-science)
+[World Happiness Rankings.ipynb](https://github.com/christian-cleberg/data-science)
 
 ## Background Information
 

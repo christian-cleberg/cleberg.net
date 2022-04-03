@@ -7,7 +7,7 @@ description = "Let's explore how to perform basic machine learning using Python 
 ## Want to try it yourself?
 
 You can download the Jupyter Notebook containing this Python analysis here:
-[Lincoln_Business_Clusters.ipynb](https://git.sr.ht/~kaizoku/data-science)
+[Lincoln_Business_Clusters.ipynb](https://github.com/christian-cleberg/data-science)
 
 ## Background Information
 

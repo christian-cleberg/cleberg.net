@@ -7,7 +7,7 @@ description = "Let's explore a data set together using Python and Jupyter Lab - 
 ## Want to try it yourself?
 
 You can download the Jupyter Notebook containing this Python analysis here:
-[video_game_sales.ipynb](https://git.sr.ht/~kaizoku/data-science)
+[video_game_sales.ipynb](https://github.com/christian-cleberg/data-science)
 
 ## Background Information
 
