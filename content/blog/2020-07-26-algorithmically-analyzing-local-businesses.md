@@ -6,24 +6,29 @@ description = "Let's explore how to perform basic machine learning using Python 
 
 ## Want to try it yourself?
 
-You can download the Jupyter Notebook containing this Python analysis here: [Lincoln_Business_Clusters.ipynb](https://git.sr.ht/~kaizoku/data-science)
+You can download the Jupyter Notebook containing this Python analysis here:
+[Lincoln_Business_Clusters.ipynb](https://git.sr.ht/~kaizoku/data-science)
 
 ## Background Information
 
-This project aims to help investors learn more about Lincoln, Nebraska, USA in order to determine optimal locations for business investments in Lincoln. The data used in this project was obtained using Foursquare's developer API.
+This project aims to help investors learn more about Lincoln, Nebraska, USA in
+order to determine optimal locations for business investments in Lincoln. The
+data used in this project was obtained using Foursquare's developer API.
 
 Fields include:
 
-- Venue Name
-- Venue Category
-- Venue Latitude
-- Venue Longitude
+-   Venue Name
+-   Venue Category
+-   Venue Latitude
+-   Venue Longitude
 
-There are 232 records found using the center of Lincoln as the area of interest with a radius of 10,000.
+There are 232 records found using the center of Lincoln as the area of interest
+with a radius of 10,000.
 
 ## Import the Data
 
-The first step is the simplest: import the applicable libraries. We will be using the libraries below for this project.
+The first step is the simplest: import the applicable libraries. We will be
+using the libraries below for this project.
 
 ```python
 # Import the Python libraries we will be using
@@ -36,7 +41,9 @@ from pandas.io.json import json_normalize
 from sklearn.cluster import KMeans
 ```
 
-To begin our analysis, we need to import the data for this project. The data we are using in this project comes directly from the Foursquare API. The first step is to get the latitude and longitude of the city being studied (Lincoln, NE) and
+To begin our analysis, we need to import the data for this project. The data we
+are using in this project comes directly from the Foursquare API. The first step
+is to get the latitude and longitude of the city being studied (Lincoln, NE) and
 setting up the folium map.
 
 ```python
@@ -50,7 +57,11 @@ map_LNK
 
 ![Blank map](https://img.cleberg.io/blog/20200726-ibm-data-science/01_blank_map-min.png "Blank map")
 
-Now that we have defined our city and created the map, we need to go get the business data. The Foursquare API will limit the results to 100 per API call, so we use our first API call below to determine the total results that Foursquare has found. Since the total results is 232, we perform the API fetching process three times (100 + 100 + 32 = 232).
+Now that we have defined our city and created the map, we need to go get the
+business data. The Foursquare API will limit the results to 100 per API call, so
+we use our first API call below to determine the total results that Foursquare
+has found. Since the total results is 232, we perform the API fetching process
+three times (100 + 100 + 32 = 232).
 
 ```python
 # Foursquare API credentials
@@ -114,7 +125,12 @@ results3 = requests.get(url3).json()
 
 ## Clean the Data
 
-Now that we have our data in three separate dataframes, we need to combine them into a single dataframe and make sure to reset the index so that we have a unique ID for each business. The `get_category_type` function below will pull the categories and name from each business's entry in the Foursquare data automatically. Once all the data has been labelled and combined, the results are stored in the `nearby_venues` dataframe.
+Now that we have our data in three separate dataframes, we need to combine them
+into a single dataframe and make sure to reset the index so that we have a
+unique ID for each business. The `get_category_type` function below will pull
+the categories and name from each business's entry in the Foursquare data
+automatically. Once all the data has been labelled and combined, the results are
+stored in the `nearby_venues` dataframe.
 
 ```python
 # This function will extract the category of the venue from the API dictionary
@@ -185,7 +201,9 @@ nearby_venues
 
 ## Visualize the Data
 
-We now have a complete, clean data set. The next step is to visualize this data onto the map we created earlier. We will be using folium's `CircleMarker()` function to do this.
+We now have a complete, clean data set. The next step is to visualize this data
+onto the map we created earlier. We will be using folium's `CircleMarker()`
+function to do this.
 
 ```python
 # add markers to map
@@ -209,9 +227,14 @@ map_LNK
 
 ## Clustering: _k-means_
 
-To cluster the data, we will be using the _k-means_ algorithm. This algorithm is iterative and will automatically make sure that data points in each cluster are as close as possible to each other, while being as far as possible away from other clusters.
+To cluster the data, we will be using the _k-means_ algorithm. This algorithm is
+iterative and will automatically make sure that data points in each cluster are
+as close as possible to each other, while being as far as possible away from
+other clusters.
 
-However, we first have to figure out how many clusters to use (defined as the variable '_k_'). To do so, we will use the next two functions to calculate the sum of squares within clusters and then return the optimal number of clusters.
+However, we first have to figure out how many clusters to use (defined as the
+variable '_k_'). To do so, we will use the next two functions to calculate the
+sum of squares within clusters and then return the optimal number of clusters.
 
 ```python
 # This function will return the sum of squares found in the data
@@ -249,7 +272,9 @@ def optimal_number_of_clusters(wcss):
 n = optimal_number_of_clusters(sum_of_squares)
 ```
 
-Now that we have found that our optimal number of clusters is six, we need to perform k-means clustering. When this clustering occurs, each business is assigned a cluster number from 0 to 5 in the dataframe.
+Now that we have found that our optimal number of clusters is six, we need to
+perform k-means clustering. When this clustering occurs, each business is
+assigned a cluster number from 0 to 5 in the dataframe.
 
 ```python
 # set number of clusters equal to the optimal number
@@ -262,8 +287,8 @@ kmeans = KMeans(n_clusters=kclusters, random_state=0).fit(cluster_df)
 nearby_venues.insert(0, 'Cluster Labels', kmeans.labels_)
 ```
 
-Success! We now have a dataframe with clean business data, along with a cluster number for each business. Now let's map
-the data using six different colors.
+Success! We now have a dataframe with clean business data, along with a cluster
+number for each business. Now let's map the data using six different colors.
 
 ```python
 # create map with clusters
@@ -290,7 +315,11 @@ map_clusters
 
 ## Investigate Clusters
 
-Now that we have figured out our clusters, let's do a little more analysis to provide more insight into the clusters. With the information below, we can see which clusters are more popular for businesses and which are less popular. The results below show us that clusters 0 through 3 are popular, while clusters 4 and 5 are not very popular at all.
+Now that we have figured out our clusters, let's do a little more analysis to
+provide more insight into the clusters. With the information below, we can see
+which clusters are more popular for businesses and which are less popular. The
+results below show us that clusters 0 through 3 are popular, while clusters 4
+and 5 are not very popular at all.
 
 ```python
 # Show how many venues are in each cluster
@@ -303,8 +332,9 @@ for x in range(0,6):
 
 ![venues per cluster](https://img.cleberg.io/blog/20200726-ibm-data-science/05_venues_per_cluster-min.png "venues per cluster")
 
-Our last piece of analysis is to summarize the categories of businesses within each cluster. With these results, we can
-clearly see that restaurants, coffee shops, and grocery stores are the most popular.
+Our last piece of analysis is to summarize the categories of businesses within
+each cluster. With these results, we can clearly see that restaurants, coffee
+shops, and grocery stores are the most popular.
 
 ```python
 # Calculate how many venues there are in each category
@@ -334,8 +364,17 @@ with pd.option_context('display.max_rows', None, 'display.max_columns', None):
 
 ## Discussion
 
-In this project, we gathered location data for Lincoln, Nebraska, USA and clustered the data using the k-means algorithm in order to identify the unique clusters of businesses in Lincoln. Through these actions, we found that there are six unique business clusters in Lincoln and that two of the clusters are likely unsuitable for investors. The remaining four clusters have a variety of businesses, but are largely dominated by restaurants and grocery stores.
+In this project, we gathered location data for Lincoln, Nebraska, USA and
+clustered the data using the k-means algorithm in order to identify the unique
+clusters of businesses in Lincoln. Through these actions, we found that there
+are six unique business clusters in Lincoln and that two of the clusters are
+likely unsuitable for investors. The remaining four clusters have a variety of
+businesses, but are largely dominated by restaurants and grocery stores.
 
-Using this project, investors can now make more informed decisions when deciding the location and category of business in which to invest.
+Using this project, investors can now make more informed decisions when deciding
+the location and category of business in which to invest.
 
-Further studies may involve other attributes for business locations, such as population density, average wealth across the city, or crime rates. In addition, further studies may include additional location data and businesses by utilizing multiple sources, such as Google Maps and OpenStreetMap.
+Further studies may involve other attributes for business locations, such as
+population density, average wealth across the city, or crime rates. In addition,
+further studies may include additional location data and businesses by utilizing
+multiple sources, such as Google Maps and OpenStreetMap.

@@ -1,6 +1,7 @@
 # cleberg.io
 
-This is a Markdown-based website and blog, using [Zola](https://www.getzola.org) to generate static-site files.
+This is a Markdown-based website and blog, using [Zola](https://www.getzola.org)
+to generate static-site files.
 
 ## Building & Deployment
 

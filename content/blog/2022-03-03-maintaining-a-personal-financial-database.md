@@ -7,31 +7,50 @@ draft = false
 
 ## Personal Financial Tracking
 
-For the last 6-ish years, I've tracked my finances in a spreadsheet. This is common practice in the business world, but any good dev will cringe at the thought of long-term storage of data in a spreadsheet. A spreadsheet is not for long-term storage or as a source of a data to pull data/reports.
+For the last 6-ish years, I've tracked my finances in a spreadsheet. This is
+common practice in the business world, but any good dev will cringe at the
+thought of long-term storage of data in a spreadsheet. A spreadsheet is not for
+long-term storage or as a source of a data to pull data/reports.
 
-As I wanted to expand the functionality of my financial data (e.g., adding more reports), I decided to migrate the data into a database. To run reports, I would query the database and use a language like Python or Javascript to process the data, perform calculations, and visualize the data.
+As I wanted to expand the functionality of my financial data (e.g., adding more
+reports), I decided to migrate the data into a database. To run reports, I would
+query the database and use a language like Python or Javascript to process the
+data, perform calculations, and visualize the data.
 
 ## SQLite
 
-When choosing the type of database I wanted to use for this project, I was split between three options:
+When choosing the type of database I wanted to use for this project, I was split
+between three options:
 
 1. MySQL - The database I have the most experience with and have used for years.
 2. PostgreSQL - A database I'm new to, but want to learn.
-3. SQLite - A database that I've used for a couple projects and have moderate experience.
+3. SQLite - A database that I've used for a couple projects and have moderate
+   experience.
 
-I ended up choosing SQLite since it can be maintained within a single `.sqlite` file, which allows me more flexibility for storage and backup. I keep this file in my cloud storage and pull it up whenever needed.
+I ended up choosing SQLite since it can be maintained within a single `.sqlite`
+file, which allows me more flexibility for storage and backup. I keep this file
+in my cloud storage and pull it up whenever needed.
 
 ### GUI Editing
 
-Since I didn't want to try and import 1000 - 1500 records into my new database via the command line, I opted to use [DB Browser for SQLite (DB4S)](https://sqlitebrowser.org/) as a GUI tool. This application is actually excellent and I don't see myself going back to the CLI when working in this database.
+Since I didn't want to try and import 1000 - 1500 records into my new database
+via the command line, I opted to use
+[DB Browser for SQLite (DB4S)](https://sqlitebrowser.org/) as a GUI tool. This
+application is actually excellent and I don't see myself going back to the CLI
+when working in this database.
 
-DB4S allows you to copy a range of cells from a spreadsheet and paste it straight into the SQL table. I used this process for all 36 accounts, 1290 account statements, and 126 pay statements. Overall, I'm guessing this took anywhere between 4 - 8 hours. In comparison, it probably took me 2-3 days to initially create the spreadsheet.
+DB4S allows you to copy a range of cells from a spreadsheet and paste it
+straight into the SQL table. I used this process for all 36 accounts, 1290
+account statements, and 126 pay statements. Overall, I'm guessing this took
+anywhere between 4 - 8 hours. In comparison, it probably took me 2-3 days to
+initially create the spreadsheet.
 
 ![DB4S](https://img.cleberg.io/blog/20220303-maintaining-a-personal-financial-database/db4s.png)
 
 ### Schema
 
-The schema for this database is actually extremely simple and involves only three tables (for now):
+The schema for this database is actually extremely simple and involves only
+three tables (for now):
 
 1. Accounts
 2. Statements
@@ -39,7 +58,9 @@ The schema for this database is actually extremely simple and involves only thre
 
 **Accounts**
 
-The Accounts table contains summary information about an account, such as a car loan or a credit card. By viewing this table, you can find high-level data, such as interest rate, credit line, or owner.
+The Accounts table contains summary information about an account, such as a car
+loan or a credit card. By viewing this table, you can find high-level data, such
+as interest rate, credit line, or owner.
 
 ```sql
 CREATE TABLE "Accounts" (
@@ -57,7 +78,10 @@ CREATE TABLE "Accounts" (
 
 **Statements**
 
-The Statements table uses the same unique identifier as the Accounts table, meaning you can join the tables to find a monthly statement for any of the accounts listed in the Accounts table. Each statement has an account ID, statement date, and total balance.
+The Statements table uses the same unique identifier as the Accounts table,
+meaning you can join the tables to find a monthly statement for any of the
+accounts listed in the Accounts table. Each statement has an account ID,
+statement date, and total balance.
 
 ```sql
 CREATE TABLE "Statements" (
@@ -72,7 +96,10 @@ CREATE TABLE "Statements" (
 
 **Payroll**
 
-The Payroll table is a separate entity, unrelated to the Accounts or Statements tables. This table contains all information you would find on a pay statement from an employer. As you change employers or obtain new perks/benefits, just add new columns to adapt to the new data.
+The Payroll table is a separate entity, unrelated to the Accounts or Statements
+tables. This table contains all information you would find on a pay statement
+from an employer. As you change employers or obtain new perks/benefits, just add
+new columns to adapt to the new data.
 
 ```sql
 CREATE TABLE "Payroll" (
@@ -108,13 +135,17 @@ CREATE TABLE "Payroll" (
 
 ### Python Reporting
 
-Once I created the database tables and imported all my data, the only step left was to create a process to report and visualize on various aspects of the data.
+Once I created the database tables and imported all my data, the only step left
+was to create a process to report and visualize on various aspects of the data.
 
-In order to explore and create the reports I'm interested in, I utilized a two-part process involving Jupyter Notebooks and Python scripts.
+In order to explore and create the reports I'm interested in, I utilized a
+two-part process involving Jupyter Notebooks and Python scripts.
 
 #### Step 1: Jupyter Notebooks
 
-When I need to explore data, try different things, and re-run my code cell-by-cell, I use Jupyter Notebooks. For example, I explored the `Accounts` table until I found the following useful information:
+When I need to explore data, try different things, and re-run my code
+cell-by-cell, I use Jupyter Notebooks. For example, I explored the `Accounts`
+table until I found the following useful information:
 
 ```python
 import sqlite3
@@ -140,7 +171,8 @@ df.groupby(['AccountType']).sum().plot.pie(title='Credit Line by Account Type', 
 
 #### Step 2: Python Scripts
 
-Once I explored enough through the notebooks and had a list of reports I wanted, I moved on to create a Python project with the following structure:
+Once I explored enough through the notebooks and had a list of reports I wanted,
+I moved on to create a Python project with the following structure:
 
 ```
 finance/
@@ -163,13 +195,17 @@ finance/
 
 This structure allows me to:
 
-1. Compile all required python packages into `requirements.txt` for easy installation if I move to a new machine.
-2. Activate a virtual environment in `venv/` so I don't need to maintain a system-wide Python environment just for this project.
+1. Compile all required python packages into `requirements.txt` for easy
+   installation if I move to a new machine.
+2. Activate a virtual environment in `venv/` so I don't need to maintain a
+   system-wide Python environment just for this project.
 3. Keep my `notebooks/` folder to continuously explore the data as I see fit.
 4. Maintain a local copy of the database in `src/` for easy access.
 5. Export reports, images, HTML files, etc. to `public/`.
 
-Now, onto the differences between the code in a Jupyter Notebook and the actual Python files. To create the report in the Notebook snippet above, I created the following function inside `process.py`:
+Now, onto the differences between the code in a Jupyter Notebook and the actual
+Python files. To create the report in the Notebook snippet above, I created the
+following function inside `process.py`:
 
 ```python
 # Create summary pie chart
@@ -199,15 +235,19 @@ def summary_data(accounts: pandas.DataFrame) -> None:
         summary_chart.figure.savefig(f"public/summary_chart_{x}.png", dpi=1200)
 ```
 
-The result? A high-quality pie chart that is read directly by the `public/index.html` template I use.
+The result? A high-quality pie chart that is read directly by the
+`public/index.html` template I use.
 
 ![Summary Pie Chart](https://img.cleberg.io/blog/20220303-maintaining-a-personal-financial-database/summary_chart.png)
 
 Other charts generated by this project include:
 
-- Charts of account balances over time.
-- Line chart of effective tax rate (taxes divided by taxable income).
-- Salary projections and error limits using past income and inflation rates.
-- Multi-line chart of gross income, taxable income, and net income.
+-   Charts of account balances over time.
+-   Line chart of effective tax rate (taxes divided by taxable income).
+-   Salary projections and error limits using past income and inflation rates.
+-   Multi-line chart of gross income, taxable income, and net income.
 
-The best thing about this project? I can improve it at any given time, shaping it into whatever helps me the most for that time. I imagine that I will be introducing an asset tracking table soon to track the depreciating value of cars, houses, etc. Who knows what's next?
+The best thing about this project? I can improve it at any given time, shaping
+it into whatever helps me the most for that time. I imagine that I will be
+introducing an asset tracking table soon to track the depreciating value of
+cars, houses, etc. Who knows what's next?

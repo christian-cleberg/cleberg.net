@@ -7,9 +7,11 @@ draft = false
 
 ## What is Nextcloud?
 
-[Nextcloud](https://nextcloud.com/) is a self-hosted solution for storage, communications, editing, calendar, contacts, and more.
+[Nextcloud](https://nextcloud.com/) is a self-hosted solution for storage,
+communications, editing, calendar, contacts, and more.
 
-This tutorial assumes that you have an Ubuntu server and a domain name configured to point toward the server.
+This tutorial assumes that you have an Ubuntu server and a domain name
+configured to point toward the server.
 
 ## Install Dependencies
 
@@ -29,7 +31,8 @@ Next, you will need to log-in to MySQL as the `root` user of the machine.
 sudo mysql -uroot -p
 ```
 
-Once you've logged in, you must create a new user so that Nextcloud can manage the database. You will also create a `nextcloud` database and assign privileges:
+Once you've logged in, you must create a new user so that Nextcloud can manage
+the database. You will also create a `nextcloud` database and assign privileges:
 
 ```sql
 CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
@@ -41,9 +44,13 @@ quit;
 
 ## Download & Install Nextcloud
 
-To download Nextcloud, go the the [Nextcloud downloads page](https://nextcloud.com/install/#instructions-server), click on `Archive File` and right-click the big blue button to copy the link.
+To download Nextcloud, go the the
+[Nextcloud downloads page](https://nextcloud.com/install/#instructions-server),
+click on `Archive File` and right-click the big blue button to copy the link.
 
-Then, go to your server and enter the following commands to download, unzip, and move the files to your destination directory. This example uses `example.com` as the destination, but you can put it wherever you want to server your files from.
+Then, go to your server and enter the following commands to download, unzip, and
+move the files to your destination directory. This example uses `example.com` as
+the destination, but you can put it wherever you want to server your files from.
 
 ```bash
 wget https://download.nextcloud.com/server/releases/nextcloud-23.0.3.zip
@@ -54,13 +61,16 @@ sudo cp -r nextcloud /var/www/example.com
 
 ## Configure the Apache Web Server
 
-Now that the database is set up and Nextcloud is installed, you need to set up the Apache configuration files to tell the server how to handle requests for `example.com/nextcloud`. First, open the following file in an editor:
+Now that the database is set up and Nextcloud is installed, you need to set up
+the Apache configuration files to tell the server how to handle requests for
+`example.com/nextcloud`. First, open the following file in an editor:
 
 ```bash
 sudo nano /etc/apache2/sites-available/nextcloud.conf
 ```
 
-Once the editor is open, paste the following information in. Then, save and close the file.
+Once the editor is open, paste the following information in. Then, save and
+close the file.
 
 ```config
 <VirtualHost *:80>
@@ -95,13 +105,15 @@ Next, enable the Apache mods required by Nextcloud:
 sudo a2enmod rewrite headers env dir mime
 ```
 
-Finally, restart Apache. If any errors arise, you must solve those before continuing.
+Finally, restart Apache. If any errors arise, you must solve those before
+continuing.
 
 ```bash
 sudo systemctl restart apache2
 ```
 
-In order for the app to work, you must have the correct file permissions on your `nextcloud` directory. Set the owner to be `www-data`:
+In order for the app to work, you must have the correct file permissions on your
+`nextcloud` directory. Set the owner to be `www-data`:
 
 ```bash
 sudo chown -R www-data:www-data /var/www/example.com/nextcloud/
@@ -109,13 +121,16 @@ sudo chown -R www-data:www-data /var/www/example.com/nextcloud/
 
 ## DNS
 
-If you do not have a static IP address, you will need to update your DNS settings (at your DNS provider) whenever your dynamic IP address changes.
+If you do not have a static IP address, you will need to update your DNS
+settings (at your DNS provider) whenever your dynamic IP address changes.
 
-For an example on how I do that with Cloudflare, see my other post: [Updating Dynamic DNS with Cloudflare API](/blog/updating-dynamic-dns-with-cloudflare-api/)
+For an example on how I do that with Cloudflare, see my other post:
+[Updating Dynamic DNS with Cloudflare API](/blog/updating-dynamic-dns-with-cloudflare-api/)
 
 ## Certbot
 
-If you want to serve Nextcloud from HTTPS rather than plain HTTP, use the following commands to issue Let's Encrypt SSL certificates:
+If you want to serve Nextcloud from HTTPS rather than plain HTTP, use the
+following commands to issue Let's Encrypt SSL certificates:
 
 ```bash
 sudo apt install snapd
@@ -128,9 +143,11 @@ sudo certbot --apache
 
 ## Results
 
-Voila! You're all done and should be able to access Nextcloud from your domain or IP address.
+Voila! You're all done and should be able to access Nextcloud from your domain
+or IP address.
 
-See the screenshots below for the dashboard and a settings page on my instance of Nextcloud, using the `Breeze Dark` theme I installed from the Apps page.
+See the screenshots below for the dashboard and a settings page on my instance
+of Nextcloud, using the `Breeze Dark` theme I installed from the Apps page.
 
 ![Nextcloud Dashboard](https://img.cleberg.io/blog/20220323-installing-nextcloud-on-ubuntu/nextcloud_dashboard.png)
 

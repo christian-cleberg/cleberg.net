@@ -7,9 +7,14 @@ draft = false
 
 ## DDNS: Dynamic DNS
 
-If you're hosting a service from a location with dynamic DNS (where your IP may change at any time), you must have a solution to update the DNS so that you can access your service even when the IP of the server changes.
+If you're hosting a service from a location with dynamic DNS (where your IP may
+change at any time), you must have a solution to update the DNS so that you can
+access your service even when the IP of the server changes.
 
-The process below uses the [Cloudflare API](https://api.cloudflare.com/) to update DNS `A` records with the server's current IP. If you use another DNS provider, you will have to find a way to update your DNS (or find a way to get a static IP).
+The process below uses the [Cloudflare API](https://api.cloudflare.com/) to
+update DNS `A` records with the server's current IP. If you use another DNS
+provider, you will have to find a way to update your DNS (or find a way to get a
+static IP).
 
 First, install `jq` since we will use it in the next script:
 
@@ -24,7 +29,9 @@ mkdir ~/ddns
 nano ~/ddns/update_cloudflare_dns.sh
 ```
 
-Paste the following into the script and update the `api_token`, `email`, and `zone_name` variables. If you are updating a subdomain (`subdomain.example.com`), uncomment and update the `dns_record` variable.
+Paste the following into the script and update the `api_token`, `email`, and
+`zone_name` variables. If you are updating a subdomain
+(`subdomain.example.com`), uncomment and update the `dns_record` variable.
 
 ```bash
 #!/bin/bash
@@ -136,7 +143,8 @@ You can test the script by running it manually:
 ./update_cloudflare_dns.sh
 ```
 
-To make sure the script runs by itself, add it to the `cron` file so that it will run on a schedule. To do this, open the cron file:
+To make sure the script runs by itself, add it to the `cron` file so that it
+will run on a schedule. To do this, open the cron file:
 
 ```bash
 crontab -e
