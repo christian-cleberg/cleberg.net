@@ -9,7 +9,13 @@ If you want to use this structure to create your site, simply clone the repo:
 
 ```bash
 git clone https://github.com/christian-cleberg/cleberg.io
+```
+
+```bash
 mv cleberg.io <your-website>
+```
+
+```bash
 cd <your-website>
 ```
 
