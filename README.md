@@ -1,20 +1,28 @@
 # cleberg.io
 
-This is a Markdown-based website and blog, using [Zola](https://www.getzola.org)
-to generate static-site files.
+This is my personal Markdown-based website and blog, using
+[Zola](https://www.getzola.org) to generate static-site files.
 
 ## Building & Deployment
 
-If you use this structure to create your site, simply clone the repo:
+If you want to use this structure to create your site, simply clone the repo:
 
 ```bash
-git clone https://github.com/user/repo
+git clone https://github.com/christian-cleberg/cleberg.io
+mv cleberg.io <your-website>
+cd <your-website>
 ```
 
-Then, enter the repo and build the static files:
+Make changes to the config, templates, static, and content files to make this
+your own website. You can preview the files, with live updates:
 
 ```bash
-cd repo
+zola serve
+```
+
+When you're finished with your updates, build the static files:
+
+```bash
 zola build
 ```
 
