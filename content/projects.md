@@ -23,4 +23,4 @@ title = "Projects"
 | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 | [Dark Hacker News](https://github.com/christian-cleberg/dark-hackernews)   | [Visit &rarr;](https://github.com/christian-cleberg/dark-hackernews/raw/main/hackernews.user.styl)   | A dark theme for Hacker News.              |
 | [Dark Journal Star](https://github.com/christian-cleberg/dark-journalstar) | [Visit &rarr;](https://github.com/christian-cleberg/dark-journalstar/raw/main/journalstar.user.styl) | A dark theme for the Lincoln Journal Star. |
-| [Dark OMG Ubuntu](https://github.com/christian-cleberg/dark-omgubuntu)     | [Visit &rarr;](https://github.com/christian-cleberg/dark-omgubuntu/raw/main/omgubuntu.user.styl)     | A dark theme for OMG! Ubuntu!              |
+| [Dark OMG! Ubuntu!](https://github.com/christian-cleberg/dark-omgubuntu)   | [Visit &rarr;](https://github.com/christian-cleberg/dark-omgubuntu/raw/main/omgubuntu.user.styl)     | A dark theme for OMG! Ubuntu!              |
