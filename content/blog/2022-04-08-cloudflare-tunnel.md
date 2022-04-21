@@ -19,6 +19,11 @@ For personal users of Cloudflare (e.g., me) who use Cloudflare as a buffer or
 DMZ between their homes and the public internet, some of these tools are
 incredibly useful for fighting spam and malicious attacks.
 
+One of the biggest benefits of using Cloudflare Tunnel is that you can close
+ports on your home network and prevent common spam and abuse that people and
+bots try to attack. I found that my home network went from ~100 attacks per day
+to zero after setting up Cloudflare Tunnel and closing ports `80` and `443`!
+
 In this post, I will be walking through the process of setting up a tunnel
 between Cloudflare and my home network (using the GUI method, not in a
 terminal), connecting local services to domain names, and protecting them all
