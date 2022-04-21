@@ -52,7 +52,7 @@ box, but the battery was depleted and required charging right away.
 
 ![PineTime Box Contents](https://img.cleberg.io/blog/20220409-pinetime-smart-watch/pinetime_box_contents.png)
 
-### Physical Hardware
+## Software
 
 ### Watch OS: InfiniTime
 
