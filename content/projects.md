@@ -9,6 +9,8 @@ title = "Projects"
 | [401k Projections](https://github.com/christian-cleberg/401k)                   | [Visit &rarr;](https://christian-cleberg.github.io/401k/)                | A plotly graph to calculate future 401k value.      |
 | [Color Generator](https://github.com/christian-cleberg/color-generator)         | [Visit &rarr;](https://christian-cleberg.github.io/color-generator/)     | A color palette generator.                          |
 | [Crypt](https://github.com/christian-cleberg/crypt)                             | [Visit &rarr;](https://crates.io/crates/crypt)                           | A command-line password manager.                    |
+| [LibreTasks](https://github.com/christian-cleberg/LibreTasks)                   | N/A                                                                      | A simple iOS tasks application.                     |
+| [LibreWeather](https://github.com/christian-cleberg/LibreWeather)               | N/A                                                                      | A simple iOS weather application.                   |
 | [Lincoln Incidents](https://github.com/christian-cleberg/lincoln-incidents)     | [Visit &rarr;](https://christian-cleberg.github.io/lincoln-incidents/)   | A set of plotly line charts of police data.         |
 | [Michelangelo](https://github.com/christian-cleberg/michelangelo)               | N/A                                                                      | A photo & video gallery using Tumblr's API.         |
 | [PHP Blog](https://github.com/christian-cleberg/php-blog)                       | N/A                                                                      | A database-free blogging platform.                  |
