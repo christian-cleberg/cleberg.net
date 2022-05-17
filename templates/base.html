@@ -27,7 +27,6 @@
 		%}"application/atom+xml"{% else %}"application/rss+xml"{% endif %}
 		title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}"> {%
 		endif %} {% block css %}
-		<link rel="stylesheet" href="/css/normalize.css" />
 		<link rel="stylesheet" href="/css/styles.css" />
 		<link
 			rel="stylesheet"
