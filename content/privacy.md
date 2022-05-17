@@ -71,4 +71,4 @@ For more information, see the
 
 Please don't hesitate to reach out if you have any questions at all. You can
 always reach me at [hello@cleberg.io](mailto:hello@cleberg.io)
-[[GPG key](https://keys.openpgp.org/vks/v1/by-fingerprint/3A8AA9FF8906334646ABE0CC7FA94F8154265655)].
+[[GPG key](https://cleberg.io/gpg_key.txt)].
