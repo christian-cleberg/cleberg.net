@@ -4,7 +4,19 @@
 	content="{{ page.description | safe | default(value='') }}"
 	name="description"
 />
-{% endblock page_meta %} {% block content %}
+{% endblock page_meta %} {% block css %}
+<link rel="stylesheet" href="/css/styles.css" />
+<link
+	rel="stylesheet"
+	href="/syntax-theme-dark.css"
+	media="(prefers-color-scheme: dark)"
+/>
+<link
+	rel="stylesheet"
+	href="/syntax-theme-light.css"
+	media="(prefers-color-scheme: light)"
+/>
+{% endblock css %} {% block content %}
 <h1 class="title">{{ page.title }}</h1>
 <p class="subtitle">{{ page.date }}</p>
 {{ page.content | safe }} {% endblock content %}
