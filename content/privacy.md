@@ -10,7 +10,7 @@ for all source code changes to this privacy policy and website. Otherwise, see
 below for the creation and revision dates for this policy.
 
 Created: `2022-02-11 23:05:00 UTC`  
-Updated: `2022-03-26 23:00:00 UTC`
+Updated: `2022-05-17 14:40:00 UTC`
 
 ## Data Collection & Usage
 
@@ -44,9 +44,34 @@ bullet points for the purpose of each log:
 -   **Access Log**: To enable the local [Fail2Ban](https://www.fail2ban.org)
     software to block malicious attacks against the server.
 
+### Cloudflare
+
+This website uses [Cloudflare](https://www.cloudflare.com) for DNS and tunneling
+purposes. Per the Cloudflare privacy policy for end users, the following quoted
+statement is provided in
+[their privacy policy](https://www.cloudflare.com/privacypolicy/).
+
+Please note that within Cloudlfare's privacy policy, you are the End User and I
+am the Customer.
+
+> **End Users**
+>
+> Cloudflare processes End Users’ interactions with Customer’s Internet
+> Properties and the Services. This information is processed when End Users
+> access or use our Customers’ domains, websites, APIs, applications, devices,
+> end points, and networks that use one or more of our Services, and when End
+> Users access or use Services, such as Cloudflare Zero Trust. The information
+> processed may include but is not limited to IP addresses, traffic routing
+> data, system configuration information, and other information about traffic to
+> and from Customers’ websites, devices, applications, and/or networks.
+>
+> The End User data that we make available to our Customers via the Service
+> dashboard or other online interface are specifically defined as “Customer
+> Logs”.
+
 ### Analytics (Deprecated)
 
-For the period of 2022-02-02 - 2022-03-26, this website utilized
+For the period of 2022-02-02 to 2022-03-26, this website utilized
 [Nullitics](https://nullitics.com) as a tool to learn what to improve on this
 website. As of 2022-03-26, this tracking script was removed from the site and is
 no longer in use.
