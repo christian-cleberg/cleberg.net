@@ -250,12 +250,18 @@ h3:before {
 
 .post {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin-bottom: 0.5rem;
 }
 
 .post-date {
 	flex: 0 0 auto;
+}
+
+.post-separator {
+	color: var(--secondary-color);
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 table {
