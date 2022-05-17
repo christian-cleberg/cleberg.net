@@ -16,8 +16,8 @@
 		/>
 		<title>{% block title %}{{ config.title }}{% endblock title %}</title>
 		<link rel="canonical" href="{{ config.base_url | safe }}" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico""> {% block
-		page_meta %}
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		{% block page_meta %}
 		<meta
 			name=" description"
 			content="{{ config.description | default(value='') | truncate(length=150) }}"
