@@ -22,9 +22,13 @@ which are dedicated to performance-based websites that fit their size limits.
 Since `cleberg.io` currently measures around `30.0KB` (`22.6KB` is the
 `favicon.ico`), I'm hoping the PRs will be approved soon.
 
-There's also a list out there dedicated to websites that do not include JS, but
-I believe it required submitting a request via Sourcehut, so I'm not sure if
-it's worth the hassle.
+~~There's also a list out there dedicated to websites that do not include JS,
+but I believe it required submitting a request via Sourcehut, so I'm not sure if
+it's worth the hassle.~~
+
+After a little further looking, I also went ahead and submitted PRs to the
+[250KB Club](https://250kb.club/) and [no-JS Club](https://no-js.club/)
+listings.
 
 ## Estoy Aprendiendo Español
 
