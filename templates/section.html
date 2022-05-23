@@ -11,7 +11,7 @@ config.title }}{% endblock %} {% block content %}
 	{% endif %}
 	<div class="post">
 		<span class="post-date">
-			{{- page.date | date(format="%m-%d-%Y") -}}
+			{{- page.date | date(format="%Y-%m-%d") -}}
 		</span>
 		<span class="post-separator">&middot;</span>
 		<a class="post-link" href="{{ page.permalink | safe }}">
