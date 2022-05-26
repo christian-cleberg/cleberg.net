@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="color-scheme" content="dark light" />
+		<!--
+		<meta name="color-scheme" content="dark light">
 		<meta
 			name="theme-color"
 			media="(prefers-color-scheme: light)"
@@ -14,65 +15,51 @@
 			media="(prefers-color-scheme: dark)"
 			content="#111"
 		/>
+		-->
 		<title>{% block title %}{{ config.title }}{% endblock title %}</title>
-		<link rel="canonical" href="{{ config.base_url | safe }}" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="canonical" href="{{ config.base_url | safe }}">
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
 		{% block page_meta %}
 		<meta
 			name=" description"
 			content="{{ config.description | default(value='') | truncate(length=150) }}"
-		/>
+		>
 		{% endblock page_meta %} {% if config.generate_feed %} <link
 		rel="alternate" type={% if config.feed_filename=="atom.xml"
 		%}"application/atom+xml"{% else %}"application/rss+xml"{% endif %}
 		title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}"> {%
 		endif %} {% block css %}
-		<link rel="stylesheet" href="/css/styles.css" />
+		<link rel="stylesheet" href="/styles.css">
 		{% endblock css %}
 	</head>
 
 	<body>
-		<div class="container">
-			<nav class="navbar">
-				<div class="container">
-					<div class="navbar-logo">
-						<a href="/">cleberg.io</a>
-					</div>
-					<div class="navbar-links">
-						<p><a href="/">/home</a></p>
-						<p><a href="/blog/">/blog</a></p>
-						<p><a href="/projects/">/projects</a></p>
-					</div>
-				</div>
-			</nav>
-			<section class="section">
-				{% block content %} {% endblock %}
-			</section>
-			<footer>
-				<p>
-					<a href="/privacy/">Privacy Policy</a>
-					&middot;
-					<a
-						rel="license"
-						href="https://github.com/christian-cleberg/cleberg.io/raw/main/CC-BY-SA-4.0.txt"
-						target="_blank"
-						rel="noopener,noreferrer"
-						>CC-BY-SA</a
-					>
-					&middot;
-					<a
-						href="https://github.com/christian-cleberg/cleberg.io/raw/main/LICENSE.txt"
-						target="_blank"
-						rel="noopener,noreferrer"
-						>GPLv3</a
-					>
-				</p>
-				<p>
-					Build: {{ now() | date(format="%Y-%m-%d %H:%M",
-					timezone="UTC") }}
-				</p>
-				<p>&copy; 2016 - 2022</p>
-			</footer>
-		</div>
+		<nav>
+			<a href="/">home</a> &middot; <a href="/blog/">blog</a> &middot;
+			<a href="/projects/">projects</a> &middot; <a href="/about/">about</a>
+		</nav>
+		<main>{% block content %} {% endblock %}</main>
+		<footer>
+			<a href="/privacy/">Privacy Policy</a>
+			&middot;
+			<a
+				href="https://raw.githubusercontent.com/christian-cleberg/cleberg.io/main/CC-BY-SA-4.0.txt"
+				target="_blank"
+				rel="noopener,noreferrer"
+				>CC-BY-SA</a
+			>
+			&middot;
+			<a
+				href="https://raw.githubusercontent.com/christian-cleberg/cleberg.io/main/LICENSE.txt"
+				target="_blank"
+				rel="noopener,noreferrer"
+				>GPLv3</a
+			>
+			<p>
+				Build: {{ now() | date(format="%Y-%m-%d %H:%M",timezone="UTC")
+				}}
+			</p>
+			<p>&copy; 2016 - 2022</p>
+		</footer>
 	</body>
 </html>

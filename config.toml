@@ -1,19 +1,13 @@
 base_url = "https://cleberg.io"
-title = "Christian Cleberg"
+title = "cleberg.io"
 description = "A collection of my thoughts and musings."
 generate_feed = true
 
 [markdown]
-highlight_code = true
-highlight_theme = "css"
-highlight_themes_css = [
-  { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
-  { theme = "ayu-light", filename = "syntax-theme-light.css" },
-]
 external_links_target_blank = true
 external_links_no_follow = true
 external_links_no_referrer = true
 render_emoji = true
 
 [extra]
-title_separator = "|"
+title_separator = "~"
