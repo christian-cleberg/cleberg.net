@@ -1,5 +1,5 @@
 base_url = "https://cleberg.io"
-title = "cleberg.io"
+title = "Christian Cleberg"
 description = "A collection of my thoughts and musings."
 generate_feed = true
 
@@ -10,4 +10,4 @@ external_links_no_referrer = true
 render_emoji = true
 
 [extra]
-title_separator = "~"
+title_separator = "|"
