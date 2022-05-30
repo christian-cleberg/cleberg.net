@@ -40,5 +40,5 @@ zola build
 Finally, copy the new static files to your web server location:
 
 ```bash
-sudo cp -r public/* /var/www/website_directory
+sudo cp -r public/* /var/www/<your-website-directory>
 ```
