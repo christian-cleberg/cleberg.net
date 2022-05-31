@@ -5,7 +5,7 @@ title = "Privacy"
 ## Dates & Revisions
 
 Please see the
-[full Git history](https://github.com/christian-cleberg/cleberg.io/commits/main)
+[full Git history](https://git.sr.ht/~kaizoku/cleberg.io/log)
 for all source code changes to this privacy policy and website. Otherwise, see
 below for the creation and revision dates for this policy.
 

@@ -4,11 +4,6 @@ title = "IBM Watson Visual Recognition"
 description = "Learn how to use IBM Watson visual recognition to automatically analyze images."
 +++
 
-## Want to try it yourself?
-
-You can download the Jupyter Notebook containing this Python analysis here:
-[IBM Watson Visual Recognition.ipynb](https://github.com/christian-cleberg/data-science)
-
 ## What is IBM Watson?
 
 If you've never heard of [Watson](https://www.ibm.com/watson), this service is a

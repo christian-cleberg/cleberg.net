@@ -24,7 +24,7 @@ presentable again.
 For the last year or two, I have written everything exclusively in
 [Markdown](https://en.wikipedia.org/wiki/Markdown) format. Small notes,
 long-form writings, and even these blog posts
-([see this blog post in Markdown format](https://github.com/christian-cleberg/cleberg.io/blob/main/content/blog/2022-03-02-easy-reliable-note-taking.md))
+([see this blog post in Markdown format](https://git.sr.ht/~kaizoku/cleberg.io/tree/main/item/content/blog/2022-03-02-easy-reliable-note-taking.md?view-source))
 are all written in Markdown.
 
 Why Markdown? While I do appreciate the simplicity of plain-text files without

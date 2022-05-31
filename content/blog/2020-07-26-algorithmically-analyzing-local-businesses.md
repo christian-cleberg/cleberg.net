@@ -4,11 +4,6 @@ title = "Algorithmically Analyzing Local Businesses"
 description = "Let's explore how to perform basic machine learning using Python and Jupyter Lab."
 +++
 
-## Want to try it yourself?
-
-You can download the Jupyter Notebook containing this Python analysis here:
-[Lincoln_Business_Clusters.ipynb](https://github.com/christian-cleberg/data-science)
-
 ## Background Information
 
 This project aims to help investors learn more about Lincoln, Nebraska, USA in

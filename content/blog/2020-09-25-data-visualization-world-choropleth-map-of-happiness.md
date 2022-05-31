@@ -4,11 +4,6 @@ title = "Data Visualization: World Choropleth Map of Happiness"
 description = "Let's explore a data set together using Python and Jupyter Lab - happiness rankings around the world."
 +++
 
-## Want to try it yourself?
-
-You can download the Jupyter Notebook containing this Python analysis here:
-[World Happiness Rankings.ipynb](https://github.com/christian-cleberg/data-science)
-
 ## Background Information
 
 The dataset (obtained from

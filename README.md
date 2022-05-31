@@ -13,7 +13,7 @@ If you want to use this structure to create your site, simply clone the repo and
 rename it to something meaningful:
 
 ```bash
-git clone https://github.com/christian-cleberg/cleberg.io
+git clone https://git.sr.ht/~kaizoku/cleberg.io
 ```
 
 ```bash

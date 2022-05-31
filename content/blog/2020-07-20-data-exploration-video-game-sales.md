@@ -4,11 +4,6 @@ title = "Data Exploration: Video Game Sales"
 description = "Let's explore a data set together using Python and Jupyter Lab - video game sales from around the world."
 +++
 
-## Want to try it yourself?
-
-You can download the Jupyter Notebook containing this Python analysis here:
-[video_game_sales.ipynb](https://github.com/christian-cleberg/data-science)
-
 ## Background Information
 
 This dataset (obtained from
