@@ -8,16 +8,16 @@ Sourcehut: [@kaizoku](https://git.sr.ht/~kaizoku/)
 
 ## Websites
 
-| Repository                                                            | Website                                                 | Description                                         |
-| --------------------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------- |
-| [401k Projections](https://git.sr.ht/~kaizoku/401k)                   | [Visit &rarr;](https://cleberg.io/401k/)                | A plotly graph to calculate future 401k value.      |
-| [Color Generator](https://git.sr.ht/~kaizoku/color-generator)         | [Visit &rarr;](https://cleberg.io/color-generator/)     | A color palette generator.                          |
-| [Lincoln Incidents](https://git.sr.ht/~kaizoku/lincoln-incidents)     | [Visit &rarr;](https://cleberg.io/lincoln-incidents/)   | A set of plotly line charts of police data.         |
-| [Michelangelo](https://git.sr.ht/~kaizoku/michelangelo)               | N/A                                                     | A photo & video gallery using Tumblr's API.         |
-| [PHP Blog](https://git.sr.ht/~kaizoku/php-blog)                       | N/A                                                     | A database-free blogging platform.                  |
-| [Sandbox](https://git.sr.ht/~kaizoku/sandbox)                         | [Visit &rarr;](https://cleberg.io/sandbox/)             | A collection of web learning projects.              |
-| [Space Wiki](https://git.sr.ht/~kaizoku/space-wiki)                   | [Visit &rarr;](https://cleberg.io/space-wiki/)          | A small educational website about our solar system. |
-| [World Incarceration](https://git.sr.ht/~kaizoku/world-incarceration) | [Visit &rarr;](https://cleberg.io/world-incarceration/) | An interactive map of world prison data.            |
+| Repository                                                            | Website                                                          | Description                                         |
+| --------------------------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------------------- |
+| [401k Projections](https://git.sr.ht/~kaizoku/401k)                   | [Visit &rarr;](https://projects.cleberg.io/401k/)                | A plotly graph to calculate future 401k value.      |
+| [Color Generator](https://git.sr.ht/~kaizoku/color-generator)         | [Visit &rarr;](https://projects.cleberg.io/color-generator/)     | A color palette generator.                          |
+| [Lincoln Incidents](https://git.sr.ht/~kaizoku/lincoln-incidents)     | [Visit &rarr;](https://projects.cleberg.io/lincoln-incidents/)   | A set of plotly line charts of police data.         |
+| [Michelangelo](https://git.sr.ht/~kaizoku/michelangelo)               | N/A                                                              | A photo & video gallery using Tumblr's API.         |
+| [PHP Blog](https://git.sr.ht/~kaizoku/php-blog)                       | N/A                                                              | A database-free blogging platform.                  |
+| [Sandbox](https://git.sr.ht/~kaizoku/sandbox)                         | [Visit &rarr;](https://projects.cleberg.io/sandbox/)             | A collection of web learning projects.              |
+| [Space Wiki](https://git.sr.ht/~kaizoku/space-wiki)                   | [Visit &rarr;](https://projects.cleberg.io/space-wiki/)          | A small educational website about our solar system. |
+| [World Incarceration](https://git.sr.ht/~kaizoku/world-incarceration) | [Visit &rarr;](https://projects.cleberg.io/world-incarceration/) | An interactive map of world prison data.            |
 
 ## Stylus Themes
 
