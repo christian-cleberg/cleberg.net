@@ -5,12 +5,12 @@ title = "Privacy"
 ## Dates & Revisions
 
 Please see the
-[full Git history](https://git.sr.ht/~kaizoku/cleberg.io/log)
+[full Git history](https://git.sr.ht/~kaizoku/cleberg.io/log/main/item/content/privacy.md)
 for all source code changes to this privacy policy and website. Otherwise, see
 below for the creation and revision dates for this policy.
 
 Created: `2022-02-11 23:05:00 UTC`  
-Updated: `2022-05-27 01:15:00 UTC`
+Updated: `2022-05-31 17:19:00 UTC`
 
 ## Data Collection & Usage
 
