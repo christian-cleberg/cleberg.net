@@ -10,7 +10,7 @@ for all source code changes to this privacy policy and website. Otherwise, see
 below for the creation and revision dates for this policy.
 
 Created: `2022-02-11 23:05:00 UTC`  
-Updated: `2022-05-31 17:19:00 UTC`
+Updated: `2022-05-31 17:19:30 UTC`
 
 ## Data Collection & Usage
 
@@ -25,8 +25,8 @@ The default access logs and error logs are disabled. More technically, see the f
 ```config
 http {
     ...
-    access_log /dev/null crit;
-    error_log  /dev/null crit;
+    access_log /dev/null;
+    error_log  /dev/null;
     ...
 }
 ```
