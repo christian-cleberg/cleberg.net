@@ -207,10 +207,6 @@ Once the configuration files are created, you will need to enable them with the
 sudo ln -s /etc/nginx/sites-available/dashy.example.com /etc/nginx/sites-enabled/
 ```
 
-```bash
-sudo ln -s /etc/nginx/sites-available/uptime.example.com /etc/nginx/sites-enabled/
-```
-
 Voilà! Your local services should now be available through their URLs.
 
 ## HTTPS with Certbot
