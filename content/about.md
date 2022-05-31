@@ -52,10 +52,10 @@ about my professional life.
 ### Certifications
 
 -   Certified Information Systems Auditor (CISA) from ISACA, 2021
--   Certified Entry-level Python Programmer from Python Institute, 2020
+-   Certified Entry-level Python Programmer (PCEP) from Python Institute, 2020
 -   IBM Data Science Professional Certificate from IBM, 2020
 -   Associate - Customer Service (ACS) from LOMA, 2020
--   Associate - Life Management Institute from LOMA, 2020
+-   Associate - Life Management Institute (ALMI) from LOMA, 2020
 -   ISACA Cybersecurity Audit Certificate from ISACA, 2020
 
 ### Education
