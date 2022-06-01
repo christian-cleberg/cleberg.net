@@ -10,7 +10,7 @@ for all source code changes to this privacy policy and website. Otherwise, see
 below for the creation and revision dates for this policy.
 
 Created: `2022-02-11 23:05:00 UTC`  
-Updated: `2022-05-31 17:19:30 UTC`
+Updated: `2022-06-01 18:52:30 UTC`
 
 ## Data Collection & Usage
 
@@ -30,31 +30,6 @@ http {
     ...
 }
 ```
-
-### Cloudflare
-
-This website uses [Cloudflare](https://www.cloudflare.com) for DNS and tunneling
-purposes. Per the Cloudflare privacy policy for end users, the following quoted
-statement is provided in
-[their privacy policy](https://www.cloudflare.com/privacypolicy/).
-
-Please note that within Cloudlfare's privacy policy, you are the End User and I
-am the Customer.
-
-> **End Users**
->
-> Cloudflare processes End Users’ interactions with Customer’s Internet
-> Properties and the Services. This information is processed when End Users
-> access or use our Customers’ domains, websites, APIs, applications, devices,
-> end points, and networks that use one or more of our Services, and when End
-> Users access or use Services, such as Cloudflare Zero Trust. The information
-> processed may include but is not limited to IP addresses, traffic routing
-> data, system configuration information, and other information about traffic to
-> and from Customers’ websites, devices, applications, and/or networks.
->
-> The End User data that we make available to our Customers via the Service
-> dashboard or other online interface are specifically defined as “Customer
-> Logs”.
 
 ## Questions?
 
