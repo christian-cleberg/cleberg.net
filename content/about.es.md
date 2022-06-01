@@ -1,26 +1,29 @@
 +++
-title = "About"
+title = "Sobre Mí"
 +++
 
-< [Traducción al español](/es/about/) >
+< [English Translation](/about/) >
 
-I'm Christian Cleberg, a Senior IT Auditor currently living in Lincoln, NE.
-Outside of work, I spend my time as a data analyst, hobbyist programmer, and
-homelabber.
+Perdónenme por mi mal español. Esta página web es un trabajo en progreso. Estoy
+aprendiendo.
+
+¡Hola! Yo soy Christian Cleberg, un TI Auditor de Lincoln, NE. Fuera del
+trabajo, yo paso mi tiempo como analista de datos, aficionado a la programación
+y sysadmin.
 
 ## Personal
 
-### Hobbies
+### Los Pasatiempos
 
--   Programming
--   Video Games
--   Television & Movies
--   Reading
--   Cooking
--   Billiards
--   Disc Golf
+-   Programación
+-   Los videojuegos
+-   La televisión y los películas
+-   Las cuentas
+-   La cocinar
+-   Billar
+-   Golf del disco
 
-### Favorite Languages
+### Idiomas Favoritos
 
 -   Python
 -   SQL
@@ -31,10 +34,9 @@ homelabber.
 
 ## Professional
 
-In case you aren't on LinkedIn, here are some of the more important details
-about my professional life.
+Si no estás en LinkedIn, vea los detalles abajo:
 
-### Resume
+### El Currículum
 
 -   Senior IT Auditor at [KPMG](https://en.wikipedia.org/wiki/KPMG), 2022 -
     Present
@@ -51,7 +53,7 @@ about my professional life.
 -   Community Management Intern at
     [Walgreens](https://en.wikipedia.org/wiki/Walgreens), 2017 - 2018
 
-### Certifications
+### Las Certificaciones
 
 -   Certified Information Systems Auditor (CISA) from ISACA, 2021
 -   Certified Entry-level Python Programmer (PCEP) from Python Institute, 2020
@@ -60,8 +62,9 @@ about my professional life.
 -   Associate - Life Management Institute (ALMI) from LOMA, 2020
 -   ISACA Cybersecurity Audit Certificate from ISACA, 2020
 
-### Education
+### La Educación
 
--   Bachelor of Science in Business Administration (Major: Accounting) from the
-    [University of Nebraska - Lincoln](https://en.wikipedia.org/wiki/University_of_Nebraska%E2%80%93Lincoln),
+-   La Licenciatura en Ciencias en Administración de Empresas (Especialidad: La
+    Contabilidad) de la
+    [Universidad de Nebraska - Lincoln](https://en.wikipedia.org/wiki/University_of_Nebraska%E2%80%93Lincoln),
     2016 - 2019
