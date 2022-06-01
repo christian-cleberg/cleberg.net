@@ -1,6 +1,7 @@
 base_url = "https://cleberg.io"
 title = "Christian Cleberg"
 description = "A collection of my thoughts and musings."
+default_language = "en"
 generate_feed = true
 
 [markdown]
