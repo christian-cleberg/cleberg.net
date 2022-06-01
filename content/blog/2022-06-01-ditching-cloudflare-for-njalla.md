@@ -66,19 +66,20 @@ Cloudflare Tunnel is a service that acts as a reverse-proxy (hosted on
 Cloudflare's servers) and allowed me to mask the private IP address of the
 server hosting my various websites and apps.
 
-However, as I was Cloudflare, I was not able to find a suitable replacement that
-was inexpensive and simple. So, I simply went back to hosting
-[my own reverse proxy with Nginx](/blog/set-up-nginx-reverse-proxy/) within my
-network. With my recent additions of Unifi hardware, I am much more protected
-against spam and malicious attacks at the network edge than I was before I
-switched to Cloudflare.
+However, as I was moving away from Cloudflare, I was not able to find a suitable
+replacement that was both inexpensive and simple. So, I simply went back to
+hosting [my own reverse proxy with Nginx](/blog/set-up-nginx-reverse-proxy/).
+With the recent additions of Unifi hardware in my server/network rack, I am much
+more protected against spam and malicious attacks at the network edge than I was
+before I switched to Cloudflare.
 
 ## Access
 
-Cloudflare Access, an add-on to my use of Cloudflare Tunnel, provided an
-authentication screen that required you to enter valid credentials before
-Cloudflare would forward you to the actual website or app (if the website/app
-has their own authentication, you'd have to authenticate twice).
+Cloudflare Access, another app I used in combination with Cloudflare Tunnel,
+provided an authentication screen that required you to enter valid credentials
+before Cloudflare would forward you to the actual website or app (if the
+website/app has their own authentication, you'd then have to authenticate a
+second time).
 
 I did not replace this service with anything since I only host a handful of
-non-sensitive apps that don't require further authentication.
+non-sensitive apps that don't require duplicate authentication.
