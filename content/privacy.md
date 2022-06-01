@@ -1,5 +1,6 @@
 +++
 title = "Privacy"
+description = "The official privacy policy of cleberg.io."
 +++
 
 ## Dates & Revisions

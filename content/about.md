@@ -1,5 +1,6 @@
 +++
 title = "About"
+description = "A web page all about me."
 +++
 
 < [Traducción al español](/es/about/) >

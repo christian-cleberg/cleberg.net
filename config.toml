@@ -1,7 +1,4 @@
 base_url = "https://cleberg.io"
-title = "Christian Cleberg"
-description = "A collection of my thoughts and musings."
-generate_feed = true
 default_language = "en"
 
 [markdown]
@@ -13,6 +10,12 @@ render_emoji = true
 [extra]
 title_separator = "|"
 
+[languages.en]
+title = "Christian Cleberg"
+description = "A collection of my thoughts and musings."
+generate_feed = true
+
 [languages.es]
 title = "Christian Cleberg"
 description = "Una colección de mis pensamientos y reflexiones."
+generate_feed = false

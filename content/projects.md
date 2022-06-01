@@ -1,5 +1,6 @@
 +++
 title = "Projects"
+description = "A quick listing of my top (not necessarily good) projects."
 +++
 
 ## Source Code
