@@ -5,8 +5,8 @@ description = "Una página web todo acerca de mí."
 
 < [English Translation](/about/) >
 
-Perdónenme por mi mal español. Esta página web es un trabajo en progreso. Estoy
-aprendiendo.
+> Perdónenme por mi mal español, estoy aprendiendo. Esta página web es un trabajo
+en progreso.
 
 ¡Hola! Yo soy Christian Cleberg, un TI Auditor de Lincoln, NE. Fuera del
 trabajo, yo paso mi tiempo como analista de datos, aficionado a la programación
@@ -39,29 +39,29 @@ Si no estás en LinkedIn, vea los detalles abajo:
 
 ### El Currículum
 
--   Senior IT Auditor at [KPMG](https://en.wikipedia.org/wiki/KPMG), 2022 -
+-   Auditor Senior de TI at [KPMG](https://en.wikipedia.org/wiki/KPMG), 2022 -
     Present
--   Senior Technology Risk Consultant at
+-   Consultor Senior de Riesgos Tecnológicos at
     [EY](https://en.wikipedia.org/wiki/Ernst_%26_Young), 2021 - 2022
--   Senior IT Auditor at [Ameritas](https://en.wikipedia.org/wiki/Ameritas),
+-   Auditor Senior de TI at [Ameritas](https://en.wikipedia.org/wiki/Ameritas),
     2020 - 2021
--   IS Auditor II at [Nelnet](https://en.wikipedia.org/wiki/Nelnet), 2019 - 2020
--   Internal Audit Intern at [Ameritas](https://en.wikipedia.org/wiki/Ameritas),
+-   Auditor de TI (II) at [Nelnet](https://en.wikipedia.org/wiki/Nelnet), 2019 - 2020
+-   Pasante de Auditoría Interna at [Ameritas](https://en.wikipedia.org/wiki/Ameritas),
     2018 - 2019
--   Teaching Assistant at
+-   Profesor de Apoyo at
     [UNL](https://en.wikipedia.org/wiki/University_of_Nebraska%E2%80%93Lincoln),
     2017 - 2018
--   Community Management Intern at
+-   Becario de Gestión Comunitaria at
     [Walgreens](https://en.wikipedia.org/wiki/Walgreens), 2017 - 2018
 
 ### Las Certificaciones
 
--   Certified Information Systems Auditor (CISA) from ISACA, 2021
--   Certified Entry-level Python Programmer (PCEP) from Python Institute, 2020
--   IBM Data Science Professional Certificate from IBM, 2020
--   Associate - Customer Service (ACS) from LOMA, 2020
--   Associate - Life Management Institute (ALMI) from LOMA, 2020
--   ISACA Cybersecurity Audit Certificate from ISACA, 2020
+-   Certified Information Systems Auditor (CISA) de ISACA, 2021
+-   Certified Entry-level Python Programmer (PCEP) de Python Institute, 2020
+-   IBM Data Science Professional Certificate de IBM, 2020
+-   Associate - Customer Service (ACS) de LOMA, 2020
+-   Associate - Life Management Institute (ALMI) de LOMA, 2020
+-   ISACA Cybersecurity Audit Certificate de ISACA, 2020
 
 ### La Educación
 
