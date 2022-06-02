@@ -1,9 +1,5 @@
 # cleberg.io
 
-<a href="https://512kb.club">
-    <img src="https://512kb.club/assets/images/green-team.svg" />
-</a>
-
 This is my personal Markdown-based website and blog, using
 [Zola](https://www.getzola.org) to generate static-site files.
 
