@@ -2,6 +2,16 @@
 {% block title %}
 	{{ section.title ~ " | " ~ config.title }}
 {% endblock %}
+{% block nav %}
+	<div class="breadcrumbs">
+		<a href="/">home</a>
+		{% set path = "/" %}
+		{% for name in section.components %}
+			{% set_global path = path ~ name ~ "/" %}
+			/ <a href="{{path}}">{{ name }}</a>
+		{% endfor %}
+	</div>
+{% endblock nav %}
 {% block content %}
 	<h1 class="title">{{ section.title }}</h1>
 	<p>Subscribe: <a href="/atom.xml">Atom RSS Feed</a></p>
@@ -15,13 +25,12 @@
 				<h2 class="post-year">{{- current_date -}}</h2>
 			{% endif %}
 			<div class="post">
-				<span class="post-date">
-					{{- page.date | date(format="%Y-%m-%d") -}}
-				</span>
-				<span class="post-separator">&middot;</span>
 				<a class="post-link" href="{{ page.permalink | safe }}">
 					{{- page.title -}}
 				</a>
+				<span class="post-date">
+					{{- page.date | date(format="%b %d") -}}
+				</span>
 			</div>
 		{% endfor %}
 	</div>

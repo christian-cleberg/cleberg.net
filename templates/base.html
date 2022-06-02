@@ -37,14 +37,7 @@
 		<div class="container">
 			<nav class="navbar">
 				<div class="container">
-					<div class="navbar-logo">
-						<a href="/">cleberg.io</a>
-					</div>
-					<div class="navbar-links">
-						<p><a href="/about/">/about</a></p>
-						<p><a href="/blog/">/blog</a></p>
-						<p><a href="/projects/">/projects</a></p>
-					</div>
+					{% block nav %}{% endblock %}
 				</div>
 			</nav>
 			<section class="section">
@@ -70,8 +63,8 @@
 					>
 				</p>
 				<p>
-					Build: {{ now() | date(format="%Y-%m-%d %H:%M",
-					timezone="UTC") }}
+					Build: <code>{{ now() | date(format="%Y-%m-%d %H:%M",
+					timezone="UTC") }}</code>
 				</p>
 				<p>&copy; 2016 - 2022</p>
 			</footer>

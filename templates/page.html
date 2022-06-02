@@ -11,6 +11,16 @@
 {% block css %}
 	<link rel="stylesheet" href="/styles.css">
 {% endblock css %}
+{% block nav %}
+    <div class="breadcrumbs">
+        <a href="/">home</a>
+        {% set path = "/" %}
+        {% for name in page.components %}
+            {% set_global path = path ~ name ~ "/" %}
+            / <a href="{{path}}">{{ name }}</a>
+        {% endfor %}
+    </div>
+{% endblock nav %}
 {% block content %}
 	<h1 class="title">{{ page.title }}</h1>
     {% if page.date %}
