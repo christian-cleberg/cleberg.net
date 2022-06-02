@@ -5,12 +5,12 @@ description = "Una página web todo acerca de mí."
 
 < [English Translation](/about/) >
 
-> Perdónenme por mi mal español, estoy aprendiendo. Esta página web es un trabajo
-en progreso.
+> Perdónenme por mi mal español, estoy aprendiendo. Esta página web es un
+> trabajo en progreso.
 
-¡Hola! Yo soy Christian Cleberg, un TI Auditor de Lincoln, NE. Fuera del
-trabajo, yo paso mi tiempo como analista de datos, aficionado a la programación
-y sysadmin.
+¡Hola! Soy Christian Cleberg, un TI Auditor de Lincoln, NE. Fuera del trabajo,
+yo paso mi tiempo como analista de datos, aficionado a la programación y
+sysadmin.
 
 ## Personal
 
@@ -45,9 +45,10 @@ Si no estás en LinkedIn, vea los detalles abajo:
     [EY](https://en.wikipedia.org/wiki/Ernst_%26_Young), 2021 - 2022
 -   Auditor Senior de TI at [Ameritas](https://en.wikipedia.org/wiki/Ameritas),
     2020 - 2021
--   Auditor de TI (II) at [Nelnet](https://en.wikipedia.org/wiki/Nelnet), 2019 - 2020
--   Pasante de Auditoría Interna at [Ameritas](https://en.wikipedia.org/wiki/Ameritas),
-    2018 - 2019
+-   Auditor de TI (II) at [Nelnet](https://en.wikipedia.org/wiki/Nelnet), 2019 -
+    2020
+-   Pasante de Auditoría Interna at
+    [Ameritas](https://en.wikipedia.org/wiki/Ameritas), 2018 - 2019
 -   Profesor de Apoyo at
     [UNL](https://en.wikipedia.org/wiki/University_of_Nebraska%E2%80%93Lincoln),
     2017 - 2018
