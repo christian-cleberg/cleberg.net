@@ -28,7 +28,7 @@ homelabber.
 -   JavaScript
 -   PHP
 -   Swift
--   rust
+-   Rust
 
 ## Professional
 

@@ -24,14 +24,14 @@ y sysadmin.
 -   Billar
 -   Golf del disco
 
-### Idiomas Favoritos
+### Lenguajes de Programación Favoritos
 
 -   Python
 -   SQL
 -   JavaScript
 -   PHP
 -   Swift
--   rust
+-   Rust
 
 ## Professional
 
