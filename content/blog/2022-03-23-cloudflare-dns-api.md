@@ -13,9 +13,9 @@ change at any time), you must have a solution to update the DNS so that you can
 access your service even when the IP of the server changes.
 
 The process below uses the [Cloudflare API](https://api.cloudflare.com/) to
-update DNS `A` records with the server's current IP. If you use another DNS
-provider, you will have to find a way to update your DNS (or find a way to get a
-static IP).
+update DNS `A` and `AAAA` records with the server's current IP. If you use
+another DNS provider, you will have to find a way to update your DNS (or find a
+way to get a static IP).
 
 First, install `jq` since we will use it in the next script:
 
@@ -23,18 +23,54 @@ First, install `jq` since we will use it in the next script:
 sudo apt install jq
 ```
 
-Next, create a location for your DDNS update scripts:
+Next, create a location for your DDNS update scripts and open the first script:
 
 ```bash
 mkdir ~/ddns
-nano ~/ddns/update_cloudflare_dns.sh
+nano ~/ddns/update.sh
 ```
 
-Paste the following into the script and update the `api_token`, `email`, and
-`zone_name` variables. If you are updating a subdomain
-(`subdomain.example.com`), uncomment and update the `dns_record` variable.
+The following `update.sh` script will take all of your domains and subdomains
+and check Cloudflare to see if the current `A` and `AAAA` records match your
+server's IP address. If not, it will update the records.
 
 ```bash
+# file: update.sh
+#!/bin/bash
+
+# Update TLDs
+domains=(example.com example.net)
+
+for domain in "${domains[@]}"
+do
+  echo -e "\nUpdating $domain..."
+  zone_name=$domain /home/<your-username>/ddns/ddns.sh
+done
+
+# Update subdomains for example.com
+domain=example.com
+subdomains=(photos.example.com)
+
+for subdomain in "${subdomains[@]}"
+do
+  echo -e "\nUpdating $subdomain..."
+  zone_name=$domain  dns_record=$subdomain /home/<your-username>/ddns/ddns.sh
+done
+```
+
+Next, open up the `ddns.sh` script. Paste the following into the script and
+update the `api_token` and `email` variables.
+
+```bash
+nano ~/ddns/ddns.sh
+```
+
+:warning: **Note**: If you want your DNS records to be proxied through
+Cloudflare, find and update the following snippet: `\"proxied\":false}"` to say
+`true` instead of `false`.
+
+```bash
+# file: ddns.sh
 #!/bin/bash
 # based on https://gist.github.com/Tras2/cba88201b17d765ec065ccbedfb16d9a
 # initial data; they need to be filled by the user
@@ -42,10 +78,6 @@ Paste the following into the script and update the `api_token`, `email`, and
 api_token=<YOUR_API_TOKEN>
 ## email address associated with the Cloudflare account
 email=<YOUR_EMAIL>
-## the zone (domain) should be modified
-zone_name=example.com
-## the dns record (sub-domain) should be modified
-# dns_record=subdomain.example.com
 
 # get the basic data
 ipv4=$(curl -s -X GET -4 https://ifconfig.co)
@@ -132,19 +164,20 @@ else
 fi
 ```
 
-Once the script is saved and closed, make the script executable:
+Once the script is saved and closed, make the scripts executable:
 
 ```bash
-chmod +x ~/ddns/update_cloudflare_dns.sh
+chmod +x ~/ddns/ddns.sh
+chmod +x ~/ddns/update.sh
 ```
 
 You can test the script by running it manually:
 
 ```bash
-./update_cloudflare_dns.sh
+./update.sh
 ```
 
-To make sure the script runs by itself, add it to the `cron` file so that it
+To make sure the scripts run automatically, add it to the `cron` file so that it
 will run on a schedule. To do this, open the cron file:
 
 ```bash
@@ -154,5 +187,5 @@ crontab -e
 In the cron file, paste the following at the bottom of the editor:
 
 ```bash
-*/5 * * * * bash /home/<your_username>/ddns/update_cloudflare_dns.sh
+*/5 * * * * bash /home/<your_username>/ddns/update.sh
 ```
