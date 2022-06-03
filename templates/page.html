@@ -13,7 +13,11 @@
 {% endblock css %}
 {% block nav %}
     <div class="breadcrumbs">
-        <a href="/">home</a>
+        {% if lang == "es" %}
+            <a href="/">página principal</a>
+        {% else %}
+            <a href="/">home</a>
+        {% endif %}
         {% set path = "/" %}
         {% for name in page.components %}
             {% set_global path = path ~ name ~ "/" %}

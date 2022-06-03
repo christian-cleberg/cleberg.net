@@ -23,8 +23,14 @@ So, as of today, I have switched over to [Njalla](https://njal.la) as my
 registrar and DNS manager. I was able to easily transfer my domains over
 rapidly, with only one domain taking more than 15-30 minutes to propagate.
 
-I do still have two domains sitting at Cloudflare for the moment while I decide
-if they're worth the higher rates (one domain is 30€ and the other is 45€).
+~~I do still have two domains sitting at Cloudflare for the moment while I
+decide if they're worth the higher rates (one domain is 30€ and the other is
+45€).~~
+
+> **Update (2022.06.03)**: I ended up transferring my final two domains over to
+> Njalla, clearing my Cloudflare account of personal data, and deleting the
+> Cloudflare account entirely. *I actually feel relieved to have moved on to a
+> provider I trust.*
 
 ## DNS
 
