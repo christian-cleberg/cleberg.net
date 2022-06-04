@@ -29,8 +29,8 @@ decide if they're worth the higher rates (one domain is 30€ and the other is
 
 > **Update (2022.06.03)**: I ended up transferring my final two domains over to
 > Njalla, clearing my Cloudflare account of personal data, and deleting the
-> Cloudflare account entirely. *I actually feel relieved to have moved on to a
-> provider I trust.*
+> Cloudflare account entirely. _I actually feel relieved to have moved on to a
+> provider I trust._
 
 ## DNS
 
@@ -50,10 +50,14 @@ DNS configuration. I was able to do that at a past registrar (perhaps it was
 
 ### Dynamic DNS Updates
 
-I am working on a local server script to dynamically update my `A` records
-whenever my public IP address changes at home - I will update this post with a
-link whenever that becomes available. In the meantime, I do know that you can
-create `Dynamic` DNS records with Njalla that
+I have built an easy Python script to run (or set-up in `cron` to run
+automatically) that will check my server's IPv4 and IPv6, compare it to Njalla,
+and update the DNS records if they don't match. You can see the full script and
+process in my other post:
+[Updating Dynamic DNS with Njalla API](/blog/njalla-dns-api/).
+
+I haven't used this other method, but I do know that you can create `Dynamic`
+DNS records with Njalla that
 [work for updating dynamic subdomains](https://njal.la/docs/ddns/).
 
 ### Njalla's DNS Tool
