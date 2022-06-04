@@ -1,6 +1,6 @@
 +++
 date = 2022-03-23
-title = "Updating Dynamic DNS with Cloudflare API"
+title = "Dynamic DNS with Cloudflare API"
 description = "Learn how to update Cloudflare DNS records automatically with a simple bash script."
 draft = false
 aliases = ["/blog/updating-dynamic-dns-with-cloudflare-api"]

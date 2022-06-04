@@ -1,6 +1,6 @@
 +++
 date = 2022-06-04
-title = "Updating Dynamic DNS with Njalla API"
+title = "Dynamic DNS with Njalla API"
 description = "Learn how to update Njalla DNS records automatically with a simple Python script."
 draft = false
 +++
