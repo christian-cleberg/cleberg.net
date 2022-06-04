@@ -46,7 +46,7 @@ For this demo, we are using the `list-records` and `edit-record` requests.
 The `list-records` request requires the following payload to be sent when
 calling the API:
 
-```json
+```txt
 params: {
     domain: string
 }
@@ -55,7 +55,7 @@ params: {
 The `edit-record` request requires the following payload to be sent when calling
 the API:
 
-```json
+```txt
 params: {
     domain: string
     id: int
