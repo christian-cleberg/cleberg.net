@@ -1,6 +1,6 @@
 +++
 date = 2022-06-12
-title = "Open Source macOS Apps"
+title = "Open-Source macOS Apps"
 description = "A roundup of my favoritate open-source macOS applications."
 draft = false
 +++
