@@ -126,8 +126,8 @@ Kate is a simple text editor that allows for quick and easy editing.
 
 #### Transmission
 
-[Website](https://transmissionbt.com/) -
-[Source Code](https://github.com/transmission/transmission)
+- [Website](https://transmissionbt.com/)
+- [Source Code](https://github.com/transmission/transmission)
 
 A drop-dead simple torrent client.
 
