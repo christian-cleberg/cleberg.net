@@ -79,6 +79,10 @@ schedule.
 
 ## Writing on Desktop
 
+> **Update (06.14.22)**: Since writing this post, I have reverted to simply
+> keeping my `notes` folder open and opening notes individually in TextEdit
+> for a more minimal and relaxing writing experience on the desktop.
+
 The bulk of my writing occurs in a desktop environment, with a full keyboard
 layout and wide screen. I don't illustrate with a smart pen, I rarely use
 embedded images, and I love being able to see all of my notes/directories in a
@@ -110,12 +114,12 @@ Personally, I write very little on mobile - except when needing to take
 important notes on-the-go. Any long-form writing, journals, etc. are done at
 home, where I always have my laptop available.
 
-I wanted a simple and foolproof editor for iOS - preferably open-source.
-However, after testing 5-10 apps, I could not find an open-source iOS
-note-taking app that allowed me to use the local folder I wanted for my notes
-(Cryptomator). So, I am using
-[QuickText](https://apps.apple.com/us/app/quicktext-plain-text-editor/id1440478074)
-for now, which is not open-source.
+I wanted a simple and foolproof editor for iOS - preferably open-source. After
+a long journey of testing the few (& terrible) open-source iOS note-taking apps,
+I finally found a phenomenal one:
+[Runestone](https://github.com/simonbs/runestone). This app is fantastic
+for note-taking, has plenty of optional features, and integrates natively
+with the iOS file manager.
 
 This app opens the iOS file manager and allows you to click any file you want,
 opens it up in an editor, and lets me save and close out of that note.
