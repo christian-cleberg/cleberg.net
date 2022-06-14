@@ -8,68 +8,37 @@
 <a href="/projects/">{ Projects }</a>
 <h2>Recent Posts</h2>
 {% for subsection in section.subsections | sort %}
-	{% set subsection_item = get_section(path=subsection) %}
-	{% for page in subsection_item.pages %}
-		{% if loop.index > 3 %}{% break %}{% endif %}
-		<div class="post">
-			<a class="post-link" href="{{ page.permalink | safe }}">
-				{{- page.title -}}
-			</a>
-			<span class="post-date"> {{- page.date | date(format="%b %Y") -}}</span>
-		</div>
-	{% endfor %}
+{% set subsection_item = get_section(path=subsection) %}
+{% for page in subsection_item.pages %}
+{% if loop.index > 3 %}{% break %}{% endif %}
+<div class="post">
+	<a class="post-link" href="{{ page.permalink | safe }}">
+		{{- page.title -}}
+	</a>
+	<span class="post-date"> {{- page.date | date(format="%b %d") -}}</span>
+</div>
+{% endfor %}
 {% endfor %}
 <h2>Available Services</h2>
-<a href="https://ig.cleberg.net" target="_blank" rel="noopener,noreferrer"
-	>Bibliogram</a
-> - An Instagram proxy
+<a href="https://ig.cleberg.net" target="_blank" rel="noopener,noreferrer">Bibliogram</a> - An Instagram proxy
 <br />
-<a href="https://reddit.cleberg.net" target="_blank" rel="noopener,noreferrer"
-	>libreddit</a
-> - A Reddit proxy
+<a href="https://reddit.cleberg.net" target="_blank" rel="noopener,noreferrer">libreddit</a> - A Reddit proxy
 <br />
-<a
-	href="https://translate.cleberg.net"
-	target="_blank"
-	rel="noopener,noreferrer"
-	>LibreTranslate</a
-> - An open-source translation tool
+<a href="https://translate.cleberg.net" target="_blank" rel="noopener,noreferrer">LibreTranslate</a> - An open-source
+translation tool
 <h2>Contact</h2>
-Email: <a href="mailto:hello@cleberg.io">hello@cleberg.io</a> [<a
-	href="https://cleberg.io/gpg_key.txt"
-	>GPG key</a
->]
+Email: <a href="mailto:hello@cleberg.io">hello@cleberg.io</a> [<a href="https://cleberg.io/gpg_key.txt">GPG key</a>]
 <br>
 LinkedIn:
-<a
-	href="https://linkedin.com/in/christian-cleberg/"
-	target="_blank"
-	rel="noopener,noreferrer"
-	>@christian-cleberg</a
->
+<a href="https://linkedin.com/in/christian-cleberg/" target="_blank" rel="noopener,noreferrer">@christian-cleberg</a>
 <br>
 Matrix:
-<a
-	href="https://matrix.to/#/@kaizoku_:matrix.org"
-	target="_blank"
-	rel="noopener,noreferrer"
-	>@kaizoku_</a
->
+<a href="https://matrix.to/#/@kaizoku_:matrix.org" target="_blank" rel="noopener,noreferrer">@kaizoku_</a>
 <br>
 Sourcehut:
-<a
-	href="https://git.sr.ht/~kaizoku/"
-	target="_blank"
-	rel="noopener,noreferrer"
-	>@kaizoku</a
->
+<a href="https://git.sr.ht/~kaizoku/" target="_blank" rel="noopener,noreferrer">@kaizoku</a>
 <br>
 Stack Overflow:
-<a
-	href="https://stackoverflow.com/users/12566804/kaizoku"
-	target="_blank"
-	rel="noopener,noreferrer"
-	>@kaizoku</a
->
+<a href="https://stackoverflow.com/users/12566804/kaizoku" target="_blank" rel="noopener,noreferrer">@kaizoku</a>
 <br>
 {% endblock content %}
