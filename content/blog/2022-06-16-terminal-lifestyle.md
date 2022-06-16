@@ -37,13 +37,14 @@ more meaningful experiences:
 My personal approach to reducing digital distractions and increasing my focus on 
 the task at hand is to use a terminal for as much as I possibly can.
 
-Most days, this means that I have 3-5 tabs open in my terminal:
+Most days, this means that I have a few tabs open constantly in my terminal:
 
 1. A web browser
 2. A chat client
 3. An email client
-4. A local shell for navigating my computer's files
-5. A remote shell for managing servers and other machines
+4. An RSS feed reader
+5. A local shell for navigating my computer's files
+6. A remote shell for managing servers and other machines
 
 Beyond this, I rarely open other tabs or GUI applications, unless absolutely 
 necessary. If you look, you may be surprised what can be accomplished in the 
@@ -152,6 +153,31 @@ And here is that same message after being delivered to my inbox:
 
 ![neomutt 
 !inbox](https://img.cleberg.io/blog/20220616-terminal-lifestyle/neomutt_inbox.png)
+
+### RSS Feed Reader
+
+I have just started using [Newsboat](https://newsboat.org/) to read articles in 
+my terminal and have found quick success with it.
+
+I'll show you a quick screenshot first:
+
+![Newsboat](https://img.cleberg.io/blog/20220616-terminal-lifestyle/newsboat.png)
+
+The configuration was super easy for this app; I simply installed the app, 
+created a file for URLs, and imported my OPML subscriptions that I had exported 
+out of my old feed reader:
+
+```bash
+brew install newsboat
+```
+
+```bash
+touch ~/.newsboat/urls
+```
+
+```bash
+newsboat -i=my_subscriptions.opml
+```
 
 ### Writing & Programming
 
