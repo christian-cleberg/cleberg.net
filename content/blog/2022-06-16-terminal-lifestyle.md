@@ -6,8 +6,8 @@ description = "A detailed description on how I'm living my digital life in the t
 
 ## Text-Based Simplicity
 
-I've detailed my views on web-based minimalism and related topics, in other 
-posts throughout the years, such as JavaScript/CSS bloat slowing down websites 
+I've detailed my views on web-based minimalism and related topics in other 
+posts throughout the years; e.g., JavaScript/CSS bloat slowing down websites 
 that are essentially a text document. However, I have never really expanded 
 beyond talking about the web and describing how I focus on minimalizing 
 distractions in other digital environments.
@@ -148,8 +148,7 @@ Regardless, here's a quick look at composing a message in `neomutt`, using
 ![neomutt 
 !compose](https://img.cleberg.io/blog/20220616-terminal-lifestyle/neomutt_compose.png)
 
-And here is that same message after being delivered to my inbox (I moved it to 
-my Junk folder for screenshot purposes):
+And here is that same message after being delivered to my inbox:
 
 ![neomutt 
 !inbox](https://img.cleberg.io/blog/20220616-terminal-lifestyle/neomutt_inbox.png)
