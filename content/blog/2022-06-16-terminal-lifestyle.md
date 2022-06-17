@@ -9,7 +9,7 @@ description = "A detailed description on how I'm living my digital life in the t
 I've detailed my views on web-based minimalism and related topics in other 
 posts throughout the years; e.g., JavaScript/CSS bloat slowing down websites 
 that are essentially a text document. However, I have never really expanded 
-beyond talking about the web and describing how I focus on minimalizing 
+beyond talking about the web and describing how I focus on minimizing 
 distractions in other digital environments.
 
 This post is going to set the baseline for how I *try* to live my digital life. 
