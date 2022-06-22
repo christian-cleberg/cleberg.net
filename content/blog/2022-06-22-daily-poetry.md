@@ -103,9 +103,9 @@ For the actual poem content, we need to loop over each line in the `lines`
 variable since each line is a separate string by default.
 
 > You *could* also extract the title or author and make another call out to the 
-> API but it just doesn't make sense to me to send multiple requests when we can 
-> create a simple loop on our local machine to work with the data we already 
-> have.
+> API to avoid having to build the plaintext poem with a loop, but it just 
+> doesn't make sense to me to send multiple requests when we can create a simple 
+> loop on our local machine to work with the data we already have.
 >
 > For 
 > [example](https://poetrydb.org/title/Sonnet%20XXII:%20With%20Fools%20and%20Children/lines.text), 
