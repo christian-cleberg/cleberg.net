@@ -102,6 +102,16 @@ presented by the API.
 For the actual poem content, we need to loop over each line in the `lines` 
 variable since each line is a separate string by default.
 
+> You *could* also extract the title or author and make another call out to the 
+> API but it just doesn't make sense to me to send multiple requests when we can 
+> create a simple loop on our local machine to work with the data we already 
+> have.
+>
+> For 
+> [example](https://poetrydb.org/title/Sonnet%20XXII:%20With%20Fools%20and%20Children/lines.text), 
+> look at the raw data response of this link to see the poem's lines returned 
+> in plaintext.
+
 ```python
 title = json_data[0]['title']
 author = json_data[0]['author']
