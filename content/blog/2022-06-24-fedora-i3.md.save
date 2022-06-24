@@ -2,7 +2,7 @@
 date = 2022-01-20
 title = "Rebooting My Love Affair with Linux"
 description = "A quick recap on my migration from macOS to Fedora i3."
-draft = false
+draft = true
 +++
 
 ## Leaving macOS
@@ -47,106 +47,39 @@ tiling window manager (WM) working on it.
 
 ### i3
 
-![i3wm](https://img.cleberg.io/blog/20220624-fedora-i3/i3wm.png)
+![i3wm]()
 
 One of the reasons I settled on Fedora is that it comes with an official i3 
 spin. Being able to use a tiling WM, such as i3 or sway, is one of the biggest 
 things I wanted to do as soon as I adopted Linux again.
 
 I will probably set-up a dotfile repository soon, so that I don't lose any of my 
-configurations, but nothing big has been configured thus far.
+configurations, but for now you are stuck just reading this blog post to see 
+what I've changed in order to get the result in the screenshot above.
 
-The two main things I have updated in i3wm are natural scrolling and binding my 
-brightness keys to the `brightnessctl` program.
+- dotfiles?
+- brightnessctl fix
 
-#### Natural Scrolling
+#### polybar
 
-You can enable natural scrolling by the opening the following file:
+- dotfiles?
 
-```bash
-sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
-```
+#### alacritty
 
-Within the `40-libinput.conf` file, find the following input sections and enable 
-the natural scrolling option.
-
-This is the `pointer` section:
-
-```conf
-Section "InputClass"
-        Identifier "libinput pointer catchall"
-        MatchIsPointer "on"
-        MatchDevicePath "/dev/input/event*"
-        Driver "libinput"
-        Option "NaturalScrolling" "True"
-EndSection
-```
-
-This is the `touchpad` section:
-
-```conf
-Section "InputClass"
-        Identifier "libinput touchpad catchall"
-        MatchIsTouchpad "on"
-        MatchDevicePath "/dev/input/event*"
-        Driver "libinput"
-        Option "NaturalScrolling" "True"
-EndSection
-```
-
-#### Enabling Brightness Keys
-
-Likewise, enabling brightness key functionality is as simple as binding the keys 
-to the `brightnessctl` program.
-
-To do this, open up your i3 config file. Mine is located here:
-
-```bash
-nano /home/<my-user>/.config/i3/config
-```
-
-```conf
-# Use brightnessctl to adjust brightness.
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 3%-
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 3%+
-```
-
-#### `polybar`
-
-Instead of using the default `i3status` bar, I have opted to use `polybar` 
-instead (as you can also see in the screenshot above).
-
-My config for this menu bar is basically just the default settings with modified 
-colors and an added battery block to quickly show me the machine's battery info.
-
-#### `alacritty`
-
-Not much to say on this part yet, as I haven't configured it much, but I 
-installed `alacritty` as my default terminal and am using `zsh` and the shell.
+- dotfiles?
 
 ## Software Choices
 
-Again, I'm not going to say much that I haven't said already in other blog 
-posts, so I'll just do a quick rundown of the apps I installed immediately after 
-I set-up the environment.
+flatpak:
 
-Flatpak Apps:
+- cryptomator
+- pcloud
+- signal
 
-- Cryptomator
-- pCloud
-- Signal
-
-Fedora Packages:
+dnf:
 
 - gomuks
 - neomutt
 - neofetch
-- Firefox
-  - uBlock Origin
-  - Bitwarden
-  - Stylus
-  - Privacy Redirect
-
-Other:
-
-- exiftool
+- firefox
+q
