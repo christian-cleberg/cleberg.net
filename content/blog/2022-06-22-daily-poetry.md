@@ -8,8 +8,8 @@ draft = false
 ## Source Code
 
 I don't want to bury the lede here, so if you'd like to see the full source 
-code I use to email myself plaintext poems daily, visit the repository on 
-Sourcehut: [dailypoem](https://git.sr.ht/~kaizoku/dailypoem).
+code I use to email myself plaintext poems daily, visit the repository: 
+[dailypoem](https://git.cleberg.net/cgit.cgi/dailypoem.git/).
 
 ## My Daily Dose of Poetry
 

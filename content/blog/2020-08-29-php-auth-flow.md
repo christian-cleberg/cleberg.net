@@ -16,7 +16,7 @@ OAuth, and some may just use their own simple database.
 For those using pre-built libraries, authentication may simply be a problem of
 copying and pasting the code from their library's documentation. For example,
 here's the code I use to authenticate users with the Tumblr OAuth API for my
-Tumblr client, [Vox Populi](https://git.sr.ht/~kaizoku/vox-populi/):
+Tumblr client, [Vox Populi](https://git.cleberg.net/cgit.cgi/vox-populi.git/):
 
 ```php
 // Start the session

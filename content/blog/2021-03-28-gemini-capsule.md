@@ -23,7 +23,7 @@ links (which will display on their own line), quotes, and an unordered list.
 
 Here's a complete listing of valid Gemtext:
 
-````txt
+```txt
 # Heading 1
 ## Heading 2
 ### Heading 3
@@ -40,7 +40,7 @@ My List:
 * Item
 
 ```Anything between three backticks will be rendered as code.```
-````
+```
 
 ## Free Option
 
