@@ -24,6 +24,7 @@ description = "A quick listing of my top (not necessarily good) projects."
 
 | Repository                                                                  | Website                                                                                           | Description                                |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| [Dark cGit](https://git.cleberg.net/cgit.cgi/dark-hackernews.git/)          | [Visit &rarr;](https://git.cleberg.net/cgit.cgi/dark-cgit.git/plain/cgit.user.styl)               | A dark theme for cgit.                     |
 | [Dark Hacker News](https://git.cleberg.net/cgit.cgi/dark-hackernews.git/)   | [Visit &rarr;](https://git.cleberg.net/cgit.cgi/dark-hackernews.git/plain/hackernews.user.styl)   | A dark theme for Hacker News.              |
 | [Dark Journal Star](https://git.cleberg.net/cgit.cgi/dark-journalstar.git/) | [Visit &rarr;](https://git.cleberg.net/cgit.cgi/dark-journalstar.git/plain/journalstar.user.styl) | A dark theme for the Lincoln Journal Star. |
 | [Dark OMG! Ubuntu!](https://git.cleberg.net/cgit.cgi/dark-omgubuntu.git/)   | [Visit &rarr;](https://git.cleberg.net/cgit.cgi/dark-omgubuntu.git/plain/omgubuntu.user.styl)     | A dark theme for OMG! Ubuntu!              |
