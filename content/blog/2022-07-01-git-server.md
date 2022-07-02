@@ -16,12 +16,13 @@ anywhere.
 Before I dive into the details, I want to state a high-level summary of my 
 self-hosted Git approach:
 
-- This method uses the `ssh://` and `git://` protocols for push and pull access.
+- This method uses the `ssh://` (read & write) and `git://` (read-only) 
+  protocols for push and pull access.
   - For the `git://` protocol, I create a `git-daemon-export-ok` file in any 
   repository that I want to be cloneable by anyone.
   - The web interface I am using (`cgit`) allows dumb HTTP cloning by default. I 
-  do not disable this setting as I want beginners to be able to clone a 
-  repository even if they don't know the proper method.
+  do not disable this setting as I want beginners to be able to clone one of my 
+  repositories even if they don't know the proper method.
 - I am not enabling Smart HTTPS for any repositories. Updates to repositories 
 must be pushed via SSH.
 - Beyond the actual repository management, I am using `cgit` for the front-end 
@@ -30,7 +31,7 @@ web interface.
   stored within the directory that `cgit` reads. To host private repositories, 
   you'd need to set up another directory that `cgit` can't read.
 
-### Assumptions
+## Assumptions
 
 For the purposes of this walkthrough, I am assuming you have a URL 
 (`git.example.com`) or IP address (`207.84.26.991`) addressed to the server that 
@@ -74,6 +75,12 @@ If your server still has password-based authentication available, you can copy
 it over to your user's home directory like this:
 
 ```bash
+ssh-copy-id git@server
+```
+
+Otherwise, copy it over to any user that you can access.
+
+```bash
 scp ~/.ssh/id_rsa.pub your_user@your_server:
 ```
 
@@ -115,7 +122,7 @@ In my case, I am using `/git` as my source folder. To create this folder and
 assign it to the user we created, execute the following commands:
 
 ```bash
-sudo mkdir git
+sudo mkdir /git
 sudo chown -R git:git /git
 ```
 
@@ -147,7 +154,7 @@ touch git-daemon-export-ok
 
 ## Opening the Firewall
 
-Don't forget to open up ports on the device firewall and network firewall, if 
+Don't forget to open up ports on the device firewall and network firewall if 
 you want to access these repositories publicly. If you're using default ports, 
 forward ports `22` (ssh) and `8169` (git) from your router to your server's IP 
 address.
@@ -188,7 +195,7 @@ There are two main syntaxes you can use to manage git over SSH:
 - `git clone ssh://[user@]server/project.git`
 
 I prefer the first, which is an `scp`-like syntax. To test it, try to clone the 
-example repository you set up on the server:
+test repository you set up on the server:
 
 ```bash
 git clone git@git.example.com:/git/test.git
@@ -204,6 +211,8 @@ To do this on a system with `systemd`, create a service file:
 ```bash
 sudo nano /etc/systemd/system/git-daemon.service
 ```
+
+Inside the `git-daemon.service` file, paste the following:
 
 ```conf
 [Unit]
@@ -241,7 +250,7 @@ git clone git://git.example.com/test.git
 
 ## Migrating Repositories
 
-At this point, I have a working git server that works with both SSH and 
+At this point, we have a working git server that works with both SSH and 
 read-only access.
 
 For each of the repositories I had hosted a different provider, I executed the 
@@ -254,6 +263,7 @@ Server:
 su git
 mkdir /git/<REPOSITORY_NAME>.git && cd /git/<REPOSITORY_NAME>.git
 git init --bare
+
 # If you want to make this repo viewable/cloneable to the public
 touch git-daemon-export-ok
 ```
@@ -270,7 +280,8 @@ git push
 
 If you want a web viewer for your repositories, you can use various tools, such 
 as `gitweb`, `cgit`, or `klaus`. I chose `cgit` due to its simple interface and 
-fairly easy set-up (compared to others).
+fairly easy set-up (compared to others). Not to mention that the 
+[Linux kernel uses `cgit`](https://git.kernel.org/).
 
 ### Docker
 
@@ -280,9 +291,10 @@ Installing via Docker is as simple as:
 sudo docker run --name=cgit -d -p 8763:80 -v /git:/git invokr/cgit
 ```
 
-Once it's finished installing, you can access the site at <SERVER_IP>:8763 or 
+Once it's finished installing, you can access the site at `<SERVER_IP>:8763` or 
 use a reverse-proxy service to forward `cgit` to a URL, such as 
-`git.example.com`.
+`git.example.com`. See the next section for more details on reverse proxying a 
+URL.
 
 ### Nginx Reverse Proxy
 
