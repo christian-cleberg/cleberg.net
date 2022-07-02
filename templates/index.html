@@ -4,8 +4,7 @@
 </div>
 {% endblock nav %} {% block content %}
 <h1>Hi, I'm Christian.</h1>
-<a href="/about/">{ About }</a> &middot; <a href="/blog/">{ Blog }</a> &middot;
-<a href="/projects/">{ Projects }</a>
+<a href="/about/">{ About }</a> &middot; <a href="/blog/">{ Blog }</a>
 <h2>Recent Posts</h2>
 {% for subsection in section.subsections | sort %}
 {% set subsection_item = get_section(path=subsection) %}
