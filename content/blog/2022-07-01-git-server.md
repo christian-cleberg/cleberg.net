@@ -496,8 +496,9 @@ chmod 755 syntax-highlighting.py
 ```
 
 Once the main files are created and permissions are modified, we need create 
-another directory called `html-converts` inside the `filters` directory. In this 
-new directory, we will `curl` another file that will convert Markdown to HTML.
+another directory called `html-converters` inside the `filters` directory. In 
+this new directory, we will `curl` another file that will convert Markdown to 
+HTML.
 
 ```bash
 mkdir html-converters && cd html-converters
@@ -529,6 +530,26 @@ Syntax Highlighting:
 
 README Rendering:
 ![README Rendering](https://img.cleberg.io/blog/20220701-git-server/about-page.png)
+
+### Theming
+
+I won't go into much detail in this section, but you can fully theme your 
+installation of `cgit` since you have access to the `cgit.css` file in your web 
+root.
+
+For example, I created a Stylus theme called 
+[dark-cgit](https://git.cleberg.net/cgit.cgi/dark-cgit.git/) to use for my 
+personal website. This theme just needs the URL updated to work for any other 
+cgit-based site. Here's what this theme looks like in action:
+
+Index:
+![dark-cgit home](https://img.cleberg.io/blog/20220701-git-server/dark-cgit-home.png)
+
+Syntax Highlighting:
+![dark-cgit code](https://img.cleberg.io/blog/20220701-git-server/dark-cgit-code.png)
+
+README Rendering:
+![dark-cgit readme](https://img.cleberg.io/blog/20220701-git-server/dark-cgit-readme.png)
 
 ## Backups
 
