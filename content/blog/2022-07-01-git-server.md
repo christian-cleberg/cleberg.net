@@ -6,51 +6,51 @@ description = "My retrospective on successfully setting up a personal git server
 
 ## My Approach to Self-Hosting Git
 
-I have often tried to self-host my Git repositories, but have always fallen 
+I have often tried to self-host my Git repositories, but have always fallen
 short when I tried to find a suitable web interface to show on the front-end.
 
-After a few years, I have finally found a combination of methods that allow me 
-to easily self-host my projects, view them on the web, and access them from 
+After a few years, I have finally found a combination of methods that allow me
+to easily self-host my projects, view them on the web, and access them from
 anywhere.
 
-Before I dive into the details, I want to state a high-level summary of my 
+Before I dive into the details, I want to state a high-level summary of my
 self-hosted Git approach:
 
-- This method uses the `ssh://` (read & write) and `git://` (read-only) 
+- This method uses the `ssh://` (read & write) and `git://` (read-only)
   protocols for push and pull access.
-  - For the `git://` protocol, I create a `git-daemon-export-ok` file in any 
-  repository that I want to be cloneable by anyone.
-  - The web interface I am using (`cgit`) allows dumb HTTP cloning by default. I 
-  do not disable this setting as I want beginners to be able to clone one of my 
-  repositories even if they don't know the proper method.
-- I am not enabling Smart HTTPS for any repositories. Updates to repositories 
-must be pushed via SSH.
-- Beyond the actual repository management, I am using `cgit` for the front-end 
-web interface.
-  - As far as I am aware, you can't "exclude" a repository from `cgit` if it's 
-  stored within the directory that `cgit` reads. To host private repositories, 
-  you'd need to set up another directory that `cgit` can't read.
+  - For the `git://` protocol, I create a `git-daemon-export-ok` file in any
+    repository that I want to be cloneable by anyone.
+  - The web interface I am using (`cgit`) allows dumb HTTP cloning by default. I
+    do not disable this setting as I want beginners to be able to clone one of my
+    repositories even if they don't know the proper method.
+- I am not enabling Smart HTTPS for any repositories. Updates to repositories
+  must be pushed via SSH.
+- Beyond the actual repository management, I am using `cgit` for the front-end
+  web interface.
+  - As far as I am aware, you can't "exclude" a repository from `cgit` if it's
+    stored within the directory that `cgit` reads. To host private repositories,
+    you'd need to set up another directory that `cgit` can't read.
 
 ## Assumptions
 
-For the purposes of this walkthrough, I am assuming you have a URL 
-(`git.example.com`) or IP address (`207.84.26.991`) addressed to the server that 
+For the purposes of this walkthrough, I am assuming you have a URL
+(`git.example.com`) or IP address (`207.84.26.991`) addressed to the server that
 you will be using to host your git repositories.
 
 ## Adding a Git User
 
-In order to use the SSH method associated with git, we will need to add a 
-user named `git`. If you have used the SSH method for other git hosting sites, 
+In order to use the SSH method associated with git, we will need to add a
+user named `git`. If you have used the SSH method for other git hosting sites,
 you are probably used to the following syntax:
 
 ```bash
 git clone [user@]server:project.git
 ```
 
-The syntax above is an `scp`-like syntax for using SSH on the `git` user on the 
+The syntax above is an `scp`-like syntax for using SSH on the `git` user on the
 server to access your repository.
 
-Let's delete any remnants of an old `git` user, if any, and create the new user 
+Let's delete any remnants of an old `git` user, if any, and create the new user
 account:
 
 ```bash
@@ -60,7 +60,7 @@ sudo adduser git
 
 ### Import Your SSH Keys to the Git User
 
-Once the `git` user is created, you will need to copy your public SSH key on 
+Once the `git` user is created, you will need to copy your public SSH key on
 your local development machine to the `git` user on the server.
 
 If you don't have an SSH key yet, create one with this command:
@@ -71,7 +71,7 @@ ssh-keygen
 
 Once you create the key pair, the public should be saved to `~/.ssh/id_rsa.pub`.
 
-If your server still has password-based authentication available, you can copy 
+If your server still has password-based authentication available, you can copy
 it over to your user's home directory like this:
 
 ```bash
@@ -84,7 +84,7 @@ Otherwise, copy it over to any user that you can access.
 scp ~/.ssh/id_rsa.pub your_user@your_server:
 ```
 
-Once on the server, you will need to copy the contents into the `git` user's 
+Once on the server, you will need to copy the contents into the `git` user's
 `authorized_keys` file:
 
 ```bash
@@ -93,14 +93,14 @@ cat id_rsa.pub > /home/git/.ssh/authorized_keys
 
 ### (Optional) Disable Password-Based SSH
 
-If you want to lock-down your server and ensure that no one can authenticate in 
+If you want to lock-down your server and ensure that no one can authenticate in
 via SSH with a password, you will need to edit your SSH configuration.
 
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
 
-Within this file, find the following settings and set them to the values I am 
+Within this file, find the following settings and set them to the values I am
 showing below:
 
 ```conf
@@ -109,16 +109,16 @@ PasswordAuthentication no
 AuthenticationMethods publickey
 ```
 
-You may have other Authentication Methods required in your personal set-up, so 
-the key here is just to ensure that `AuthenticationMethods` does not allow 
+You may have other Authentication Methods required in your personal set-up, so
+the key here is just to ensure that `AuthenticationMethods` does not allow
 passwords.
 
 ## Setting up the Base Directory
 
-Now that we have set-up a `git` user to handle all of transport methods, we need 
+Now that we have set-up a `git` user to handle all of transport methods, we need
 to set-up the directory that we will be using as our base of all repositories.
 
-In my case, I am using `/git` as my source folder. To create this folder and 
+In my case, I am using `/git` as my source folder. To create this folder and
 assign it to the user we created, execute the following commands:
 
 ```bash
@@ -128,14 +128,14 @@ sudo chown -R git:git /git
 
 ## Creating a Test Repository
 
-On your server, switch over to the `git` user in order to start managing git 
+On your server, switch over to the `git` user in order to start managing git
 files.
 
 ```bash
 su git
 ```
 
-Once logged-in as the `git` user, go to your base directory and create a test 
+Once logged-in as the `git` user, go to your base directory and create a test
 repository.
 
 ```bash
@@ -144,8 +144,8 @@ mkdir test.git && cd test.git
 git init --bare
 ```
 
-If you want to make this repo viewable/cloneable to the public via the `git://` 
-protocol, you need to create a `git-daemon-export-ok` file inside the 
+If you want to make this repo viewable/cloneable to the public via the `git://`
+protocol, you need to create a `git-daemon-export-ok` file inside the
 repository.
 
 ```bash
@@ -154,12 +154,12 @@ touch git-daemon-export-ok
 
 ## Opening the Firewall
 
-Don't forget to open up ports on the device firewall and network firewall if 
-you want to access these repositories publicly. If you're using default ports, 
-forward ports `22` (ssh) and `8169` (git) from your router to your server's IP 
+Don't forget to open up ports on the device firewall and network firewall if
+you want to access these repositories publicly. If you're using default ports,
+forward ports `22` (ssh) and `8169` (git) from your router to your server's IP
 address.
 
-If your server also has a firewall, ensure that the firewall allows the same 
+If your server also has a firewall, ensure that the firewall allows the same
 ports that are forwarded from the router. For example, if you use `ufw`:
 
 ```bash
@@ -169,11 +169,11 @@ sudo ufw allow 8169
 
 ### Non-Standard SSH Ports
 
-If you use a non-standard port for SSH, such as `9876`, you will need to create 
-an SSH configuration file on your local development machine in order to connect 
+If you use a non-standard port for SSH, such as `9876`, you will need to create
+an SSH configuration file on your local development machine in order to connect
 to your server's git repositories.
 
-To do this, you'll need to define your custom port on your client machine in 
+To do this, you'll need to define your custom port on your client machine in
 your `~/.ssh/config` file:
 
 ```bash
@@ -194,7 +194,7 @@ There are two main syntaxes you can use to manage git over SSH:
 - `git clone [user@]server:project.git`
 - `git clone ssh://[user@]server/project.git`
 
-I prefer the first, which is an `scp`-like syntax. To test it, try to clone the 
+I prefer the first, which is an `scp`-like syntax. To test it, try to clone the
 test repository you set up on the server:
 
 ```bash
@@ -203,7 +203,7 @@ git clone git@git.example.com:/git/test.git
 
 ## Enabling Read-Only Access
 
-If you want people to be able to clone any repository where you've placed a 
+If you want people to be able to clone any repository where you've placed a
 `git-daemon-export-ok` file, you will need to start the git daemon.
 
 To do this on a system with `systemd`, create a service file:
@@ -250,11 +250,11 @@ git clone git://git.example.com/test.git
 
 ## Migrating Repositories
 
-At this point, we have a working git server that works with both SSH and 
+At this point, we have a working git server that works with both SSH and
 read-only access.
 
-For each of the repositories I had hosted a different provider, I executed the 
-following commands in order to place a copy on my server as my new source of 
+For each of the repositories I had hosted a different provider, I executed the
+following commands in order to place a copy on my server as my new source of
 truth:
 
 Server:
@@ -278,9 +278,9 @@ git push
 
 ## Using `cgit`
 
-If you want a web viewer for your repositories, you can use various tools, such 
-as `gitweb`, `cgit`, or `klaus`. I chose `cgit` due to its simple interface and 
-fairly easy set-up (compared to others). Not to mention that the 
+If you want a web viewer for your repositories, you can use various tools, such
+as `gitweb`, `cgit`, or `klaus`. I chose `cgit` due to its simple interface and
+fairly easy set-up (compared to others). Not to mention that the
 [Linux kernel uses `cgit`](https://git.kernel.org/).
 
 ### Docker
@@ -291,15 +291,15 @@ Installing via Docker is as simple as:
 sudo docker run --name=cgit -d -p 8763:80 -v /git:/git invokr/cgit
 ```
 
-Once it's finished installing, you can access the site at `<SERVER_IP>:8763` or 
-use a reverse-proxy service to forward `cgit` to a URL, such as 
-`git.example.com`. See the next section for more details on reverse proxying a 
+Once it's finished installing, you can access the site at `<SERVER_IP>:8763` or
+use a reverse-proxy service to forward `cgit` to a URL, such as
+`git.example.com`. See the next section for more details on reverse proxying a
 URL.
 
 ### Nginx Reverse Proxy
 
-I am using Nginx as my reverse proxy so that the `cgit` Docker container can use 
-`git.cleberg.net` as its URL. To do so, I simply created the following 
+I am using Nginx as my reverse proxy so that the `cgit` Docker container can use
+`git.cleberg.net` as its URL. To do so, I simply created the following
 configuration file:
 
 ```bash
@@ -350,17 +350,17 @@ sudo ln -s /etc/nginx/sites-available/git.example.com /etc/nginx/sites-enabled/
 sudo systemctl restart nginx.service
 ```
 
-As we can see below, my site at [git.cleberg.net](https://git.cleberg.net) is 
+As we can see below, my site at [git.cleberg.net](https://git.cleberg.net) is
 available and running:
 
 ![cgit example](https://img.cleberg.io/blog/20220701-git-server/cgit.png)
 
 ### Settings Up Git Details
 
-Once you have `cgit` running, you can add some small details, such as repository 
+Once you have `cgit` running, you can add some small details, such as repository
 owners and descriptions by editing the following files.
 
-The `description` file within the repository on your server will display the 
+The `description` file within the repository on your server will display the
 description online.
 
 ```bash
@@ -368,7 +368,7 @@ cd /git/example.git
 nano description
 ```
 
-You can add a `[gitweb]` block to the `config` file in order to display the 
+You can add a `[gitweb]` block to the `config` file in order to display the
 owner of the repository.
 
 ```bash
@@ -383,8 +383,8 @@ nano config
 
 ### Editing `cgit`
 
-If you want to edit other items, such as the actual site name or description of 
-`cgit`, you will need to open the Docker container and edit the `cgitrc` file 
+If you want to edit other items, such as the actual site name or description of
+`cgit`, you will need to open the Docker container and edit the `cgitrc` file
 inside:
 
 ```bash
@@ -392,8 +392,8 @@ sudo docker exec -it cgit bash
 vi /etc/cgitrc
 ```
 
-Below is an example configuration for `cgitrc`. You can find all of the 
-configuration options within the 
+Below is an example configuration for `cgitrc`. You can find all of the
+configuration options within the
 [configuration manual](https://git.zx2c4.com/cgit/plain/cgitrc.5.txt).
 
 ```conf
@@ -408,8 +408,6 @@ enable-log-filecount=1
 enable-log-linecount=1
 enable-git-config=1
 
-# COMMENT-OUT THIS LINE OR ELSE YOUR FILE PREVIEWS MAY NOT WORK
-# source-filter=/opt/highlight.sh
 section-from-path=2
 scan-path=/git
 
@@ -417,13 +415,6 @@ clone-url=git://git.example.com/$CGIT_REPO_URL ssh://git@git.example.com:/git/$C
 
 root-title=<YOUR_WEBSITE_NAME>
 root-desc=<YOUR_WEBSITE_DESCRIPTION>
-
-# Highlight source code with python pygments-based highlighter
-source-filter=/var/www/cgit/filters/syntax-highlighting.py
-
-# Format markdown, restructuredtext, manpages, text files, and html files
-# through the right converters
-about-filter=/var/www/cgit/filters/about-formatting.sh
 
 ##
 ## List of common mimetypes
@@ -470,14 +461,83 @@ readme=:INSTALL
 readme=:install
 ```
 
+### Fix: Syntax Highlighting & README Rendering
+
+After completing my install and playing around with it for a few days, I noticed 
+two issues:
+
+1. Syntax highlighting did not work when viewing the source code within a file.
+2. The `about` tab within a repository was not rendered to HTML.
+
+The following process fixes these issues. First, we need to be on the server 
+hosting `cgit` and then enter our Docker container:
+
+```bash
+sudo docker exec -it cgit bash
+```
+
+Within this container, we need to go to our document root for the `cgit` web 
+files and create a `filters` directory:
+
+```bash
+cd /var/www/htdocs/cgit
+mkdir filters
+cd filters
+```
+
+In this directory, we are going to pull down a couple formatting files from the 
+main `cgit` repository.
+
+```bash
+curl https://git.zx2c4.com/cgit/plain/filters/about-formatting.sh > about-formatting.sh
+chmod 755 about-formatting.sh
+curl https://git.zx2c4.com/cgit/plain/filters/syntax-highlighting.py > syntax-highlighting.py
+chmod 755 syntax-highlighting.py
+```
+
+Once the main files are created and permissions are modified, we need create 
+another directory called `html-converts` inside the `filters` directory. In this 
+new directory, we will `curl` another file that will convert Markdown to HTML.
+
+```bash
+mkdir html-converters && cd html-converters
+curl https://git.zx2c4.com/cgit/plain/filters/html-converters/md2html > md2html
+chmod 755 md2html
+```
+
+If you need other filters or html-converters found within [the cgit project 
+files](https://git.zx2c4.com/cgit/tree/filters), repeat the `curl` and `chmod` 
+process above for whichever files you need.
+
+Lastly, we just need to add the following to our `cgitrc` file in order for 
+`cgit` to know where our filtering files are:
+
+```conf
+# Highlight source code with python pygments-based highlighter
+source-filter=/var/www/htdocs/cgit/filters/syntax-highlighting.py
+
+# Format markdown, restructuredtext, manpages, text files, and html files
+# through the right converters
+about-filter=/var/www/htdocs/cgit/filters/about-formatting.sh
+```
+
+Now you should see that syntax highlighting and README rendering to the `about` 
+tab is fixed. See the images below for illustrations:
+
+Syntax Highlighting:
+![Syntax highlighting](https://img.cleberg.io/blog/20220701-git-server/syntax-highlighting.png)
+
+README Rendering:
+![README Rendering](https://img.cleberg.io/blog/20220701-git-server/about-page.png)
+
 ## Backups
 
-The last thing to note is that running services on your own equipment means that 
-you're assuming a level of risk that exists regarding data loss, catastrophes, 
-etc. In order to reduce the impact of any such occurrence, I suggest backing up 
+The last thing to note is that running services on your own equipment means that
+you're assuming a level of risk that exists regarding data loss, catastrophes,
+etc. In order to reduce the impact of any such occurrence, I suggest backing up
 your data regularly.
 
-Backups can be automated via `cron`, by hooking your base directory up to a 
-cloud provider, or even setting up hooks to push all repository info to git 
-mirrors on other git hosts. Whatever the method, make sure that your data 
+Backups can be automated via `cron`, by hooking your base directory up to a
+cloud provider, or even setting up hooks to push all repository info to git
+mirrors on other git hosts. Whatever the method, make sure that your data
 doesn't vanish in the event that your drives or servers fail.
