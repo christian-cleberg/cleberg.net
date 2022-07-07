@@ -11,7 +11,7 @@ for all source code changes to this privacy policy and website. Otherwise, see
 below for the creation and revision dates for this policy.
 
 Created: `2022-02-11 23:05:00 UTC`  
-Updated: `2022-07-01 01:20:00 UTC`
+Updated: `2022-07-07 04:05:00 UTC`
 
 ## Data Collection & Usage
 
@@ -36,4 +36,4 @@ http {
 
 Please don't hesitate to reach out if you have any questions at all. You can
 always reach me at [hello@cleberg.io](mailto:hello@cleberg.io)
-[[GPG key](https://cleberg.io/gpg_key.txt)].
+[[PGP](https://cleberg.io/pgp.txt)].

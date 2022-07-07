@@ -1,67 +1,60 @@
-{% extends "base.html" %}
-{% block title %}
-	{{ page.title ~ " | " ~ config.title }}
-{% endblock %}
-{% block page_meta %}
-	<meta
-		content="{{ page.description | safe | default(value='') }}"
-		name="description"
-	>
-{% endblock page_meta %}
-{% block css %}
-	<link rel="stylesheet" href="/styles.css">
-    <link
-        rel="stylesheet"
-        href="/syntax-theme-dark.css"
-        media="(prefers-color-scheme: dark)"
-    >
-    <link
-        rel="stylesheet"
-        href="/syntax-theme-light.css"
-        media="(prefers-color-scheme: light)"
-    >
-{% endblock css %}
-{% block nav %}
-    <div class="breadcrumbs">
-        {% if lang == "es" %}
-            <a href="/">página principal</a>
-        {% else %}
-            <a href="/">home</a>
-        {% endif %}
-        {% set path = "/" %}
-        {% for name in page.components %}
-            {% set_global path = path ~ name ~ "/" %}
-            / <a href="{{path}}">{{ name }}</a>
-        {% endfor %}
-    </div>
-{% endblock nav %}
-{% block content %}
-	<h1 class="title">{{ page.title }}</h1>
-    {% if page.date %}
-    	<p class="post-meta">{{ page.date }} &middot; {{ page.word_count }} words &middot; {{ page.reading_time }} minutes</p>
+{% extends "base.html" %} {% block title %} {{ page.title ~ " | " ~ config.title
+}} {% endblock %} {% block page_meta %}
+<meta
+  content="{{ page.description | safe | default(value='') }}"
+  name="description"
+/>
+{% endblock page_meta %} {% block css %}
+<link rel="stylesheet" href="/styles.css" />
+<link
+  rel="stylesheet"
+  href="/syntax-theme-dark.css"
+  media="(prefers-color-scheme: dark)"
+/>
+<link
+  rel="stylesheet"
+  href="/syntax-theme-light.css"
+  media="(prefers-color-scheme: light)"
+/>
+{% endblock css %} {% block nav %} {% set path = "/" %} {% set count = 0 %} {%
+for name in page.components %} {% set_global path = path ~ name ~ "/" %} / {%
+set_global count = count + 1 %} {% if count > 1 %}
+<a href="{{path}}">{{ name }}</a>
+{% else %}
+<a href="{{path}}">{{ name }}</a>
+{% endif %} {% endfor %} {% endblock nav %} {% block content %}
+<article>
+  <h1>{{ page.title }}</h1>
+  {% if page.date %}
+  <p>
+    {{ page.date }} &middot; {{ page.word_count }} words &middot; {{
+    page.reading_time }} minutes
+  </p>
+  {% endif %} {% if page.toc %}
+  <nav>
+    {% if lang == "es" %}
+    <h2>El índice de contenido</h2>
+    {% else %}
+    <h2>Table of Contents</h2>
     {% endif %}
-	{% if page.toc %}
-        {% if lang == "es" %}
-            <h2>El índice de contenido</h2>
-        {% else %}
-            <h2>Table of Contents</h2>
-        {% endif %}
+    <ul>
+      {% for h1 in page.toc %}
+      <li>
+        <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+        {% if h1.children %}
         <ul>
-        {% for h1 in page.toc %}
-            <li>
-                <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-                {% if h1.children %}
-                    <ul>
-                        {% for h2 in h1.children %}
-                            <li>
-                                <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endfor %}
+          {% for h2 in h1.children %}
+          <li>
+            <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+          </li>
+          {% endfor %}
         </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
     {% endif %}
-{{ page.content | safe }}
+  </nav>
+  {{ page.content | safe }}
+</article>
 {% endblock content %}

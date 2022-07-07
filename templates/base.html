@@ -1,73 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="color-scheme" content="dark light">
-		<meta
-			name="theme-color"
-			media="(prefers-color-scheme: light)"
-			content="#fff"
-		>
-		<meta
-			name="theme-color"
-			media="(prefers-color-scheme: dark)"
-			content="#111"
-		>
-		<title>{% block title %}{{ config.title }}{% endblock title %}</title>
-		<link rel="canonical" href="{{ config.base_url | safe }}">
-		<link rel="icon" href="/favicon.png">
-		{% block page_meta %}
-		<meta
-			name=" description"
-			content="{{ config.description | default(value='') | truncate(length=150) }}"
-		>
-		{% endblock page_meta %}
-		{% if config.generate_feed %}
-			<link rel="alternate" type={% if config.feed_filename=="atom.xml"
-			%}"application/atom+xml"{% else %}"application/rss+xml"{% endif %}
-			title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
-		{% endif %}
-		{% block css %}
-			<link rel="stylesheet" href="/styles.css">
-		{% endblock css %}
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#fff"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#111"
+    />
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <link rel="canonical" href="{{ config.base_url | safe }}" />
+    <link rel="icon" href="/favicon.png" />
+    {% block page_meta %}
+    <meta
+      name=" description"
+      content="{{ config.description | default(value='') | truncate(length=150) }}"
+    />
+    {% endblock page_meta %} {% if config.generate_feed %} <link rel="alternate"
+    type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
+    %}"application/rss+xml"{% endif %} title="RSS" href="{{
+    get_url(path=config.feed_filename) | safe }}"> {% endif %} {% block css %}
+    <link rel="stylesheet" href="/styles.css" />
+    {% endblock css %}
+  </head>
 
-	<body>
-		<div class="container">
-			<nav class="navbar">
-				<div class="container">
-					{% block nav %}{% endblock %}
-				</div>
-			</nav>
-			<section class="section">
-				{% block content %}{% endblock %}
-			</section>
-			<footer>
-				<p>
-					<a href="/privacy/">Privacy</a>
-					&middot;
-					<a
-						rel="license"
-						href="https://git.cleberg.net/cgit.cgi/cleberg.io.git/plain/CC-BY-SA-4.0.txt"
-						target="_blank"
-						rel="noopener,noreferrer"
-						>CC-BY-SA</a
-					>
-					&middot;
-					<a
-						href="https://git.cleberg.net/cgit.cgi/cleberg.io.git/plain/LICENSE.txt"
-						target="_blank"
-						rel="noopener,noreferrer"
-						>GPLv3</a
-					>
-				</p>
-				<p>
-					Build: <code>{{ now() | date(format="%Y-%m-%d %H:%M",
-					timezone="UTC") }}</code>
-				</p>
-				<p>&copy; 2016 - 2022</p>
-			</footer>
-		</div>
-	</body>
+  <body>
+    <nav>
+      ~/{% if lang == "es" %}
+      <a href="/">página principal</a>
+      {% else %}
+      <a href="/">home</a>
+      {% endif %}{% block nav %}{% endblock %}
+    </nav>
+    <hr />
+    <main>{% block content %}{% endblock %}</main>
+    <hr />
+    <footer>
+      <p>
+        <a href="/privacy/">Privacy</a>
+        &middot;
+        <a
+          rel="license"
+          href="https://git.cleberg.net/cgit.cgi/cleberg.io.git/plain/CC-BY-SA-4.0.txt"
+          target="_blank"
+          rel="noopener,noreferrer"
+          >CC-BY-SA</a
+        >
+        &middot;
+        <a
+          href="https://git.cleberg.net/cgit.cgi/cleberg.io.git/plain/LICENSE.txt"
+          target="_blank"
+          rel="noopener,noreferrer"
+          >GPLv3</a
+        >
+      </p>
+      <p>&copy; 2016 - 2022</p>
+    </footer>
+  </body>
 </html>
