@@ -38,3 +38,8 @@ Finally, copy the new static files to your web server location:
 ```bash
 sudo cp -r public/* /var/www/<your-website-directory>
 ```
+
+## Acknowlegements
+
+The colors for this website come from the
+[gruvbox](https://github.com/morhetz/gruvbox) color palette.
