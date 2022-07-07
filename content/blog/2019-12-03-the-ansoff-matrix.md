@@ -41,7 +41,9 @@ strategies around their existing products or explore new products.
 _Figure 1: The Ansoff Matrix_ -
 [By JaisonAbeySabu - Own work, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=33604757)
 
-## Market Penetration
+## Strategic Options
+
+### Market Penetration
 
 The most straightforward strategy in the Ansoff matrix is to focus on existing
 products in existing markets, also known as market penetration[^3]. Companies
@@ -50,7 +52,7 @@ of money to get further value out of their current markets. Coca-Cola does this
 by introducing new features such as Christmas-themed bottles, personal names on
 the bottles, and other marketing schemes.
 
-## Market Development
+### Market Development
 
 market development extends existing products into new markets in an attempt to
 increase the number of buyers. One interesting way that Coca-Cola used this
@@ -58,7 +60,7 @@ strategy comes from the stigma that Diet Coke is a woman's drink[^4]. Coca-Cola
 introduced Coca-Cola Zero, which contained the same nutritional content as Diet
 Coke, but was packaged in a dark black can to appear more "manly"[^4].
 
-## Product Development
+### Product Development
 
 Product development uses existing markets to introduce new products so that the
 firm can better meet customer needs[^4]. The extreme end of diversification is
@@ -68,7 +70,7 @@ Johnson & Johnson's dedication to continuous diversification has led them to a
 balance sheet rating of "AAA", industry recognition for diversification, and
 increases in their investor dividends for 57 consecutive years[^6].
 
-## Related Diversification
+### Related Diversification
 
 Diversification, the final strategy of the Ansoff Matrix, is more difficult than
 the others since it involves exploring both new markets and new products.
@@ -77,7 +79,7 @@ the firm's core business. Coca-Cola's best example of related diversification is
 its acquisition of Glaceau and Vitamin Water, which expanded their drinking
 lines of business[^4].
 
-## Unrelated Diversification
+### Unrelated Diversification
 
 Unrelated diversification is a diversification strategy that does not really
 relate to the firm's core business but still diversifies their business
@@ -116,7 +118,7 @@ planning. Companies need to understand the utility of a strategic management
 framework while ensuring that the company is poised to execute as efficiently as
 they have planned.
 
-### References
+**References**
 
 [^1]:
     Dess, G. G., McNamara, G., Eisner, A. B., Lee, S. H. (2019). Strategic
