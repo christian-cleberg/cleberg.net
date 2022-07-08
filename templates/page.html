@@ -26,11 +26,11 @@ set_global count = count + 1 %} {% if count > 1 %}
 <article>
   <h1>{{ page.title }}</h1>
   {% if page.date %}
-  <p>
-    {{ page.date }} &middot; {{ page.word_count }} words &middot; {{
-    page.reading_time }} minutes
-  </p>
-  {% endif %} {% if page.toc %}
+  <time datetime="{{- page.date | date(format='%Y-%m-%d') -}}">
+    {{- page.date | date(format="%Y.%m.%d") -}}
+  </time>
+  &middot; {{ page.word_count }} words &middot; {{
+  page.reading_time }} minutes {% endif %} {% if page.toc %}
   <nav>
     {% if lang == "es" %}
     <h2>El índice de contenido</h2>
