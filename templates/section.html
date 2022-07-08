@@ -12,8 +12,11 @@ path ~ name ~ "/" %} / <a href="{{path}}">{{ name }}</a>
   </ul><h2>{{- current_date -}}</h2><ul>
   {% endif %}
     <li>
-      [<span> {{- page.date | date(format="%m.%d") -}} </span>]
-      <a class="post-link" href="{{ page.permalink | safe }}">
+      <time datetime="{{- page.date | date(format='%Y-%m-%d') -}}">
+        {{- page.date | date(format="%m.%d") -}}
+      </time>
+      &nbsp;
+      <a href="{{ page.permalink | safe }}">
         {{- page.title -}}
       </a>
     </li>
