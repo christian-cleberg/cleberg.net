@@ -1,10 +1,14 @@
-{% extends "base.html" %} {% block title %} {{ page.title ~ " | " ~ config.title
-}} {% endblock %} {% block page_meta %}
+{% extends "base.html" %}
+{% block title %}
+  {{ page.title ~ " | " ~ config.title }}
+{% endblock %}
+{% block page_meta %}
 <meta
   content="{{ page.description | safe | default(value='') }}"
   name="description"
 />
-{% endblock page_meta %} {% block css %}
+{% endblock page_meta %}
+{% block css %}
 <link rel="stylesheet" href="/styles.css" />
 <link
   rel="stylesheet"
@@ -16,13 +20,21 @@
   href="/syntax-theme-light.css"
   media="(prefers-color-scheme: light)"
 />
-{% endblock css %} {% block nav %} {% set path = "/" %} {% set count = 0 %} {%
-for name in page.components %} {% set_global path = path ~ name ~ "/" %} / {%
-set_global count = count + 1 %} {% if count > 1 %}
-<a href="{{path}}">{{ name }}</a>
-{% else %}
-<a href="{{path}}">{{ name }}</a>
-{% endif %} {% endfor %} {% endblock nav %} {% block content %}
+{% endblock css %}
+{% block nav %}
+  {% set path = "/" %}
+  {% set count = 0 %}
+  {% for name in page.components %}
+    {% set_global path = path ~ name ~ "/" %} / 
+    {% set_global count = count + 1 %}
+    {% if count > 1 %}
+      <a href="{{path}}">{{ name }}</a>
+    {% else %}
+      <a href="{{path}}">{{ name }}</a>
+    {% endif %}
+  {% endfor %}
+{% endblock nav %} 
+{% block content %}
 <article>
   <h1>{{ page.title }}</h1>
   {% if page.date %}

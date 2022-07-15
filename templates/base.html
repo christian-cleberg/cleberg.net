@@ -22,11 +22,17 @@
       name=" description"
       content="{{ config.description | default(value='') | truncate(length=150) }}"
     />
-    {% endblock page_meta %} {% if config.generate_feed %} <link rel="alternate"
-    type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
-    %}"application/rss+xml"{% endif %} title="RSS" href="{{
-    get_url(path=config.feed_filename) | safe }}"> {% endif %} {% block css %}
-    <link rel="stylesheet" href="/styles.css" />
+    {% endblock page_meta %}
+    {% if config.generate_feed %}
+    <link
+      rel="alternate"
+      type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"
+      {% else %}"application/rss+xml"{% endif %}
+      title="RSS"
+      href="{{get_url(path=config.feed_filename) | safe }}">
+    {% endif %}
+    {% block css %}
+      <link rel="stylesheet" href="/styles.css" />
     {% endblock css %}
   </head>
 
