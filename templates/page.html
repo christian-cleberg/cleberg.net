@@ -69,11 +69,11 @@
   </nav>
   {{ page.content | safe }}
   {% if "blog" in page.path %}
-  <blockquote>
+  <aside>
     If you have any questions or comments about this post or site in general,
     feel free to <a href="mailto:hello@cleberg.io">email me</a> [<a 
     href="https://cleberg.io/gpg.txt">GPG</a>].
-  </blockquote>
+  </aside>
   {% endif %}
 </article>
 {% endblock content %}
