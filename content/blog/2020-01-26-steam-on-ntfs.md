@@ -8,10 +8,10 @@ aliases = ["/blog/steam-on-ntfs-drives"]
 
 ## Auto-Mount Steam Drives
 
-![Steam example](https://img.cleberg.io/blog/007-the-best-linux-software/steam.png "Steam example")
+![Steam example](https://img.cleberg.io/blog/20200125-the-best-linux-software/steam.png "Steam example")
 
 If you want to see how to install Steam on Linux, see my other post:
-[The Best Linux Software](/blog/the-best-linux-software/).
+[The Best Linux Software](/blog/linux-software/).
 
 Are you having trouble launching games, even though they've installed correctly?
 This may happen if you're storing your games on an NTFS-formatted drive. This
