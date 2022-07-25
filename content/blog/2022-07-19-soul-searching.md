@@ -2,6 +2,7 @@
 date = 2022-07-19
 title = "On Soul Searching, Inner Peace, and Tranquility"
 description = ""
+draft= true
 +++
 
 > The more you know who you are and what you want, the less you let things upset 
