@@ -46,7 +46,7 @@ informational.
 This program starts with a simple import of the required packages, so I wanted 
 to explain why each package is used:
 
-```python
+```py
 from email.mime.text import MIMEText # Required for translating MIMEText
 import smtplib # Required to process the SMTP mail delivery
 import json # Required to parse the poetry API results
@@ -59,7 +59,7 @@ Next, we need to actually send the API request. In my case, I'm calling a random
 poem from the entire API. If you want, you can call specific poems or authors 
 from this API.
 
-```python
+```py
 json_data = requests.get('https://poetrydb.org/random').json()
 ```
 
@@ -112,7 +112,7 @@ variable since each line is a separate string by default.
 > look at the raw data response of this link to see the poem's lines returned 
 > in plaintext.
 
-```python
+```py
 title = json_data[0]['title']
 author = json_data[0]['author']
 line_count = json_data[0]['linecount']
@@ -130,7 +130,7 @@ For my daily email, I want to see the title of the poem first, followed by the
 author, then a blank line, and finally the full poem. This code snippet combines 
 that data and packages it into a MIMEText container, ready to be emailed.
 
-```python
+```py
 msg_body = title + "\n" + author + "\n\n" + lines
 msg = MIMEText(msg_body)
 ```
@@ -138,7 +138,7 @@ msg = MIMEText(msg_body)
 Before we send the email, we need to prepare the metadata (subject, from, to, 
 etc.):
 
-```python
+```py
 sender_email = 'example@server.local'
 recipient_emails = ['user@example.com']
 msg['Subject'] = 'Your Daily Poem (' + line_count + ' lines)'
@@ -152,7 +152,7 @@ Now that I have everything ready to be emailed, the last step is to simply
 connect to an SMTP server and send the email out to the recipients. In my case, 
 I installed `mailutils` on Ubuntu and let my SMTP server be `localhost`.
 
-```python
+```py
 smtp_server = 'localhost'
 s = smtplib.SMTP(smtp_server)
 s.sendmail(sender_email, recipient_emails, msg.as_string())
