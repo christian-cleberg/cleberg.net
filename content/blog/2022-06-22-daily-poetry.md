@@ -164,7 +164,7 @@ s.quit()
 Instead of including a screenshot, I've copied the contents of the email that 
 was delivered to my inbox below since I set this process up in plaintext format.
 
-```text
+```txt
 Date: Wed, 22 Jun 2022 14:37:19 +0000 (UTC)
 From: REDACTED
 To: REDACTED
