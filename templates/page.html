@@ -44,11 +44,7 @@
   &middot; {{ page.word_count }} words &middot; {{
   page.reading_time }} minutes {% endif %} {% if page.toc %}
   <nav>
-    {% if lang == "es" %}
-    <h2>El índice de contenido</h2>
-    {% else %}
     <h2>Table of Contents</h2>
-    {% endif %}
     <ul>
       {% for h1 in page.toc %}
       <li>

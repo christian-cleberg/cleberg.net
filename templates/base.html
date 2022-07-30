@@ -38,11 +38,8 @@
 
   <body>
     <nav>
-      ~/{% if lang == "es" %}
-      <a href="/">página principal</a>
-      {% else %}
-      <a href="/">home</a>
-      {% endif %}{% block nav %}{% endblock %}
+      ~/<a href="/">home</a>
+      {% block nav %}{% endblock %}
     </nav>
     <hr>
     <main>{% block content %}{% endblock %}</main>

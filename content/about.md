@@ -3,8 +3,6 @@ title = "About"
 description = "A web page all about me."
 +++
 
-< [Traducción al español](/es/about/) >
-
 I'm Christian Cleberg, a Senior IT Auditor currently living in Nebraska. Outside
 of work, I spend my time as a data analyst, hobbyist programmer, and homelabber.
 
