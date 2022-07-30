@@ -79,7 +79,7 @@ sudo python3 setup.py install
 
 In my case, I ran into a few errors and needed to create the folders that 
 curseradio wanted to use for its installation. If you don't get any errors, you 
-can ski pthis and run the app.
+can skip this and run the app.
 
 ```bash
 sudo mkdir /usr/local/lib/python3.10/
