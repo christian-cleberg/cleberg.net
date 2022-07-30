@@ -1,6 +1,6 @@
 +++
 date = 2022-07-30
-title = "Converting Music Files from FLAC to Opus"
+title = "Recursive Command-Line FLAC to Opus Conversion"
 description = "A retrospective on how I recursively converting my FLAC file music library to OPUS with opusenc."
 +++
 
