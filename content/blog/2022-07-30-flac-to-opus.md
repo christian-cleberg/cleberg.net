@@ -168,6 +168,6 @@ du -h --max-depth=1 .
 In my case, my small library went from 78GB all the way down to 6.3GB!
 
 ```txt
-78G	  ./archives
-6.3G	./library
+78G    ./archives
+6.3G   ./library
 ```
