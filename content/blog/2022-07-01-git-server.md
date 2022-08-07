@@ -350,8 +350,7 @@ sudo ln -s /etc/nginx/sites-available/git.example.com /etc/nginx/sites-enabled/
 sudo systemctl restart nginx.service
 ```
 
-As we can see below, my site at [git.cleberg.net](https://git.cleberg.net) is
-available and running:
+As we can see below, my site at `git.cleberg.net` is available and running:
 
 ![cgit example](https://img.cleberg.io/blog/20220701-git-server/cgit.png)
 
@@ -538,7 +537,7 @@ installation of `cgit` since you have access to the `cgit.css` file in your web
 root.
 
 For example, I created a Stylus theme called 
-[dark-cgit](https://git.cleberg.net/cgit.cgi/dark-cgit.git/) to use for my 
+[dark-cgit](https://github.com/christian-cleberg/dark-cgit) to use for my 
 personal website. This theme just needs the URL updated to work for any other 
 cgit-based site. Here's what this theme looks like in action:
 
