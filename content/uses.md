@@ -59,7 +59,7 @@ my environment.
 - Newsboat
 - Nano
 - VS Codium
-- Filen
+- pCloud + Cryptomator
 - Signal
 - Plex
 - Mullvad
@@ -87,14 +87,14 @@ my environment.
 
 - Canary Mail
 - Runestone
-- Filen
+- pCloud + Cryptomator
 - Signal
 - Apollo
 - Element
 - NetNewsWire
 - Plex
 - Plexamp
-- Varys
+- Plex Dash
 - OTP Auth
 - Bitwarden
 - Mullvad
