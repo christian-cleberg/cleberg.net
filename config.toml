@@ -12,8 +12,8 @@ render_emoji = true
 highlight_code = true
 highlight_theme = "css"
 highlight_themes_css = [
-  { theme = "gruvbox-dark", filename = "syntax-theme-dark.css" },
-  { theme = "gruvbox-light", filename = "syntax-theme-light.css" },
+  { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
+  { theme = "inspired-github", filename = "syntax-theme-light.css" },
 ]
 
 [extra]
