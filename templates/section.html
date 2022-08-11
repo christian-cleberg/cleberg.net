@@ -18,9 +18,9 @@
     {% set_global current_date = page.date | date(format="%Y") %}
     {% if current_date != date %}
       {%- set_global date = current_date -%}
-      </ul><h2>{{- current_date -}}</h2><ul>
+      <h2>{{- current_date -}}</h2>
     {% endif %}
-    <li>
+    <div>
       <time datetime="{{- page.date | date(format='%Y-%m-%d') -}}">
         {{- page.date | date(format="%m.%d") -}}
       </time>
@@ -28,8 +28,7 @@
       <a href="{{ page.permalink | safe }}">
         {{- page.title -}}
       </a>
-    </li>
-    {% endfor %}
-  </ul>
+    </div>
+  {% endfor %}
 </section>
 {% endblock content %}
