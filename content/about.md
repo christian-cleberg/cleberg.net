@@ -32,7 +32,6 @@ of work, I spend my time as a data analyst, hobbyist programmer, and homelabber.
 - SQL
 - JavaScript
 - PHP
-- Swift
 - Rust
 
 ## Professional
