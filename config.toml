@@ -12,7 +12,7 @@ render_emoji = true
 highlight_code = true
 highlight_theme = "css"
 highlight_themes_css = [
-  { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
+  { theme = "ayu-dark", filename = "syntax-theme.css" },
 ]
 
 [extra]
