@@ -182,6 +182,7 @@ nano ~/.ssh/config
 
 ```conf
 Host git.example.com
+  # HostName can be a URL or an IP address
   HostName git.example.com
   Port 9876
   User git
@@ -283,7 +284,7 @@ as `gitweb`, `cgit`, or `klaus`. I chose `cgit` due to its simple interface and
 fairly easy set-up (compared to others). Not to mention that the
 [Linux kernel uses `cgit`](https://git.kernel.org/).
 
-### Docker
+### Option #1: Docker Run
 
 Installing via Docker is as simple as:
 
@@ -295,6 +296,30 @@ Once it's finished installing, you can access the site at `<SERVER_IP>:8763` or
 use a reverse-proxy service to forward `cgit` to a URL, such as
 `git.example.com`. See the next section for more details on reverse proxying a
 URL.
+
+### Option #2: Docker Compose
+
+If you prefer Docker Compose, you can set up a `docker-compose.yml` file to 
+automatically connect resources like the repositories, `cgitrc`, and various 
+files or folders to the container:
+
+```conf
+# docker-compose.yml
+version: '3'
+
+services:
+  cgit:
+    image: invokr/cgit
+    volumes:
+      - /git:/git
+      - ./cgitrc:/etc/cgitrc
+      - ./logo.png:/var/www/htdocs/cgit/logo.png
+      - ./favicon.png:/var/www/htdocs/cgit/favicon.png
+      - ./filters:/var/www/htdocs/cgit/filters
+    ports:
+      - "8787:80"
+    restart: always
+```
 
 ### Nginx Reverse Proxy
 
@@ -380,6 +405,9 @@ nano config
 	owner = "YourName"
 ```
 
+Note that you can ignore the configuration within each repository and simply set 
+up this information in the `cgitrc` file, if you want to do it that way.
+
 ### Editing `cgit`
 
 If you want to edit other items, such as the actual site name or description of
@@ -462,11 +490,15 @@ readme=:install
 
 ### Fix: Syntax Highlighting & README Rendering
 
-After completing my install and playing around with it for a few days, I noticed 
-two issues:
+After completing my install via the `docker run` method and playing around with 
+it for a few days, I noticed two issues:
 
 1. Syntax highlighting did not work when viewing the source code within a file.
 2. The `about` tab within a repository was not rendered to HTML.
+
+> Note that if you used the `docker-compose` method, you can create the 
+> `filters` folder and all of its contents on your host system and you should 
+> only have to enter the container to update it and install `pygments`.
 
 The following process fixes these issues. First, we need to be on the server 
 hosting `cgit` and then enter our Docker container:
@@ -508,6 +540,17 @@ chmod 755 md2html
 If you need other filters or html-converters found within [the cgit project 
 files](https://git.zx2c4.com/cgit/tree/filters), repeat the `curl` and `chmod` 
 process above for whichever files you need.
+
+However, formatting will not work quite yet since the Docker cgit container 
+we're using doesn't have the formatting package installed. You can install this 
+easily by install Python 3+ and the `pygments` package:
+
+```bash
+yum update
+yum install epel-release
+yum install python3
+pip3 install pygments
+```
 
 Lastly, we just need to add the following to our `cgitrc` file in order for 
 `cgit` to know where our filtering files are:
