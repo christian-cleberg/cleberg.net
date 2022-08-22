@@ -321,6 +321,12 @@ services:
     restart: always
 ```
 
+Then, just start the container:
+
+```bash
+sudo docker-compose up -d
+```
+
 ### Nginx Reverse Proxy
 
 I am using Nginx as my reverse proxy so that the `cgit` Docker container can use
