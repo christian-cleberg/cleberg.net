@@ -25,11 +25,13 @@ self-hosted Git approach:
     repositories even if they don't know the proper method.
 - I am not enabling Smart HTTPS for any repositories. Updates to repositories
   must be pushed via SSH.
-- Beyond the actual repository management, I am using `cgit` for the front-end
+- Beyond the actual repository management, I am using `cgit` for the front-end 
   web interface.
-  - As far as I am aware, you can't "exclude" a repository from `cgit` if it's
-    stored within the directory that `cgit` reads. To host private repositories,
-    you'd need to set up another directory that `cgit` can't read.
+  - If you use the `scan-path=<path>` configuration in the `cgitrc` 
+  configuration file to automatically find repositories, you can't exclude" a 
+  repository from `cgit` if it's stored within the path that `cgit` reads. To 
+  host private repositories, you'd need to set up another directory that `cgit` 
+  can't read.
 
 ## Assumptions
 
@@ -156,7 +158,7 @@ touch git-daemon-export-ok
 
 Don't forget to open up ports on the device firewall and network firewall if
 you want to access these repositories publicly. If you're using default ports,
-forward ports `22` (ssh) and `8169` (git) from your router to your server's IP
+forward ports `22` (ssh) and `9418` (git) from your router to your server's IP
 address.
 
 If your server also has a firewall, ensure that the firewall allows the same
@@ -164,7 +166,7 @@ ports that are forwarded from the router. For example, if you use `ufw`:
 
 ```bash
 sudo ufw allow 22
-sudo ufw allow 8169
+sudo ufw allow 9418
 ```
 
 ### Non-Standard SSH Ports
@@ -277,31 +279,27 @@ git remote set-url origin git@git.EXAMPLE.COM:/git/<REPOSITORY_NAME>.git
 git push
 ```
 
-## Using `cgit`
+## Optional Web View: `cgit`
 
 If you want a web viewer for your repositories, you can use various tools, such
 as `gitweb`, `cgit`, or `klaus`. I chose `cgit` due to its simple interface and
 fairly easy set-up (compared to others). Not to mention that the
 [Linux kernel uses `cgit`](https://git.kernel.org/).
 
-### Option #1: Docker Run
+### Docker Compose
 
-Installing via Docker is as simple as:
+Instead of using my previous method of using a `docker run` command, I've 
+updated this section to use `docker-compose` instead for an easier installation 
+and simpler management and configuration.
+
+In order to use Docker Compose, you will set up a `docker-compose.yml` file to 
+automatically connect resources like the repositories, `cgitrc`, and various 
+files or folders to the `cgit` container you're creating:
 
 ```bash
-sudo docker run --name=cgit -d -p 8763:80 -v /git:/git invokr/cgit
+mkdir ~/cgit && cd ~/cgit
+nano docker-compose.yml
 ```
-
-Once it's finished installing, you can access the site at `<SERVER_IP>:8763` or
-use a reverse-proxy service to forward `cgit` to a URL, such as
-`git.example.com`. See the next section for more details on reverse proxying a
-URL.
-
-### Option #2: Docker Compose
-
-If you prefer Docker Compose, you can set up a `docker-compose.yml` file to 
-automatically connect resources like the repositories, `cgitrc`, and various 
-files or folders to the container:
 
 ```conf
 # docker-compose.yml
@@ -317,7 +315,7 @@ services:
       - ./favicon.png:/var/www/htdocs/cgit/favicon.png
       - ./filters:/var/www/htdocs/cgit/filters
     ports:
-      - "8787:80"
+      - "8763:80"
     restart: always
 ```
 
@@ -326,6 +324,11 @@ Then, just start the container:
 ```bash
 sudo docker-compose up -d
 ```
+
+Once it's finished installing, you can access the site at `<SERVER_IP>:8763` or
+use a reverse-proxy service to forward `cgit` to a URL, such as
+`git.example.com`. See the next section for more details on reverse proxying a
+URL to a local port.
 
 ### Nginx Reverse Proxy
 
@@ -374,7 +377,7 @@ server {
 
 ```
 
-Once created, symlink it and restart the server.
+Once created, symlink it and restart the web server.
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/git.example.com /etc/nginx/sites-enabled/
@@ -388,7 +391,10 @@ As we can see below, my site at `git.cleberg.net` is available and running:
 ### Settings Up Git Details
 
 Once you have `cgit` running, you can add some small details, such as repository
-owners and descriptions by editing the following files.
+owners and descriptions by editing the following files within each repository.
+
+Alternatively, you can use the `cgitrc` file to edit these details if you only 
+care to edit them for the purpose of seeing them on your website.
 
 The `description` file within the repository on your server will display the
 description online.
@@ -416,13 +422,11 @@ up this information in the `cgitrc` file, if you want to do it that way.
 
 ### Editing `cgit`
 
-If you want to edit other items, such as the actual site name or description of
-`cgit`, you will need to open the Docker container and edit the `cgitrc` file
-inside:
+In order to edit certain items within `cgit`, you need to edit the `cgitrc` 
+file. 
 
 ```bash
-sudo docker exec -it cgit bash
-vi /etc/cgitrc
+nano ~/cgit/cgitrc
 ```
 
 Below is an example configuration for `cgitrc`. You can find all of the
@@ -431,7 +435,8 @@ configuration options within the
 
 ```conf
 css=/cgit.css
-logo=/cgit.png
+logo=/logo.png
+favicon=/favicon.png
 robots=noindex, nofollow
 
 enable-index-links=1
@@ -441,13 +446,13 @@ enable-log-filecount=1
 enable-log-linecount=1
 enable-git-config=1
 
-section-from-path=2
-scan-path=/git
-
 clone-url=git://git.example.com/$CGIT_REPO_URL ssh://git@git.example.com:/git/$CGIT_REPO_URL
 
-root-title=<YOUR_WEBSITE_NAME>
-root-desc=<YOUR_WEBSITE_DESCRIPTION>
+root-title=My Git Website
+root-desc=My personal git repositories.
+
+# Allow download of tar.gz, tar.bz2 and zip-files
+snapshots=tar.gz tar.bz2 zip
 
 ##
 ## List of common mimetypes
@@ -459,6 +464,14 @@ mimetype.jpeg=image/jpeg
 mimetype.pdf=application/pdf
 mimetype.png=image/png
 mimetype.svg=image/svg+xml
+
+# Highlight source code
+# source-filter=/var/www/htdocs/cgit/filters/syntax-highlighting.sh
+source-filter=/var/www/htdocs/cgit/filters/syntax-highlighting.py
+
+# Format markdown, restructuredtext, manpages, text files, and html files
+# through the right converters
+about-filter=/var/www/htdocs/cgit/filters/about-formatting.sh
 
 ##
 ## Search for these files in the root of the default branch of repositories
@@ -478,52 +491,44 @@ readme=:README.txt
 readme=:readme.txt
 readme=:README
 readme=:readme
-readme=:INSTALL.md
-readme=:install.md
-readme=:INSTALL.mkd
-readme=:install.mkd
-readme=:INSTALL.rst
-readme=:install.rst
-readme=:INSTALL.html
-readme=:install.html
-readme=:INSTALL.htm
-readme=:install.htm
-readme=:INSTALL.txt
-readme=:install.txt
-readme=:INSTALL
-readme=:install
+
+# Repositories
+
+# Uncomment the following line to scan a path instead of adding repositories manually
+# scan-path=/git
+
+## Test Section
+section=git/test-section
+
+repo.url=test.git
+repo.path=/git/test.git
+repo.readme=:README.md
+repo.owner=John Doe
+repo.desc=An example repository!
 ```
 
-### Fix: Syntax Highlighting & README Rendering
+### Final Fixes: Syntax Highlighting & README Rendering
 
-After completing my install via the `docker run` method and playing around with 
-it for a few days, I noticed two issues:
+After completing my initial install and playing around with it for a few days, I 
+noticed two issues:
 
 1. Syntax highlighting did not work when viewing the source code within a file.
 2. The `about` tab within a repository was not rendered to HTML.
 
-> Note that if you used the `docker-compose` method, you can create the 
-> `filters` folder and all of its contents on your host system and you should 
-> only have to enter the container to update it and install `pygments`.
-
-The following process fixes these issues. First, we need to be on the server 
-hosting `cgit` and then enter our Docker container:
+The following process fixes these issues. To start, lets go to the `cgit` 
+directory where we were editing our configuration file earlier.
 
 ```bash
-sudo docker exec -it cgit bash
+cd ~/cgit
 ```
 
-Within this container, we need to go to our document root for the `cgit` web 
-files and create a `filters` directory:
+In here, create two folders that will hold our syntax files:
 
 ```bash
-cd /var/www/htdocs/cgit
-mkdir filters
-cd filters
+mkdir filters && mkdir filters/html-converters && cd filters
 ```
 
-In this directory, we are going to pull down a couple formatting files from the 
-main `cgit` repository.
+Next, download the default filters:
 
 ```bash
 curl https://git.zx2c4.com/cgit/plain/filters/about-formatting.sh > about-formatting.sh
@@ -532,13 +537,11 @@ curl https://git.zx2c4.com/cgit/plain/filters/syntax-highlighting.py > syntax-hi
 chmod 755 syntax-highlighting.py
 ```
 
-Once the main files are created and permissions are modified, we need create 
-another directory called `html-converters` inside the `filters` directory. In 
-this new directory, we will `curl` another file that will convert Markdown to 
-HTML.
+Finally, download the HTML conversion files you need. The example below just 
+downloads the Markdown converter:
 
 ```bash
-mkdir html-converters && cd html-converters
+cd html-converters
 curl https://git.zx2c4.com/cgit/plain/filters/html-converters/md2html > md2html
 chmod 755 md2html
 ```
@@ -552,14 +555,21 @@ we're using doesn't have the formatting package installed. You can install this
 easily by install Python 3+ and the `pygments` package:
 
 ```bash
+# Enter the container's command line
+sudo docker exec -it cgit bash
+```
+
+```bash
+# Install the necessary packages and then exit
 yum update
 yum install epel-release
 yum install python3
 pip3 install pygments
+exit
 ```
 
-Lastly, we just need to add the following to our `cgitrc` file in order for 
-`cgit` to know where our filtering files are:
+If not done already, we need to add the following variables to our 
+`cgitrc` file in order for `cgit` to know where our filtering files are:
 
 ```conf
 # Highlight source code with python pygments-based highlighter
@@ -583,7 +593,8 @@ README Rendering:
 
 I won't go into much detail in this section, but you can fully theme your 
 installation of `cgit` since you have access to the `cgit.css` file in your web 
-root.
+root. This is another file you can add as a volume to the `docker-compose.yml` 
+file if you want to edit this without entering the container's command line.
 
 For example, I created a Stylus theme called 
 [dark-cgit](https://github.com/christian-cleberg/dark-cgit) to use for my 
@@ -599,7 +610,7 @@ Syntax Highlighting:
 README Rendering:
 ![dark-cgit readme](https://img.cleberg.io/blog/20220701-git-server/dark-cgit-readme.png)
 
-## Backups
+## :warning: Remember to Backup Your Data!
 
 The last thing to note is that running services on your own equipment means that
 you're assuming a level of risk that exists regarding data loss, catastrophes,
