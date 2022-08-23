@@ -564,7 +564,7 @@ sudo docker exec -it cgit bash
 yum update
 yum install epel-release
 yum install python3
-pip3 install pygments
+pip3 install pygments markdown
 exit
 ```
 
