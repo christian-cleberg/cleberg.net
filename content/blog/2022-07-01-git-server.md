@@ -333,7 +333,7 @@ URL to a local port.
 ### Nginx Reverse Proxy
 
 I am using Nginx as my reverse proxy so that the `cgit` Docker container can use
-`git.cleberg.net` as its URL. To do so, I simply created the following
+`git.cleberg.io` as its URL. To do so, I simply created the following
 configuration file:
 
 ```bash
@@ -597,7 +597,7 @@ root. This is another file you can add as a volume to the `docker-compose.yml`
 file if you want to edit this without entering the container's command line.
 
 For example, I created a Stylus theme called 
-[dark-cgit](https://github.com/christian-cleberg/dark-cgit) to use for my 
+[dark-cgit](https://git.cleberg.io/cgit.cgi/dark-cgit.git/) to use for my 
 personal website. This theme just needs the URL updated to work for any other 
 cgit-based site. Here's what this theme looks like in action:
 
