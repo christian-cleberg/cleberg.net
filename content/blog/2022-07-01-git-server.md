@@ -561,12 +561,15 @@ sudo docker exec -it cgit bash
 
 ```bash
 # Install the necessary packages and then exit
-yum update
-yum install epel-release
-yum install python3
-pip3 install pygments markdown
+yum update -y &&                      \
+yum upgrade -y &&                     \
+yum install python3 python3-pip -y && \
+pip3 install markdown pygments &&     \
 exit
 ```
+
+**You will need to enter the cgit docker container and re-run these `yum` 
+commands every time you kill and restart the container!**
 
 If not done already, we need to add the following variables to our 
 `cgitrc` file in order for `cgit` to know where our filtering files are:
