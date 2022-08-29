@@ -1,7 +1,7 @@
 +++
 date = 2022-08-29
 title = "Salary Transparency"
-description = "As "
+description = "In an effort to de-mystify compensation culture, I'm publishing my personal salary data online."
 +++
 
 ## My Personal Salary Transparency
