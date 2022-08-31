@@ -22,6 +22,7 @@ difference for multiple persons within the same role.
 
 \* [See the CSV data here](/salary.csv).
 
+<div class="table-container">
 | Title | Company | Location | Start Date | End Date | Days Worked | Salary | Reason for Leaving |
 | ----- | ------- | -------- | ---------- | -------- | ----------- | ------ | ------------------ |
 | Community Management Intern | Walgreens | Lincoln (NE) | 2017-06-19 | 2018-02-02 | 228 | $14/hr | New Job |
@@ -33,5 +34,6 @@ difference for multiple persons within the same role.
 | Senior IT Auditor | Ameritas | Lincoln (NE) | 2021-05-19 | 2021-09-03 | 107 | $72000 | New Job |
 | Technology Risk Consulting Senior | Ernst & Young | Des Moines (IA) | 2021-09-07 | 2022-06-03 | 269 | $89500 | New Job |
 | Senior Auditor, Technology Assurance | KPMG | Omaha (NE) | 2022-06-06 | - | - | $110000 | - |
+</div>
 
 Inspired by [Xe](https://xeiaso.net/salary-transparency).
