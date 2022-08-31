@@ -32,7 +32,6 @@ the `Favourites` category.
 
 ### Commands/Shortcuts
 
-<div class="table-container">
 |   Key(s)   |             Command             |
 |:----------:|:-------------------------------:|
 | ↑, ↓       | navigate                        |
@@ -42,7 +41,6 @@ the `Favourites` category.
 | k          | stop playing stream             |
 | q          | quit                            |
 | f          | toggle favourite                |
-</div>
 
 ## Installation
 

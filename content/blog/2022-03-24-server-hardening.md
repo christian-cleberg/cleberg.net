@@ -206,12 +206,10 @@ order to SSH to this server, I need to plug my laptop into port 23 or else I
 cannot SSH. Otherwise, I'd need to hook up a monitor and keyboard directly to
 the server to manage it.
 
-<div class="table-container">
 | VLAN ID | VLAN Name | Member Ports | Tagged Ports | Untagged Ports |
 | :-----: | :-------: | :----------: | :----------: | :------------: |
 |    1    |  Default  |     1-24     |              |      1-24      |
 |    2    |  Server   |    1,8,23    |              |     1,8,23     |
-</div>
 
 ### 802.1Q VLAN PVID Setting
 
@@ -219,7 +217,6 @@ Once the VLAN is created, I simply add the `VLAN ID` of `2` as the `PVID` for
 any related ports (in this case, see that ports `8` and `23` have a PVID of
 `2`).
 
-<div class="table-container">
 | Port | PVID |
 | :--: | :--: |
 |  1   |  1   |
@@ -246,7 +243,6 @@ any related ports (in this case, see that ports `8` and `23` have a PVID of
 |  22  |  1   |
 |  23  |  2   |
 |  24  |  1   |
-</div>
 
 ## Router
 

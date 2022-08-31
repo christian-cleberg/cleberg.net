@@ -131,12 +131,10 @@ In my case, the table below shows the port forwarding rules I've created. In
 this table, `xxx.xxx.xxx.xxx` is the local device IP of the reverse proxy
 server - it will probably be an IP between `192.168.1.1` and `192.168.1.255`.
 
-<div class="table-container">
 | NAME  | FROM | PORT |  DEST PORT/IP   | ENABLED |
 | :---: | :--: | :--: | :-------------: | :-----: |
 | HTTP  |  \*  |  80  | xxx.xxx.xxx.xxx |  TRUE   |
 | HTTPS |  \*  | 443  | xxx.xxx.xxx.xxx |  TRUE   |
-</div>
 
 Once configured, these rules will direct all web traffic to your reverse proxy.
 

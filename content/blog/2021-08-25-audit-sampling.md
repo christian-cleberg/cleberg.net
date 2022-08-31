@@ -91,7 +91,6 @@ that will instruct auditors which sample sizes to choose. This allows for
 uniform testing and reduces overall workload. See the table below for a common
 implementation of sample sizes:
 
-<div class="table-container">
 | Control Frequency | Sample Size - High Risk | Sample Size - Low Risk |
 | ----------------- | ----------------------- | ---------------------- |
 | More Than Daily   | 40                      | 25                     |
@@ -102,7 +101,6 @@ implementation of sample sizes:
 | Semi-Annually     | 1                       | 1                      |
 | Annually          | 1                       | 1                      |
 | Ad-hoc            | 1                       | 1                      |
-</div>
 
 ## Sampling with Python & Pandas
 
