@@ -31,6 +31,45 @@ Schema](https://pages.johnspurlock.com/graphql-schema-docs/cloudflare.html)
 - [MySportsFeeds API](https://www.mysportsfeeds.com)
 - [OMDb API](https://www.omdbapi.com)
 
+## Blogs & Personal Websites
+
+- [0xFF](https://0xff.nu)
+- [aem1k](https://aem1k.com)
+- [Alicia's Notes](https://notes.aliciasykes.com)
+- [Artemis Everfree](https://artemis.sh)
+- [Barry Hess](https://bjhess.com/blog/)
+- [Bismuth Garden](https://bismuth.garden)
+- [brandur](https://brandur.org)
+- [cadence's website](https://cadence.moe)
+- [Consuming Cyberpunk](https://consumingcyberpunk.com)
+- [Cyberpunks.com](https://www.cyberpunks.com)
+- [The Digital Antiquarian](https://www.filfre.net)
+- [Drew DeVault](https://drewdevault.com)
+- [edison.me](https://edison.me)
+- [fribbledom's journal](https://fribbledom.com)
+- [fdisk.space](https://fdisk.space)
+- [hmbrg.org](https://hmbrg.org)
+- [Hundred Rabbits](https://100r.co/site/home.html)
+- [Jakob Maier](https://www.jakobmaier.at)
+- [Julia Evans](https://jvns.ca)
+- [Kishore](https://kishvanchee.com)
+- [Liam Wong](https://www.liamwong.com)
+- [LOW TECH MAGAZINE](https://solar.lowtechmagazine.com)
+- [Marián Mižik](https://mizik.sk)
+- [Matt Mullenweg](https://ma.tt)
+- [Matthew Graybosch](https://matthewgraybosch.com)
+- [mntn](https://mntn.xyz)
+- [The Obscuritory](https://obscuritory.com)
+- [OMG! Ubuntu!](https://www.omgubuntu.co.uk)
+- [Rutherford Craze](https://craze.co.uk)
+- [t0.vc](https://t0.vc)
+- [Tania Rascia](https://www.taniarascia.com)
+- [tdarb](https://tdarb.org)
+- [Tom MacWright](https://macwright.com)
+- [Xe Iaso](https://xeiaso.net)
+- [zserge](https://zserge.com)
+- [雨山](https://ameyama.com)
+
 ## Communities
 
 - [Cyberpunk Forums](https://cyberpunkforums.com)
@@ -69,6 +108,7 @@ Schema](https://pages.johnspurlock.com/graphql-schema-docs/cloudflare.html)
 Zinn](https://www.historyisaweapon.com/zinnapeopleshistory.html)
 - [Schiit Happened by Jason 
 Stoddard](https://www.head-fi.org/threads/schiit-happened-the-story-of-the-worlds-most-improbable-start-up.701900/)
+- [The Anarchist Library](https://theanarchistlibrary.org/special/index)
 
 ## Software
 
