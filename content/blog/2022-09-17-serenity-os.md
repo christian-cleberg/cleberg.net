@@ -1,5 +1,5 @@
 +++
-date = 2022-09-12
+date = 2022-09-17
 title = "Serenity OS: Testing Out a Unique System"
 description = "Walking through my exploration of Serenity OS, a unique 90s-esque system."
 +++
@@ -79,7 +79,7 @@ After this process is completed, the image should run automatically and launch.
 
 I played around in SerenityOS for an hour or two in order to see what I could do 
 and had a lot of fun with it. The only issue I ran into was a lack of working 
-internet. I didn't try to hard, but I could tell that the main network link 
+internet. I didn't try very hard, but I could tell that the main network link 
 wasn't connecting to my Fedora host properly.
 
 ## Screenshots
