@@ -6,6 +6,13 @@ draft = false
 aliases = ["/blog/hardening-a-public-facing-home-server"]
 +++
 
+## Post Updates
+
+> After reviewing this post today (2022-10-04), I noticed quite a few gaps in my 
+> write-up and wanted to add a few things - even though this blog is really just 
+> a retrospective and knowledge dump for myself. I left things intact and simply 
+> crossed them out (~~like this~~) for posterity.
+
 ## Planning Data Flows & Security
 
 ### My Personal Data Flow
@@ -39,7 +46,7 @@ Let's start with the actual server itself. Think about the following:
 Once the data leaves the server, where does it go? In my case, it goes to a
 managed switch. In this case, I asked the following:
 
--   What settings is the switch using?
+-   What configurations is the switch using?
 -   Am I using VLANs?
     -   Yes, I am using 802.1Q VLANs.
 -   Are the VLANs configured properly?
@@ -47,8 +54,8 @@ managed switch. In this case, I asked the following:
         VLAN to allow outside traffic to and from the server alone. No other
         devices, except for a service port, and in that VLAN.
 
-Now, the data has been processed through the switch. Where does it go next? In
-my case, it's pretty simple - it goes to the router/modem device:
+At this point, the data has been processed through the switch. Where does it go 
+next? In my case, it's pretty simple - it goes to the router/modem device:
 
 -   Does my ISP block any ports that I need?
     -   This is an important one that a lot of people run into when self-hosting
@@ -56,7 +63,9 @@ my case, it's pretty simple - it goes to the router/modem device:
         you think ports are blocked.
 -   Is there a router firewall?
     -   Yes, I checked that it's configured to allow the ports I need to run my
-        services publicly.
+        services publicly. Common web servers and reverse proxies require ports 
+        80 and 443 but other services like media servers or games can require 
+        unique ports, so be sure to check the documentation for your service(s).
 -   Are there any other settings affecting inbound/outbound traffic?
     -   Schedules or access blocks
     -   Static Routing
@@ -71,14 +80,35 @@ publicly.
 
 ## Server
 
-The services I run on my server are installed straight into the OS, without any
-use of Docker or VMs, so I don't need any extra application configuration to
-make them accessible to the outside world.
+~~The services I run on my server are installed straight into the OS, without 
+any use of Docker or VMs, so I don't need any extra application configuration to
+make them accessible to the outside world.~~
+
+As of 2022-10-04, the paragraph above is no longer true as I now run a reverse 
+proxy with Nginx and host many services inside Docker. However, it doesn't 
+change anything regarding this post as I still just need to open ports 80 & 443 
+and create the necessary website configuration files.
+
+When creating new services - either installed directly on bare metal or within 
+something like Docker - I ensure that I read through the documentation 
+thoroughly to understand a few key things:
+  - What network activities should this app perform (if any)? Using which ports 
+  and protocols?
+  - Does this app require any commands/services to be run as `root`?
+  - Does this app log errors, authentication failures/successes, or anything 
+  else that would be useful for an investigation?
 
 For extra security, I use limit all incoming connections to SSH connections
 through my server firewall (`ufw`) and disable common SSH settings. After all of
 that, I use `fail2ban` as a preventative measure against brute-force login
 attempts.
+
+As another piece of security, you can randomize your SSH port to ensure that 
+random scanners or attackers can't easily try to force their way into your 
+network. For example, you can edit the port rules in your server to block all 
+connection requests to port `22` but forward all remote connections from port 
+`12345` to your server's port `22`. Then you just need to SSH to your network 
+via your randomized port.
 
 ### `ufw`
 
@@ -177,7 +207,8 @@ will not include all the details in this post. To see how to configure MFA for
 
 I haven't written a post on how I use `fail2ban`, but it's quite simple. I use
 the default `sshd` jail, but you can always create new jails for respective
-applications or ports.
+applications or ports. For example, if you use Nginx as your web server, you can 
+use the `nginx-http-auth` jail.
 
 In order to get it up and running, use the following commands:
 
@@ -250,10 +281,64 @@ On my router, the configuration was as easy as opening the firewall settings and
 unblocking the ports I needed for my services (e.g., HTTP/S, Plex, SSH, MySQL,
 etc.).
 
-Since I'm relying on an ISP-provided modem/router combo for now (not by choice),
-I do not use any other advanced settings on my router that would inhibit any
-valid traffic to these services.
+~~Since I'm relying on an ISP-provided modem/router combo for now (not by 
+choice), I do not use any other advanced settings on my router that would 
+inhibit any valid traffic to these services.~~
+
+The paragraph above regarding the ISP-owned router is no longer accurate as I 
+now use a Ubiquiti Unifi Dream Machine Pro as my router. Within this router, I 
+enabled port forwarding/firewall rules, segregate the network based on device, 
+and enable traffic restrictions (e.g. silently drop traffic from certain 
+countries and threat categories).
 
 If you have the option with your ISP, I recommend using a personal router with
 software that you are familiar with so that you can explore all the options
 available to you.
+
+## Physical Security
+
+One large piece of self-hosting that people generally don't discuss online is 
+physical security. However, physical security is very important for everyone who 
+hosts a server like this. Exactly *how* important it is depends on the server 
+use/purpose.
+
+If you self-host customer applications that hold protected data (HIPAA, GDPR, 
+COPPA, etc.), then physical security is extremely important and cannot be 
+ignored. If you simply host a blog and some hobby sites, then it's a relatively 
+minor consideration - but one you still need to think about.
+
+### Location
+
+The first consideration is quite simple: location.
+  - Is the server within a property you own or housed on someone else's property?
+  - Is it nearby (in your house, in your work office, in your neighbor's garage, 
+  in a storage unit, etc.)?
+  - Do you have 24/7 access to the server?
+  - Are there climate considerations, such as humidity, fires, tornadoes, 
+  monsoons?
+  - Do you have emergency equipment nearby in case of emergency?
+
+### Hardware Ownership
+
+Secondly, consider the hardware itself:
+  - Do you own the server in its entirety?
+  - Are any other users able to access the server - even if your data/space is 
+  segregated?
+  - If you're utilizing a third-party, do they have any documentation to show 
+  responsibility? This could be a SOC 1/2/3 report, ISO compliance report, 
+  internal security/safety documentation.
+
+### Physical Controls
+
+Regardless of who owns the hardware, ensure that there are adequate safeguards 
+in place, if necessary. These usually don't apply to small home servers and are 
+usually covered already if you're utilizing a third-party.
+
+These can include:
+  - Server bezel locks
+  - Server room locks - physical, digital, or biometric authentication
+  - Security cameras
+  - Raised floors/lowered ceilings with proper guards/gates in-place within the 
+  floors or ceilings
+  - Security personnel
+  - Log sheets and/or guest badges
