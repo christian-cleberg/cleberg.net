@@ -8,7 +8,7 @@ description = "In this post, I walk through the Syncthing software and how to se
 
 If you've been looking around the self-hosted cloud storage space for a while, 
 you've undoubtedly run into someone suggesting 
-[Syncthing](https://syncthing.net) as an option. However, it is an usual 
+[Syncthing](https://syncthing.net) as an option. However, it is an unusual 
 alternative for those users out there who are used to having a centralized cloud 
 server that serves as the "controller" of the data and interacts with clients on 
 devices to fetch files.
