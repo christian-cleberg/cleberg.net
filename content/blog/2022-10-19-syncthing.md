@@ -14,7 +14,7 @@ server that serves as the "controller" of the data and interacts with clients on
 devices to fetch files.
 
 This post is a walkthough of the Syncthing software, how I set-up my personal 
-storage, and some pros and cons of using the software..
+storage, and some pros and cons of using the software.
 
 ### How Does Syncthing Work?
 
