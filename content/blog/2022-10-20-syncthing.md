@@ -1,5 +1,5 @@
 +++
-date = 2022-10-19 
+date = 2022-10-20
 title = "Syncthing: A Minimal Self-Hosted Cloud Storage Solution"
 description = "In this post, I walk through the Syncthing software and how to set it up on multiple devices."
 +++
