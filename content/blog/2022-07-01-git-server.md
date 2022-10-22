@@ -154,6 +154,26 @@ repository.
 touch git-daemon-export-ok
 ```
 
+## Change the Login Shell for `git`
+
+To make sure that the `git` user is only used for git operations and nothing 
+else, you need to change the user's login shell. To do this, simply use the 
+`chsh` command:
+
+```bash
+sudo chsh git
+```
+
+The interactive prompt will ask which shell you want the `git` user to use. You 
+must use the following value:
+
+```bash
+/usr/bin/git-shell
+```
+
+Once done, no one will be able to SSH to the `git` user or execute commands 
+other than the standard git commands.
+
 ## Opening the Firewall
 
 Don't forget to open up ports on the device firewall and network firewall if
