@@ -7,7 +7,7 @@ description = "In an effort to de-mystify compensation culture, I'm publishing m
 ## My Personal Salary Transparency
 
 In an effort to not bury the lede, I want to start by noting that my personal 
-salary history is now [publicly available on this site](/salary/).
+salary history is now [publicly available on this site](/salary-transparency/).
 
 I have made this step in an effort to help lead the way among those who wish to 
 share, compare, or research salaries in my field. I feel that this is a 
