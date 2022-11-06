@@ -9,7 +9,7 @@
 />
 {% endblock page_meta %}
 {% block css %}
-<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/styles.css">
 <link
   rel="stylesheet"
   href="/syntax-theme.css"
@@ -37,8 +37,8 @@
   </time>
   &middot; {{ page.word_count }} words &middot; {{
   page.reading_time }} minutes {% endif %} {% if page.toc %}
-  <nav>
-    <h2>Table of Contents</h2>
+  <nav aria-labelledby="page-toc">
+    <h2 id="page-toc">Table of Contents</h2>
     <ul>
       {% for h1 in page.toc %}
       <li>
