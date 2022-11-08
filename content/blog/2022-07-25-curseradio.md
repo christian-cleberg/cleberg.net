@@ -87,7 +87,7 @@ sudo mkdir /usr/local/lib/python3.10/site-packages/
 ```
 
 ```bash
-sudo chown -R kaizoku:kaizoku /usr/local/lib/python3.10/
+sudo chown -R $USER:$USER /usr/local/lib/python3.10/
 ```
 
 ## Run the Application
