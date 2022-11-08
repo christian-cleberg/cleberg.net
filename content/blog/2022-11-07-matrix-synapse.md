@@ -94,7 +94,7 @@ doas nano /etc/nginx/http.d/example.com.conf
 If you already have TLS certificates for this domain (`example.com`), you can 
 simply use the SSL configuration and point toward your TLS certificates.
 
-```bash
+```conf
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
