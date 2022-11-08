@@ -6,8 +6,10 @@ description = "A short guide on how I was able to get Synapse working on Alpine 
 
 ## Synpase
 
-If you're reading this, you likely know that Synapse is a popular Matrix 
-homeserver software that allows users to run their own Matrix homeserver.
+If you're reading this, you likely know that 
+[Synapse](https://github.com/matrix-org/synapse/) is a popular 
+[Matrix](https://matrix.org/) homeserver software that allows users to run their 
+own Matrix homeserver.
 
 This post is a short guide describing how I was able to get Synapse working in a 
 minimally-useable state on Alpine Linux.
@@ -17,15 +19,15 @@ minimally-useable state on Alpine Linux.
 ### Dependencies
 
 First, since there is no Alpine-specific packge for Synapse, we need to ensure 
-that Alpine has the required dependencies for the Python-based install.
+that Alpine has the required dependencies for the Python-based installation 
+method.
 
 ```bash
 doas apk -U update
 doas apk add python3 py3-virtualenv
 ```
 
-Next, we need to set-up the Python environment for Synapse to run inside a 
-virtual environment:
+Next, we need to set up a Python virtual environment for Synapse:
 
 ```bash
 mkdir -p ~/synapse && cd ~/synapse
@@ -38,9 +40,9 @@ pip install matrix-synapse
 
 ### Running Synapse
 
-Once installed, running Synapse is easy. Simple execute the following command, 
+Once installed, running Synapse is easy. Simply execute the following command, 
 replacing `example.com` with the domain name that will be used with this 
-homeserver.
+homeserver. This will generate the configuration files needed to run the server.
 
 ```bash
 python -m synapse.app.homeserver \
@@ -67,7 +69,7 @@ nano ~/synapse/homeserver.yaml
 For now, we just need to ensure the `server_name` is accurate. However, there 
 are a lot of other configuration options found in the [Configuring 
 Synapse](https://matrix-org.github.io/synapse/develop/usage/configuration/config_documentation.html) 
-documentation that can be enabled/disabled at this point.
+documentation that can be enabled/disabled at any point.
 
 ```yaml
 server_name: "example.com"
@@ -103,7 +105,7 @@ server {
     listen 8448 ssl http2 default_server;
     listen [::]:8448 ssl http2 default_server;
 
-    server_name matrix.cleberg.io;
+    server_name example.com;
 
     location ~ ^(/_matrix|/_synapse/client) {
         # note: do not add a path (even a single /) after the port in `proxy_pass`,
@@ -157,9 +159,12 @@ doas rc-service nginx restart
 ```
 
 If you still need to generate TLS certificates, run `certbot` now and obtain the 
-certificates. This command will ask if you want to use a webroot or spin up a 
-temporary web server - I highly recommend using the temporary web server due to 
-the many issues with using a webroot. You will need to stop Nginx to do this:
+certificates. Certbot will ask if you want to use a webroot or spin up a 
+temporary web server - I **highly** recommend using the temporary web server due 
+to the many issues with using a webroot.
+
+You will need to stop Nginx in order to user the temporary web server option 
+with Certbot:
 
 ```bash
 # Stop Nginx so certbot can spin up a temp webserver for cert generation
@@ -171,17 +176,22 @@ doas rc-service nginx start
 ### Open Firewall & Router Ports
 
 If you use a firewall on the server, open the `8448` port for discovery and 
-federation. If you want additional services, such as voice calls, you will need 
+federation, as well as the normal web server ports if you're using a reverse 
+proxy. If you want additional services, such as voice calls, you will need 
 to read the Synapse documentation to see which ports need to be opened for those 
 features.
 
+Here's an example for the Universal Firewall (UFW) software:
+
 ```bash
-# UFW port example
+# Matrix port
 doas ufw allow 8448
+# Standard web server ports
+doas ufw allow "Nginx Full"
 ```
 
-Remember to forward any Synapse ports, such as `8448`, in your Router from the 
-internet to your server.
+Remember to forward any Synapse ports, such as `8448`, `80`, and `443`, in your 
+Router from the internet to your server's IP address.
 
 ### Adding Matrix Users
 
@@ -194,6 +204,8 @@ register_new_matrix_user -c homeserver.yaml
 ```
 
 Remember that the format for federated Matrix usernames is 
-`@username:example.com`! Once Synapse is running and you have a username, you 
-are ready to login to a Matrix client and start sending messages, joining rooms, 
-and utilizing your very own Matrix server.
+`@username:example.com` when signing into client applications.
+
+Once Synapse is running and you have a username, you are ready to login to a 
+Matrix client and start sending messages, joining rooms, and utilizing your very 
+own Matrix server.
