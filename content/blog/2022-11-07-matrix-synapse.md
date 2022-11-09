@@ -102,8 +102,8 @@ server {
     listen [::]:443 ssl http2;
 
     # For the federation port
-    listen 8448 ssl http2 default_server;
-    listen [::]:8448 ssl http2 default_server;
+    listen 8448 ssl http2;
+    listen [::]:8448 ssl http2;
 
     server_name example.com;
 
