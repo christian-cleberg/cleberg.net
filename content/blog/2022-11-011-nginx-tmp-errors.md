@@ -38,7 +38,7 @@ caching temporary files.
 
 ```bash
 # Alpine Linux
-doas chown -R nginx:nginx /var/lib/nginx/
+doas chown -R nginx:nginx /var/lib/nginx
 
 # Other Distros
 sudo chown -R nginx:nginx /var/lib/nginx
