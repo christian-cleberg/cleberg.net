@@ -5,7 +5,7 @@ description = "A quick fix for Nginx permission errors on the tmp directory."
 +++
 
 *This is a very short post so that I personally remember the solution as it has 
-popped up a few times for me.*
+occurred multiple times for me.*
 
 ## The Problem
 
