@@ -48,10 +48,20 @@ You *may* also be able to change the `proxy_temp_path` in your Nginx config, but
 I did not try this. Here's a suggestion I found online that may work if the 
 above solution does not:
 
+```bash
+nano /etc/nginx/http.d/example.com.conf
+```
+
 ```conf
-# Set the proxy_temp_path to your preference, make sure it's owned by the 
-# `nginx` user
-proxy_temp_path /tmp;
+server {
+  ...
+
+  # Set the proxy_temp_path to your preference, make sure it's owned by the 
+  # `nginx` user
+  proxy_temp_path /tmp;
+
+  ...
+}
 ```
 
 Finally, restart Nginx and your server should be able to cache temporary files 
