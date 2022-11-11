@@ -23,7 +23,7 @@ cat /var/log/nginx/error.log
 2022/11/11 11:30:34 [crit] 8970#8970: *10 open() "/var/lib/nginx/tmp/proxy/3/00/0000000003" failed (13: Permission denied) while reading upstream, client: 169.150.203.10, server: cyberchef.cleberg.io, request: "GET /assets/main.css HTTP/2.0", upstream: "http://127.0.0.1:8111/assets/main.css", host: "cyberchef.cleberg.io", referrer: "https://cyberchef.cleberg.io/"
 ```
 
-### The Solution
+## The Solution
 
 In order to resolve the issue, I had to ensure the `/var/lib/nginx` 
 directory is owned by Nginx. Mine was owned by the `www` user and Nginx was not 
