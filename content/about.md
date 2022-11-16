@@ -11,7 +11,7 @@ of work, I spend my time as a data analyst, hobbyist programmer, and homelabber.
 - Email: hello [at] cleberg.net [[GPG](https://cleberg.net/gpg.txt)]
 - LinkedIn: [@christian-cleberg](https://linkedin.com/in/christian-cleberg/)
 - Matrix: [@kaizoku\_](https://matrix.to/#/@kaizoku_:matrix.org)
-- Source Code: [git@cleberg.io](https://git.cleberg.net)
+- Source Code: [git@cleberg.nET](https://git.cleberg.net)
 - Stack Overflow: [@cyborg](https://stackoverflow.com/users/12566804/kaizoku)
 
 ## Personal
