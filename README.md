@@ -1,4 +1,4 @@
-# cleberg.io
+# cleberg.net
 
 This is my personal Markdown-based website and blog, using
 [Zola](https://www.getzola.org) to generate static-site files.
@@ -9,11 +9,11 @@ If you want to use this structure to create your site, simply clone the repo and
 rename it to something meaningful:
 
 ```bash
-git clone git://git.cleberg.io/cleberg.io.git
+git clone git://git.cleberg.net/cleberg.net.git
 ```
 
 ```bash
-mv cleberg.io <your-website>
+mv cleberg.net <your-website>
 ```
 
 ```bash
