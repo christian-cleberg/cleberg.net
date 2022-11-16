@@ -29,7 +29,7 @@ data, selecting samples, or performing audit tests. These steps can be necessary
 for an audit (and may even be performed by the same associates), but they are
 not data analytics.
 
-![The Intelligence Cycle](https://img.cleberg.io/blog/20190909-data-analysis-in-auditing/intelligence_cycle-min.png)
+![The Intelligence Cycle](https://img.cleberg.net/blog/20190909-data-analysis-in-auditing/intelligence_cycle-min.png)
 
 _Figure 1: The Intelligence Cycle_
 
@@ -84,7 +84,7 @@ analytics so that the results can be as comprehensive as possible:
 -   **Analysts**: There must be auditors willing and able to perform data
     analytics or else the system cannot be sustained.
 
-![The DELTA Model](https://img.cleberg.io/blog/20190909-data-analysis-in-auditing/delta-min.png)
+![The DELTA Model](https://img.cleberg.net/blog/20190909-data-analysis-in-auditing/delta-min.png)
 
 _Figure 2: The DELTA Model_
 
@@ -202,11 +202,11 @@ assume what the data means, especially if it relates to a complex subject. _Tell
 a story_ about the data and why the results matter. For example, **Figure 4**
 shows a part of the explanation the author gives to illustrate his point.
 
-![Entry-Level Visualization](https://img.cleberg.io/blog/20190909-data-analysis-in-auditing/vis_example-min.png)
+![Entry-Level Visualization](https://img.cleberg.net/blog/20190909-data-analysis-in-auditing/vis_example-min.png)
 
 _Figure 3: Entry-Level Visualization_
 
-![Entry-Level Visualization](https://img.cleberg.io/blog/20190909-data-analysis-in-auditing/vis_example_explanation-min.png)
+![Entry-Level Visualization](https://img.cleberg.net/blog/20190909-data-analysis-in-auditing/vis_example_explanation-min.png)
 
 _Figure 4: Visualization Explanation_
 

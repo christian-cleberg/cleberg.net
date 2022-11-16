@@ -25,7 +25,7 @@ presentable again.
 For the last year or two, I have written everything exclusively in
 [Markdown](https://en.wikipedia.org/wiki/Markdown) format. Small notes,
 long-form writings, and even these blog posts
-([see this blog post in Markdown format](https://git.cleberg.io/cgit.cgi/cleberg.io.git/plain/content/blog/2022-03-02-note-taking.md))
+([see this blog post in Markdown format](https://git.cleberg.net/cgit.cgi/cleberg.net.git/plain/content/blog/2022-03-02-note-taking.md))
 are all written in Markdown.
 
 Why Markdown? While I do appreciate the simplicity of plain-text files without
@@ -39,7 +39,7 @@ render it as plain-text and I can read it just as easily.
 For example, here's how TextEdit on macOS will open and display a Markdown file
 in plain-text, since it does contain any features to preview Markdown as HTML:
 
-![Plain Text Markdown](https://img.cleberg.io/blog/20220302-easy-reliable-note-taking/plain_markdown.png)
+![Plain Text Markdown](https://img.cleberg.net/blog/20220302-easy-reliable-note-taking/plain_markdown.png)
 
 ## Saving & Syncing Files
 
@@ -95,12 +95,12 @@ Markdown editor is incredibly easy and straightforward.
 
 Here's an example of how my Markdown notes look when opened in plain-text mode:
 
-![Obsidian Markdown Source Mode](https://img.cleberg.io/blog/20220302-easy-reliable-note-taking/obsidian_source_mode.png)
+![Obsidian Markdown Source Mode](https://img.cleberg.net/blog/20220302-easy-reliable-note-taking/obsidian_source_mode.png)
 
 Here's the "live preview" version, where the Markdown is rendered into its HTML
 format:
 
-![Obsidian Markdown Live Preview](https://img.cleberg.io/blog/20220302-easy-reliable-note-taking/obsidian_live_preview.png)
+![Obsidian Markdown Live Preview](https://img.cleberg.net/blog/20220302-easy-reliable-note-taking/obsidian_live_preview.png)
 
 ### Programming on Desktop
 

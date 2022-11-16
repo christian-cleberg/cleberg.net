@@ -8,7 +8,7 @@ aliases = ["/blog/ditching-cloudflare-for-njalla"]
 
 ## Registrar
 
-![Njalla's Registrar Dashboard](https://img.cleberg.io/blog/20220601-ditching-cloudflare-for-njalla/registrar.png)
+![Njalla's Registrar Dashboard](https://img.cleberg.net/blog/20220601-ditching-cloudflare-for-njalla/registrar.png)
 
 After spending a year or so using Cloudflare for DNS only - no proxying or
 applications - I spent the last few months using Cloudflare Tunnels and
@@ -34,7 +34,7 @@ decide if they're worth the higher rates (one domain is 30€ and the other is
 
 ## DNS
 
-![Njalla's DNS Settings](https://img.cleberg.io/blog/20220601-ditching-cloudflare-for-njalla/dns.png)
+![Njalla's DNS Settings](https://img.cleberg.net/blog/20220601-ditching-cloudflare-for-njalla/dns.png)
 
 As noted above, I'm using Njalla exclusively for DNS configurations on my
 domains.
@@ -69,7 +69,7 @@ information for those of you (AKA: me) who hate using the `dig` command.
 This was very useful for monitoring a couple of my transferred domains to see
 when the changes in nameservers, records, and DNSSEC went into effect.
 
-![Njalla's DNS Tool](https://img.cleberg.io/blog/20220601-ditching-cloudflare-for-njalla/dns_tool.png)
+![Njalla's DNS Tool](https://img.cleberg.net/blog/20220601-ditching-cloudflare-for-njalla/dns_tool.png)
 
 ## Tunnel
 

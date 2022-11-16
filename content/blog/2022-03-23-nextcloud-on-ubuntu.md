@@ -150,10 +150,10 @@ or IP address.
 See the screenshots below for the dashboard and a settings page on my instance
 of Nextcloud, using the `Breeze Dark` theme I installed from the Apps page.
 
-![Nextcloud Dashboard](https://img.cleberg.io/blog/20220323-installing-nextcloud-on-ubuntu/nextcloud_dashboard.png)
+![Nextcloud Dashboard](https://img.cleberg.net/blog/20220323-installing-nextcloud-on-ubuntu/nextcloud_dashboard.png)
 
 _Figure 01: Nextcloud Dashboard_
 
-![Nextcloud Settings](https://img.cleberg.io/blog/20220323-installing-nextcloud-on-ubuntu/nextcloud_settings.png)
+![Nextcloud Settings](https://img.cleberg.net/blog/20220323-installing-nextcloud-on-ubuntu/nextcloud_settings.png)
 
 _Figure 02: Nextcloud Security Settings_

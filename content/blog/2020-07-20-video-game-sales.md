@@ -44,7 +44,7 @@ df = pd.read_csv(file)
 df
 ```
 
-![DataFrame result](https://img.cleberg.io/blog/20200720-data-exploration-video-game-sales/01_dataframe-min.png "DataFrame result")
+![DataFrame result](https://img.cleberg.net/blog/20200720-data-exploration-video-game-sales/01_dataframe-min.png "DataFrame result")
 
 ## Explore the Data
 
@@ -53,7 +53,7 @@ df
 df.describe()
 ```
 
-![df.describe() result](https://img.cleberg.io/blog/20200720-data-exploration-video-game-sales/02_describe-min.png "df.describe() result")
+![df.describe() result](https://img.cleberg.net/blog/20200720-data-exploration-video-game-sales/02_describe-min.png "df.describe() result")
 
 ```python
 # This function shows the rows and columns of NaN values. For example, df[179,3] = nan
@@ -70,21 +70,21 @@ np.where(pd.isnull(df))
 sns.catplot(x='Platform', y='Global_Sales', data=df, jitter=False).set_xticklabels(rotation=90)
 ```
 
-![plot of global sales by platform](https://img.cleberg.io/blog/20200720-data-exploration-video-game-sales/03_plot-min.png "plot of global sales by platform")
+![plot of global sales by platform](https://img.cleberg.net/blog/20200720-data-exploration-video-game-sales/03_plot-min.png "plot of global sales by platform")
 
 ```python
 # This function plots the global sales by genre
 sns.catplot(x='Genre', y='Global_Sales', data=df, jitter=False).set_xticklabels(rotation=45)
 ```
 
-![plot of global sales by genre](https://img.cleberg.io/blog/20200720-data-exploration-video-game-sales/04_plot-min.png "plot of global sales by genre")
+![plot of global sales by genre](https://img.cleberg.net/blog/20200720-data-exploration-video-game-sales/04_plot-min.png "plot of global sales by genre")
 
 ```python
 # This function plots the global sales by year
 sns.lmplot(x='Year', y='Global_Sales', data=df).set_xticklabels(rotation=45)
 ```
 
-![plot of global sales by year](https://img.cleberg.io/blog/20200720-data-exploration-video-game-sales/05_plot-min.png "plot of global sales by year")
+![plot of global sales by year](https://img.cleberg.net/blog/20200720-data-exploration-video-game-sales/05_plot-min.png "plot of global sales by year")
 
 ```python
 # This function plots four different lines to show sales from different regions.
@@ -112,7 +112,7 @@ ax.legend()
 plt.show()
 ```
 
-![plot of regional sales by year](https://img.cleberg.io/blog/20200720-data-exploration-video-game-sales/06_plot-min.png "plot of regional sales by year")
+![plot of regional sales by year](https://img.cleberg.net/blog/20200720-data-exploration-video-game-sales/06_plot-min.png "plot of regional sales by year")
 
 ## Investigate Outliers
 
@@ -138,14 +138,14 @@ df3 = df[(df['Year'] == 2006)]
 df3.describe()
 ```
 
-![descriptive statistics of 2006 sales](https://img.cleberg.io/blog/20200720-data-exploration-video-game-sales/07_2006_stats-min.png "descriptive statistics of 2006 sales")
+![descriptive statistics of 2006 sales](https://img.cleberg.net/blog/20200720-data-exploration-video-game-sales/07_2006_stats-min.png "descriptive statistics of 2006 sales")
 
 ```python
 # Plot the results of the previous dataframe (games from 2006) - we can see the year's results were largely carried by Wii Sports
 sns.catplot(x="Genre", y="Global_Sales", data=df3, jitter=False).set_xticklabels(rotation=45)
 ```
 
-![plot of 2006 sales](https://img.cleberg.io/blog/20200720-data-exploration-video-game-sales/08_plot-min.png "plot of 2006 sales")
+![plot of 2006 sales](https://img.cleberg.net/blog/20200720-data-exploration-video-game-sales/08_plot-min.png "plot of 2006 sales")
 
 ```python
 # We can see 4 outliers in the graph above, so let's get the top 5 games from that dataframe
@@ -153,7 +153,7 @@ sns.catplot(x="Genre", y="Global_Sales", data=df3, jitter=False).set_xticklabels
 df3.sort_values(by=['Global_Sales'], ascending=False).head(5)
 ```
 
-![outliers of 2006 sales](https://img.cleberg.io/blog/20200720-data-exploration-video-game-sales/09_outliers-min.png "outliers of 2006 sales")
+![outliers of 2006 sales](https://img.cleberg.net/blog/20200720-data-exploration-video-game-sales/09_outliers-min.png "outliers of 2006 sales")
 
 ## Discussion
 

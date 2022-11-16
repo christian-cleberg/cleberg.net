@@ -8,7 +8,7 @@ aliases = ["/blog/migrating-to-debian-and-nginx"]
 
 ## Server OS: Debian
 
-![Debian + neofetch](https://img.cleberg.io/blog/20220216-migrating-to-debian-and-nginx/neofetch.png)
+![Debian + neofetch](https://img.cleberg.net/blog/20220216-migrating-to-debian-and-nginx/neofetch.png)
 
 I've used various Linux distributions throughout the years, but I've never used
 anything except Ubuntu for my servers. Why? I really have no idea - mostly just
@@ -23,14 +23,14 @@ to Ubuntu for my purposes.
 I did the normal things when first launching the VPS, such as adding a new user,
 locking down SSH, etc. If you want to see that level of detail, read my other
 post about
-[How to Set Up a VPS Web Server](https://cleberg.io/blog/how-to-set-up-a-vps-web-server/).
+[How to Set Up a VPS Web Server](https://cleberg.net/blog/how-to-set-up-a-vps-web-server/).
 
 All of this has been similar, apart from small things such as the location of
 users' home folders. No complaints at all from me - Debian seems great.
 
 ## Web Server: Nginx
 
-![Nginx status](https://img.cleberg.io/blog/20220216-migrating-to-debian-and-nginx/nginx.png)
+![Nginx status](https://img.cleberg.net/blog/20220216-migrating-to-debian-and-nginx/nginx.png)
 
 Once I had the baseline server configuration set-up for Debian, I moved on to
 trying out [Nginx](https://nginx.org) as my web server software. This required
@@ -160,12 +160,12 @@ all of this.
 
 ## Gemini Server: Agate
 
-![Agate status](https://img.cleberg.io/blog/20220216-migrating-to-debian-and-nginx/agate.png)
+![Agate status](https://img.cleberg.net/blog/20220216-migrating-to-debian-and-nginx/agate.png)
 
 Finally, I set up the Agate software on this server again to host my Gemini
 server content - using Rust as I have before. You can read my other post for
 more information on installing Agate:
-[Hosting a Gemini Server](https://cleberg.io/blog/hosting-a-gemini-server/).
+[Hosting a Gemini Server](https://cleberg.net/blog/hosting-a-gemini-server/).
 
 All in all, Debian + Nginx is very slick and I prefer it over my old combination
 of Ubuntu + Apache (although it's really just Nginx > Apache for me, since

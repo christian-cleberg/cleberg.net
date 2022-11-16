@@ -69,14 +69,14 @@ I am using [Lynx](https://lynx.invisible-island.net), a text-based browser that
 runs quickly and easily in the terminal. Lynx allows me to browser most websites 
 by simply typing `g` and then typing in the URL I want.
 
-![Lynx](https://img.cleberg.io/blog/20220616-terminal-lifestyle/lynx.png)
+![Lynx](https://img.cleberg.net/blog/20220616-terminal-lifestyle/lynx.png)
 
 If you need a search engine while in Lynx, I recommend [DuckDuckGo 
 (Lite)](https://lite.duckduckgo.com/lite/), which allows you to search the web 
 using their text-only interface.
 
 ![DuckDuckGo 
-!Lite](https://img.cleberg.io/blog/20220616-terminal-lifestyle/ddg.png)
+!Lite](https://img.cleberg.net/blog/20220616-terminal-lifestyle/ddg.png)
 
 Eventually, you will run into websites that don't work (or are just too ugly 
 and messy) in a text-only mode and you'll be forced to switch over to a GUI 
@@ -120,7 +120,7 @@ Overall, I like gomuks and am able to enjoy all of the features I was using in
 Element. The only hiccup I have occurred is manually downloading images to view 
 them, which can be annoying.
 
-![gomuks](https://img.cleberg.io/blog/20220616-terminal-lifestyle/gomuks.png)
+![gomuks](https://img.cleberg.net/blog/20220616-terminal-lifestyle/gomuks.png)
 
 ### Email
 
@@ -147,12 +147,12 @@ Regardless, here's a quick look at composing a message in `neomutt`, using
 `nano`:
 
 ![neomutt 
-!compose](https://img.cleberg.io/blog/20220616-terminal-lifestyle/neomutt_compose.png)
+!compose](https://img.cleberg.net/blog/20220616-terminal-lifestyle/neomutt_compose.png)
 
 And here is that same message after being delivered to my inbox:
 
 ![neomutt 
-!inbox](https://img.cleberg.io/blog/20220616-terminal-lifestyle/neomutt_inbox.png)
+!inbox](https://img.cleberg.net/blog/20220616-terminal-lifestyle/neomutt_inbox.png)
 
 ### RSS Feed Reader
 
@@ -161,7 +161,7 @@ my terminal and have found quick success with it.
 
 I'll show you a quick screenshot first:
 
-![Newsboat](https://img.cleberg.io/blog/20220616-terminal-lifestyle/newsboat.png)
+![Newsboat](https://img.cleberg.net/blog/20220616-terminal-lifestyle/newsboat.png)
 
 The configuration was super easy for this app; I simply installed the app, 
 created a file for URLs, and imported my OPML subscriptions that I had exported 
@@ -210,4 +210,4 @@ explored the best terminal set-up for programming. However, I have seen many
 peers find success configuring `vim` and `emacs`, so that's where I will start 
 when I pick my projects back up.
 
-![nano](https://img.cleberg.io/blog/20220616-terminal-lifestyle/nano.png)
+![nano](https://img.cleberg.net/blog/20220616-terminal-lifestyle/nano.png)

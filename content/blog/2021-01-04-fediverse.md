@@ -22,7 +22,7 @@ of you can talk and communicate back and forth without having to be on the same
 server. However, responsible email admins are there to set rules and control the
 traffic going in/out of the server.
 
-![Federated services diagram](https://img.cleberg.io/blog/20210104-a-simple-guide-to-the-fediverse/federated-example.svg)
+![Federated services diagram](https://img.cleberg.net/blog/20210104-a-simple-guide-to-the-fediverse/federated-example.svg)
 
 The main objective of this architecture is to decentralize the control within
 the internet connections. For example, if you run your own Mastodon instance,

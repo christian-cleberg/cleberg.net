@@ -8,7 +8,7 @@ aliases = ["/blog/steam-on-ntfs-drives"]
 
 ## Auto-Mount Steam Drives
 
-![Steam example](https://img.cleberg.io/blog/20200125-the-best-linux-software/steam.png "Steam example")
+![Steam example](https://img.cleberg.net/blog/20200125-the-best-linux-software/steam.png "Steam example")
 
 If you want to see how to install Steam on Linux, see my other post:
 [The Best Linux Software](/blog/linux-software/).

@@ -353,7 +353,7 @@ URL to a local port.
 ### Nginx Reverse Proxy
 
 I am using Nginx as my reverse proxy so that the `cgit` Docker container can use
-`git.cleberg.io` as its URL. To do so, I simply created the following
+`git.cleberg.net` as its URL. To do so, I simply created the following
 configuration file:
 
 ```bash
@@ -406,7 +406,7 @@ sudo systemctl restart nginx.service
 
 As we can see below, my site at `git.cleberg.net` is available and running:
 
-![cgit example](https://img.cleberg.io/blog/20220701-git-server/cgit.png)
+![cgit example](https://img.cleberg.net/blog/20220701-git-server/cgit.png)
 
 ### Settings Up Git Details
 
@@ -607,10 +607,10 @@ Now you should see that syntax highlighting and README rendering to the `about`
 tab is fixed. See the images below for illustrations:
 
 Syntax Highlighting:
-![Syntax highlighting](https://img.cleberg.io/blog/20220701-git-server/syntax-highlighting.png)
+![Syntax highlighting](https://img.cleberg.net/blog/20220701-git-server/syntax-highlighting.png)
 
 README Rendering:
-![README Rendering](https://img.cleberg.io/blog/20220701-git-server/about-page.png)
+![README Rendering](https://img.cleberg.net/blog/20220701-git-server/about-page.png)
 
 ### Theming
 
@@ -620,18 +620,18 @@ root. This is another file you can add as a volume to the `docker-compose.yml`
 file if you want to edit this without entering the container's command line.
 
 For example, I created a Stylus theme called 
-[dark-cgit](https://git.cleberg.io/cgit.cgi/dark-cgit.git/) to use for my 
+[dark-cgit](https://git.cleberg.net/cgit.cgi/dark-cgit.git/) to use for my 
 personal website. This theme just needs the URL updated to work for any other 
 cgit-based site. Here's what this theme looks like in action:
 
 Index:
-![dark-cgit home](https://img.cleberg.io/blog/20220701-git-server/dark-cgit-home.png)
+![dark-cgit home](https://img.cleberg.net/blog/20220701-git-server/dark-cgit-home.png)
 
 Syntax Highlighting:
-![dark-cgit code](https://img.cleberg.io/blog/20220701-git-server/dark-cgit-code.png)
+![dark-cgit code](https://img.cleberg.net/blog/20220701-git-server/dark-cgit-code.png)
 
 README Rendering:
-![dark-cgit readme](https://img.cleberg.io/blog/20220701-git-server/dark-cgit-readme.png)
+![dark-cgit readme](https://img.cleberg.net/blog/20220701-git-server/dark-cgit-readme.png)
 
 ## :warning: Remember to Backup Your Data!
 

@@ -55,7 +55,7 @@ I blog in plain Markdown files, commit all articles to Git, and ensure that
 future readers will be able to see the source data long after I'm gone, or the
 website has gone offline. However, I still haven't committed any images served
 on my blog to Git, as I'm not entirely sold on Git LFS yet - for now, images can
-be found at [img.cleberg.io](https://img.cleberg.io).
+be found at [img.cleberg.net](https://img.cleberg.net).
 
 Saving my comments back to the Git repository ensures that another aspect of my
 site will degrade gracefully.

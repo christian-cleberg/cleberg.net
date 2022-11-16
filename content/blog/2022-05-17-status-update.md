@@ -11,15 +11,15 @@ It's currently about 11:30 PM here and thunderstorms are rolling through the
 area, which means it's the perfect time to settle down, put my headphones in,
 and write a blog post.
 
-![Thunderstorm](https://img.cleberg.io/blog/20220517-status-update/thunderstorm.jpg)
+![Thunderstorm](https://img.cleberg.net/blog/20220517-status-update/thunderstorm.jpg)
 
 ## Programming
 
 While I haven't been able to blog or write a lot of code lately, I did submit a
-couple pull requests to get `cleberg.io` listed on the
+couple pull requests to get `cleberg.net` listed on the
 [512KB Club](https://512kb.club/) and [1MB Club](https://1mb.club/) websites,
 which are dedicated to performance-based websites that fit their size limits.
-Since `cleberg.io` currently measures around `30.0KB` (`22.6KB` is the
+Since `cleberg.net` currently measures around `30.0KB` (`22.6KB` is the
 `favicon.ico`), I'm hoping the PRs will be approved soon.
 
 ~~There's also a list out there dedicated to websites that do not include JS,

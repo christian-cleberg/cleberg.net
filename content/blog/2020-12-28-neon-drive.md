@@ -41,7 +41,7 @@ Taking a look at the main menu, you can see that Neon Drive plays into every
 stereotype you can think of around retrofuturistic, synthwave arcades (in a good
 way).
 
-![Neon Drive Menu](https://img.cleberg.io/blog/20201228-neon-drive/neon_drive_menu.png)
+![Neon Drive Menu](https://img.cleberg.net/blog/20201228-neon-drive/neon_drive_menu.png)
 
 Once you get into the first level, we see that the choice of car fits right in
 with the stereotypical cars of the 80s, like the
@@ -49,17 +49,17 @@ with the stereotypical cars of the 80s, like the
 [Ferrari F40](https://en.wikipedia.org/wiki/Ferrari_F40). Each new level comes
 with new color schemes and cars, so you should never get tired of the aesthetic.
 
-![Neon Drive Race](https://img.cleberg.io/blog/20201228-neon-drive/neon_drive_race.png)
+![Neon Drive Race](https://img.cleberg.net/blog/20201228-neon-drive/neon_drive_race.png)
 
 Personally, I love the orange and blue colors used in level 2:
 
-![Neon Drive Level](https://img.cleberg.io/blog/20201228-neon-drive/neon_drive_level_2.png)
+![Neon Drive Level](https://img.cleberg.net/blog/20201228-neon-drive/neon_drive_level_2.png)
 
 If you're the competitive type and getting 100% on all arcade machines isn't
 enough, there are leaderboards for the regular part of the game, and the
 endurance game mode.
 
-![Neon Drive Leaderboard](https://img.cleberg.io/blog/20201228-neon-drive/neon_drive_leaderboard.png)
+![Neon Drive Leaderboard](https://img.cleberg.net/blog/20201228-neon-drive/neon_drive_leaderboard.png)
 
 ## Other Suggestions
 

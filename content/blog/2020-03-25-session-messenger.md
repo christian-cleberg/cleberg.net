@@ -72,7 +72,7 @@ following command:
 sudo chmod u+x session-messenger-desktop-linux-x86_64-1.0.5.AppImage
 ```
 
-![Session downloads page](https://img.cleberg.io/blog/20200325-session-private-messenger/session_downloads.png)  
+![Session downloads page](https://img.cleberg.net/blog/20200325-session-private-messenger/session_downloads.png)  
 _Fig. 1 - Session Downloads_
 
 ## Creating an Account
@@ -84,15 +84,15 @@ ID. It will look something like this:
 You'll need to set a display name and, optionally, a password. If you set a
 password, you will need to enter it every time you open the app.
 
-![Session login page](https://img.cleberg.io/blog/20200325-session-private-messenger/session_linux_login.png)
+![Session login page](https://img.cleberg.net/blog/20200325-session-private-messenger/session_linux_login.png)
 
 _Fig. 2 - Session Login (Linux)_
 
-![Session login page](https://img.cleberg.io/blog/20200325-session-private-messenger/session_macos_login.png)
+![Session login page](https://img.cleberg.net/blog/20200325-session-private-messenger/session_macos_login.png)
 
 _Fig. 3 - Session Login (macOS)_
 
-![Password authentication](https://img.cleberg.io/blog/20200325-session-private-messenger/session_password_authentication.png)
+![Password authentication](https://img.cleberg.net/blog/20200325-session-private-messenger/session_password_authentication.png)
 
 _Fig. 4 - Password Authentication_
 
@@ -105,14 +105,14 @@ any other messaging app, so I won't dive into much detail here.
 
 ### macOS
 
-![macOS Conversations](https://img.cleberg.io/blog/20200325-session-private-messenger/session_macos_conversations.png)
+![macOS Conversations](https://img.cleberg.net/blog/20200325-session-private-messenger/session_macos_conversations.png)
 
 _Fig. 5 - macOS Conversations_
 
 One key feature to note is that the desktop application now provides a helpful
 pop-up box explaining the process that Session uses to hide your IP address:
 
-![IP Hiding](https://img.cleberg.io/blog/20200325-session-private-messenger/session_ip.png)
+![IP Hiding](https://img.cleberg.net/blog/20200325-session-private-messenger/session_ip.png)
 
 _Fig. 6 - IP Address Help Box_
 
@@ -121,7 +121,7 @@ _Fig. 6 - IP Address Help Box_
 The mobile app is quite simple and effective, giving you all the standard mobile
 messaging options you'd expect.
 
-![iOS App](https://img.cleberg.io/blog/20200325-session-private-messenger/session_ios.png)
+![iOS App](https://img.cleberg.net/blog/20200325-session-private-messenger/session_ios.png)
 
 _Fig. 7 - iOS App_
 

@@ -19,7 +19,7 @@ snapshot of how I was using macOS in 2022.
 
 Read on to see the applications I regularly use, both FOSS and proprietary.
 
-![macOS App Drawer](https://img.cleberg.io/blog/20220612-foss-macos-apps/macos_apps.png)
+![macOS App Drawer](https://img.cleberg.net/blog/20220612-foss-macos-apps/macos_apps.png)
 
 ## Open-Source macOS Apps
 
@@ -32,7 +32,7 @@ Read on to see the applications I regularly use, both FOSS and proprietary.
 
 A self-explanatory browser choice - my default choice most of the time.
 
-![Firefox](https://img.cleberg.io/blog/20220612-foss-macos-apps/firefox.png)
+![Firefox](https://img.cleberg.net/blog/20220612-foss-macos-apps/firefox.png)
 
 #### LibreWolf
 
@@ -41,7 +41,7 @@ A self-explanatory browser choice - my default choice most of the time.
 
 A more secure alternative browser to Firefox.
 
-![LibreWolf](https://img.cleberg.io/blog/20220612-foss-macos-apps/librewolf.png)
+![LibreWolf](https://img.cleberg.net/blog/20220612-foss-macos-apps/librewolf.png)
 
 #### Lagrange
 
@@ -50,7 +50,7 @@ A more secure alternative browser to Firefox.
 
 A graphical browser for the Gemini protocol.
 
-![Lagrange](https://img.cleberg.io/blog/20220612-foss-macos-apps/lagrange.png)
+![Lagrange](https://img.cleberg.net/blog/20220612-foss-macos-apps/lagrange.png)
 
 ### Utilities
 
@@ -61,7 +61,7 @@ A graphical browser for the Gemini protocol.
 
 My personal choice of VPN, supporting both OpenVPN and Wiregaurd configurations.
 
-![Mullvad](https://img.cleberg.io/blog/20220612-foss-macos-apps/mullvad.png)
+![Mullvad](https://img.cleberg.net/blog/20220612-foss-macos-apps/mullvad.png)
 
 #### Itsycal
 
@@ -71,7 +71,7 @@ My personal choice of VPN, supporting both OpenVPN and Wiregaurd configurations.
 A small calendar in the menu bar, which gives me great flexibility when needing
 to see days of the week or future dates.
 
-![Itsycal](https://img.cleberg.io/blog/20220612-foss-macos-apps/itsycal.png)
+![Itsycal](https://img.cleberg.net/blog/20220612-foss-macos-apps/itsycal.png)
 
 #### CopyQ
 
@@ -80,7 +80,7 @@ to see days of the week or future dates.
 
 A simple clipboard history manager, available in the menu bar.
 
-![CopyQ](https://img.cleberg.io/blog/20220612-foss-macos-apps/copyq.png)
+![CopyQ](https://img.cleberg.net/blog/20220612-foss-macos-apps/copyq.png)
 
 #### iTerm2
 
@@ -89,7 +89,7 @@ A simple clipboard history manager, available in the menu bar.
 
 The only logical choice for a terminal on macOS, iTerm2 is phenomenal.
 
-![iTerm2](https://img.cleberg.io/blog/20220612-foss-macos-apps/iterm_neofetch.png)
+![iTerm2](https://img.cleberg.net/blog/20220612-foss-macos-apps/iterm_neofetch.png)
 
 #### Stats
 
@@ -98,7 +98,7 @@ The only logical choice for a terminal on macOS, iTerm2 is phenomenal.
 A collection of statistics available in the menu bar that display data regarding
 the device CPU, GPU, storage, network, etc.
 
-![Stats](https://img.cleberg.io/blog/20220612-foss-macos-apps/stats.png)
+![Stats](https://img.cleberg.net/blog/20220612-foss-macos-apps/stats.png)
 
 ### IDE
 
@@ -111,7 +111,7 @@ VSCodium is a slimmed-down version of Microsoft's VSCode and has all of the
 telemetry removed. I enjoy using this IDE simply due to its massive number
 of add-ons available.
 
-![VSCodium](https://img.cleberg.io/blog/20220612-foss-macos-apps/vscodium.png)
+![VSCodium](https://img.cleberg.net/blog/20220612-foss-macos-apps/vscodium.png)
 
 #### Kate
 
@@ -120,7 +120,7 @@ of add-ons available.
 
 Kate is a simple text editor that allows for quick and easy editing.
 
-![Kate](https://img.cleberg.io/blog/20220612-foss-macos-apps/kate.png)
+![Kate](https://img.cleberg.net/blog/20220612-foss-macos-apps/kate.png)
 
 ### Media
 
@@ -131,7 +131,7 @@ Kate is a simple text editor that allows for quick and easy editing.
 
 A drop-dead simple torrent client.
 
-![Transmission](https://img.cleberg.io/blog/20220612-foss-macos-apps/transmission.png)
+![Transmission](https://img.cleberg.net/blog/20220612-foss-macos-apps/transmission.png)
 
 #### FileBot
 
@@ -143,7 +143,7 @@ While FileBot is no longer open-source, it used to be and there is a fork of the
 most recent source code linked above. This app is incredibly helpful for automatically
 renaming movies and TV shows using custom templates.
 
-![FileBot](https://img.cleberg.io/blog/20220612-foss-macos-apps/filebot.png)
+![FileBot](https://img.cleberg.net/blog/20220612-foss-macos-apps/filebot.png)
 
 #### Plex
 
@@ -153,7 +153,7 @@ renaming movies and TV shows using custom templates.
 Plex is self-explanatory: a simple desktop client to stream content from your Plex
 server or from one of Plex's services.
 
-![Plex](https://img.cleberg.io/blog/20220612-foss-macos-apps/plex.png)
+![Plex](https://img.cleberg.net/blog/20220612-foss-macos-apps/plex.png)
 
 #### NetNewsWire
 
@@ -163,7 +163,7 @@ server or from one of Plex's services.
 A beautiful RSS feed reader. I use this client on macOS and iOS, using my
 [FreshRSS server](/blog/freshrss/).
 
-![NetNewsWire](https://img.cleberg.io/blog/20220612-foss-macos-apps/netnewswire.png)
+![NetNewsWire](https://img.cleberg.net/blog/20220612-foss-macos-apps/netnewswire.png)
 
 ### Files & Cloud Storage
 
@@ -175,7 +175,7 @@ A beautiful RSS feed reader. I use this client on macOS and iOS, using my
 pCloud is my current cloud provider choice. I bounce around cloud providers quite a lot,
 but iCloud was syncing incredibly slowly lately and caused me to migrate over to pCloud.
 
-![pCloud](https://img.cleberg.io/blog/20220612-foss-macos-apps/pcloud.png)
+![pCloud](https://img.cleberg.net/blog/20220612-foss-macos-apps/pcloud.png)
 
 #### Cryptomator
 
@@ -186,7 +186,7 @@ For all files saved within a cloud provider, I suggest using Cryptomator to encr
 files locally before they ever touch the provider's servers. This is one of the only ways
 to ensure that a third party isn't able to touch or read your personal data.
 
-![Cryptomator](https://img.cleberg.io/blog/20220612-foss-macos-apps/cryptomator.png)
+![Cryptomator](https://img.cleberg.net/blog/20220612-foss-macos-apps/cryptomator.png)
 
 #### GPG Tools
 
@@ -196,7 +196,7 @@ to ensure that a third party isn't able to touch or read your personal data.
 GPG Tools is the easiest way I've found to manage GPG keys on macOS. This tool allows me
 to painlessly encrypt emails, decrypt emails, and sign my git commits.
 
-![GPG Tools](https://img.cleberg.io/blog/20220612-foss-macos-apps/gpg_tools.png)
+![GPG Tools](https://img.cleberg.net/blog/20220612-foss-macos-apps/gpg_tools.png)
 
 #### Gramps
 
@@ -206,7 +206,7 @@ to painlessly encrypt emails, decrypt emails, and sign my git commits.
 Gramps is a classic genealogy tool, allowing for editing, exporting, and visualization
 of GEDCOM genealogy data.
 
-![Gramps](https://img.cleberg.io/blog/20220612-foss-macos-apps/gramps.png)
+![Gramps](https://img.cleberg.net/blog/20220612-foss-macos-apps/gramps.png)
 
 ### Messaging
 
@@ -218,7 +218,7 @@ of GEDCOM genealogy data.
 Element is the official client for the Matrix messaging protocol. I've tried a handful of
 clients and haven't found anything as good as Element yet.
 
-![Element](https://img.cleberg.io/blog/20220612-foss-macos-apps/element.png)
+![Element](https://img.cleberg.net/blog/20220612-foss-macos-apps/element.png)
 
 #### Signal
 
@@ -228,7 +228,7 @@ clients and haven't found anything as good as Element yet.
 Signal is another self-explanatory one. This is the desktop companion app that syncs with
 the mobile app.
 
-![Signal](https://img.cleberg.io/blog/20220612-foss-macos-apps/signal.png)
+![Signal](https://img.cleberg.net/blog/20220612-foss-macos-apps/signal.png)
 
 ### Command-Line Tools
 
@@ -238,7 +238,7 @@ the mobile app.
 
 `amfora` is a command-line browser for the Gemini protocol. 
 
-![amfora](https://img.cleberg.io/blog/20220612-foss-macos-apps/amfora.png)
+![amfora](https://img.cleberg.net/blog/20220612-foss-macos-apps/amfora.png)
 
 #### exiftool
 
@@ -263,7 +263,7 @@ Used to extract audio from the `yt-dlp` program.
 
 - [Source Code](https://github.com/dylanaraps/neofetch)
 
-![neofetch](https://img.cleberg.io/blog/20220612-foss-macos-apps/iterm_neofetch.png)
+![neofetch](https://img.cleberg.net/blog/20220612-foss-macos-apps/iterm_neofetch.png)
 
 #### yt-dlp
 
@@ -284,7 +284,7 @@ yt-dlp -x --audio-format=flac -o "%(title)s.%(ext)s" https://example.com/video
 
 Zola is a static-site generator, used to build this website.
 
-![zola](https://img.cleberg.io/blog/20220612-foss-macos-apps/zola.png)
+![zola](https://img.cleberg.net/blog/20220612-foss-macos-apps/zola.png)
 
 ## Proprietary macOS Apps
 
@@ -298,7 +298,7 @@ Meta is an excellent tag editor for musical files. While the base app costs $5 a
 auto-finder + image selector costs an additional $5, this tool is excellent and easy to use.
 I was able to re-tag a ton of artists and albums with Meta in no time at all.
 
-![Meta](https://img.cleberg.io/blog/20220612-foss-macos-apps/meta.png)
+![Meta](https://img.cleberg.net/blog/20220612-foss-macos-apps/meta.png)
 
 #### Pictogram
 
@@ -309,7 +309,7 @@ app drawer or dock, this app is a great tool to replace those icons. Personally,
 used this tool by downloading icons from [macOS Icons](https://macosicons.com/) and saving
 them in an `icons` folder to be re-used later.
 
-![Pictogram](https://img.cleberg.io/blog/20220612-foss-macos-apps/pictogram.png)
+![Pictogram](https://img.cleberg.net/blog/20220612-foss-macos-apps/pictogram.png)
 
 ### Utilities
 
@@ -321,9 +321,9 @@ Little Snitch is a powerful firewall that can set detailed rules on allowing and
 connections per application, URL, or domain. The app has a ton of information dialogs that
 can visualize where the requests are coming from or going to.
 
-![Little Snitch](https://img.cleberg.io/blog/20220612-foss-macos-apps/little_snitch_rules.png)
+![Little Snitch](https://img.cleberg.net/blog/20220612-foss-macos-apps/little_snitch_rules.png)
 
-![Little Snitch](https://img.cleberg.io/blog/20220612-foss-macos-apps/little_snitch_map.png)
+![Little Snitch](https://img.cleberg.net/blog/20220612-foss-macos-apps/little_snitch_map.png)
 
 #### Micro Snitch
 
@@ -332,4 +332,4 @@ can visualize where the requests are coming from or going to.
 Micro Snitch, made by the same company as Little Snitch, is a small tool to notify you whenever
 a program on the computer is using your microphone or camera.
 
-![Micro Snitch](https://img.cleberg.io/blog/20220612-foss-macos-apps/micro_snitch.png)
+![Micro Snitch](https://img.cleberg.net/blog/20220612-foss-macos-apps/micro_snitch.png)

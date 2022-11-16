@@ -6,7 +6,7 @@ draft = false
 aliases = ["/blog/what-is-internal-audit"]
 +++
 
-![](https://img.cleberg.io/blog/20200922-what-is-internal-audit/internal-audit-overview.jpg)
+![](https://img.cleberg.net/blog/20200922-what-is-internal-audit/internal-audit-overview.jpg)
 
 _Fig. 1 - Internal Audit Overview_
 
@@ -105,14 +105,14 @@ audit work.
 model in 2013, but have released an updated version in 2020. Here is what the
 three lines of defense model has historically looked like:
 
-![](https://img.cleberg.io/blog/20200922-what-is-internal-audit/three_lines_model.png)
+![](https://img.cleberg.net/blog/20200922-what-is-internal-audit/three_lines_model.png)
 
 _Fig. 2 - 2013 Three Lines of Defense Model_
 
 I won't go into depth about the changes made to the model in this article.
 Instead, let's take a look at the most current model.
 
-![](https://img.cleberg.io/blog/20200922-what-is-internal-audit/updated_three_lines_model.png)
+![](https://img.cleberg.net/blog/20200922-what-is-internal-audit/updated_three_lines_model.png)
 
 _Fig. 3 - 2020 Three Lines of Defense Model_
 
@@ -142,7 +142,7 @@ However, certain special projects or abnormal business areas may call for
 changes to the audit process. The audit process is not set in stone, it's simply
 a set of best practices so that audits can be performed consistently.
 
-![](https://img.cleberg.io/blog/20200922-what-is-internal-audit/internal-audit-process.jpg)
+![](https://img.cleberg.net/blog/20200922-what-is-internal-audit/internal-audit-process.jpg)
 
 _Fig. 4 - The Internal Audit Process_
 
@@ -236,7 +236,7 @@ and file issues that could have been fixed at the beginning.
 
 ## Data Science & Data Analytics
 
-![](https://img.cleberg.io/blog/20200922-what-is-internal-audit/data-science-skillset.png)
+![](https://img.cleberg.net/blog/20200922-what-is-internal-audit/data-science-skillset.png)
 
 _Fig. 5 - Data Science Skill Set_
 

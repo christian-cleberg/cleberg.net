@@ -10,7 +10,7 @@ aliases = ["/blog/minimal-website-redesign"]
 
 As a form of continuous learning and entertainment, I've been running a handful
 of websites since 2016 when I took my first programming courses in college. One
-of the websites I maintain is [cleberg.io](https://cleberg.io), the place I
+of the websites I maintain is [cleberg.net](https://cleberg.net), the place I
 consider the official website to represent me. Under this site, I have a handful
 of sub-directories and sub-domains.
 
@@ -29,7 +29,7 @@ radius on items, visible borders, and content that takes up the entire screen
 
 ### The Old Design
 
-![Old website design](https://img.cleberg.io/blog/20201227-minimal-website-redesign/old_design.png)
+![Old website design](https://img.cleberg.net/blog/20201227-minimal-website-redesign/old_design.png)
 
 ## The Redesign Process
 
@@ -80,23 +80,23 @@ colors.
 
 ### The New Design
 
-![New website design](https://img.cleberg.io/blog/20201227-minimal-website-redesign/new_design.png)
+![New website design](https://img.cleberg.net/blog/20201227-minimal-website-redesign/new_design.png)
 
 ### Reflection
 
-So, what did all of this reorganizing do to [cleberg.io](https://cleberg.io) and
-[cleberg.io/blog/](https://cleberg.io/blog/)? Well first, my websites are now
+So, what did all of this reorganizing do to [cleberg.net](https://cleberg.net) and
+[cleberg.net/blog/](https://cleberg.net/blog/)? Well first, my websites are now
 **ridiculously fast**. Since the prior designs were also minimal and didn't have
 many images, they measured up in Firefox's Network Monitor around 300 KB -
 600KB. After making the changes, my main site is at 5 KB transferred (22 KB
 total), and my blog is at 6.5 KB transferred (13 KB total). **That means the
 redesigned pages are less than 2% the size of the old designs.**
 
-Google Lighthouse ranks [cleberg.io](https://cleberg.io) as 100 in performance,
+Google Lighthouse ranks [cleberg.net](https://cleberg.net) as 100 in performance,
 accessibility, and best practices - withSEO at 92 since they think tap targets
 are not sized appropriately for mobile users. First contextual paints of the
 pages are under 0.8 seconds with 0 ms of blocking time. However,
-[cleberg.io/blog/](https://cleberg.io/blog/) ranks at 100 for all four
+[cleberg.net/blog/](https://cleberg.net/blog/) ranks at 100 for all four
 categories! First contextual paints of the blog homepage are under 1.0 seconds
 with 0 ms of blocking time, due to the fact that the CSS for my blog is within a
 separate CSS file and the CSS for my main website is simply embedded in the HTML

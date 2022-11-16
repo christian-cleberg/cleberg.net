@@ -9,7 +9,7 @@ draft = false
 
 I don't want to bury the lede here, so if you'd like to see the full source 
 code I use to email myself plaintext poems daily, visit the repository: 
-[daily-poem](https://git.cleberg.io/cgit.cgi/daily-poem.git/).
+[daily-poem](https://git.cleberg.net/cgit.cgi/daily-poem.git/).
 
 ## My Daily Dose of Poetry
 

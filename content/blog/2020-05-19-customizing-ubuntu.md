@@ -23,7 +23,7 @@ tutorials out there on customizations.
 
 ### Required Tools
 
-![GNOME Tweaks](https://img.cleberg.io/blog/20200519-customizing-ubuntu/gnome-tweaks-min.png)
+![GNOME Tweaks](https://img.cleberg.net/blog/20200519-customizing-ubuntu/gnome-tweaks-min.png)
 
 Ubuntu 20.04 ships with the default desktop environment
 [GNOME](https://www.gnome.org/), which includes the handy `gnome-tweaks` tool to
@@ -91,7 +91,7 @@ extensions, you will first need to install the browser extension that the
 website instructs you to. See this screenshot for the blue box with a link to
 the extension.
 
-![GNOME Extensions](https://img.cleberg.io/blog/20200519-customizing-ubuntu/gnome-extensions-min.png)
+![GNOME Extensions](https://img.cleberg.net/blog/20200519-customizing-ubuntu/gnome-extensions-min.png)
 
 After the browser extension in installed, you will need to install the native
 host connector:
