@@ -6,6 +6,40 @@ description = "A static page to keep updated on my current hardware and software
 The sections below are a moderately updated listing of the various machines and 
 software I frequently use.
 
+## Donations
+
+I'm lucky enough to be able to financially support a few open source products 
+and communities that are very important to me:
+
+- [Bitwarden](https://bitwarden.com)
+- [Free Software Foundation](https://www.fsf.org)
+- [GrapheneOS](https://grapheneos.org)
+- [Home Assistant](https://www.home-assistant.io)
+- [Syncthing](https://syncthing.net)
+
+## Software
+
+I'm limiting myself to a short software list for brevity - I utilize many more 
+programs than the ones listed below.
+
+Note that I currently run Fedora Linux (i3wm) on my laptop, Alpine Linux on my 
+servers, and GrapheneOS on my phone.
+
+_(Listed in alphabetical order.)_
+
+- Aegis
+- Alacritty (zsh)
+- Bitwarden
+- Home Assistant
+- K-9 Mail, Neomutt, Thunderbird
+- Librewolf
+- Matrix (Element & Gomuks)
+- Mullvad
+- Plex
+- Signal
+- Syncthing
+- Transmission
+
 ## Hardware
 
 ### Laptop
