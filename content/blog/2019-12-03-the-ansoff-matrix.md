@@ -118,33 +118,26 @@ planning. Companies need to understand the utility of a strategic management
 framework while ensuring that the company is poised to execute as efficiently as
 they have planned.
 
-**References**
+## Footnotes
 
-[^1]:
-    Dess, G. G., McNamara, G., Eisner, A. B., Lee, S. H. (2019). Strategic
-    management: Text & cases, ninth edition. New York, NY: McGraw-Hill
-    Education.
+[^1]: Dess, G. G., McNamara, G., Eisner, A. B., Lee, S. H. (2019). Strategic 
+management: Text & cases, ninth edition. New York, NY: McGraw-Hill Education.
 
-[^2]:
-    Juneja, P. (n.d.). Benefits of strategic management. Management Study Guide.
-    Retrieved from
-    [https://www.managementstudyguide.com/strategic-management-benefits.htm](https://www.managementstudyguide.com/strategic-management-benefits.htm)
+[^2]: Juneja, P. (n.d.). Benefits of strategic management. Management Study 
+Guide. Retrieved from 
+[https://www.managementstudyguide.com/strategic-management-benefits.htm](https://www.managementstudyguide.com/strategic-management-benefits.htm).
 
-[^3]:
-    Meldrum M., McDonald M. (1995) The Ansoff matrix. In: Key Marketing
-    Concepts. London: Palgrave.
+[^3]: Meldrum M., McDonald M. (1995) The Ansoff matrix. In: Key Marketing 
+Concepts. London: Palgrave.
 
-[^4]:
-    Oakley, T. (2015). Coca-Cola: The Ansoff matrix. The Marketing Agenda.
-    Retrieved from
-    [https://themarketingagenda.com/2015/03/28/coca-cola-ansoff-matrix/](https://themarketingagenda.com/2015/03/28/coca-cola-ansoff-matrix/)
+[^4]: Oakley, T. (2015). Coca-Cola: The Ansoff matrix. The Marketing Agenda. 
+Retrieved from 
+[https://themarketingagenda.com/2015/03/28/coca-cola-ansoff-matrix/](https://themarketingagenda.com/2015/03/28/coca-cola-ansoff-matrix/).
 
-[^5]:
-    Lemke, T. (2019). The most diversified companies in the stock market. The
-    balance. Retrieved from
-    [https://www.thebalance.com/the-most-diversified-companies-in-the-stock-market-4169730](https://www.thebalance.com/the-most-diversified-companies-in-the-stock-market-4169730)
+[^5]: Lemke, T. (2019). The most diversified companies in the stock market. The 
+balance. Retrieved from 
+[https://www.thebalance.com/the-most-diversified-companies-in-the-stock-market-4169730](https://www.thebalance.com/the-most-diversified-companies-in-the-stock-market-4169730).
 
-[^6]:
-    Johnson & Johnson. (2018). 2018 Investor Fact Sheet. [PDF file]. Retrieved
-    from
-    [http://www.investor.jnj.com/\_document/2018-investor-fact-sheet-4-19'id=0000016a-5681-d475-a17f-d78db54a0000](http://www.investor.jnj.com/_document/2018-investor-fact-sheet-4-19'id=0000016a-5681-d475-a17f-d78db54a0000)
+[^6]: Johnson & Johnson. (2018). 2018 Investor Fact Sheet. [PDF file]. Retrieved 
+from 
+[http://www.investor.jnj.com/\_document/2018-investor-fact-sheet-4-19'id=0000016a-5681-d475-a17f-d78db54a0000](http://www.investor.jnj.com/_document/2018-investor-fact-sheet-4-19'id=0000016a-5681-d475-a17f-d78db54a0000).
