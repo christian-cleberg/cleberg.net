@@ -1,10 +1,10 @@
-Title,Company,Location,Start Date,End Date,Tenure,Salary,Reason for Leaving
-Community Management Intern,Walgreens,Lincoln (NE),2017-06-19,2018-02-02,9 mo,$14/hr,Found Internship in My Field
-Teaching Assistant,University of Nebraska-Lincoln,Lincoln (NE),2017-08-21,2018-05-04,10 mo,$9/hr,Academic Year Ended
-Internal Audit Intern,Ameritas,Lincoln (NE),2018-02-05,2019-06-21,1 yr 5 mo,$16/hr,Found Full-Time Role
-IS Auditor I,Nelnet,Lincoln (NE),2019-06-24,2019-12-16,7 mo,$20/hr,Promoted
-IS Auditor II,Nelnet,Lincoln (NE),2019-12-16,2020-04-24,5 mo,$58000,New Job
-IT Auditor,Ameritas,Lincoln (NE),2020-04-27,2021-05-18,1 yr 2 mo,$65000,Promoted
-Senior IT Auditor,Ameritas,Lincoln (NE),2021-05-19,2021-09-03,5 mo,$72000,New Job
-Technology Risk Consulting Senior,Ernst & Young,Des Moines (IA),2021-09-07,2022-06-03,10 mo,$89500,New Job
-Senior Auditor - Technology Assurance,KPMG,Omaha (NE),2022-06-06,-,-,$110000,-
+Title,Location,Year,Compensation
+Community Management Intern,Lincoln (NE),2017,$14/hr
+Teaching Assistant,Lincoln (NE),2017,$9/hr
+Internal Audit Intern,Lincoln (NE),2018,$16/hr
+IS Auditor I,Lincoln (NE),2019,$20/hr
+IS Auditor II,Lincoln (NE),2019,$58000
+IT Auditor,Lincoln (NE),2020,$65000
+Senior IT Auditor,Lincoln (NE),2021,$72000
+Technology Risk Consulting Senior,Des Moines (IA),2021,$89500
+Senior Auditor - Technology Assurance,Omaha (NE),2022,$110000
