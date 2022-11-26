@@ -21,17 +21,17 @@ difference for multiple persons within the same role.
 
 ## Salary Data*
 
-| Title                                | Location       | Year | Compensation^ |
-|--------------------------------------|----------------|------|---------------|
-| Community Management Intern          | Lincoln, NE    | 2017 | $14/hr        |
-| Teaching Assistant                   | Lincoln, NE    | 2017 | $9/hr         |
-| Internal Audit Intern                | Lincoln, NE    | 2018 | $16/hr        |
-| IS Auditor I                         | Lincoln, NE    | 2019 | $20/hr        |
-| IS Auditor II                        | Lincoln, NE    | 2019 | $58000        |
-| IT Auditor                           | Lincoln, NE    | 2020 | $65000        |
-| Senior IT Auditor                    | Lincoln, NE    | 2021 | $72000        |
-| Technology Risk Consulting Senior    | Des Moines, IA | 2021 | $89500        |
-| Senior Auditor, Technology Assurance | Omaha, NE      | 2022 | $110000       |
+| Title                                | Location       | Year | Salary^ |
+|--------------------------------------|----------------|------|---------|
+| Community Management Intern          | Lincoln, NE    | 2017 | $14/hr  |
+| Teaching Assistant                   | Lincoln, NE    | 2017 | $9/hr   |
+| Internal Audit Intern                | Lincoln, NE    | 2018 | $16/hr  |
+| IS Auditor I                         | Lincoln, NE    | 2019 | $20/hr  |
+| IS Auditor II                        | Lincoln, NE    | 2019 | $58000  |
+| IT Auditor                           | Lincoln, NE    | 2020 | $65000  |
+| Senior IT Auditor                    | Lincoln, NE    | 2021 | $72000  |
+| Technology Risk Consulting Senior    | Des Moines, IA | 2021 | $89500  |
+| Senior Auditor, Technology Assurance | Omaha, NE      | 2022 | $110000 |
 
 \* *Note 1: [You can find the CSV data here](/salary.csv).*  
 \^ *Note 2: Data does not include bonuses, benefits, or other compensation.*
