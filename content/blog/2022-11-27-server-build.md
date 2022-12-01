@@ -34,8 +34,8 @@ onboard graphics.
 - **RAM**: 64GB RAM (2x32GB) _Max of 128GB RAM on this motherboard_
 - **Boot Drive**: Western Digital 500GB M.2 NVME SSD
 - **HDD Bay**:
-  - 10TB WD White _(shucked, previously owned)_
-  - 8TB WD White _(shucked, previously owned)_
+  - 10TB WD White _(shucked, moved from previous server)_
+  - 8TB WD White _(shucked, moved from previous server)_
   - 2 x 8TB WD Red Plus _(Black Friday lined up perfectly with this build so I 
   grabbed two of these)_
 - **PSU**: Corsair RM850 PSU
@@ -83,3 +83,60 @@ effortless.
 
 I am very happy with the results and will likely continue to improve on this 
 server as the years go by rather than buying another used server online.
+
+### Mistakes I Made
+
+This post wouldn't be complete if I didn't write about the mistakes I made while 
+building. The only real mistake I made beyond a "whoops I dropped a screw" 
+related to airflow and fan direction.
+
+While installing the two new hard drives that showed up on 2022-11-30 and 
+getting ready to install the case in my rack, I noticed that the hard drive 
+temperatures were quite high.
+
+I used the `smartctl` command for each of my drives (`/dev/sda` through 
+`/dev/sdd`):
+
+```bash
+doas smartctl -a /dev/sda | grep Temperature_Celsius
+```
+
+The results were unusual - all four drives were idling around ~44-46 degrees 
+Celsius. The only drive that was cooler was my 10TB drive, which was at 38 
+degrees Celsius. I noted that this 10TB drive was also closest to the case fan.
+
+```bash
+ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
+# /dev/sda
+194 Temperature_Celsius     0x0002   147   147   000    Old_age   Always       -       44 (Min/Max 22/46)
+# /dev/sdb
+194 Temperature_Celsius     0x0002   141   141   000    Old_age   Always       -       46 (Min/Max 21/48)
+# /dev/sdc
+194 Temperature_Celsius     0x0002   144   144   000    Old_age   Always       -       45 (Min/Max 19/61)
+# /dev/sdd
+194 Temperature_Celsius     0x0002   171   171   000    Old_age   Always       -       38 (Min/Max 14/56)
+```
+
+After looking to see if I could fit more fans into the case, I noticed that the 
+120mm fan used for intake from the front of the case was actually pushing air 
+out of the case by mistake. This fan site right in front of the hard drive bay.
+
+Once I reversed the fan to act as an intake fan, the temperatures dropped 
+immediately! They are now idling at ~31-33 degrees Celsius. A single fan 
+spinning the wrong way caused my drives to idle 10-15 degrees higher than they 
+should have.
+
+```bash
+ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
+# /dev/sda
+194 Temperature_Celsius     0x0002   209   209   000    Old_age   Always       -       31 (Min/Max 14/56)
+# /dev/sdb
+194 Temperature_Celsius     0x0002   196   196   000    Old_age   Always       -       33 (Min/Max 19/61)
+# /dev/sdc
+194 Temperature_Celsius     0x0002   203   203   000    Old_age   Always       -       32 (Min/Max 21/48)
+# /dev/sdd
+194 Temperature_Celsius     0x0002   196   196   000    Old_age   Always       -       33 (Min/Max 22/46)
+```
+
+This was a silly error to make, but I'm glad I found it today before I screwed 
+the case into the rack and made things a lot more tedious to fix.
