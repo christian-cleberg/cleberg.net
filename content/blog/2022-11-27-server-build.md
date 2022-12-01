@@ -101,7 +101,7 @@ I used the `smartctl` command for each of my drives (`/dev/sda` through
 doas smartctl -a /dev/sda | grep Temperature_Celsius
 ```
 
-The results were unusual - all four drives were idling around ~44-46 degrees 
+The results were unusual - all four drives were idling at ~44-46 degrees 
 Celsius. The only drive that was cooler was my 10TB drive, which was at 38 
 degrees Celsius. I noted that this 10TB drive was also closest to the case fan.
 
@@ -119,9 +119,9 @@ ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_
 
 After looking to see if I could fit more fans into the case, I noticed that the 
 120mm fan used for intake from the front of the case was actually pushing air 
-out of the case by mistake. This fan site right in front of the hard drive bay.
+out of the case by mistake. This fan sits right in front of the hard drive bay.
 
-Once I reversed the fan to act as an intake fan, the temperatures dropped 
+Once I flipped the fan around to act as an intake fan, the temperatures dropped 
 immediately! They are now idling at ~31-33 degrees Celsius. A single fan 
 spinning the wrong way caused my drives to idle 10-15 degrees higher than they 
 should have.
