@@ -12,6 +12,7 @@
 <section>
   <h1>{{ section.title }}</h1>
   <p>Subscribe: <a href="/atom.xml">Atom RSS Feed</a></p>
+  <p>Use <code>Ctrl + F</code> to search for keywords in the posts below.</p>
   {% set current_date = "1970-01-01" | date(format="%Y") %}
   {% set date = "1970-01-01" | date(format="%Y") %}
   {% for page in section.pages %}
