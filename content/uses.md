@@ -33,13 +33,11 @@ WM:            i3wm
 Editor:        nano
 Terminal:      Alacritty
 Browser:       LibreWolf
-Search Engine: Metager
-Feed Reader:   Newsboat
-Email:         Neomutt
-               Thunderbird
+Search_Engine: Metager
+Feed_Reader:   Newsboat
+Email:         [Neomutt, Thunderbird]
 VPN:           Mullvad
-Messenger:     Gomuks
-               Signal
+Messenger:     [Gomuks, Signal]
 ```
 
 ### Mobile
@@ -58,8 +56,7 @@ Search Engine: DuckDuckGo
 Feed Reader:   Feeder
 Email:         K-9 Mail
 VPN:           Mullvad
-Messenger:     Element
-               Signal
+Messenger:     [Element, Signal]
 MFA:           Aegis
 ```
 
