@@ -19,26 +19,49 @@ and communities that are very important to me:
 
 ## Software
 
-I'm limiting myself to a short software list for brevity - I utilize many more 
-programs than the ones listed below.
+### Desktop
 
-Note that I currently run Fedora Linux (i3wm) on my laptop, Alpine Linux on my 
-servers, and GrapheneOS on my phone.
+```bash
+echo $desktop_details.sh
+```
 
-_(Listed in alphabetical order.)_
+```bash
+Model:         ThinkPad E15
+OS:            Fedora Linux
+Shell:         zsh
+WM:            i3wm
+Editor:        nano
+Terminal:      Alacritty
+Browser:       LibreWolf
+Search Engine: Metager
+Feed Reader:   Newsboat
+Email:         Neomutt
+               Thunderbird
+VPN:           Mullvad
+Messenger:     Gomuks
+               Signal
+```
 
-- Aegis
-- Alacritty (zsh)
-- Bitwarden
-- Home Assistant
-- K-9 Mail, Neomutt, Thunderbird
-- Librewolf
-- Matrix (Element & Gomuks)
-- Mullvad
-- Plex
-- Signal
-- Syncthing
-- Transmission
+### Mobile
+
+```bash
+echo $mobile_details.sh
+```
+
+```bash
+Model:         Pixel 6 Pro
+OS:            GrapheneOS
+Launcher:      Lawnchair
+Editor:        Markor
+Browser:       DuckDuckGo
+Search Engine: DuckDuckGo
+Feed Reader:   Feeder
+Email:         K-9 Mail
+VPN:           Mullvad
+Messenger:     Element
+               Signal
+MFA:           Aegis
+```
 
 ## Hardware
 
@@ -63,16 +86,12 @@ My server rack contains the following hardware:
 
 - UniFi Dream Machine Pro
 - UniFi Switch 24 PoE
-- Custom Tower PC Server
-  - Processor: Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz
-  - Graphics: NVIDIA GeForce GTX 1660 Ti
-  - Memory: 32 GB DDR4 DIMM
-  - Storage: 128 GB SSD, 8TB HDD, 10TB HDD
+- UniFi Patch Panel
+- Custom Rack-Mounted Server ([read about it &rarr;](/blog/server-build/))
+  - Case: Rosewill RSV-R4100U 4U Chassis
+  - Processor: AMD Ryzen 7 5700G with Radeon Graphics
+  - Memory: 64 GB DDR4 DIMM
+  - Storage: 500 GB M.2 NVMe SSD, 1 x 10TB HDD, 3 x 8TB HDD
 - Raspberry Pi 4 Model B (8GB RAM)
 - Philips Hue Bridge
 - Tripp-Lite 12 Socket Surge Protector
-
-I'd love to replace my tower PC with a proper 2U server so that I can also add 
-in a patch panel to organize my ethernet cords. However, I'm not sure what specs 
-I want in the server and thus, I am hesitant to purchase anything that may not 
-be ideal.
