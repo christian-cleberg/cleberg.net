@@ -51,7 +51,7 @@ Model:         Pixel 6 Pro
 OS:            GrapheneOS
 Launcher:      Lawnchair
 Editor:        Markor
-Browser:       DuckDuckGo
+Browser:       Vanadium
 Search Engine: DuckDuckGo
 Feed Reader:   Feeder
 Email:         K-9 Mail
