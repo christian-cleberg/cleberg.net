@@ -33,7 +33,7 @@ WM:            i3wm
 Editor:        nano
 Terminal:      Alacritty
 Browser:       LibreWolf
-Search_Engine: Metager
+Search_Engine: SearXNG
 Feed_Reader:   Newsboat
 Email:         [Neomutt, Thunderbird]
 VPN:           Mullvad
@@ -51,8 +51,8 @@ Model:         Pixel 6 Pro
 OS:            GrapheneOS
 Launcher:      Lawnchair
 Editor:        Markor
-Browser:       Vanadium
-Search_Engine: DuckDuckGo
+Browser:       [Bromite, Vanadium]
+Search_Engine: SearXNG
 Feed_Reader:   Feeder
 Email:         K-9 Mail
 VPN:           Mullvad
