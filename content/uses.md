@@ -52,8 +52,8 @@ OS:            GrapheneOS
 Launcher:      Lawnchair
 Editor:        Markor
 Browser:       Vanadium
-Search Engine: DuckDuckGo
-Feed Reader:   Feeder
+Search_Engine: DuckDuckGo
+Feed_Reader:   Feeder
 Email:         K-9 Mail
 VPN:           Mullvad
 Messenger:     [Element, Signal]
