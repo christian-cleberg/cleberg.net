@@ -14,7 +14,7 @@ think and rarely edit anything, aside from minor grammatical errors.
 
 ### Visual
 
-I tend to favor minimalistic designs, with a heavy emphasis on utility. If 
+I tend to favor minimalistic designs with a heavy emphasis on utility. If 
 something does not serve a purpose, I likely do not want it on my website. Some 
 people love this, some hate it. Either way, it's what I prefer.
 
