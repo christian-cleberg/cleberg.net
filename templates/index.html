@@ -14,14 +14,15 @@
   <ul>
     {% for subsection in section.subsections | sort %}
       {% set subsection_item = get_section(path=subsection) %}
-    {% for page in subsection_item.pages %}
-    {% if loop.index > 3 %}
-      {% break %}
-    {% endif %}
-    <li>
-      <a href="{{ page.permalink | safe }}"> {{- page.title -}} </a>
-    </li>
-    {% endfor %} {% endfor %}
+      {% for page in subsection_item.pages %}
+      {% if loop.index > 3 %}
+        {% break %}
+      {% endif %}
+      <li>
+        <a href="{{ page.permalink | safe }}"> {{- page.title -}} </a>
+      </li>
+      {% endfor %}
+    {% endfor %}
   </ul>
 
   <h2>Services</h2>
