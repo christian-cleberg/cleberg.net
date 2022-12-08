@@ -1,6 +1,6 @@
 +++
 date = 2022-12-07
-title = "Redirecting Nginx Subdomains & Trailing Content"
+title = "Redirect Nginx Subdomains & Trailing Content with Regex"
 description= ""
 +++
 
