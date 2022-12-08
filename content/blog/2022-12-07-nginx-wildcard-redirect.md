@@ -37,7 +37,7 @@ To make this possible. I needed to configure a proper redirect scheme in my
 Nginx configuration.
 
 ```bash
-doas nano /etc/nginx/http.d/cleberg.net.conf
+doas nano /etc/nginx/http.d/cleberg.io.conf
 ```
 
 Within this file, I had one block set to redirect HTTP requests to HTTPS for the 
