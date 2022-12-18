@@ -19,7 +19,7 @@ Instead, I finally found a solution that allows me to redirect both subdomains
 AND trailing content. For example, both of these URLs now redirect properly
 using the logic I'll explain below:
 
-```text
+```txt
 # Example 1 - Simple base domain redirect with trailing content
 https://cleberg.io/blog/alpine-linux/ -> https://cleberg.net/blog/alpine-linux/
 
