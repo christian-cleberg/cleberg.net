@@ -28,13 +28,13 @@ above or via the command-line.
 
 For Debian-based distros:
 
-```bash
+```sh
 sudo apt install syncthing
 ```
 
 For Fedora-based distros:
 
-```bash
+```sh
 sudo dnf install syncthing
 ```
 
@@ -71,7 +71,7 @@ You can also start, stop, and restart the Syncthing server via the command-line
 or web dashboard. If you're running Syncthing on a device with `systemd`, you 
 can use the following commands:
 
-```bash
+```sh
 sudo systemctl start syncthing@username.service
 sudo systemctl restart syncthing@username.service
 sudo systemctl stop syncthing@username.service

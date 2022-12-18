@@ -45,7 +45,7 @@ terminal will load quickly and for a login.
 To login to the installation image, use the `root` account; there is no 
 password. Once logged-in, execute the setup command:
 
-```bash
+```sh
 setup-alpine
 ```
 
@@ -74,7 +74,7 @@ described above.)
 Once the setup script is finished, be sure to reboot the machine and remove the 
 USB device.
 
-```bash
+```sh
 reboot
 ```
 
@@ -88,7 +88,7 @@ through my personal post-installation setup for my web server.
 
 First, login as `root` in order to update and upgrade the system:
 
-```bash
+```sh
 apk -U upgrade
 ```
 
@@ -98,7 +98,7 @@ I needed to add a user so that I don't need to login in as root. Note that if
 you're used to using the `sudo` command, you will now need to use the `doas` 
 command on Alpine Linux.
 
-```bash
+```sh
 apk add doas
 adduser <username>
 adduser <username> wheel
@@ -106,7 +106,7 @@ adduser <username> wheel
 
 You can now logout and log back in using the newly-created user:
 
-```bash
+```sh
 exit
 ```
 
@@ -115,13 +115,13 @@ exit
 In order to install more common packages that aren't found in the `main` 
 repository, you will need to enable the `community` repository:
 
-```bash
+```sh
 doas nano /etc/apk/repositories
 ```
 
 Uncomment the community line for whichever version of Alpine you're running:
 
-```bash
+```sh
 /media/usb/apks
 http://dl-cdn.alpinelinux.org/alpine/v3.16/main
 http://dl-cdn.alpinelinux.org/alpine/v3.16/community
@@ -135,7 +135,7 @@ http://dl-cdn.alpinelinux.org/alpine/v3.16/community
 Now that the community packages are available, you can install any packages you 
 need. In my case, I installed the web server packages I need for my services:
 
-```bash
+```sh
 doas apk add nano nginx docker docker-compose ufw
 ```
 
@@ -143,21 +143,21 @@ doas apk add nano nginx docker docker-compose ufw
 
 If you didn't install OpenSSH as part of the installation, you can do so now:
 
-```bash
+```sh
 doas apk add openssh
 ```
 
 Next, either create a new key or copy your SSH key to the server from your 
 current machines:
 
-```bash
+```sh
 # Create a new key
 ssh-keygen
 ```
 
 If you need to copy an existing SSH key from a current machine:
 
-```bash
+```sh
 # Copy key from existing machines
 ssh-copy-id <username>@<ip_address>
 ```
@@ -168,7 +168,7 @@ Lastly, I installed `ufw` above as my firewall. To setup, default to deny
 incoming and allow outgoing connections. Then selectively allow other ports or 
 apps as needed.
 
-```bash
+```sh
 doas ufw default deny incoming
 doas ufw default allow outgoing
 doas ufw allow SSH
@@ -181,21 +181,21 @@ doas ufw allow 9418 # Git server port
 If you don't like the hostname set during installation, you just need to edit 
 two files. First, edit the simple hostname file:
 
-```bash
+```sh
 doas nano /etc/hostname
 ```
 
-```bash
+```sh
 <hostname>
 ```
 
 Next, edit the hosts file:
 
-```bash
+```sh
 doas nano /etc/hosts
 ```
 
-```bash
+```sh
 127.0.0.1	<hostname>.local <hostname> localhost.local localhost
 ::1		    <hostname> <hostname>.local
 ```
@@ -205,7 +205,7 @@ doas nano /etc/hosts
 To set-up my web server, I simply created the `www` user and created the 
 necessary files.
 
-```bash
+```sh
 doas adduser -D -g 'www' www
 mkdir /www
 doas mkdir /www
@@ -218,14 +218,14 @@ Otherwise, you can drop configuration files in the following directory. You
 don't need to enable or symlink the configuration file like you do in other 
 systems.
 
-```bash
+```sh
 doas nano /etc/nginx/http.d/example_website.conf
 ```
 
 Once the configuration is set and pointed at the `/www` directory to serve 
 files, enable the Nginx service:
 
-```bash
+```sh
 # Note that 'default' must be included or Nginx will not start on boot
 doas rc-update add nginx default
 ```
@@ -243,7 +243,7 @@ I went in-depth on how to self-host a git server in another post:
 However, there are a few differences with Alpine. First note that in order to 
 change the `git` user's shell, you must do a few things a little different:
 
-```bash
+```sh
 doas apk add libuser
 doas touch /etc/login.defs
 doas mkdir /etc/default

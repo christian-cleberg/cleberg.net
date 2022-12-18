@@ -46,7 +46,7 @@ Okay, now let's get started.
 
 To begin, we need to install the proper Python package for IBM Watson.
 
-```bash
+```sh
 pip install --upgrade --user "ibm-watson>=4.5.0"
 ```
 

@@ -19,13 +19,13 @@ way to get a static IP).
 
 First, install `jq` since we will use it in the next script:
 
-```bash
+```sh
 sudo apt install jq
 ```
 
 Next, create a location for your DDNS update scripts and open the first script:
 
-```bash
+```sh
 mkdir ~/ddns
 nano ~/ddns/update.sh
 ```
@@ -34,7 +34,7 @@ The following `update.sh` script will take all of your domains and subdomains
 and check Cloudflare to see if the current `A` and `AAAA` records match your
 server's IP address. If not, it will update the records.
 
-```bash
+```sh
 # file: update.sh
 #!/bin/bash
 
@@ -61,7 +61,7 @@ done
 Next, open up the `ddns.sh` script. Paste the following into the script and
 update the `api_token` and `email` variables.
 
-```bash
+```sh
 nano ~/ddns/ddns.sh
 ```
 
@@ -69,7 +69,7 @@ nano ~/ddns/ddns.sh
 Cloudflare, find and update the following snippet: `\"proxied\":false}"` to say
 `true` instead of `false`.
 
-```bash
+```sh
 # file: ddns.sh
 #!/bin/bash
 # based on https://gist.github.com/Tras2/cba88201b17d765ec065ccbedfb16d9a
@@ -166,26 +166,26 @@ fi
 
 Once the script is saved and closed, make the scripts executable:
 
-```bash
+```sh
 chmod +x ~/ddns/ddns.sh
 chmod +x ~/ddns/update.sh
 ```
 
 You can test the script by running it manually:
 
-```bash
+```sh
 ./update.sh
 ```
 
 To make sure the scripts run automatically, add it to the `cron` file so that it
 will run on a schedule. To do this, open the cron file:
 
-```bash
+```sh
 crontab -e
 ```
 
 In the cron file, paste the following at the bottom of the editor:
 
-```bash
+```sh
 */5 * * * * bash /home/<your_username>/ddns/update.sh
 ```

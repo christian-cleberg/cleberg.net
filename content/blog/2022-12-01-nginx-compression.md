@@ -15,7 +15,7 @@ Interactive, and Speed Index.
 In order to enable text compression on Nginx, we need to enable it within the 
 configuration file:
 
-```bash
+```sh
 nano /etc/nginx/nginx.conf
 ```
 

@@ -96,7 +96,7 @@ already have one on your system. Once created, grab the contents of `id_rsa.pub`
 and add it to your Sourcehut account settings - this will allow you to push and
 pull code changes without using a username/password.
 
-```bash
+```sh
 ssh keygen
 ```
 
@@ -104,18 +104,18 @@ Next up, let's create a repository with the proper name so that the Sourcehut
 build system will know we want them to host a website for us. Use the following
 format exactly:
 
-```bash
+```sh
 mkdir your-username.srht.site && cd your-username.srht.site
 ```
 
 Now that we've created the repo, let's initialize Git and add the proper remote
 URL.
 
-```bash
+```sh
 git init
 ```
 
-```bash
+```sh
 git remote add origin git@git.sr.ht:~your-username/your-username.srht.site
 ```
 
@@ -155,7 +155,7 @@ second command to the `upload` section:
 
 Lastly, commit your changes and push them to the remote repo.
 
-```bash
+```sh
 git add .; git commit -m "initial commit"; git push --set-upstream origin HEAD
 ```
 
@@ -163,7 +163,7 @@ If you've successfully created the files with the proper format, you'll see the
 terminal print a message that lets you know where the automatic build is taking
 place. For example, here's what the terminal tells me:
 
-```bash
+```sh
 remote: Build started:
 remote: https://builds.sr.ht/~kaizoku/job/689803 [.build.yml]
 ```

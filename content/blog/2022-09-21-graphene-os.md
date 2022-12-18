@@ -26,11 +26,11 @@ directory, and move the necessary executables to a central location, such as
 `/usr/bin/`. For this installation, we only need the `fastboot` and `adb` 
 executables.
 
-```bash
+```sh
 cd ~/Downloads
 ```
 
-```bash
+```sh
 unzip platform-tools_r33.0.3-linux.zip
 cd platform-tools
 sudo mv fastboot /usr/bin/
@@ -45,7 +45,7 @@ releases page.
 
 Once we have the links, let's download them to our working directory:
 
-```bash
+```sh
 curl -O https://releases.grapheneos.org/factory.pub
 curl -0 https://releases.grapheneos.org/raven-factory-2022091400.zip
 curl -0 https://releases.grapheneos.org/raven-factory-2022091400.zip.sig
@@ -56,18 +56,18 @@ curl -0 https://releases.grapheneos.org/raven-factory-2022091400.zip.sig
 In order to validate the integrity of the downloaded files, we will need the 
 `signify` package and Graphene's `factory.pub` file.
 
-```bash
+```sh
 sudo dnf install signify
 ```
 
-```bash
+```sh
 curl -O https://releases.grapheneos.org/factory.pub
 ```
 
 Then we can validate the files and ensure that no data was corrupted or 
 modified before it was saved to our device.
 
-```bash
+```sh
 signify -Cqp factory.pub -x raven-factory-2022091400.zip.sig && echo verified
 ```
 
@@ -76,7 +76,7 @@ signify -Cqp factory.pub -x raven-factory-2022091400.zip.sig && echo verified
 Once the files are verified, we can unzip the Graphene image and enter the 
 directory:
 
-```bash
+```sh
 unzip raven-factory-2022091400.zip && cd raven-factory-2022091400
 ```
 
@@ -99,7 +99,7 @@ case, I chose USB Debugging and performed all actions via USB cable.
 Once these options are enabled, plug the phone into the computer and execute the 
 following command:
 
-```bash
+```sh
 adb devices
 ```
 
@@ -113,7 +113,7 @@ Once we have found the device via `adb`, we can either boot into the
 bootloader interface by holding the volume down button while the phone reboots 
 or by executing the following command:
 
-```bash
+```sh
 adb reboot bootloader
 ```
 
@@ -128,7 +128,7 @@ Fedora quirk, but I'm documenting my commands verbatim in this post.
 
 First, we start by unlocking the bootloader so that we can load other ROMs:
 
-```bash
+```sh
 sudo fastboot flashing unlock
 ```
 
@@ -137,7 +137,7 @@ sudo fastboot flashing unlock
 Once the phone is unlocked, we can flash it with the `flash-all.sh` script found 
 inside the `raven-factory-2022091400` folder we entered earlier:
 
-```bash
+```sh
 sudo ./flash-all.sh
 ```
 
@@ -152,7 +152,7 @@ land back on the bootloader screen. At this point, we can re-lock the
 bootloader to enable full verified boot and protect the device from unwanted 
 flashing or erasure of data.
 
-```bash
+```sh
 sudo fastboot flashing lock
 ```
 

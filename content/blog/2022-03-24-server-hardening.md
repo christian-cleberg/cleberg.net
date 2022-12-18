@@ -125,7 +125,7 @@ list of IPs, you can always set the firewall to only allow connections to port
 
 For a quick start to only allow SSH connections to the server, use this:
 
-```bash
+```sh
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22
@@ -142,14 +142,14 @@ First, make sure you have an SSH keypair generated on the device(s) that you'll
 be using to log in to the server. If you don't have an SSH key, run this
 command:
 
-```bash
+```sh
 ssh-keygen
 ```
 
 Now that we have an SSH key, copy it to the server with the following command,
 which will ask for the users password before accepting the key:
 
-```bash
+```sh
 ssh-copy-id my_user@my_server
 ```
 
@@ -164,7 +164,7 @@ authentication and disable anyone from using `ssh` to login as `root`.
 
 To do this, open the `sshd_config` file:
 
-```bash
+```sh
 sudo nano /etc/ssh/sshd_config
 ```
 
@@ -179,7 +179,7 @@ PubkeyAuthentication yes
 
 Finally, restart the `ssh` service:
 
-```bash
+```sh
 sudo systemctl restart sshd.service
 ```
 
@@ -212,7 +212,7 @@ use the `nginx-http-auth` jail.
 
 In order to get it up and running, use the following commands:
 
-```bash
+```sh
 sudo apt install fail2ban
 sudo fail2ban-client start sshd
 sudo fail2ban-client status sshd

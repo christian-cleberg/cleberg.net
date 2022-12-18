@@ -74,13 +74,13 @@ if Python 2 will work for this.
 First, find a suitable place to create your script. Personally, I just create a
 directory called `ddns` in my home directory:
 
-```bash
+```sh
 mkdir ~/ddns
 ```
 
 Next, create a Python script file:
 
-```bash
+```sh
 nano ~/ddns/ddns.py
 ```
 
@@ -184,7 +184,7 @@ for record in data['records']:
 Once you've created the script and are ready to test it, run the following
 command:
 
-```bash
+```sh
 python3 ~/ddns/ddns.py
 ```
 
@@ -193,13 +193,13 @@ python3 ~/ddns/ddns.py
 To make sure the scripts run automatically, add it to the `cron` file so that it
 will run on a schedule. To do this, open the `cron` file:
 
-```bash
+```sh
 crontab -e
 ```
 
 In the cron file, paste the following at the bottom of the editor in order to
 check the IP every five minutes:
 
-```bash
+```sh
 */5 * * * * python3 /home/<your_username>/ddns/ddns.py
 ```

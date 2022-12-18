@@ -187,7 +187,7 @@ If you're using Apache, make sure the `www-data` user on your server has the
 correct permissions to your website directory or else it will not be able to
 write to `comments.json`.
 
-```bash
+```sh
 chgrp -R www-data /path/to/website/
 chmod -R g+w comments.json
 ```

@@ -20,7 +20,7 @@ manager you have installed.
 
 To disable `lxdm`, simply remove the service symlink:
 
-```bash
+```sh
 sudo rm /var/service/lxdm
 ```
 
@@ -31,7 +31,7 @@ disabled. Make sure to replace `<new_display_manager>` with your new DM, such as
 `gdm`, `xdm`, etc.
 
 
-```bash
+```sh
 sudo ln -s /etc/sv/<new_display_manager> /var/service
 ```
 
@@ -41,11 +41,11 @@ Depending on your setup, you may need to create a few X files, such as
 `~/.xinitrc`. For my personal set-up, I created this file to launch the i3wm as 
 my desktop.
 
-```bash
+```sh
 nano ~/.xinitrc
 ```
 
-```bash
+```sh
 #!/bin/sh
 
 exec i3
@@ -60,14 +60,14 @@ Finally, in order to automatically launch an X session upon login, you will need
 to edit the `.bash_profile` (bash) or `.zprofile` (zsh) files for your 
 shell:
 
-```bash
+```sh
 nano ~/.zprofile
 ```
 
 Add the following snippet to the end of the shell profile file. This will 
 execute the `startx` command upon login.
 
-```bash
+```sh
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 	exec startx
 fi

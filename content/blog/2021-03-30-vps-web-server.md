@@ -123,7 +123,7 @@ signed up with a service like DigitalOcean, you can add your SSH key to your
 account and to your VPS droplet so that you don't need a password in order to
 SSH.
 
-```bash
+```sh
 ssh root@xxx.xxx.xxx.xxx
 ```
 
@@ -136,7 +136,7 @@ First, let's update and upgrade our server.
 **NOTE:** Since we have logged in to the server as `root` for now, we don't need
 to use the `sudo` modifier before our commands.
 
-```bash
+```sh
 apt update && apt upgrade -y
 ```
 
@@ -148,20 +148,20 @@ While being able to use `root` can be beneficial at times, you shouldn't use
 So let's set up a new user in our system. The `-m` option below tells the OS to
 create a home directory for the new user.
 
-```bash
+```sh
 adduser USERNAME
 ```
 
 Now, create a password for that user.
 
-```bash
+```sh
 passwd USERNAME
 ```
 
 Finally, add the user to the sudoers file so they can perform priveleged
 commands.
 
-```bash
+```sh
 usermod -a -G sudo USERNAME
 ```
 
@@ -170,7 +170,7 @@ from your local machine to the VPS. If you haven't disabled password-based SSH
 yet, the easiest way to do this is `ssh-copy-id` from your local computer (not
 from the VPS):
 
-```bash
+```sh
 ssh-copy-id testuser@xxx.xxx.xxx.xxx
 ```
 
@@ -185,7 +185,7 @@ web server and any other packages we need.
 From this point on, I will be logged in as a user (not `root`) and will need to
 use the `sudo` modifier for most commands.
 
-```bash
+```sh
 sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y
 sudo apt install apache2
 ```
@@ -193,7 +193,7 @@ sudo apt install apache2
 If you need other language support, such as PHP, you'll need to install that
 too.
 
-```bash
+```sh
 sudo apt install libapache2-mod-php php-dom
 sudo a2enmod php
 sudo systemctl restart apache2
@@ -204,7 +204,7 @@ sudo systemctl restart apache2
 Next up is to create the directories for the domain(s) we want to be hosted on
 this web server.
 
-```bash
+```sh
 cd /var/www
 sudo mkdir example.com
 ```
@@ -214,7 +214,7 @@ put it within a specific `public_html` folder. You don't need this `public_html`
 if you don't want it, but it helps with organizing items related to
 `example.com` that you don't want published to the internet.
 
-```bash
+```sh
 cd example.com
 sudo mkdir public_html && cd public_html
 sudo nano index.html
@@ -240,7 +240,7 @@ anything, paste this in there:
 If you want something to be served at `example.com/page01/file.txt`, you'll have
 to create the `page01` directory under the `example.com` directory. For example:
 
-```bash
+```sh
 cd /var/www/example.com/public_html
 sudo mkdir page01
 sudo nano file.txt
@@ -252,7 +252,7 @@ Now, let's set up the files that will tell the server where to find the files
 for `example.com`. We will copy the default configuration file and create our
 own.
 
-```bash
+```sh
 cd /etc/apache2/sites-available
 sudo cp 000-default.conf example.com.conf
 sudo nano example.com.conf
@@ -275,7 +275,7 @@ it to look similar to this (settings may change based on your personal needs):
 Now, enable the configuration for your new site, disable the default
 configuration, and reload the web server.
 
-```bash
+```sh
 sudo a2ensite example.com.conf
 sudo a2dissite 000-default.conf
 sudo systemctl reload apache2
@@ -284,7 +284,7 @@ sudo systemctl reload apache2
 You can always run a test to make sure no errors or warnings are found in your
 configuration files.
 
-```bash
+```sh
 sudo apache2ctl configtest
 ```
 
@@ -293,7 +293,7 @@ to `http://example.com` and see the HTML content you provided earlier. Note that
 SSL/TLS has not been enabled yet, so you won't be able to use the secure version
 yet (`https://example.com`).
 
-```bash
+```sh
 sudo systemctl restart apache2
 ```
 
@@ -309,7 +309,7 @@ us with the process.
 
 The first step is to install `snapd` and snap's `core` for Ubuntu.
 
-```bash
+```sh
 sudo apt install snapd
 sudo snap install core
 sudo snap refresh core
@@ -317,13 +317,13 @@ sudo snap refresh core
 
 Next, install the `certbot` snap package.
 
-```bash
+```sh
 sudo snap install --classic certbot
 ```
 
 Execute the following command to ensure that the `certbot` command can be run.
 
-```bash
+```sh
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
@@ -336,13 +336,13 @@ Finally, you can run `certbot` one of two ways:
 
 Run certbot and allow automatic config changes:
 
-```bash
+```sh
 sudo certbot --apache
 ```
 
 Run certbot for certificates only - don't allow it to alter config files:
 
-```bash
+```sh
 sudo certbot certonly --apache
 ```
 
@@ -351,7 +351,7 @@ will renew your certificates automatically before they expire. You will not need
 to run Certbot again, unless you change your configuration. You can test
 automatic renewal for your certificates by running this command:
 
-```bash
+```sh
 sudo certbot renew --dry-run
 ```
 
@@ -367,7 +367,7 @@ Now, add the following rules to the firewall allow SSH, Apache, and HTTP(S)
 connections. If you need to, you can enable different ports for specifics
 applications, SFTP, etc.
 
-```bash
+```sh
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow OpenSSH
@@ -377,7 +377,7 @@ sudo ufw allow proto tcp from any to any port 80,443
 
 Once you've added all the rules you need, enable the firewall.
 
-```bash
+```sh
 sudo ufw enable
 ```
 

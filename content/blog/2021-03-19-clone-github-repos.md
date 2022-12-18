@@ -16,7 +16,7 @@ If you're using GitHub, you can easily clone all of your code back down in just
 seconds. First, create a bash script - I do so by opening a new file in `nano`,
 but you can use `gedit`, `vim`, or something else:
 
-```bash
+```sh
 nano clone_github_repos.sh
 ```
 
@@ -24,7 +24,7 @@ Next, paste in the following information. Note that you can replace the word
 `users` in the first line with `orgs` and type an organization's name instead of
 a user's name.
 
-```bash
+```sh
 CNTX=users; NAME=YOUR-USERNAME; PAGE=1
 curl "https://api.github.com/$CNTX/$NAME/repos?page=$PAGE&per_page=100" |
   grep -e 'git_url*' |
@@ -34,13 +34,13 @@ curl "https://api.github.com/$CNTX/$NAME/repos?page=$PAGE&per_page=100" |
 
 Finally, save the bash script and make it executable.
 
-```bash
+```sh
 chmod a+x clone_github_repos.sh
 ```
 
 Now you can run the script and should see the cloning process begin.
 
-```bash
+```sh
 ./clone_github_repos.sh
 ```
 
@@ -53,7 +53,7 @@ First, log-in to Sourcehut and go to their
 [GraphQL playground for Git](https://git.sr.ht/graphql). Next, paste the
 following query into the left box:
 
-```bash
+```sh
 query {
   me {
     canonicalName
@@ -74,7 +74,7 @@ the next step.
 
 Now let's create the bash script:
 
-```bash
+```sh
 nano clone_sourcehut_repos.sh
 ```
 
@@ -84,7 +84,7 @@ obtained above and replace `your-username` with your username.
 Note that this uses the SSH-based Git cloning method (e.g. `git@git...`), so
 you'll need to ensure you have set-up Sourcehut with your SSH key.
 
-```bash
+```sh
 repos=(repo1 repo2 repo3)
 
 # List all sub-directories in the current directory
@@ -97,13 +97,13 @@ done
 
 Finally, save the bash script and make it executable.
 
-```bash
+```sh
 chmod a+x clone_sourcehut_repos.sh
 ```
 
 Now you can run the script and should see the cloning process begin.
 
-```bash
+```sh
 ./clone_sourcehut_repos.sh
 ```
 
@@ -113,7 +113,7 @@ Now that you have all of your code repositories cloned to your local computer,
 you may want to change the remote host (e.g. moving from GitHub to GitLab). To
 do this, let's create another bash script:
 
-```bash
+```sh
 nano change_remote_urls.sh
 ```
 
@@ -122,7 +122,7 @@ whichever host you are moving to. For this example, I am looping through all of
 my cloned GitHub directories and changing them to Sourcehut (e.g.
 `<YOUR_NEW_REMOTE_URL>` -\> `git@git.sr.ht:~myusername`).
 
-```bash
+```sh
 # List all sub-directories in the current directory
 for dir in */
 do
@@ -141,12 +141,12 @@ done
 
 Finally, save the bash script and make it executable.
 
-```bash
+```sh
 chmod a+x change_remote_urls.sh
 ```
 
 Now you can run the script and should see the cloning process begin.
 
-```bash
+```sh
 ./change_remote_urls.sh
 ```

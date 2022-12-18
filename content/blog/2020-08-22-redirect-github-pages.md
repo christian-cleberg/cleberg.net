@@ -90,7 +90,7 @@ address, e.g. `185.199.108.153` your browser sends an HTTP request to that
 server with an HTTP header `Host`. Below are `curl` examples that load the same
 website (these examples might not work if you are behind a proxy server):
 
-```bash
+```sh
 curl --header "Host: your_github_username.github.io" http://185.199.108.153/
 curl --header "Host: www.example.com" http://185.199.108.153/
 curl --header "Host: example.com" http://185.199.108.153/

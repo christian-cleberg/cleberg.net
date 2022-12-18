@@ -98,7 +98,7 @@ The `A` records should point toward the public IP address of the server. If you
 don't know the public IP address, log in to the server and run the following
 command:
 
-```bash
+```sh
 curl ifconfig.co
 ```
 
@@ -142,7 +142,7 @@ Once configured, these rules will direct all web traffic to your reverse proxy.
 
 To install Nginx, simply run the following command:
 
-```bash
+```sh
 sudo apt install nginx
 ```
 
@@ -152,7 +152,7 @@ that Nginx can accept web traffic from the router.
 For example, if you want to use `ufw` for web traffic and SSH, run the following
 commands:
 
-```bash
+```sh
 sudo ufw allow 'Nginx Full'
 sudo ufw allow SSH
 sudo ufw enable
@@ -169,7 +169,7 @@ To start, you'll need to create a configuration file for each domain in
 
 Dashy:
 
-```bash
+```sh
 nano /etc/nginx/sites-available/dashy.example.com
 ```
 
@@ -186,7 +186,7 @@ server {
 
 Uptime:
 
-```bash
+```sh
 nano /etc/nginx/sites-available/uptime.example.com
 ```
 
@@ -204,7 +204,7 @@ server {
 Once the configuration files are created, you will need to enable them with the
 `symlink` command:
 
-```bash
+```sh
 sudo ln -s /etc/nginx/sites-available/dashy.example.com /etc/nginx/sites-enabled/
 ```
 
@@ -219,7 +219,7 @@ If you want to enable HTTPS for your new domains, you will need to generate
 SSL/TLS certificates for them. The easiest way to generate certificates on Nginx
 is [Certbot](https://certbot.eff.org):
 
-```bash
+```sh
 sudo apt install snapd; sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot

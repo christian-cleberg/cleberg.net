@@ -37,7 +37,7 @@ trying out [Nginx](https://nginx.org) as my web server software. This required
 me to install the `nginx` and `ufw` packages, as well as setting up the initial
 UFW config:
 
-```bash
+```sh
 sudo apt install nginx ufw
 sudo ufw allow 'Nginx Full'
 sudo ufw allow SSH
@@ -50,7 +50,7 @@ Once I had the firewall set, I moved on to creating the directories and files
 for my website. This is very easy and is basically the same as setting up an
 Apache server, so no struggles here.
 
-```bash
+```sh
 sudo mkdir -p /var/www/your_domain/html
 sudo chown -R $USER:$USER /var/www/your_domain/html
 sudo chmod -R 755 /var/www/your_domain
@@ -63,13 +63,13 @@ and symlink it the `sites-enabled` folder.
 
 Creating the config file for your domain:
 
-```bash
+```sh
 sudo nano /etc/nginx/sites-available/your_domain
 ```
 
 Default content for an Nginx config file:
 
-```bash
+```sh
 server {
         listen 80;
         listen [::]:80;
@@ -87,7 +87,7 @@ server {
 
 Finally, symlink it together:
 
-```bash
+```sh
 sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
 ```
 
@@ -97,7 +97,7 @@ This will make your site available to the public (as long as you have
 Next, I used [certbot](https://certbot.eff.org/) to issue an HTTPS certificate
 for my domains using the following commands:
 
-```bash
+```sh
 sudo apt install snapd; sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
@@ -114,11 +114,11 @@ The configuration below shows a set-up where you only want your website to serve
 content from its own domain - except for images and scripts, which may come from
 `nullitics.com`. All other content would be blocked from loading in a browser.
 
-```bash
+```sh
 sudo nano /etc/nginx/sites-available/your_domain
 ```
 
-```bash
+```sh
 server {
     ...
         add_header Content-Security-Policy "default-src 'none'; img-src 'self' https://nullitics.com; script-src 'self' https://nullitics.com; style-src 'self'; font-src 'self'";
@@ -131,7 +131,7 @@ server {
 }
 ```
 
-```bash
+```sh
 sudo systemctl restart nginx
 ```
 

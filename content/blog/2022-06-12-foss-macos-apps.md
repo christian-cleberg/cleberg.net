@@ -248,7 +248,7 @@ the mobile app.
 `exiftool` is an excellent image editing tool for the command-line. I wrote a blog
 post about it recently: [Stripping Image Metadata with exiftool](/blog/exiftool/).
 
-```bash
+```sh
 sudo exiftool -r -all= -ext jpg -ext png /path/to/images
 ```
 
@@ -273,7 +273,7 @@ A simple command-line utility to extract audio and video files from video hostin
 
 For example, to extract a video as a `.flac` audio file:
 
-```bash
+```sh
 yt-dlp -x --audio-format=flac -o "%(title)s.%(ext)s" https://example.com/video
 ```
 

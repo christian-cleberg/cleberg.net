@@ -30,7 +30,7 @@ Ubuntu 20.04 ships with the default desktop environment
 quickly change designs. To install this, just open your terminal and enter the
 following command:
 
-```bash
+```sh
 sudo apt install gnome-tweaks
 ```
 
@@ -69,7 +69,7 @@ If the theme is not showing up after you've moved it into the themes folder, you
 may have uncompressed the folder into a sub-folder. You can check this by
 entering the theme folder and listing the contents:
 
-```bash
+```sh
 cd /usr/share/themes/Mojave-Dark && ls -la
 ```
 
@@ -77,7 +77,7 @@ This is an example of what the contents of your theme folder should look like.
 If you just see another folder there, you should move that folder up into the
 `/usr/share/themes/` folder.
 
-```bash
+```sh
 cinnamon  COPYING  gnome-shell  gtk-2.0  gtk-3.0  index.theme  metacity-1  plank  xfwm4
 ```
 
@@ -96,7 +96,7 @@ the extension.
 After the browser extension in installed, you will need to install the native
 host connector:
 
-```bash
+```sh
 sudo apt install chrome-gnome-shell
 ```
 
@@ -153,31 +153,31 @@ choose from - just figure out what you like and add it to your `~/.zshrc` file!
 
 To install zsh on Ubuntu, enter the following command into a terminal:
 
-```bash
+```sh
 sudo apt install zsh
 ```
 
 Then, enter the next command to activate zsh:
 
-```bash
+```sh
 sudo chsh -s $(which zsh) $(whoami)
 ```
 
 To install Terminator on Ubuntu:
 
-```bash
+```sh
 sudo apt install terminator
 ```
 
 To install Oh My Zsh on Ubuntu:
 
-```bash
+```sh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 To install zsh-autosuggestions via Oh My Zsh:
 
-```bash
+```sh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
@@ -185,11 +185,11 @@ Then, add the following plugin wording to your `~/.zshrc` file (the default
 config usually has the `git` plugin activated, so just add any other plugins to
 the parentheses separated by a space):
 
-```bash
+```sh
 nano ~/.zshrc
 ```
 
-```bash
+```sh
 plugins=(git zsh-autosuggestions)
 ```
 

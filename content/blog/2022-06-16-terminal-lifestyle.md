@@ -96,7 +96,7 @@ I use the [gomuks](https://docs.mau.fi/gomuks/) client currently.
 This was incredibly easy to install on macOS (but I will need to see if it'll 
 be just as easy on Linux when my new laptop arrives):
 
-```bash
+```sh
 brew install gomuks
 ```
 
@@ -167,15 +167,15 @@ The configuration was super easy for this app; I simply installed the app,
 created a file for URLs, and imported my OPML subscriptions that I had exported 
 out of my old feed reader:
 
-```bash
+```sh
 brew install newsboat
 ```
 
-```bash
+```sh
 touch ~/.newsboat/urls
 ```
 
-```bash
+```sh
 newsboat -i=my_subscriptions.opml
 ```
 

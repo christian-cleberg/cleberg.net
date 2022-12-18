@@ -12,7 +12,7 @@ domains or websites you wish to block.
 
 First, create the file in your nginx directory:
 
-```bash
+```sh
 doas nano /etc/nginx/blacklist.conf
 ```
 
@@ -37,7 +37,7 @@ map $http_referer $bad_referer {
 In order for the blacklist to work, Nginx needs to know it exists and how to 
 handle it. For this, edit the `nginx.conf` file.
 
-```bash
+```sh
 doas nano /etc/nginx/nginx.conf
 ```
 
@@ -62,7 +62,7 @@ edit the configuration file for you website. For example, I have all website
 configuration files in the `http.d` directory. You may have them in the 
 `sites-available` directory on some distributions.
 
-```bash
+```sh
 doas nano /etc/nginx/http.d/example.com.conf
 ```
 
@@ -92,7 +92,7 @@ server {
 
 Lastly, restart Nginx to enable all changes made.
 
-```bash
+```sh
 doas rc-service nginx restart
 ```
 
@@ -101,7 +101,7 @@ doas rc-service nginx restart
 In order to test the results, let's curl the contents of our site. To start, 
 I'll curl the site normally:
 
-```bash
+```sh
 curl https://cleberg.net
 ```
 
@@ -113,7 +113,7 @@ The HTML contents of the page come back successfully:
 
 Next, let's include a blacklisted referrer:
 
-```bash
+```sh
 curl --referer https://news.ycombinator.com https://cleberg.net
 ```
 

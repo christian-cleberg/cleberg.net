@@ -24,7 +24,7 @@ However, AppImage files are not executable by default, so you'll either need to
 right-click to open the properties of the file and click the "Allow executing
 file as program" box in the Permissions tab or use the following command:
 
-```bash
+```sh
 chmod u+x FILE_NAME
 ```
 
@@ -34,25 +34,25 @@ command-line only.
 
 First, you'll have to echo the repo and write it to a list file:
 
-```bash
+```sh
 echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
 ```
 
 Next, add the application keys to Ubuntu's keyring:
 
-```bash
+```sh
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
 ```
 
 Finally, update the repositories and install the app.
 
-```bash
+```sh
 sudo apt update && sudo apt install balena-etcher-electron
 ```
 
 Using Arch, Manjaro, or another distro using the AUR? Use this command instead:
 
-```bash
+```sh
 sudo pacman -S etcher
 ```
 
@@ -70,13 +70,13 @@ of the app.
 
 First, add the Atom repository to your sources.
 
-```bash
+```sh
 sudo add-apt-repository ppa:webupd8team/atom
 ```
 
 Next, update your package listings and install atom.
 
-```bash
+```sh
 sudo apt update && sudo apt install atom
 ```
 
@@ -84,7 +84,7 @@ If you have issues updating your packages with the Atom repository, you'll need
 use the snap package described below instead of the repository. To remove the
 repository we just added, use this command:
 
-```bash
+```sh
 sudo add-apt-repository -r ppa:webupd8team/atom
 ```
 
@@ -93,13 +93,13 @@ You can also install Atom as a snap package, but it must be installed with the
 [classic snaps is available](https://language-bash.com/blog/how-to-snap-introducing-classic-confinement),
 if you'd like to read more about why you need the classic flag.
 
-```bash
+```sh
 snap install atom --classic
 ```
 
 Using Arch, Manjaro, or another distro using the AUR? Use this command instead:
 
-```bash
+```sh
 sudo pacman -S atom
 ```
 
@@ -121,7 +121,7 @@ To install VS Code, you'll need to download the `.deb` file from the
 file, either double-click it to install through the Software Center or run the
 following command:
 
-```bash
+```sh
 sudo dpkg -i FILE_NAME.deb
 ```
 
@@ -130,14 +130,14 @@ the `--classic` flag. A full explanation of
 [classic snaps is available](https://language-bash.com/blog/how-to-snap-introducing-classic-confinement),
 if you'd like to read more about why you need the classic flag.
 
-```bash
+```sh
 snap install code --classic
 ```
 
 Using Arch, Manjaro, or another distro using the AUR? Use these commands
 instead:
 
-```bash
+```sh
 sudo pacman -S yay binutils make gcc pkg-config fakeroot yay -S visual-studio-code-bin
 ```
 
@@ -152,7 +152,7 @@ to use if you want to customize your GNOME desktop environment. This is how you
 can switch application themes (GTK), shell themes, icons, fonts, and more. To
 install GNOME Tweaks on Ubuntu, you just need to install the official package.
 
-```bash
+```sh
 sudo apt install gnome-tweaks
 ```
 
@@ -160,7 +160,7 @@ If you've installed Manjaro or Arch with Gnome, you should have the tweak tool
 pre-installed. If you're on Fedora, this tool is available as an official
 package:
 
-```bash
+```sh
 sudo dnf install gnome-tweaks
 ```
 
@@ -177,7 +177,7 @@ play games not officially created for Linux platforms.
 
 To install Steam on Ubuntu, you just need to install the official package.
 
-```bash
+```sh
 sudo apt install steam-installer
 ```
 
@@ -185,7 +185,7 @@ For Arch-based systems, you'll simply need to install the `steam` package.
 However, this requires that you enable the `multilib` source. To do so, use the
 following command:
 
-```bash
+```sh
 sudo nano /etc/pacman.conf
 ```
 
@@ -203,7 +203,7 @@ Include = /etc/pacman.d/mirrorlist
 
 Finally, install the program:
 
-```bash
+```sh
 sudo pacman -S steam
 ```
 
@@ -225,20 +225,20 @@ resource-heavy GUI apps.
 This is an official package if you're running Ubuntu 17.04 or later, so simply
 use the following command:
 
-```bash
+```sh
 sudo apt install neofetch
 ```
 
 If you're running Ubuntu 16.10 or earlier, you'll have to use a series of
 commands:
 
-```bash
+```sh
 sudo add-apt-repository ppa:dawidd0811/neofetch; sudo apt update; sudo apt install neofetch
 ```
 
 Using Arch, Manjaro, or another distro using the AUR? Use this command instead:
 
-```bash
+```sh
 sudo pacman -S neofetch
 ```
 
@@ -258,18 +258,18 @@ While this shouldn't be a problem for most users, yt-dlp requires Python 2.6,
 2.7, or 3.2+ to work correctly so install Python if you don't have it already.
 You can check to see if you have Python installed by running:
 
-```bash
+```sh
 python -V
 ```
 
 To get the youtube-dl package, simply curl the URL and output the results.
 
-```bash
+```sh
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 ```
 
 Finally, make the file executable so that it can be run from the command-line.
 
-```bash
+```sh
 sudo chmod a+rx /usr/local/bin/yt-dlp
 ```

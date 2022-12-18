@@ -15,7 +15,7 @@ you're okay accepting that risk.
 
 Okay, let's create the bash script:
 
-```bash
+```sh
 nano change_git_authors.sh
 ```
 
@@ -26,7 +26,7 @@ changes you need to make are to the following variables:
 -   `CORRECT_NAME`
 -   `CORRECT_EMAIL`
 
-```bash
+```sh
 #!/bin/sh
 
 # List all sub-directories in the current directory
@@ -63,12 +63,12 @@ done
 
 Finally, save the bash script and make it executable.
 
-```bash
+```sh
 chmod a+x change_git_authors.sh
 ```
 
 Now you can run the script and should see the process begin.
 
-```bash
+```sh
 ./change_git_authors.sh
 ```

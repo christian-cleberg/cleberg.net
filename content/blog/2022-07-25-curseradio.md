@@ -51,13 +51,13 @@ required. To get started, install `python3`, `pip3`, and `mpv` on your system.
 In this example, I'm using Fedora Linux, which uses the `dnf` package manager. 
 You may need to adjust this if you're using a different system.
 
-```bash
+```sh
 sudo dnf install python3 pip3 mpv
 ```
 
 Next, use `pip3` to install `requests`, `xdg`, and `lxml`:
 
-```bash
+```sh
 pip3 install requests xdg lxml
 ```
 
@@ -66,14 +66,14 @@ pip3 install requests xdg lxml
 Once all the dependencies are installed, we can clone the source code and enter 
 that directory:
 
-```bash
+```sh
 git clone https://github.com/chronitis/curseradio && cd curseradio
 ```
 
 Once you're within the `curseradio` directory, you can install the application 
 with the provided `setup.py` script.
 
-```bash
+```sh
 sudo python3 setup.py install
 ```
 
@@ -81,12 +81,12 @@ In my case, I ran into a few errors and needed to create the folders that
 curseradio wanted to use for its installation. If you don't get any errors, you 
 can skip this and run the app.
 
-```bash
+```sh
 sudo mkdir /usr/local/lib/python3.10/
 sudo mkdir /usr/local/lib/python3.10/site-packages/
 ```
 
-```bash
+```sh
 sudo chown -R $USER:$USER /usr/local/lib/python3.10/
 ```
 
@@ -94,6 +94,6 @@ sudo chown -R $USER:$USER /usr/local/lib/python3.10/
 
 Once fully installed without errors, you can run the application!
 
-```bash
+```sh
 python3 /usr/local/bin/curseradio
 ```

@@ -23,7 +23,7 @@ To fix this problem, you'll need to try a few things. First, you'll need to
 install the `ntfs-3g` package, which is meant for better interoperability with
 Linux.
 
-```bash
+```sh
 sudo apt install ntfs-3g
 ```
 
@@ -33,13 +33,13 @@ have to create the folders you want to mount your drive to first. I store mine
 in the `/mnt` folder using names that I'll recognize, but you can create your
 folders wherever you want.
 
-```bash
+```sh
 mkdir /path/to/folder
 ```
 
 For example:
 
-```bash
+```sh
 mkdir /mnt/steam_library
 ```
 
@@ -51,21 +51,21 @@ Drives are usually labeled similar to `/dev/nvme0n1p1` or `/dev/sda1`, so you'll
 need to find the line in the output of the command below that correlates to your
 drive and copy the UUID over to the `/etc/fstab` file.
 
-```bash
+```sh
 sudo blkid | grep UUID=
 ```
 
 Next, you'll need your `uid` and `gid`.. To find these, run the following
 command:
 
-```bash
+```sh
 id -u && id -g
 ```
 
 Now that you have collected the necessary information, open the `/etc/fstab`
 file:
 
-```bash
+```sh
 sudo nano /etc/fstab
 ```
 
@@ -79,13 +79,13 @@ UUID=B64E53824E5339F7 /mnt/steam_library ntfs-3g uid=1000,gid=1000 0 0
 Now all you need to do is unmount your drive and re-mount it. You can unmount
 the drive by doing this (be sure to use the correct drive name here):
 
-```bash
+```sh
 sudo umount /dev/sdxX
 ```
 
 You can re-mount all your drives by executing the following:
 
-```bash
+```sh
 sudo mount -a
 ```
 

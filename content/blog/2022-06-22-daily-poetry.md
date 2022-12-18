@@ -198,7 +198,7 @@ Last, but not least, is scheduling this Python script with `crontab`. To
 schedule a script to run daily, you can add it to the `crontab` file. To do 
 this, open `crontab` in editing mode:
 
-```bash
+```sh
 crontab -e
 ```
 

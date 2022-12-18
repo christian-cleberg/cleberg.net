@@ -33,15 +33,15 @@ To run a Python script, you must first create it. Open a terminal and enter the
 following commands in whichever directory you prefer to store the script. You
 can do the same things in a file manager, if you prefer.
 
-```bash
+```sh
 mkdir delete-gitlab
 ```
 
-```bash
+```sh
 cd delete-gitlab
 ```
 
-```bash
+```sh
 nano main.py
 ```
 
@@ -110,6 +110,6 @@ Finally, simply run the script and watch the output. You can also use PyCharm
 Community Edition to edit and run the Python script, if you don't want to work
 in a terminal.
 
-```bash
+```sh
 python3 main.py
 ```

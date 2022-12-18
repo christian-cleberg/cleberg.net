@@ -36,7 +36,7 @@ Go ahead, try the URLs if you want to test them.
 To make this possible. I needed to configure a proper redirect scheme in my
 Nginx configuration.
 
-```bash
+```sh
 doas nano /etc/nginx/http.d/cleberg.io.conf
 ```
 
@@ -107,7 +107,7 @@ server {
 That's all there is to it. With this, I simply restarted Nginx and watched the
 redirections work in-action.
 
-```bash
+```sh
 doas rc-service nginx restart
 ```
 

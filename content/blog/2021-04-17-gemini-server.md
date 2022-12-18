@@ -30,27 +30,27 @@ the following commands (remember to use `sudo` if you are not the root user).
 The Rust installation will give you options to customize the installation - I
 used the default installation options.
 
-```bash
+```sh
 sudo apt update && sudo apt upgrade -y
 curl https://sh.rustup.rs -sSf | sh
 ```
 
 Remember to configure your shell with the new configuration:
 
-```bash
+```sh
 source $HOME/.cargo/env
 ```
 
 Before we install agate, make sure you have the `gcc` package installed:
 
-```bash
+```sh
 sudo apt install gcc
 ```
 
 Next, you'll need to install the agate executable with Rust's Cargo package
 maintainer:
 
-```bash
+```sh
 cargo install agate
 ```
 
@@ -59,7 +59,7 @@ cargo install agate
 Once Cargo has finished installing all of the required packages, symlink the
 executable to your \$PATH.
 
-```bash
+```sh
 sudo ln -s $HOME/.cargo/bin/agate /usr/local/bin/agate
 ```
 
@@ -68,7 +68,7 @@ sudo ln -s $HOME/.cargo/bin/agate /usr/local/bin/agate
 If you're running Ubuntu or Debian, use the Debian install script found in
 Agate's GitHub repository, under the `tools/debian` folder.
 
-```bash
+```sh
 git clone https://github.com/mbrubeck/agate
 cd agate/tools/debian
 sudo ./install.sh
@@ -81,11 +81,11 @@ service, it will likely fail with an exit code. Let's add our finishing touches.
 Edit the following file and replace the hostname with your desired URL. You can
 also change the directory where content will be served.
 
-```bash
+```sh
 sudo nano /etc/systemd/system/gemini.service
 ```
 
-```bash
+```sh
 # Edit these lines to whatever you want - see the next code block for my personal configuration.
 WorkingDirectory=/srv/gemini
 ExecStart=agate --hostname $(uname -n) --lang en
@@ -93,7 +93,7 @@ ExecStart=agate --hostname $(uname -n) --lang en
 
 This is my personal config:
 
-```bash
+```sh
 WorkingDirectory=/var/gemini/
 ExecStart=agate --hostname gemini.example.com --lang en
 ```
@@ -101,7 +101,7 @@ ExecStart=agate --hostname gemini.example.com --lang en
 Since we've altered the systemd configuration files, we have to reload the
 daemon. Let's do that, restart our service, and check its status.
 
-```bash
+```sh
 sudo systemctl daemon-reload
 sudo systemctl restart gemini.service
 sudo systemctl status gemini.service
@@ -112,7 +112,7 @@ sudo systemctl status gemini.service
 If you're still getting errors, the installation process may not have properly
 enabled the gemini service. Fix it with the following commands.
 
-```bash
+```sh
 sudo systemctl enable gemini.service
 sudo systemctl restart gemini.service
 sudo systemctl status gemini.service
@@ -124,7 +124,7 @@ Great! Our server is now functional and running. The first consideration now is
 that you need to be able to access port 1965 on the server. If you have a
 firewall enabled, you'll need to open that port up.
 
-```bash
+```sh
 sudo ufw allow 1965
 sudo ufw reload
 ```
@@ -136,7 +136,7 @@ variable to earlier, Agate will expect you to put your Gemini capsule contents
 in a subfolder called "content". So, I place my files in "/var/gmi/content". I'm
 going to create that folder now and put a file in there.
 
-```bash
+```sh
 sudo mkdir /var/gemini/content
 sudo nano /var/gemini/content/index.gmi
 ```

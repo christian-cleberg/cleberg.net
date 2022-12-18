@@ -97,7 +97,7 @@ temperatures were quite high.
 I used the `smartctl` command for each of my drives (`/dev/sda` through 
 `/dev/sdd`):
 
-```bash
+```sh
 doas smartctl -a /dev/sda | grep Temperature_Celsius
 ```
 
@@ -105,7 +105,7 @@ The results were unusual - all four drives were idling at ~44-46 degrees
 Celsius. The only drive that was cooler was my 10TB drive, which was at 38 
 degrees Celsius. I noted that this 10TB drive was also closest to the case fan.
 
-```bash
+```sh
 ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
 # /dev/sda
 194 Temperature_Celsius     0x0002   147   147   000    Old_age   Always       -       44 (Min/Max 22/46)
@@ -126,7 +126,7 @@ immediately! They are now idling at ~31-33 degrees Celsius. A single fan
 spinning the wrong way caused my drives to idle 10-15 degrees higher than they 
 should have.
 
-```bash
+```sh
 ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
 # /dev/sda
 194 Temperature_Celsius     0x0002   209   209   000    Old_age   Always       -       31 (Min/Max 14/56)

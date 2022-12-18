@@ -18,7 +18,7 @@ configured to point toward the server.
 
 To start, you will need to install the packages that Nextcloud requires:
 
-```bash
+```sh
 sudo apt install apache2 mariadb-server libapache2-mod-php7.4
 sudo apt install php7.4-gd php7.4-mysql php7.4-curl php7.4-mbstring php7.4-intl
 sudo apt install php7.4-gmp php7.4-bcmath php-imagick php7.4-xml php7.4-zip
@@ -28,7 +28,7 @@ sudo apt install php7.4-gmp php7.4-bcmath php-imagick php7.4-xml php7.4-zip
 
 Next, you will need to log-in to MySQL as the `root` user of the machine.
 
-```bash
+```sh
 sudo mysql -uroot -p
 ```
 
@@ -53,7 +53,7 @@ Then, go to your server and enter the following commands to download, unzip, and
 move the files to your destination directory. This example uses `example.com` as
 the destination, but you can put it wherever you want to server your files from.
 
-```bash
+```sh
 wget https://download.nextcloud.com/server/releases/nextcloud-23.0.3.zip
 sudo apt install unzip
 unzip nextcloud-23.0.3.zip
@@ -66,7 +66,7 @@ Now that the database is set up and Nextcloud is installed, you need to set up
 the Apache configuration files to tell the server how to handle requests for
 `example.com/nextcloud`. First, open the following file in an editor:
 
-```bash
+```sh
 sudo nano /etc/apache2/sites-available/nextcloud.conf
 ```
 
@@ -96,27 +96,27 @@ close the file.
 
 Once the file is saved, enable it with Apache:
 
-```bash
+```sh
 sudo a2ensite nextcloud.conf
 ```
 
 Next, enable the Apache mods required by Nextcloud:
 
-```bash
+```sh
 sudo a2enmod rewrite headers env dir mime
 ```
 
 Finally, restart Apache. If any errors arise, you must solve those before
 continuing.
 
-```bash
+```sh
 sudo systemctl restart apache2
 ```
 
 In order for the app to work, you must have the correct file permissions on your
 `nextcloud` directory. Set the owner to be `www-data`:
 
-```bash
+```sh
 sudo chown -R www-data:www-data /var/www/example.com/nextcloud/
 ```
 
@@ -133,7 +133,7 @@ For an example on how I do that with Cloudflare, see my other post:
 If you want to serve Nextcloud from HTTPS rather than plain HTTP, use the
 following commands to issue Let's Encrypt SSL certificates:
 
-```bash
+```sh
 sudo apt install snapd
 sudo snap install core
 sudo snap refresh core

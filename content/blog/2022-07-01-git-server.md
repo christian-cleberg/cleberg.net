@@ -45,7 +45,7 @@ In order to use the SSH method associated with git, we will need to add a
 user named `git`. If you have used the SSH method for other git hosting sites,
 you are probably used to the following syntax:
 
-```bash
+```sh
 git clone [user@]server:project.git
 ```
 
@@ -55,7 +55,7 @@ server to access your repository.
 Let's delete any remnants of an old `git` user, if any, and create the new user
 account:
 
-```bash
+```sh
 sudo deluser --remove-home git
 sudo adduser git
 ```
@@ -67,7 +67,7 @@ your local development machine to the `git` user on the server.
 
 If you don't have an SSH key yet, create one with this command:
 
-```bash
+```sh
 ssh-keygen
 ```
 
@@ -76,20 +76,20 @@ Once you create the key pair, the public should be saved to `~/.ssh/id_rsa.pub`.
 If your server still has password-based authentication available, you can copy
 it over to your user's home directory like this:
 
-```bash
+```sh
 ssh-copy-id git@server
 ```
 
 Otherwise, copy it over to any user that you can access.
 
-```bash
+```sh
 scp ~/.ssh/id_rsa.pub your_user@your_server:
 ```
 
 Once on the server, you will need to copy the contents into the `git` user's
 `authorized_keys` file:
 
-```bash
+```sh
 cat id_rsa.pub > /home/git/.ssh/authorized_keys
 ```
 
@@ -98,7 +98,7 @@ cat id_rsa.pub > /home/git/.ssh/authorized_keys
 If you want to lock-down your server and ensure that no one can authenticate in
 via SSH with a password, you will need to edit your SSH configuration.
 
-```bash
+```sh
 sudo nano /etc/ssh/sshd_config
 ```
 
@@ -123,7 +123,7 @@ to set-up the directory that we will be using as our base of all repositories.
 In my case, I am using `/git` as my source folder. To create this folder and
 assign it to the user we created, execute the following commands:
 
-```bash
+```sh
 sudo mkdir /git
 sudo chown -R git:git /git
 ```
@@ -133,14 +133,14 @@ sudo chown -R git:git /git
 On your server, switch over to the `git` user in order to start managing git
 files.
 
-```bash
+```sh
 su git
 ```
 
 Once logged-in as the `git` user, go to your base directory and create a test
 repository.
 
-```bash
+```sh
 cd /git
 mkdir test.git && cd test.git
 git init --bare
@@ -150,7 +150,7 @@ If you want to make this repo viewable/cloneable to the public via the `git://`
 protocol, you need to create a `git-daemon-export-ok` file inside the
 repository.
 
-```bash
+```sh
 touch git-daemon-export-ok
 ```
 
@@ -160,14 +160,14 @@ To make sure that the `git` user is only used for git operations and nothing
 else, you need to change the user's login shell. To do this, simply use the 
 `chsh` command:
 
-```bash
+```sh
 sudo chsh git
 ```
 
 The interactive prompt will ask which shell you want the `git` user to use. You 
 must use the following value:
 
-```bash
+```sh
 /usr/bin/git-shell
 ```
 
@@ -184,7 +184,7 @@ address.
 If your server also has a firewall, ensure that the firewall allows the same
 ports that are forwarded from the router. For example, if you use `ufw`:
 
-```bash
+```sh
 sudo ufw allow 22
 sudo ufw allow 9418
 ```
@@ -198,7 +198,7 @@ to your server's git repositories.
 To do this, you'll need to define your custom port on your client machine in
 your `~/.ssh/config` file:
 
-```bash
+```sh
 nano ~/.ssh/config
 ```
 
@@ -220,7 +220,7 @@ There are two main syntaxes you can use to manage git over SSH:
 I prefer the first, which is an `scp`-like syntax. To test it, try to clone the
 test repository you set up on the server:
 
-```bash
+```sh
 git clone git@git.example.com:/git/test.git
 ```
 
@@ -231,7 +231,7 @@ If you want people to be able to clone any repository where you've placed a
 
 To do this on a system with `systemd`, create a service file:
 
-```bash
+```sh
 sudo nano /etc/systemd/system/git-daemon.service
 ```
 
@@ -260,14 +260,14 @@ WantedBy=multi-user.target
 
 Once created, enable and start the service:
 
-```bash
+```sh
 sudo systemctl enable git-daemon.service
 sudo systemctl start git-daemon.service
 ```
 
 To clone read-only via the `git://` protocol, you can use the following syntax:
 
-```bash
+```sh
 git clone git://git.example.com/test.git
 ```
 
@@ -282,7 +282,7 @@ truth:
 
 Server:
 
-```bash
+```sh
 su git
 mkdir /git/<REPOSITORY_NAME>.git && cd /git/<REPOSITORY_NAME>.git
 git init --bare
@@ -293,7 +293,7 @@ touch git-daemon-export-ok
 
 Client:
 
-```bash
+```sh
 git clone git@<PREVIOUS_HOST>:<REPOSITORY_NAME>
 git remote set-url origin git@git.EXAMPLE.COM:/git/<REPOSITORY_NAME>.git
 git push
@@ -316,7 +316,7 @@ In order to use Docker Compose, you will set up a `docker-compose.yml` file to
 automatically connect resources like the repositories, `cgitrc`, and various 
 files or folders to the `cgit` container you're creating:
 
-```bash
+```sh
 mkdir ~/cgit && cd ~/cgit
 nano docker-compose.yml
 ```
@@ -341,7 +341,7 @@ services:
 
 Then, just start the container:
 
-```bash
+```sh
 sudo docker-compose up -d
 ```
 
@@ -356,7 +356,7 @@ I am using Nginx as my reverse proxy so that the `cgit` Docker container can use
 `git.cleberg.net` as its URL. To do so, I simply created the following
 configuration file:
 
-```bash
+```sh
 sudo nano /etc/nginx/sites-available/git.example.com
 ```
 
@@ -399,7 +399,7 @@ server {
 
 Once created, symlink it and restart the web server.
 
-```bash
+```sh
 sudo ln -s /etc/nginx/sites-available/git.example.com /etc/nginx/sites-enabled/
 sudo systemctl restart nginx.service
 ```
@@ -419,7 +419,7 @@ care to edit them for the purpose of seeing them on your website.
 The `description` file within the repository on your server will display the
 description online.
 
-```bash
+```sh
 cd /git/example.git
 nano description
 ```
@@ -427,7 +427,7 @@ nano description
 You can add a `[gitweb]` block to the `config` file in order to display the
 owner of the repository.
 
-```bash
+```sh
 cd /git/example.git
 nano config
 ```
@@ -445,7 +445,7 @@ up this information in the `cgitrc` file, if you want to do it that way.
 In order to edit certain items within `cgit`, you need to edit the `cgitrc` 
 file. 
 
-```bash
+```sh
 nano ~/cgit/cgitrc
 ```
 
@@ -538,19 +538,19 @@ noticed two issues:
 The following process fixes these issues. To start, lets go to the `cgit` 
 directory where we were editing our configuration file earlier.
 
-```bash
+```sh
 cd ~/cgit
 ```
 
 In here, create two folders that will hold our syntax files:
 
-```bash
+```sh
 mkdir filters && mkdir filters/html-converters && cd filters
 ```
 
 Next, download the default filters:
 
-```bash
+```sh
 curl https://git.zx2c4.com/cgit/plain/filters/about-formatting.sh > about-formatting.sh
 chmod 755 about-formatting.sh
 curl https://git.zx2c4.com/cgit/plain/filters/syntax-highlighting.py > syntax-highlighting.py
@@ -560,7 +560,7 @@ chmod 755 syntax-highlighting.py
 Finally, download the HTML conversion files you need. The example below just 
 downloads the Markdown converter:
 
-```bash
+```sh
 cd html-converters
 curl https://git.zx2c4.com/cgit/plain/filters/html-converters/md2html > md2html
 chmod 755 md2html
@@ -574,12 +574,12 @@ However, formatting will not work quite yet since the Docker cgit container
 we're using doesn't have the formatting package installed. You can install this 
 easily by install Python 3+ and the `pygments` package:
 
-```bash
+```sh
 # Enter the container's command line
 sudo docker exec -it cgit bash
 ```
 
-```bash
+```sh
 # Install the necessary packages and then exit
 yum update -y &&                      \
 yum upgrade -y &&                     \

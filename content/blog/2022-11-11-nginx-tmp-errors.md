@@ -15,11 +15,11 @@ serving via Nginx on this server, but did not prevent the website from loading.
 
 I found the errors in the standard log file:
 
-```bash
+```sh
 cat /var/log/nginx/error.log
 ```
 
-```bash
+```sh
 2022/11/11 11:30:34 [crit] 8970#8970: *10 open() "/var/lib/nginx/tmp/proxy/3/00/0000000003" failed (13: Permission denied) while reading upstream, client: 169.150.203.10, server: cyberchef.cleberg.net, request: "GET /assets/main.css HTTP/2.0", upstream: "http://127.0.0.1:8111/assets/main.css", host: "cyberchef.cleberg.net", referrer: "https://cyberchef.cleberg.net/"
 ```
 
@@ -36,7 +36,7 @@ directory is owned by Nginx. Mine was owned by the `www` user and Nginx was not
 able to read or write files within that directory. This prevented Nginx from 
 caching temporary files.
 
-```bash
+```sh
 # Alpine Linux
 doas chown -R nginx:nginx /var/lib/nginx
 
@@ -48,7 +48,7 @@ You *may* also be able to change the `proxy_temp_path` in your Nginx config, but
 I did not try this. Here's a suggestion I found online that may work if the 
 above solution does not:
 
-```bash
+```sh
 nano /etc/nginx/http.d/example.com.conf
 ```
 
@@ -67,7 +67,7 @@ server {
 Finally, restart Nginx and your server should be able to cache temporary files 
 again.
 
-```bash
+```sh
 # Alpine Linux (OpenRC)
 doas rc-service nginx restart
 

@@ -62,7 +62,7 @@ screens properly!**
 Here's an example of the commands I pulled from the `e` screen and entered on
 the command line.
 
-```bash
+```sh
 setparams 'Install Ubuntu Server'
 setgfxpayload=keep
 linux /casper/vmlinuz quiet nomodeset ---
@@ -82,7 +82,7 @@ display using the Nvidia GPU.
 
 Always remember to update and upgrade on a new installation:
 
-```bash
+```sh
 sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y
 ```
 
@@ -114,7 +114,7 @@ and copy the link for the appropriate platform.
 
 Execute the following commands on the destination server to install Plex:
 
-```bash
+```sh
 wget <url>
 sudo dpkg -i <filename>
 sudo systemctl stop plexmediaserver.service
@@ -125,7 +125,7 @@ sudo systemctl stop plexmediaserver.service
 First, stop the Plex service so that no data is created or modified during the
 migration.
 
-```bash
+```sh
 sudo systemctl stop plexmediaserver.service
 ```
 
@@ -142,7 +142,7 @@ approximately 90 minutes to complete. In comparison, moving the data from the
 new server's `home/user/` directory to the `/var/.../Plex Media Server`
 directory took 2-3 minutes.
 
-```bash
+```sh
 scp -r "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server" your_user@xxx.xxx.xxx.xxx:"'/path/to/destination/'"
 ```
 
@@ -151,7 +151,7 @@ scp -r "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server" 
 In case you moved the data directory to a common area on the new server, it will
 have to be moved to the proper location before Plex can function properly:
 
-```bash
+```sh
 mv "Plex Media Server" /var/lib/plexmediaserver/Library/Application Support/
 ```
 
@@ -159,13 +159,13 @@ To ensure permissions were retained properly, the server will need to show that
 all files and folders in the data directory are owned by `plex:plex` (or
 whichever user is running the Plex application).
 
-```bash
+```sh
 sudo chown -R plex:plex "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server"
 ```
 
 Finally, start the service and check the status.
 
-```bash
+```sh
 sudo systemctl start plexmediaserver.service
 sudo systemctl status plexmediaserver.service
 ```
@@ -207,7 +207,7 @@ can fully utilize the new Nvidia GPU available in the server. The first step is
 to install Nvidia graphics drivers. This process may take a few minutes, but the
 commands are pretty simple:
 
-```bash
+```sh
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 sudo apt-get install ubuntu-drivers-common
@@ -216,14 +216,14 @@ sudo ubuntu-drivers autoinstall
 
 Finally, reboot so that the changes are loaded:
 
-```bash
+```sh
 sudo reboot now
 ```
 
 To ensure that the Nvidia graphics drivers are working properly, run the
 following command to view the available GPUs, statistics, and processes:
 
-```bash
+```sh
 sudo nvidia-smi
 ```
 

@@ -22,14 +22,14 @@ First, since there is no Alpine-specific packge for Synapse, we need to ensure
 that Alpine has the required dependencies for the Python-based installation 
 method.
 
-```bash
+```sh
 doas apk -U update
 doas apk add python3 py3-virtualenv
 ```
 
 Next, we need to set up a Python virtual environment for Synapse:
 
-```bash
+```sh
 mkdir -p ~/synapse && cd ~/synapse
 virtualenv -p python3 ~/synapse/env
 source ~/synapse/env/bin/activate
@@ -44,7 +44,7 @@ Once installed, running Synapse is easy. Simply execute the following command,
 replacing `example.com` with the domain name that will be used with this 
 homeserver. This will generate the configuration files needed to run the server.
 
-```bash
+```sh
 python -m synapse.app.homeserver \
     --server-name example.com \
     --config-path homeserver.yaml \
@@ -54,7 +54,7 @@ python -m synapse.app.homeserver \
 
 Once the configuration is generated, we can start-up the Synapse server:
 
-```bash
+```sh
 synctl start
 ```
 
@@ -62,7 +62,7 @@ synctl start
 
 To make any change to Synapse, we need to edit the `YAML` configuration file:
 
-```bash
+```sh
 nano ~/synapse/homeserver.yaml
 ```
 
@@ -77,7 +77,7 @@ server_name: "example.com"
 
 Make sure to restart Synapse when you make changes to the configuration:
 
-```bash
+```sh
 synctl restart
 ```
 
@@ -89,7 +89,7 @@ purpose.
 
 To use Nginx, we need to create a reverse-proxy configuration file:
 
-```bash
+```sh
 doas nano /etc/nginx/http.d/example.com.conf
 ```
 
@@ -154,7 +154,7 @@ server {
 
 Once you're done editing the Nginx conf file, restart Nginx:
 
-```bash
+```sh
 doas rc-service nginx restart
 ```
 
@@ -166,7 +166,7 @@ to the many issues with using a webroot.
 You will need to stop Nginx in order to user the temporary web server option 
 with Certbot:
 
-```bash
+```sh
 # Stop Nginx so certbot can spin up a temp webserver for cert generation
 doas rc-service nginx stop
 doas certbot certonly -v
@@ -183,7 +183,7 @@ features.
 
 Here's an example for the Universal Firewall (UFW) software:
 
-```bash
+```sh
 # Matrix port
 doas ufw allow 8448
 # Standard web server ports
@@ -198,7 +198,7 @@ Router from the internet to your server's IP address.
 Finally, if you didn't enable public registration in the `homeserver.yaml` file, 
 you can manually create users via the command-line:
 
-```bash
+```sh
 cd ~/synapse
 register_new_matrix_user -c homeserver.yaml
 ```

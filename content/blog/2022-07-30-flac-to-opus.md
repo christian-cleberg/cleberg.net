@@ -24,7 +24,7 @@ service to the smaller, stream-ready version.
 The process I follow utilizes the `opus-tools` package in Ubuntu. Before 
 proceeding, install the package:
 
-```bash
+```sh
 sudo apt install opus-tools
 ```
 
@@ -37,7 +37,7 @@ The script I'm using is stored in my home directory, but feel free to create it
 wherever you want. It does not need to be in the same directory as your music 
 files.
 
-```bash
+```sh
 cd ~ && nano transform.sh
 ```
 
@@ -61,7 +61,7 @@ afterward.
 - `opusenc`: This is the actual conversion process. You may want to edit the 
 bitrate to suit your needs. I set mine at 128 but some prefer 160 or higher.
 
-```bash
+```sh
 #!/bin/bash
 ## - The IFS takes care of spaces in file and dirnames
 ## - your folders may vary
@@ -128,13 +128,13 @@ done
 Once you're done, simply save the file and exit your editor. Don't forget to 
 enable execution of the script:
 
-```bash
+```sh
 chmod +x transform.sh
 ```
 
 Finally, you may now run the script:
 
-```bash
+```sh
 ./transform.sh
 ```
 
@@ -149,7 +149,7 @@ caused my output directory to be `/mnt/music/library/archives` instead of
 `/mnt/music/library`. So, I moved the output up one level and deleted the 
 accidental directory.
 
-```bash
+```sh
 cd /mnt/music/library
 mv archives/* .
 rm -rf archives
@@ -160,7 +160,7 @@ rm -rf archives
 If you want to see what kind of file size savings you've gained, you can always 
 use the `du` command to check:
 
-```bash
+```sh
 cd /mnt/music
 du -h --max-depth=1 .
 ```

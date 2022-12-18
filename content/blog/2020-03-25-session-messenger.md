@@ -68,7 +68,7 @@ to link to the operating system you're using.
 For Linux, it will download an AppImage that you'll need to enable with the
 following command:
 
-```bash
+```sh
 sudo chmod u+x session-messenger-desktop-linux-x86_64-1.0.5.AppImage
 ```
 

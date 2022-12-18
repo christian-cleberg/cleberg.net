@@ -38,7 +38,7 @@ those who are truly interested enough to learn how to build the OS.
 
 In order to get started, you'll need to clone the source repository:
 
-```bash
+```sh
 git clone https://github.com/SerenityOS/serenity && cd serenity
 ```
 
@@ -56,20 +56,20 @@ commands I needed to run in order to build and run SerenityOS.
 Since I am running Fedora, I needed to install these packages in order to build 
 the OS images:
 
-```bash
+```sh
 sudo dnf install texinfo binutils-devel curl cmake mpfr-devel libmpc-devel gmp-devel e2fsprogs ninja-build patch ccache rsync @"C Development Tools and Libraries" @Virtualization
 ```
 
 Next, make sure you're inside the `serenity` directory created earlier 
 during the git cloning process and process to build the toolchain:
 
-```bash
+```sh
 Meta/serenity.sh rebuild-toolchain
 ```
 
 Once the toolchain is built, you can Build and run the OS!
 
-```bash
+```sh
 Meta/serenity.sh run
 ```
 
