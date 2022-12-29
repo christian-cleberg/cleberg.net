@@ -225,7 +225,7 @@ foreach ($comments as $comment) {
         $comment_html->loadHTML($comment_md);
         $comment_html_links = $comment_html->getElementsByTagName('a');
         foreach ($comment_html_links as $comment_html_link) {
-            $comment_html_link->setAttribute('rel', 'noopener,noreferrer');
+            $comment_html_link->setAttribute('rel', 'noreferrer');
             $comment_html_link->setAttribute('target', '_blank');
         }
         $comment_secured_html = $comment_html->saveHTML();
