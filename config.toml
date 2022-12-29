@@ -16,4 +16,4 @@ highlight_themes_css = [
 ]
 
 [extra]
-title_separator = "|"
+title_separator = "::"
