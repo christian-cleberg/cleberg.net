@@ -15,6 +15,7 @@ and communities that are very important to me:
 - [Free Software Foundation](https://www.fsf.org)
 - [GrapheneOS](https://grapheneos.org)
 - [Home Assistant](https://www.home-assistant.io)
+- [Matrix](https://matrix.org)
 - [Syncthing](https://syncthing.net)
 
 ## Software
@@ -22,28 +23,28 @@ and communities that are very important to me:
 ### Desktop
 
 ```bash
-echo $desktop_details.sh
+echo $desktop_details
 ```
 
 ```bash
 Model:         ThinkPad E15
-OS:            Fedora Linux
+OS:            Alpine Linux
 Shell:         zsh
-WM:            i3wm
+WM:            sway
 Editor:        nano
-Terminal:      Alacritty
-Browser:       LibreWolf
+Terminal:      kitty
+Browser:       Firefox
 Search_Engine: SearXNG
 Feed_Reader:   Newsboat
 Email:         [Neomutt, Thunderbird]
-VPN:           Mullvad
-Messenger:     [Gomuks, Signal]
+VPN:           Wireguard (Mullvad)
+Messenger:     Gomuks
 ```
 
 ### Mobile
 
 ```bash
-echo $mobile_details.sh
+echo $mobile_details
 ```
 
 ```bash
