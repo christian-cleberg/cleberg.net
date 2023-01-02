@@ -13,10 +13,8 @@ and communities that are very important to me:
 
 - [Bitwarden](https://bitwarden.com)
 - [Free Software Foundation](https://www.fsf.org)
-- [GrapheneOS](https://grapheneos.org)
 - [Home Assistant](https://www.home-assistant.io)
 - [Matrix](https://matrix.org)
-- [Syncthing](https://syncthing.net)
 
 ## Software
 
@@ -28,16 +26,17 @@ echo $desktop_details
 
 ```bash
 Model:         ThinkPad E15
-OS:            Alpine Linux
+OS:            Fedora Workstation
 Shell:         zsh
-WM:            sway
+WM:            i3
 Editor:        nano
 Terminal:      kitty
-Browser:       Firefox
+Browser:       LibreWolf
+Add-oons:      [uBlock Origin, Bitwarden, LibRedirect, Dark Reader]
 Search_Engine: SearXNG
 Feed_Reader:   Newsboat
 Email:         [Neomutt, Thunderbird]
-VPN:           Wireguard (Mullvad)
+VPN:           Mullvad
 Messenger:     Gomuks
 ```
 
@@ -48,17 +47,17 @@ echo $mobile_details
 ```
 
 ```bash
-Model:         Pixel 6 Pro
-OS:            GrapheneOS
-Launcher:      Lawnchair
-Editor:        Markor
-Browser:       [Bromite, Vanadium]
+Model:         iPhone 14 Pro Max
+OS:            iOS
+Editor:        Runestone
+Browser:       Safari
+Add-ons:       [Adguard, Dark Reader, Privacy Redirect]
 Search_Engine: SearXNG
-Feed_Reader:   Feeder
-Email:         K-9 Mail
+Feed_Reader:   Fiery Feeds
+Email:         Canary Mail
 VPN:           Mullvad
 Messenger:     [Element, Signal]
-MFA:           Aegis
+MFA:           OTP Auth
 ```
 
 ## Hardware
