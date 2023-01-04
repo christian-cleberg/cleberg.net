@@ -9,11 +9,7 @@ external_links_target_blank = true
 external_links_no_follow = true
 external_links_no_referrer = true
 render_emoji = true
-highlight_code = true
-highlight_theme = "css"
-highlight_themes_css = [
-  { theme = "dracula", filename = "syntax-theme.css" },
-]
+highlight_code = false
 
 [extra]
 title_separator = "::"
