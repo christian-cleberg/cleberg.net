@@ -1,33 +1,15 @@
 {% extends "base.html" %}
 {% block title %}
-  {{ page.title ~ " | " ~ config.title }}
+{{ page.title ~ " | " ~ config.title }}
 {% endblock %}
 {% block page_meta %}
-<meta
-  content="{{ page.description | safe | default(value='') }}"
-  name="description"
-/>
+<meta content="{{ page.description | safe | default(value='') }}"
+      name="description">
 {% endblock page_meta %}
-{% block css %}
-<link rel="stylesheet" href="/styles.css">
-<link
-  rel="stylesheet"
-  href="/syntax-theme.css"
->
-{% endblock css %}
 {% block nav %}
-  {% set path = "/" %}
-  {% set count = 0 %}
-  {% for name in page.components %}
-    {% set_global path = path ~ name ~ "/" %} / 
-    {% set_global count = count + 1 %}
-    {% if count > 1 %}
-      <a href="{{path}}">{{ name }}</a>
-    {% else %}
-      <a href="{{path}}">{{ name }}</a>
-    {% endif %}
-  {% endfor %}
-{% endblock nav %} 
+<nav aria-label="Site Navigation">&larr; <a href="/">Return Home</a></nav>
+<hr>
+{% endblock nav %}
 {% block content %}
 <article>
   <h1>{{ page.title }}</h1>
@@ -35,7 +17,8 @@
   <time datetime="{{- page.date | date(format='%Y-%m-%d') -}}">
     {{- page.date | date(format="%Y.%m.%d") -}}
   </time>
-  &middot; {{ page.word_count }} words &middot; {{
+  <br>
+  {{ page.word_count }} words &middot; {{
   page.reading_time }} minutes {% endif %} {% if page.toc %}
   <nav aria-labelledby="page-toc">
     <h2 id="page-toc">Table of Contents</h2>
@@ -61,8 +44,8 @@
   {% if "blog" in page.path %}
   <aside>
     If you have any questions or comments about this post or site in general,
-    feel free to <a href="mailto:hello@cleberg.net">email me</a> [<a 
-    href="https://cleberg.net/gpg.txt">GPG</a>].
+    feel free to <a href="mailto:hello@cleberg.net">email me</a>
+    [<a href="https://cleberg.net/gpg.txt">GPG</a>].
   </aside>
   {% endif %}
 </article>

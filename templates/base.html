@@ -1,85 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark">
-    <meta
-      name="theme-color"
-      content="0x000000"
-    >
-    {%- set title_separator = " " ~ config.extra.title_separator ~ " " -%}
-    {%- if page.title and config.title %}
-      {%- set title = page.title %}
-      {%- set title_addition = title_separator ~ config.title %}
-      <title>{{ title ~ title_addition }}</title>
-    {%- elif section.title and config.title %}
-      {%- set title = section.title %}
-      {%- set title_addition = title_separator ~ config.title %}
-      <title>{{ title ~ title_addition }}</title>
-    {%- else %}
-      {%- set title = config.title %}
-      <title>{{ title }}</title>
-    {%- endif %}
-    <link rel="canonical" href="{{ config.base_url | safe }}">
-    <link rel="icon" href="/favicon.png">
-    {% block page_meta %}
-    <meta
-      name=" description"
-      content="{{ config.description | default(value='') | truncate(length=150) }}"
-    >
-    {% endblock page_meta %}
-    {% if config.generate_feed %}
-    <link
-      rel="alternate"
-      type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"
-      {% else %}"application/rss+xml"{% endif %}
-      title="RSS"
-      href="{{get_url(path=config.feed_filename) | safe }}">
-    {% endif %}
-    {% block css %}
-      <link rel="stylesheet" href="/styles.css">
-    {% endblock css %}
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="0xFFFFFF"
+        media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="0x000000"
+        media="(prefers-color-scheme: dark)">
+  {%- set title_separator = " " ~ config.extra.title_separator ~ " " -%}
+  {%- if page.title and config.title %}
+  {%- set title = page.title %}
+  {%- set title_addition = title_separator ~ config.title %}
+  <title>{{ title ~ title_addition }}</title>
+  {%- elif section.title and config.title %}
+  {%- set title = section.title %}
+  {%- set title_addition = title_separator ~ config.title %}
+  <title>{{ title ~ title_addition }}</title>
+  {%- else %}
+  {%- set title = config.title %}
+  <title>{{ title }}</title>
+  {%- endif %}
+  <link rel="canonical" href="{{ config.base_url | safe }}">
+  <link rel="icon" href="/favicon.png">
+  {% block page_meta %}
+  <meta name=" description"
+  content="{{ config.description | default(value='') | truncate(length=150) }}">
+  {% endblock page_meta %}
+  {% if config.generate_feed %}
+  <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml" {% else %}"application/rss+xml"{% endif %} title="RSS" href="{{get_url(path=config.feed_filename) | safe }}">
+  {% endif %}
+  {% block css %}
+  <link rel="stylesheet" href="/styles.min.css">
+  {% endblock css %}
+</head>
 
-  <body>
-    <nav aria-label="Site Navigation">
-      ~/
-      <a href="/">home</a>
-      {% block nav %}{% endblock %}
-    </nav>
-    <hr>
-    <main>{% block content %}{% endblock %}</main>
-    <hr>
-    <footer>
-      <p>
-        <a 
-          href="https://git.cleberg.net/cgit.cgi/cleberg.net.git/">
-          Source Code
-        </a>
-        <br>
-        &copy; 2016 - 2022
-      </p>
-      <p>> View my <a href="/salary-transparency/">salary transparency data</a>.
-      <br>> Member of the 
-        <a href="https://250kb.club/" target="_blank" 
-           rel="noreferrer">250kb Club</a>,
-        <a href="https://512kb.club/" target="_blank"
-           rel="noreferrer">512kb Club</a>,
-        <a href="https://1mb.club/" target="_blank" 
-           rel="noreferrer">1MB Club</a>,
-        <a href="https://no-js.club/" target="_blank" 
-           rel="noreferrer">no-JS Club</a>, &
-        <a href="https://darktheme.club/" target="_blank"
-           rel="noreferrer">Dark Theme Club</a>
-       <br>> This site is a proud member of the geekring:
-         <a href="http://geekring.net/site/233/previous" target="_blank"
-            rel="noreferrer">&larr; Previous</a> &middot;
-         <a href="http://geekring.net/site/233/random" target="_blank"
-            rel="noreferrer">Random site</a> &middot;
-         <a href="http://geekring.net/site/233/next" target="_blank"
-            rel="noreferrer">Next &rarr;</a>
-      </p>
-    </footer>
-  </body>
+<body>
+  {% block nav %}{% endblock %}
+  <main>{% block content %}{% endblock %}</main>
+  <hr>
+  <footer>
+    <p>
+      <a href="https://git.cleberg.net/cgit.cgi/cleberg.net.git/">
+        Source Code
+      </a>
+      <br>
+      &copy; 2016 - 2022
+    </p>
+    <p>> View my <a href="/salary-transparency/">salary transparency data</a>.
+      <br>> Member of the
+      <a href="https://250kb.club/" target="_blank" rel="noreferrer">
+        250kb Club</a>,
+      <a href="https://512kb.club/" target="_blank" rel="noreferrer">
+        512kb Club</a>,
+      <a href="https://1mb.club/" target="_blank" rel="noreferrer">
+        1MB Club</a>,
+      <a href="https://no-js.club/" target="_blank" rel="noreferrer">
+        no-JS Club</a>, &
+      <a href="https://darktheme.club/" target="_blank" rel="noreferrer">
+        Dark Theme Club</a>
+      <br>> This site is a proud member of the geekring:
+      <a href="http://geekring.net/site/233/previous" target="_blank"
+         rel="noreferrer">&larr; Previous</a> &middot;
+      <a href="http://geekring.net/site/233/random" target="_blank"
+         rel="noreferrer">Random site</a> &middot;
+      <a href="http://geekring.net/site/233/next" target="_blank"
+         rel="noreferrer">Next &rarr;</a>
+    </p>
+  </footer>
+</body>
+
 </html>

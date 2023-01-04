@@ -1,96 +1,48 @@
 {% extends "base.html" %}{% block nav %}{% endblock nav %}{% block content %}
 <section>
   <h1>Hi, I'm Christian.</h1>
-  <p>I'm an IT Auditor and <a href="https://www.fsf.org" target="_blank" 
-  rel="noreferrer">free software enthusiast</a>.</p>
-
-  <h2>Pages</h2>
-  <ul>
-    <li><a href="/about/">About Me &rarr;</a></li>
-    <li><a href="/colophon/">Colophon &rarr;</a></li>
-    <li><a href="/links/">External Links &rarr;</a></li>
-    <li><a href="/uses/">Things I Use &rarr;</a></li>
-  </ul>
-
+  <p>I'm an IT Auditor by profession. In my spare time, I like to tinker with
+     home servers, networking, programming, and data analysis.</p>
   <h2>Blog</h2>
-  <a href="/blog/">All Posts &rarr;</a>
-  <ul>
-    {% for subsection in section.subsections | sort %}
-      {% set subsection_item = get_section(path=subsection) %}
-      {% for page in subsection_item.pages %}
-      {% if loop.index > 3 %}
-        {% break %}
-      {% endif %}
-      <li>
-        <a href="{{ page.permalink | safe }}"> {{- page.title -}} </a>
-      </li>
-      {% endfor %}
-    {% endfor %}
-  </ul>
-
+  <a href="/blog/">[All Posts]</a><br><br>
+  {% for subsection in section.subsections | sort %}
+  {% set subsection_item = get_section(path=subsection) %}
+  {% for page in subsection_item.pages %}
+  {% if loop.index > 5 %}
+  {% break %}
+  {% endif %}
+  <div>
+  <time datetime="{{- page.date | date(format='%Y-%m-%d') -}}">
+    {{- page.date | date(format="%m.%d") -}}
+  </time>
+  &nbsp;
+    <a href="{{ page.permalink | safe }}">
+      {{- page.title -}}
+    </a>
+  </div>
+  {% endfor %}
+  {% endfor %}
   <h2>Services</h2>
-  <a
-    href="https://homelab.cleberg.net"
-    target="_blank" 
-    rel="noreferrer"
-    >Dashboard &rarr;</a
-  >
-  <ul>
-    <li>
-      <a
-        href="https://cyberchef.cleberg.net"
-        target="_blank" 
-        rel="noreferrer"
-        >CyberChef</a>
-      - The Cyber Swiss Army Knife
-    </li>
-    <li>
-      <a href="https://invidious.cleberg.net"
-         target="_blank" 
-         rel="noreferrer"
-         >Invidious</a>
-      - A YouTube proxy
-    </li>
-    <li>
-      <a
-        href="https://libreddit.cleberg.net"
-        target="_blank"
-        rel="noreferrer"
-        >Libreddit</a>
-      - A Reddit proxy
-    </li>
-    <li>
-      <a
-        href="https://nitter.cleberg.net"
-        target="_blank"
-        rel="noreferrer"
-        >Nitter</a>
-      - A Twitter proxy
-    </li>
-    <li>
-      <a
-        href="https://office.cleberg.net"
-        target="_blank"
-        rel="noreferrer"
-        >Office</a>
-      - The world's smallest office suite
-    </li>
-    <li>
-      <a
-        href="https://search.cleberg.net"
-        target="_blank"
-        rel="noreferrer"
-        >SearXNG</a>
-      - A privacy-respecting, open metasearch engine
-    </li>
-    <li>
-      <a
-        href="https://teddit.cleberg.net"
-        target="_blank"
-        rel="noreferrer"
-        >Teddit</a>
-      - A Reddit proxy
-    </li>
-  </ul>
+  <a href="https://homelab.cleberg.net" target="_blank" rel="noreferrer">
+    [Dashboard]</a><br><br>
+  <a href="https://cyberchef.cleberg.net" target="_blank" rel="noreferrer">
+    CyberChef</a> - The Cyber Swiss Army Knife<br>
+  <a href="https://invidious.cleberg.net" target="_blank" rel="noreferrer">
+    Invidious</a> - A YouTube proxy<br>
+  <a href="https://libreddit.cleberg.net" target="_blank" rel="noreferrer">
+    Libreddit</a> - A Reddit proxy<br>
+  <a href="https://nitter.cleberg.net" target="_blank" rel="noreferrer">
+    Nitter</a> - A Twitter proxy<br>
+  <a href="https://office.cleberg.net" target="_blank" rel="noreferrer">
+    Office</a> - The world's smallest office suite<br>
+  <a href="https://search.cleberg.net" target="_blank" rel="noreferrer">
+    SearXNG</a> - A privacy-respecting, open metasearch engine<br>
+  <a href="https://teddit.cleberg.net" target="_blank" rel="noreferrer">
+    Teddit</a> - A Reddit proxy<br>
+  <h2>Other Pages</h2>
+  <a href="/about/">About Me</a><br>
+  <a href="/links/">External Links</a><br>
+  <a href="/meta/">Meta</a><br>
+  <a href="/uses/">Things I Use</a><br>
 </section>
 {% endblock content %}
