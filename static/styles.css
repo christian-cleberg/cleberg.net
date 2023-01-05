@@ -149,6 +149,12 @@ img {
   box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion:no-preference) {
+  :root {
+    scroll-behavior: smooth
+  }
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   font-size: 1.1rem;
@@ -188,10 +194,10 @@ aside {
 }
 
 blockquote {
- background-color: #e69598;
- border-left: 5px solid #cb2c31;
- color: #3e0c0e;
- padding: 1rem;
+  background-color: #e69598;
+  border-left: 5px solid #cb2c31;
+  color: #3e0c0e;
+  padding: 1rem;
 }
 
 blockquote,
@@ -258,9 +264,9 @@ pre {
   }
 
   blockquote {
-   background-color: #3a0000;
-   border-left: 5px solid #e85454;
-   color: #ccc;
+    background-color: #3a0000;
+    border-left: 5px solid #e85454;
+    color: #ccc;
   }
 
   pre {
