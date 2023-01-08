@@ -21,16 +21,12 @@ and communities that are very important to me:
 ### Desktop
 
 ```bash
-echo $desktop_details
-```
-
-```bash
 Model:         ThinkPad E15
 OS:            Fedora Workstation
 Shell:         zsh
 WM:            i3
-Editor:        nano
-Terminal:      kitty
+Editor:        [nano, Pulsar]
+Terminal:      st
 Browser:       LibreWolf
 Add-oons:      [uBlock Origin, Bitwarden, LibRedirect, Dark Reader]
 Search_Engine: SearXNG
@@ -41,10 +37,6 @@ Messenger:     Gomuks
 ```
 
 ### Mobile
-
-```bash
-echo $mobile_details
-```
 
 ```bash
 Model:         iPhone 14 Pro Max
