@@ -8,14 +8,14 @@
   {% for subsection in section.subsections | sort %}
   {% set subsection_item = get_section(path=subsection) %}
   {% for page in subsection_item.pages %}
-  {% if loop.index > 5 %}
+  {% if loop.index >= 5 %}
   {% break %}
   {% endif %}
   <div>
-  <time datetime="{{- page.date | date(format='%Y-%m-%d') -}}">
-    {{- page.date | date(format="%m.%d") -}}
-  </time>
-  &nbsp;
+    <time datetime="{{- page.date | date(format='%Y-%m-%d') -}}">
+      {{- page.date | date(format="%m.%d") -}}
+    </time>
+    &nbsp;
     <a href="{{ page.permalink | safe }}">
       {{- page.title -}}
     </a>
