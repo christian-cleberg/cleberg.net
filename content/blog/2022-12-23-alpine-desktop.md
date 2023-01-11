@@ -202,48 +202,11 @@ rc-service networking restart
 ```
 
 My WiFi interface would receive an IP address from the router, but it could 
-not ping anything in the network. To solve the WiFi issues, I did two main 
-things:
+not ping anything in the network. To solve the WiFi issues, I originally 
+upgraded to Alpine's `edge` repositories, which was unnecessary.
 
-1. Upgrade to the `edge` version of Alpine as I assume the `linux-lts` kernel of 
-5.15 had issues with my device/drivers. At the time of writing, running the 
-`edge` version has me on kernal version 6.1.1-0-lts.
-2. Enable the `NameResolvingService=resolvconf` in `iwd`.
-
-#### Upgrade to Edge Repos
-
-Edit the repositories file again:
-
-```sh
-nano /etc/apk/repositories
-```
-
-Comment-out the v3.17 repositories and un-comment the edge repositories:
-
-```conf
-#/media/sda/apks
-#http://mirrors.gigenet.com/alpinelinux/v3.17/main
-#http://mirrors.gigenet.com/alpinelinux/v3.17/community
-http://mirrors.gigenet.com/alpinelinux/edge/main
-http://mirrors.gigenet.com/alpinelinux/edge/community
-#http://mirrors.gigenet.com/alpinelinux/edge/testing
-```
-
-Run the updates and upgrades requires, then sync and reboot the machine.
-
-```sh
-apk -U update
-apk add --upgrade apk-tools
-apk upgrade --available
-sync
-reboot
-```
-
-#### Enable WiFi Resolving Service
-
-In addition to upgradine to Edge above, I also needed to enable the network 
-resolving service. This is as easy as editing the following file and 
-un-commenting the lines below.
+Really, the solution was to enable the `NameResolvingService=resolvconf` in 
+`/etc/iwd/main.conf`.
 
 ```sh
 doas nano /etc/iwd/main.conf
@@ -295,3 +258,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 Note that I do not use bluetooth or screen sharing, so I won't cover those 
 options in this post.
+
+Other than these issues, I have a working Alpine desktop. No other complaints 
+thus far!
