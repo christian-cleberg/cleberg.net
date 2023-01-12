@@ -22,18 +22,18 @@ and communities that are very important to me:
 
 ```bash
 Model:         ThinkPad E15
-OS:            Fedora Workstation
+OS:            Alpine Linux
 Shell:         zsh
-WM:            i3
-Editor:        [nano, Pulsar]
-Terminal:      st
-Browser:       LibreWolf
-Add-oons:      [uBlock Origin, Bitwarden, LibRedirect, Dark Reader]
+WM:            sway
+Editor:        nano
+Terminal:      kitty
+Browser:       Firefox
+Add-ons:       [uBlock Origin, Bitwarden, LibRedirect, Dark Reader]
 Search_Engine: SearXNG
-Feed_Reader:   Newsboat
+Feed_Reader:   TinyTinyRSS
 Email:         [Neomutt, Thunderbird]
-VPN:           Mullvad
-Messenger:     Gomuks
+VPN:           Wireguard (Mullvad)
+Messenger:     [Gomuks, Signal]
 ```
 
 ### Mobile
