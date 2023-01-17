@@ -620,7 +620,7 @@ root. This is another file you can add as a volume to the `docker-compose.yml`
 file if you want to edit this without entering the container's command line.
 
 For example, I created a Stylus theme called 
-[dark-cgit](https://git.cleberg.net/cgit.cgi/dark-cgit.git/) to use for my 
+[dark-cgit](https://git.sr.ht/~cmc/dark-cgit) to use for my 
 personal website. This theme just needs the URL updated to work for any other 
 cgit-based site. Here's what this theme looks like in action:
 
