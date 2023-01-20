@@ -184,7 +184,10 @@ time, code {
 }
 
 :not(pre)>code {
-  background-color: #ddd;
+  background-color: aliceblue;
+  border: 1px solid darkblue;
+  border-radius: 4px;
+  color: #000;
   padding: 0 0.25rem;
 }
 
@@ -254,7 +257,10 @@ pre {
   }
 
   :not(pre)>code {
-    background-color: #333;
+    background-color: rgb(56,86,92);
+    border: 1px solid #5bffff;
+    border-radius: 4px;
+    color: #fff;
     padding: 0 0.25rem;
   }
 
