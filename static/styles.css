@@ -159,7 +159,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   font-size: 1.1rem;
   line-height: 1.5;
-  max-width: 40em;
+  max-width: 50em;
+  margin: 0 auto;
   padding: 1rem;
 }
 
