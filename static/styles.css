@@ -227,6 +227,12 @@ pre {
   overflow-x: auto;
 }
 
+.site-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .site-nav a {
   padding: 0 0.25rem;
 }
