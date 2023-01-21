@@ -163,6 +163,11 @@ body {
   padding: 1rem;
 }
 
+a,
+a:visited {
+  color: blue;
+}
+
 img {
   height: auto;
   width: 100%;
