@@ -222,6 +222,7 @@ pre>code {
 pre {
   padding: 0.5rem;
   border: 1px solid black;
+  border-radius: 4px;
   overflow-x: auto;
 }
 
@@ -246,6 +247,10 @@ pre {
 .footnote-definition p {
   display: inline-block;
   margin: 0;
+}
+
+.z-code {
+  background-color: inherit;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -284,7 +289,7 @@ pre {
   }
 
   pre {
-    border: 1px solid #ccc;
+    border: 1px solid #4c4c4c;
   }
 
   table {
