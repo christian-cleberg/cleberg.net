@@ -244,8 +244,8 @@ pre {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #000;
-    color: #ccc;
+    background-color: #191919;
+    color: #cccccc;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -253,25 +253,25 @@ pre {
   }
 
   a, a:hover {
-    color: #5bffff;
+    color: #61abff;
   }
 
   :not(pre)>code {
-    background-color: rgb(56,86,92);
-    border: 1px solid #5bffff;
+    background-color: #1d334c;
+    border: 1px solid #61abff;
     border-radius: 4px;
     color: #fff;
     padding: 0 0.25rem;
   }
 
   aside {
-    background-color: #333;
+    background-color: #323232;
     padding: 1rem;
   }
 
   blockquote {
-    background-color: #3a0000;
-    border-left: 5px solid #e85454;
+    background-color: #323232;
+    border-left: 5px solid #61abff;
     color: #ccc;
   }
 
@@ -281,7 +281,7 @@ pre {
 
   table {
     color: #ccc;
-    border-color: #333;
+    border-color: #323232;
   }
 
   thead, th, tr, td {
