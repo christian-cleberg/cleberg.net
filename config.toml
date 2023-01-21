@@ -13,7 +13,7 @@ highlight_code = true
 highlight_theme = "css"
 highlight_themes_css = [
   { theme = "dracula", filename = "syntax-theme-dark.css" },
-  { theme = "classic-modified", filename = "syntax-theme-light.css" },
+  { theme = "ir-white", filename = "syntax-theme-light.css" },
 ]
 
 [extra]
