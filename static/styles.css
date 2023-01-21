@@ -164,6 +164,7 @@ body {
 }
 
 a,
+a:hover,
 a:visited {
   color: blue;
 }
@@ -257,7 +258,9 @@ pre {
     color: #fff;
   }
 
-  a, a:hover {
+  a,
+  a:hover,
+  a:visited {
     color: #61abff;
   }
 
