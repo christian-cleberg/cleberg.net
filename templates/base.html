@@ -37,12 +37,16 @@
 <body>
   {% block nav %}
   <nav class="site-nav" aria-label="Site Navigation">
-    <a href="/">Home</a>
-    <a href="/blog/">Blog</a>
-    <a href="/about/">About</a>
-    <a href="/uses/">Uses</a>
-    <a href="/meta/">Meta</a>
-    <a href="#">Services</a>
+    <div>
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+      <a href="/uses/">Uses</a>
+      <a href="/meta/">Meta</a>
+    </div>
+    <div>
+      | <a href="https://homelab.cleberg.net">Services</a> &rarr;
+    </div>
   </nav>
   <hr>
   {% endblock %}
