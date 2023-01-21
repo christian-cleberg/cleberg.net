@@ -250,7 +250,7 @@ pre {
 }
 
 .z-code {
-  background-color: inherit;
+  background-color: inherit !important;
 }
 
 @media (prefers-color-scheme: dark) {
