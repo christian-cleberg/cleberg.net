@@ -1,0 +1,315 @@
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Custom CSS
+   ========================================================================== */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion:no-preference) {
+  :root {
+    scroll-behavior: smooth
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+a,
+a:hover,
+a:visited {
+  color: blue;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  max-width: 40em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead, th, tr, td {
+  border: 1px solid black;
+  padding: 0.25rem;
+}
+
+time, code {
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  font-size: 1rem;
+}
+
+:not(pre)>code {
+  background-color: aliceblue;
+  border: 1px solid darkblue;
+  border-radius: 4px;
+  color: #000;
+  padding: 0 0.25rem;
+}
+
+aside {
+  background-color: #ddd;
+  padding: 1rem;
+}
+
+blockquote {
+  background-color: #e69598;
+  border-left: 5px solid #cb2c31;
+  color: #3e0c0e;
+  padding: 1rem;
+}
+
+blockquote,
+blockquote p {
+  margin: 0;
+}
+
+pre>code {
+  font-size: 1rem;
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+
+pre {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-;5;9~content: space-between;
+}
+
+.site-nav a {
+  padding: 0 0.25rem;
+}
+
+.footnote-definition {
+  display: flex;
+  justify-content: flex-start;
+  align-items: top;
+  margin: 1rem 0;
+}
+
+.footnote-definition sup {
+  font-size: inherit;
+  top: 0;
+  line-height: inherit;
+  padding-right: .5rem;
+}
+
+.footnote-definition sup::after {
+  content: ".";
+}
+
+.footnote-definition p {
+  display: inline-block;
+  margin: 0;
+}
+
+.z-code {
+  background-color: inherit !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #191919;
+    color: #cccccc;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    color: #61abff;
+  }
+
+  :not(pre)>code {
+    background-color: #1d334c;
+    border: 1px solid #61abff;
+    border-radius: 4px;
+    color: #fff;
+    padding: 0 0.25rem;
+  }
+
+  aside {
+    background-color: #323232;
+    padding: 1rem;
+  }
+
+  blockquote {
+    background-color: #1d334c;
+    border-left: 5px solid #61abff;
+    color: #fff;
+  }
+
+  pre {
+    border: 1px solid #4c4c4c;
+  }
+
+  table {
+    color: #ccc;
+    border-color: #323232;
+  }
+
+  thead, th, tr, td {
+    border: 1px solid #ccc;
+  }
+}
