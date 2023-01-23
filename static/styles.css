@@ -180,12 +180,16 @@ table {
   border-collapse: collapse;
 }
 
-thead, th, tr, td {
+thead,
+th,
+tr,
+td {
   border: 1px solid black;
   padding: 0.25rem;
 }
 
-time, code {
+time,
+code {
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
   font-size: 1rem;
 }
@@ -271,7 +275,12 @@ pre {
     color: #cccccc;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #fff;
   }
 
@@ -309,7 +318,10 @@ pre {
     border-color: #323232;
   }
 
-  thead, th, tr, td {
+  thead,
+  th,
+  tr,
+  td {
     border: 1px solid #ccc;
   }
 }
