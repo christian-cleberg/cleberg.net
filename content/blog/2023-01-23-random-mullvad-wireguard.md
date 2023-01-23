@@ -78,7 +78,7 @@ curl/7.87.0
 ```
 
 That's all there is to it. You can see your new location and IP via the
-`printf` and `echo` commands included in the script.
+`printf` and `curl` commands included in the script.
 
 You can also go to the [Connection Check |
 Mullvad](https://mullvad.net/en/check/) page to see if you are fully connected
