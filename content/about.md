@@ -67,6 +67,6 @@ about my professional life.
 
 ### Education
 
-- Bachelor of Science in Business Administration (Major: Accounting) from the
-  [University of Nebraska - Lincoln](https://en.wikipedia.org/wiki/University_of_Nebraska%E2%80%93Lincoln),
+- BSBA in Accounting from the [University of Nebraska -
+  Lincoln](https://en.wikipedia.org/wiki/University_of_Nebraska%E2%80%93Lincoln),
   2016 - 2019
