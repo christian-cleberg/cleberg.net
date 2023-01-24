@@ -85,3 +85,33 @@ Mullvad](https://mullvad.net/en/check/) page to see if you are fully connected
 to Mullvad and if any leaks exist.
 
 ![Mullvad Connection Check](https://img.cleberg.net/blog/20230123-random-mullvad-wireguard/mullvad_check.png "Mullvad Connection Check")
+
+## Disconnecting from the Wireguard Connection
+
+If you forget which connection you're using, you can execute the following
+command to see where Wireguard is currently connected:
+
+```sh
+wg show
+```
+
+This command will show you the Wireguard interfaces and should output a
+connection like so: `interface: us-lax-wg-104`.
+
+Once you have this, just disconnect using that files' full path:
+
+```sh
+wg-quick down /home/cmc/mullvad/us-lax-wg-104.conf
+```
+
+I have a TODO item on figuring out how to easily export an environment variable
+that contains the configuration file's full name, so that I can just execute the
+following:
+
+```sh
+# Ideal situation if I can export the $file variable to the environment
+wg-quick down $file
+```
+
+If you have an idea on how to do this, [send me an 
+email](mailto:hello@cleberg.net)!
