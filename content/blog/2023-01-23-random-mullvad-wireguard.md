@@ -64,7 +64,7 @@ chmod +x ~/vpn.sh
 
 The output should look like the following:
 
-```text
+```txt
 doas (cmc@alpine) password:
 
 # ... The script will process all of the iptables and wg commands here
