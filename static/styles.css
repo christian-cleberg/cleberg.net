@@ -269,6 +269,10 @@ pre {
   background-color: inherit !important;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #191919;
