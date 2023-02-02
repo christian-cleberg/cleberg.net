@@ -107,6 +107,21 @@ fn generate_rgb() []u64 = {
 };
 ```
 
+### Running a Program
+
+Once you have a Hare file written and ready to run, you simply need to run it:
+
+```sh
+hare run file.ha
+```
+
+You can also compile the program into an executable:
+
+```sh
+hare build -o example file.ha
+./example
+```
+
 ### Initial Thoughts
 
 #### Documentation Improvements Would Help
