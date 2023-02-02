@@ -74,6 +74,7 @@ pre>code {
 }
 
 pre {
+  font-size: 1rem;
   padding: 0.5rem;
   border: 1px solid black;
   border-radius: 4px;
