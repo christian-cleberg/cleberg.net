@@ -1,7 +1,8 @@
 +++
 date = 2023-02-02
-title = "Testing out the Hare Programming Language"
+title = "Exploring the Hare Programming Language"
 description = "Walking back through my first project using the Hare programming language."
+aliases = ["/blog/testing-out-hare"]
 +++
 
 ## A Quick Note
