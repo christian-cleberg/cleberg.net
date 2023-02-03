@@ -46,7 +46,7 @@ Browser:       Safari
 Add-ons:       [Adguard, Dark Reader, Privacy Redirect]
 Search_Engine: SearXNG
 Feed_Reader:   Fiery Feeds
-Email:         Canary Mail
+Email:         [Mail, PGPro]
 VPN:           Mullvad
 Messenger:     [Element, Signal]
 MFA:           OTP Auth
