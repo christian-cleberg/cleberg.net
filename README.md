@@ -9,7 +9,7 @@ If you want to use this structure to create your site, simply clone the repo and
 rename it to something meaningful:
 
 ```bash
-git clone https://git.sr.ht/~cmc/cleberg.net
+git clone https://github.com/christian-cleberg/cleberg.net
 ```
 
 ```bash

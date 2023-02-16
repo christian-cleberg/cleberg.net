@@ -9,10 +9,10 @@ of work, I spend my time as a data analyst, hobbyist programmer, and homelabber.
 ## Contact
 
 - Email: hello [at] cleberg.net [[GPG](https://cleberg.net/gpg.txt)]
+- GitHub: [@christian-cleberg](https://github.com/christian-cleberg/)
 - LinkedIn: [@christian-cleberg](https://linkedin.com/in/christian-cleberg/)
 - Mastodon: [@cmc@fosstodon.org](https://fosstodon.org/@cmc)
 - Matrix: [@cmc_](https://matrix.to/#/@cmc_:matrix.org)
-- Sourcehut: [@cmc](https://sr.ht/~cmc/)
 - Stack Overflow: [@cmc](https://stackoverflow.com/users/12566804/kaizoku)
 
 ## Personal

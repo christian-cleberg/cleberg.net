@@ -20,7 +20,8 @@ care about here: the content within each page.
 
 I've made quite a few changes to the style of this website today, both in the
 CSS and in the HTML. You can see the [git
-changelog](https://git.sr.ht/~cmc/cleberg.net/log) for more information.
+changelog](https://github.com/christian-cleberg/cleberg.net/commits/main) for
+more information.
 
 Here are some of the key takeaways from today's changes:
 
@@ -39,7 +40,7 @@ file.
 My main focus amidst all of the changes this past year was accessibility. I
 tried to improve accessibility of all pages on this site as best as I know how.
 For example, [I added aria labels to identify different navigation
-menus](https://git.sr.ht/~cmc/cleberg.net/commit/9c2175dbe39a71c2070f8517f28c11ed4bd20654) 
+menus](https://github.com/christian-cleberg/cleberg.net/commit/9c2175dbe39a71c2070f8517f28c11ed4bd20654)
 in November.
 
 I want to continue this in 2023 and learn more about the accessibility features
