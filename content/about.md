@@ -59,6 +59,7 @@ about my professional life.
 
 ### Certifications
 
+- Microsoft Certified: Azure Fundamentals from Microsoft, 2023
 - Certified Information Systems Auditor (CISA) from ISACA, 2021
 - Certified Entry-level Python Programmer (PCEP) from Python Institute, 2020
 - IBM Data Science Professional Certificate from IBM, 2020
