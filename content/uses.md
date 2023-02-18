@@ -22,17 +22,17 @@ and communities that are very important to me:
 
 ```bash
 Model:         ThinkPad E15
-OS:            Alpine Linux
+OS:            Fedora Workstation
 Shell:         zsh
-WM:            sway
+WM:            i3
 Editor:        nano
-Terminal:      kitty
-Browser:       Firefox
+Terminal:      alacritty
+Browser:       LibreWolf
 Add-ons:       [uBlock Origin, Bitwarden, LibRedirect, Dark Reader]
 Search_Engine: SearXNG
 Feed_Reader:   TinyTinyRSS
-Email:         [Neomutt, Thunderbird]
-VPN:           Wireguard (Mullvad)
+Email:         Thunderbird
+VPN:           Mullvad
 Messenger:     [Gomuks, Signal]
 ```
 
