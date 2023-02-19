@@ -37,7 +37,7 @@ generator, which requires the Rust language. Internally, Zola uses
 in [CommonMark](https://commonmark.org).
 
 At the server level, this website runs uses the [Nginx](https://nginx.org) web
-server on [Alpine Linux](https://alpinelinux.org).
+server on [Ubuntu](https://ubuntu.com).
 
 ## Hardware
 
