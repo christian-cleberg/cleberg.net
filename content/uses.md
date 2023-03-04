@@ -27,7 +27,7 @@ Shell:         zsh
 WM:            i3
 Editor:        nano
 Terminal:      alacritty
-Browser:       LibreWolf
+Browser:       Firefox
 Add-ons:       [uBlock Origin, Bitwarden, LibRedirect, Dark Reader]
 Search_Engine: SearXNG
 Feed_Reader:   TinyTinyRSS
@@ -77,10 +77,6 @@ My server rack contains the following hardware:
 - UniFi Switch 24 PoE
 - UniFi Patch Panel
 - Custom Rack-Mounted Server ([read about it &rarr;](/blog/server-build/))
-  - Case: Rosewill RSV-R4100U 4U Chassis
-  - Processor: AMD Ryzen 7 5700G with Radeon Graphics
-  - Memory: 64 GB DDR4 DIMM
-  - Storage: 500 GB M.2 NVMe SSD, 1 x 10TB HDD, 3 x 8TB HDD
 - Raspberry Pi 4 Model B (8GB RAM)
 - Philips Hue Bridge
 - Tripp-Lite 12 Socket Surge Protector
